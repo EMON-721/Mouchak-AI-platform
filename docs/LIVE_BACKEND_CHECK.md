@@ -25,7 +25,7 @@ Any redirect, TLS failure, rejected origin/token, missing scanner/model, stalled
 
 A pass verifies this limited support path on the target it was actually run against. It does not validate all 50 tools, representative Bangladesh accuracy, official tariffs, provider backups, operator browser MFA, Netlify adapter execution or browser accessibility/PDF behavior. Specialized models retain their existing production gates. The smoke test intentionally reports these limitations instead of a `production_ready=true` claim.
 
-Four local configuration/security tests pass in `tests/test_deployment_smoke_config.py`. The exact CLI is also invoked against real disposable TLS PostgreSQL/S3/API/model containers by `scripts/test-production-stack.py`. Its new CI result must be checked before describing that invocation as passed. This is not evidence of a live owner cloud deployment.
+Four local configuration/security tests pass in `tests/test_deployment_smoke_config.py`. The exact CLI is also invoked against real disposable TLS PostgreSQL/S3/API/model containers by `scripts/test-production-stack.py`. Both jobs in [CI run 40731666580](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40731666580) passed on runtime source `c7510abe`, including 363 Python cases and the exact CLI against the actual service fixture. This is not evidence of a live owner cloud deployment.
 
 ## Resume external hosting work
 

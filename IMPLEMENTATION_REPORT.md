@@ -4,7 +4,13 @@
 
 The owner's latest instruction removes public login, signup and visitor profiles, superseding the ZIP's end-user account-screen requirements. The Super Admin/operator system retains passwords, roles and MFA. See `docs/PUBLIC_ACCESS.md` for the decision and security details.
 
-## Current backend/BillDetect continuation — 28 October 2026
+## Live backend verification continuation — 28 October 2026
+
+Added `python -m services.model_worker.deployment_smoke`: real verified-HTTPS processing with owned temporary DEMO fixtures, private storage/scanning, Tesseract, queued Bengali arithmetic, two distinct ONNX retrieval answers, JSON export, second-visitor isolation and explicit clearing of its own scopes. No existing visitor/operator data is used. Both jobs in [CI run 40731666580](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40731666580) passed on source `c7510abe`; **363 Python tests** passed. The integration report is overwritten at run start/failure so historical success cannot masquerade as current evidence. Exact scope: [LIVE_BACKEND_CHECK.md](docs/LIVE_BACKEND_CHECK.md).
+
+The user confirmed Render installation. This active session still exposes no Render account capability and its inventory has not confirmed the connection; no Render workspace, service, paid plan or cloud deployment is claimed. The two existing Supabase projects remain untouched. Resume from provider account verification when available, preserving all completed source. All 50 advanced model/data/holdout release gates retain their honest incomplete statuses. Netlify remains the owner's task.
+
+## Earlier backend/BillDetect continuation — 28 October 2026
 
 Resumed the previous source without regenerating the original kit. The owner handles Netlify. Added encrypted private monthly bill history, editable real OCR drafts, separate training consent, real private IsolationForest → ONNX export/inference and per-owner model cards. Experimental training/prediction remain blocked in production pending Bangladesh holdouts and release review; history and arithmetic work independently. See [Bill pipeline](docs/BILL_PIPELINE.md).
 

@@ -16,8 +16,9 @@
   "production_model_release_gate_enforced": true,
   "real_operator_login_mfa_and_private_record_denial": true,
   "real_expiry_worker_history_db_and_s3_deletion": true,
+  "deployment_smoke_cli_verified_in_fixture": true,
   "result": "passed",
-  "github_run_id": 40704048635,
-  "github_job_id": 122871247411,
-  "source_commit": "736fc3d4ac09ef085ee606e3a60a639dedea1fce"
+  "github_run_id": 40731666580,
+  "github_job_id": 122969313633,
+  "source_commit": "c7510abe12b91744ce21c642169aef5049efb52e"
 }

@@ -72,7 +72,11 @@ The new runtime preserves 10 MiB uploads through encrypted 1 MiB chunks, runs in
 
 [BillDetect](docs/BILL_PIPELINE.md) now has private monthly history, actual OCR drafts and experimental owner-specific ONNX model inference. Production ML remains disabled pending evaluation; arithmetic/history are available. A DEMO browser save/reload was verified. [Backend operations](docs/BACKEND_OPERATIONS.md) explains additive verified-TLS provisioning, separate roles and the current container integration result. Both jobs in [run 40704048635](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635) passed, including actual PostgreSQL/S3/scanner/worker/MFA/deletion and real OCR/ONNX container inference. This does not certify a live cloud deployment.
 
-## Latest verified source
+## Live backend verification
+
+The credential-safe [live check](docs/LIVE_BACKEND_CHECK.md) now passes against real disposable TLS database/storage/model services in [CI run 40731666580](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40731666580); **363 Python tests** pass. This command is ready to run against an authorized host once connected. No owner cloud deployment or full 50-tool certification is implied.
+
+## Earlier verified source
 
 The backend/BillDetect continuation is published to this repository's `main` while preserving the initial history. [CI run 40704048635](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635) passed both jobs on runtime commit `736fc3d`; subsequent report-only updates retain that tested runtime. Exact checks and remaining host/data/model gates: [backend operations](docs/BACKEND_OPERATIONS.md) and [bill acceptance progress](docs/audit/bill-acceptance-progress.json).
 
