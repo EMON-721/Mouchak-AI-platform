@@ -33,3 +33,7 @@ An authorized Linux host/API hostname, TLS PostgreSQL endpoint and private bucke
 Railway's official status reported new signups paused on 28 October 2026 following its security incident. Existing-account recovery depends on the original identity and the provider's official recovery process. This is not a diagnosed user-account error and is not a reason to bypass a signup restriction. References: https://status.railway.com/ and https://blog.railway.com/p/security-disclosure-recommendation-recover-account-access . No recovery email, reset repository or new identity was created.
 
 After the owner supplies an authorized host, use `deploy/compose.backend.yaml` and `docs/NETLIFY.md`; validate actual DNS/TLS, secrets, SMTP, up-to-date scanner feeds, resource sizing, worker recovery, alerts and provider backup/restore on that host. CI container success cannot certify a live cloud deployment, Netlify adapter execution, Bangladesh model accuracy or all 430 original acceptance scenarios.
+
+## Live target verification
+
+The new credential-safe `python -m services.model_worker.deployment_smoke` checks an authorized HTTPS backend with owned temporary DEMO fixtures, then clears its own scopes. See [LIVE_BACKEND_CHECK.md](LIVE_BACKEND_CHECK.md). This prepares hosted verification without assuming an existing connection is operational or certifying all advanced models.

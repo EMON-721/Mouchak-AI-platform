@@ -36,6 +36,8 @@ Production request counters use atomic PostgreSQL UPSERTs shared across replicas
 7. Bootstrap the operator with `manage create-admin` under the appropriate operational connection; its password is entered by a prompt. Enroll and verify MFA through the protected operator flow. Never enable public signup/profile screens.
 8. Verify real PostgreSQL/S3/SMTP, scanner failures, worker death/restart, queue cancellation, retention, logging/alerts and restore drills on staging. Monitor all worker services; the health endpoint does not currently prove a worker heartbeat. Retain independent backups and keys off-host. The existing local encrypted archive drill is not a production backup system.
 
+Before connecting the website, run the real backend smoke command in [LIVE_BACKEND_CHECK.md](LIVE_BACKEND_CHECK.md) against the authorized host. Its owned fixtures verify model/storage/queue behavior that a health preflight cannot prove.
+
 ## Netlify setup
 
 1. In your Netlify account, import the authorized GitHub repository `EMON-721/Mouchak-AI-platform`, branch `main`. Leave the base directory at the repository root. Keep `netlify.toml`; its command is `node scripts/check-netlify.mjs && pnpm build:next` and publish directory `.next`. Do not configure a SPA `/* /index.html` rewrite or pin a legacy Next adapter.

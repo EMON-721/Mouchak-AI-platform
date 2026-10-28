@@ -243,6 +243,18 @@ def main():
                 with psycopg.connect(pg_dsn) as owner:
                     assert owner.execute("SELECT 1 FROM users WHERE id=%s", (operator_id,)).fetchone()
                 report["real_expiry_worker_history_db_and_s3_deletion"] = True
+            # Run the exact operator-facing CLI against this real TLS/container
+            # stack; it creates/clears only its own additional visitor scopes.
+            smoke = subprocess.run([sys.executable, "-m", "services.model_worker.deployment_smoke"],
+                                   cwd=ROOT, env={**os.environ, "PRIVATE_API_URL": base,
+                                   "PUBLIC_ORIGIN": "https://mouchak.integration.test", "PRIVATE_API_TOKEN": api_token,
+                                   "MOUCHAK_SMOKE_CA_FILE": str(folder / "tls/ca.crt")},
+                                   capture_output=True, text=True, timeout=300)
+            if smoke.returncode:
+                failed_operation.append(smoke.stdout[-2000:])
+                raise AssertionError("Deployment smoke CLI did not pass")
+            assert json.loads(smoke.stdout)["result"] == "passed"
+            report["deployment_smoke_cli_verified_in_fixture"] = True
             report["result"] = "passed"
             (ROOT / "docs/audit/production-stack.json").write_text(json.dumps(report, indent=2) + "\n")
             print(json.dumps(report))
