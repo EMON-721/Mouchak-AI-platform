@@ -99,9 +99,9 @@
   },
   {
     "requirement": "deployment_github",
-    "status": "source_published_host_blocked_ci_integration_in_progress",
-    "implemented": "GitHub write and platform CI verified; additive role provisioning and network TLS PostgreSQL tested; Linux/Netlify configuration preserved",
-    "remaining": "S3 integration readiness failure under investigation; no authorized live backend host or provider restore evidence",
+    "status": "source_published_private_stack_ci_passed_live_host_blocked",
+    "implemented": "GitHub write and both CI jobs verified; real disposable PostgreSQL/S3/TLS/scanner/worker/MFA/expiry and OCR/ONNX inference pass",
+    "remaining": "Live backend host/API hostname, provider credentials, SMTP and backup/restore remain unconfigured",
     "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
     "evidence": [
       "tests/test_collaboration_operations.py",

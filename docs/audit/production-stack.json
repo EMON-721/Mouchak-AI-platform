@@ -1,0 +1,23 @@
+{
+  "fixture_only": true,
+  "cloud_deployment": false,
+  "full_50_tool_scope_certified": false,
+  "postgres_tls_verified": true,
+  "migration_ledger_idempotent": true,
+  "four_isolated_roles": true,
+  "s3_tls_handshake_verified": true,
+  "s3_tls_verified": true,
+  "secure_cookie_origin_csrf_and_owner_boundaries": true,
+  "s3_private_ciphertext_sse_roundtrip": true,
+  "real_clamav_test_signature_rejection": true,
+  "dedicated_worker_real_queued_run": true,
+  "container_real_tesseract_inference": true,
+  "container_real_onnx_retrieval_two_distinct_answers": true,
+  "production_model_release_gate_enforced": true,
+  "real_operator_login_mfa_and_private_record_denial": true,
+  "real_expiry_worker_history_db_and_s3_deletion": true,
+  "result": "passed",
+  "github_run_id": 40704048635,
+  "github_job_id": 122871247411,
+  "source_commit": "736fc3d4ac09ef085ee606e3a60a639dedea1fce"
+}

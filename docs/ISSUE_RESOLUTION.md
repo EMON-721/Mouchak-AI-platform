@@ -13,11 +13,11 @@ This is the continuation of the existing platform, not a new homepage build. Pub
 | Runtime telemetry | Disabled ONNX 1DS before import, disabled Hugging Face telemetry, added API opt-out, CI/container settings and initialization-order test | Earlier automatic-review-blocked telemetry attempt is historical; no prior absence-of-traffic claim |
 | Verification | 359 tests passed in the platform job; TypeScript, lint and Next production build passed; exact registry/source checksums retained | Pose upload automation timed out; completed pose browser E2E, operator MFA browser flow and responsive/accessibility matrix are not verified |
 
-## Current S3 integration repair
+## S3 integration repaired and verified
 
-The latest platform job passed; the separate private-stack job has verified actual PostgreSQL TLS, all six migration replay and four safe dedicated roles, then failed at S3 readiness. Strict CA certificate key usage is fixed; allowlisted error diagnostics are running to identify the remaining problem. This CI run is not marked successful overall. Read [BACKEND_OPERATIONS.md](BACKEND_OPERATIONS.md) and [BILL_PIPELINE.md](BILL_PIPELINE.md); downstream S3/scanner/operator/retention checks remain unverified until evidence is obtained.
+[Run 40704048635](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635) passed **both platform and private-stack jobs**. It verified 359 Python tests, lint, TypeScript, source/registry checks, SQL/RLS/transport checks and the Next production build. Real disposable Docker integration verified networked PostgreSQL TLS/migration replay/four isolated roles, verified HTTPS S3 encryption/SSE, scanner rejection, queued inference, actual Tesseract OCR, two distinct Bengali ONNX retrieval answers, production ML release gates, operator login/MFA/private-record denial and expired-guest database/S3 deletion. Evidence: `docs/audit/production-stack.json`. This is isolated service operation, not a deployment in the owner's cloud account.
 
-The owner handles Netlify. Railway signup was reported paused by its official status; no signup restriction was bypassed. A live authorized Linux host, API hostname, private PostgreSQL and S3/SMTP credentials are still absent. Do not ask for Netlify login or the already supplied GitHub destination again.
+The owner handles Netlify. Railway signup was reported paused by its official status; no signup restriction was bypassed. A live authorized Linux host, API hostname, PostgreSQL and S3/SMTP credentials are still absent. No Netlify login or new GitHub destination is required for this source work. Read [BACKEND_OPERATIONS.md](BACKEND_OPERATIONS.md) for exact secure provisioning and remaining host requirements.
 
 ## Earlier GitHub publication verified
 

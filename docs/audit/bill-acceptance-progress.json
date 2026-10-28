@@ -3,14 +3,83 @@
   "full_module_complete": false,
   "production_model_enabled": false,
   "cases": [
-    {"id":"07-MODEL-01","status":"mechanics_passed_nonproduction","evidence":["tests/test_bills.py::test_real_private_model_fits_persists_reloads_predicts_and_exports","tests/test_bills.py::test_artifact_corruption_fails_closed"],"remaining":"Real owner baseline and production release evaluation; no shared pretrained billing artifact is supplied"},
-    {"id":"07-MODEL-02","status":"blocked_representative_data","evidence":["tests/test_bills.py"],"remaining":"Two representative rights-cleared Bangladesh bills/holdout; synthetic baseline/extreme cases and owned rendered OCR samples do not satisfy this criterion"},
-    {"id":"07-MODEL-03","status":"mechanics_passed_quality_validation_partial","evidence":["tests/test_bills.py::test_ambiguous_or_missing_evidence_does_not_invent_an_amount","tests/test_bills.py::test_artifact_corruption_fails_closed"],"remaining":"Representative low-quality Bangladesh OCR benchmark and calibrated field confidence"},
-    {"id":"07-MODEL-04","status":"partial","evidence":["tests/test_bills.py::test_demo_or_nonconsenting_records_cannot_train","docs/DATA_AND_MODEL_PROVENANCE.md"],"remaining":"No external tariff corpus approved/imported; production source-specific reuse review and evaluation remain required"},
-    {"id":"07-MODEL-05","status":"limited_output_constraints_implemented","evidence":["services/model_worker/bills.py","docs/BILL_PIPELINE.md"],"remaining":"No primary tariff/date integration; no wrong-charge verdict is offered; complete domain claim review remains pending"},
-    {"id":"07-USER-01","status":"partial_desktop_browser","evidence":["docs/audit/bill-browser-history.jpg"],"remaining":"Actual 360px three-step photo/correction/reconciliation flow and accessibility matrix unverified"},
-    {"id":"07-ADMIN-01","status":"partial_existing_shared_cms","evidence":["tests/test_collaboration_operations.py"],"remaining":"Full original model lifecycle, source publication and administrative acceptance still incomplete"},
-    {"id":"07-PRIV-01","status":"tested_private_bill_api_and_sql_boundaries","evidence":["tests/test_bills.py::test_real_private_model_fits_persists_reloads_predicts_and_exports","scripts/test-async-postgres.mjs"],"remaining":"Actual deployed-provider and full browser owner-boundary verification"},
-    {"id":"07-GIT-01","status":"published_work_branch","evidence":["https://github.com/EMON-721/Mouchak-AI-platform/tree/work/backend-integration-bills-20261028"],"remaining":"Integration repair and final main publication tracked independently"}
+    {
+      "id": "07-MODEL-01",
+      "status": "mechanics_passed_nonproduction",
+      "evidence": [
+        "tests/test_bills.py::test_real_private_model_fits_persists_reloads_predicts_and_exports",
+        "tests/test_bills.py::test_artifact_corruption_fails_closed"
+      ],
+      "remaining": "Real owner baseline and production release evaluation; no shared pretrained billing artifact is supplied"
+    },
+    {
+      "id": "07-MODEL-02",
+      "status": "blocked_representative_data",
+      "evidence": [
+        "tests/test_bills.py"
+      ],
+      "remaining": "Two representative rights-cleared Bangladesh bills/holdout; synthetic baseline/extreme cases and owned rendered OCR samples do not satisfy this criterion"
+    },
+    {
+      "id": "07-MODEL-03",
+      "status": "mechanics_passed_quality_validation_partial",
+      "evidence": [
+        "tests/test_bills.py::test_ambiguous_or_missing_evidence_does_not_invent_an_amount",
+        "tests/test_bills.py::test_artifact_corruption_fails_closed"
+      ],
+      "remaining": "Representative low-quality Bangladesh OCR benchmark and calibrated field confidence"
+    },
+    {
+      "id": "07-MODEL-04",
+      "status": "partial",
+      "evidence": [
+        "tests/test_bills.py::test_demo_or_nonconsenting_records_cannot_train",
+        "docs/DATA_AND_MODEL_PROVENANCE.md"
+      ],
+      "remaining": "No external tariff corpus approved/imported; production source-specific reuse review and evaluation remain required"
+    },
+    {
+      "id": "07-MODEL-05",
+      "status": "limited_output_constraints_implemented",
+      "evidence": [
+        "services/model_worker/bills.py",
+        "docs/BILL_PIPELINE.md"
+      ],
+      "remaining": "No primary tariff/date integration; no wrong-charge verdict is offered; complete domain claim review remains pending"
+    },
+    {
+      "id": "07-USER-01",
+      "status": "partial_desktop_browser",
+      "evidence": [
+        "docs/audit/bill-browser-history.jpg"
+      ],
+      "remaining": "Actual 360px three-step photo/correction/reconciliation flow and accessibility matrix unverified"
+    },
+    {
+      "id": "07-ADMIN-01",
+      "status": "partial_existing_shared_cms",
+      "evidence": [
+        "tests/test_collaboration_operations.py"
+      ],
+      "remaining": "Full original model lifecycle, source publication and administrative acceptance still incomplete"
+    },
+    {
+      "id": "07-PRIV-01",
+      "status": "tested_private_bill_api_and_sql_boundaries",
+      "evidence": [
+        "tests/test_bills.py::test_real_private_model_fits_persists_reloads_predicts_and_exports",
+        "scripts/test-async-postgres.mjs"
+      ],
+      "remaining": "Actual deployed-provider and full browser owner-boundary verification"
+    },
+    {
+      "id": "07-GIT-01",
+      "status": "published_release_main",
+      "evidence": [
+        "https://github.com/EMON-721/Mouchak-AI-platform",
+        "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635"
+      ],
+      "remaining": "Cloud hosting is separate; original release gates remain incomplete"
+    }
   ]
 }
