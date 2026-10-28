@@ -1,0 +1,102 @@
+# Linux backend only; the website is hosted by Netlify. Run from the repo root:
+# docker compose --env-file .env -f deploy/compose.backend.yaml up -d --build
+x-runtime: &runtime
+  build: {context: .., dockerfile: deploy/Dockerfile.api}
+  restart: unless-stopped
+  init: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  mem_limit: 3g
+  cpus: 2
+
+x-data: &data
+  MOUCHAK_ENV: production
+  DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
+  MODEL_DIR: /app/models
+  MOUCHAK_STATE_DIR: /app/state
+  S3_BUCKET: ${S3_BUCKET:?required}
+  S3_ENDPOINT_URL: ${S3_ENDPOINT_URL:-}
+  AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:?required}
+  AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:?required}
+  AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION:?required}
+  ENABLE_DURABLE_INFERENCE: "1"
+  ENABLE_EXPERIMENTAL_POSE: "0"
+  ORT_DISABLE_TELEMETRY: "1"
+  HF_HUB_DISABLE_TELEMETRY: "1"
+
+services:
+  model-init:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: [python, scripts/download-models.py]
+    volumes: [model-weights:/app/models]
+    restart: "no"
+  signatures-init:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    user: root
+    command: [sh, -c, "chown clamav:clamav /var/lib/clamav && freshclam --stdout --datadir=/var/lib/clamav"]
+    volumes: [malware-signatures:/var/lib/clamav]
+    restart: "no"
+  signatures:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    user: clamav
+    command: [freshclam, --daemon, --foreground, --stdout, --checks=12, --datadir=/var/lib/clamav]
+    volumes: [malware-signatures:/var/lib/clamav]
+    depends_on:
+      signatures-init: {condition: service_completed_successfully}
+    restart: unless-stopped
+  api:
+    <<: *runtime
+    environment:
+      <<: *data
+      DATABASE_URL: ${DATABASE_URL:?required}
+      PRIVATE_API_TOKEN: ${PRIVATE_API_TOKEN:?required}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?required}
+      SMTP_HOST: ${SMTP_HOST:?required}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_FROM: ${SMTP_FROM:?required}
+      SMTP_USERNAME: ${SMTP_USERNAME:?required}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:?required}
+    volumes: [private-state:/app/state, model-weights:/app/models:ro, malware-signatures:/var/lib/clamav:ro]
+    depends_on:
+      model-init: {condition: service_completed_successfully}
+      signatures-init: {condition: service_completed_successfully}
+  inference:
+    <<: *runtime
+    stop_grace_period: 250s
+    command: [python, -m, services.model_worker.inference_worker]
+    environment:
+      <<: *data
+      DATABASE_URL: ${INFERENCE_DATABASE_URL:?required}
+    volumes: [private-state:/app/state, model-weights:/app/models:ro]
+    depends_on:
+      model-init: {condition: service_completed_successfully}
+  scheduler:
+    <<: *runtime
+    command: [python, -m, services.model_worker.scheduler]
+    environment:
+      MOUCHAK_ENV: production
+      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
+      DATABASE_URL: ${SCHEDULER_DATABASE_URL:?required}
+  retention:
+    <<: *runtime
+    command: [python, -m, services.model_worker.visitor_retention]
+    environment:
+      <<: *data
+      DATABASE_URL: ${RETENTION_DATABASE_URL:?required}
+    volumes: [private-state:/app/state]
+  tls:
+    image: caddy:2-alpine
+    environment:
+      API_HOSTNAME: ${API_HOSTNAME:?required}
+      TLS_EMAIL: ${TLS_EMAIL:?required}
+    ports: ["80:80", "443:443"]
+    volumes: ["./Caddyfile:/etc/caddy/Caddyfile:ro", "tls-data:/data", "tls-config:/config"]
+    depends_on: [api]
+    restart: unless-stopped
+
+volumes:
+  model-weights:
+  private-state:
+  malware-signatures:
+  tls-data:
+  tls-config:

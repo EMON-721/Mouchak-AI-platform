@@ -1,11 +1,19 @@
 """Expired anonymous-scope deletion worker. Never deletes historical accounts."""
 
 import json, os, signal, threading
-from .store import PRODUCTION, migrate
-from . import anonymous, retail, collaboration, operations
+from .store import DB, PRODUCTION, migrate
+from sqlalchemy import text
+from . import anonymous, retail, collaboration, operations, uploads, rate_limit
+
+
+def verify_role(db):
+    if PRODUCTION and db.scalar(text("SELECT current_user")) != "mouchak_retention":
+        raise RuntimeError("Production cleanup requires dedicated mouchak_retention role")
 
 
 def main():
+    with DB() as db:
+        verify_role(db)
     if not PRODUCTION:
         migrate()
     interval = max(5, min(3600, int(os.getenv("VISITOR_RETENTION_POLL_SECONDS", "60"))))
@@ -15,6 +23,10 @@ def main():
     while not stopped.is_set():
         try:
             print(json.dumps(anonymous.purge_expired()), flush=True)
+            with DB.begin() as db:
+                verify_role(db)
+                uploads.cleanup(db)
+                rate_limit.cleanup(db)
         except Exception:
             print(
                 json.dumps(

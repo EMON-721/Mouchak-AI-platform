@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useApp } from "./context";
 import { tools } from "./catalogue";
 import { ResultView } from "./tool";
+import { PendingJobs } from "./pending-jobs";
 import { CollaborationPanel } from "./collaboration";
 import type { RunResult, Workspace } from "./types";
 type Row = { id: string; module: string; created_at: string; saved: boolean };
@@ -93,6 +94,7 @@ export function SessionWork({ pane = "history" }: { pane?: string }) {
             />
           ) : (
             <>
+              <PendingJobs onOpen={open} />
               <section className="panel">
                 <h2>{t("এই session-এর ফলাফল", "Session results")}</h2>
                 {rows.length ? (

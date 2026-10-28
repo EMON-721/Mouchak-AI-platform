@@ -24,6 +24,8 @@ jobs:
       - run: python -m pytest tests --ignore=tests/verify_postgres.py -q --junitxml=ci-results.xml
       - run: node scripts/test-postgres.mjs
       - run: node scripts/test-collaboration-postgres.mjs
+      - run: node scripts/test-async-postgres.mjs
+      - run: node scripts/test-private-processing.mjs
       - run: pnpm build:next
       - uses: actions/upload-artifact@v4
         if: always()

@@ -48,9 +48,54 @@ const frontend = spawn(
   { stdio: "inherit", env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" } },
 );
 let stopping = false;
+let inference;
+async function startInference() {
+  if (process.env.ENABLE_DURABLE_INFERENCE !== "1") return;
+  for (let attempt = 0; attempt < 60 && !stopping; attempt++) {
+    try {
+      const ready = await fetch("http://127.0.0.1:8000/api/health", {
+        signal: AbortSignal.timeout(1000),
+      });
+      if (ready.ok && !stopping) {
+        inference = spawn(
+          python,
+          ["-m", "services.model_worker.inference_worker"],
+          {
+            stdio: ["ignore", log, log],
+            env: {
+              ...process.env,
+              OPENBLAS_NUM_THREADS: "2",
+              OMP_NUM_THREADS: "2",
+            },
+          },
+        );
+        inference.on("error", () => {
+          stop();
+          process.exitCode = 1;
+        });
+        inference.on("exit", (code) => {
+          if (!stopping) {
+            stop();
+            process.exitCode = code || 1;
+          }
+        });
+        return;
+      }
+    } catch {
+      /* API is still starting; no alternate listener is launched. */
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+  if (!stopping) {
+    stop();
+    process.exitCode = 1;
+  }
+}
+void startInference();
 function stop() {
   if (stopping) return;
   stopping = true;
+  inference?.kill("SIGTERM");
   backend.kill("SIGTERM");
   frontend.kill("SIGTERM");
 }

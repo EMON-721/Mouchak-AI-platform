@@ -62,6 +62,12 @@ Inference tests run actual OCR, multilingual embedding/retrieval, OpenCV and ano
 - `docs/audit/`: source analysis, hashes, test evidence and readiness records.
 - `requirements/original-kit/`: the entire unchanged input kit.
 
+## Selected hosting: Netlify + Linux AI backend
+
+The owner selected **Netlify for the website and a separate Linux/Docker host for AI**, with optional Cloudflare DNS/CDN later. Follow [docs/NETLIFY.md](docs/NETLIFY.md). `netlify.toml` builds canonical Next.js and checks its real HTTPS backend before deployment. `deploy/compose.backend.yaml` provides backend/worker/TLS/scanner configuration; host credentials and operational services remain required. No cloud deployment has been performed.
+
+The new runtime preserves 10 MiB uploads through encrypted 1 MiB chunks, runs inference through durable leased jobs, supports cancellation/reopen and coordinates production request limits in PostgreSQL. Migration 005 brings the additive schema to 24 tables. Current regression: **343 passed**, plus typecheck/lint/Next build, PostgreSQL WASM and transport checks. A browser completed and reopened actual queued Bengali retrieval. These checks do not certify all 50 advanced models, production infrastructure or all original acceptance cases.
+
 ## Deployment and GitHub
 
 Source repository: [EMON-721/Mouchak-AI-platform](https://github.com/EMON-721/Mouchak-AI-platform). GitHub write authorization is now verified, and the complete 1,127-file checkpoint was published to `main` in [commit `d93b4f3`](https://github.com/EMON-721/Mouchak-AI-platform/commit/d93b4f36163a1e0c8ab24bba40ea96b078f8a4da). A fresh fetch verified its tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested local source checkpoint `4c03fc0`. The original remote initial commit remains an ancestor. GitHub Actions [run 40680371782](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782) completed successfully, including tests, PostgreSQL checks and the Next build. Production hosting remains unconfigured. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).

@@ -1,5 +1,7 @@
 # Deployment runbook and remaining actions
 
+**Current owner-selected target: Netlify website + separate Linux/Docker AI backend. Start with [NETLIFY.md](NETLIFY.md), `netlify.toml` and `deploy/compose.backend.yaml`.** The Vercel discussion below is historical, not a deployment dependency.
+
 One HTTPS domain serves Next.js public, session-work, tool and protected operator pages. `/api/*` proxies server-side to private FastAPI. Never publish port 8000 or the database directly. Set the same stable `PRIVATE_API_TOKEN` in both services and use a private network.
 
 The Next.js container uses the verified `build:next` path. The Sites-compatible Vinext build is an additional target. Sites alone does not host Python inference, PostgreSQL or private S3. A frontend without its API is not a complete deployment.
@@ -7,10 +9,10 @@ The Next.js container uses the verified `build:next` path. The Sites-compatible 
 ## Provisioning sequence
 
 1. Provision PostgreSQL with TLS, a separate migration owner and a NOSUPERUSER/NOBYPASSRLS application role.
-2. Apply migrations 001–004 as the migration owner. Migration 003 checks stock owner/workspace/item links. Grant stock-item updates and movement insert/read only to the application role; no arbitrary movement UPDATE/DELETE privilege. Seed candidate sources before restricting runtime permissions. The backend sets `app.user_id` inside cookie-scoped owner transactions.
+2. Apply migrations 001–005 as the migration owner. Migration 003 checks stock owner/workspace/item links. Grant stock-item updates and movement insert/read only to the application role; no arbitrary movement UPDATE/DELETE privilege. Seed candidate sources before restricting runtime permissions. The backend sets `app.user_id` inside cookie-scoped owner transactions.
 3. Configure a persistent Fernet key, private S3, current malware signatures, SMTP verification/reset email, HTTPS `PUBLIC_ORIGIN` and the internal proxy token. Run actual provider integration tests.
 4. Install model assets with the checksum scripts. Keep weights out of the web image/Git. Inference stays private and CPU-based; GPU hosting is not assumed.
-5. Configure backups, key recovery and a restore drill. Configure shared rate limits, durable queues, monitoring and retention scheduling before multi-instance use. The current in-process limiter is not a distributed production limiter.
+5. Configure backups, key recovery and a restore drill. Configure shared rate limits, durable queues, monitoring and retention scheduling before multi-instance use. Production now has PostgreSQL-backed shared fixed-window counters and durable inference source; see NETLIFY.md for proxy ceilings and required hosted verification.
 6. Repeat session/MFA/owner-isolation and real-inference tests against staging. Complete required Bangladesh holdouts and expert reviews before enabling specialized AI.
 7. Build the web/API images from `deploy/`, connect one domain and verify browser → API → storage → result → download/delete. Docker image execution and live cloud deployment were not verified; no Docker daemon or hosted service configuration was supplied.
 

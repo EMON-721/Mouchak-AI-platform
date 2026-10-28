@@ -1,5 +1,7 @@
 # Issue resolution and exact remaining actions
 
+Current continuation: local fetch succeeded and verified publication history is merged. The owner selected **Netlify website + separate Linux/Docker AI backend**, with optional Cloudflare DNS/CDN later. Added chunk uploads, leased durable inference, shared PostgreSQL counters, migration 005, website job controls and deployment templates. Current local suite: **343 passed**, plus types/lint/build, PostgreSQL WASM and transport checks. Browser queued actual retrieval and reopened its result. See [NETLIFY.md](NETLIFY.md) for precise setup and unresolved host/account/database/storage dependencies. No Netlify/Linux deployment or all-50 production certification is claimed. Earlier Vercel grants are no longer required.
+
 This is the continuation of the existing platform, not a new homepage build. Public login/signup/profile remain removed. Operators retain role and MFA protection. All original-kit files remain unchanged.
 
 | Issue | Completed work | Remaining restriction |

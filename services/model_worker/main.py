@@ -21,7 +21,7 @@ from .store import *
 from .auth import *
 from .domain import process, F, InputError
 from .inference import model_health, ocr, compare_images, audio_stats, retrieve
-from . import storage
+from . import storage, rate_limit, uploads, inference_queue
 from . import retail, collaboration, operations, anonymous
 from . import pose_runtime, pose_video
 from .legacy_workflows import READING, PRODUCTS, reading_reflection, basket_compare
@@ -48,6 +48,7 @@ app.include_router(retail.router)
 app.include_router(collaboration.router)
 app.include_router(operations.router)
 app.include_router(anonymous.router)
+app.include_router(uploads.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
 
@@ -77,18 +78,31 @@ async def protection(request, call_next):
                 else ""
             ),
         )
-        with RATE_LOCK:
-            ts = time.time()
-            b = RATE.get(key, [])
-            b = [t for t in b if ts - t < 60]
-            if len(b) >= 60:
-                return JSONResponse(
-                    {"detail": "Rate limit / কিছুক্ষণ পরে চেষ্টা করুন"}, 429
+        if PRODUCTION:
+            # Transport peer is trusted; arbitrary forwarded/client IP headers are not.
+            # Proxied traffic shares this ceiling until a reviewed edge identity exists.
+            from starlette.concurrency import run_in_threadpool
+            try:
+                allowed, retry = await run_in_threadpool(
+                    rate_limit.guard, key[0], key[1], request.cookies.get("mouchak_session", "")
                 )
-            if len(RATE) > 10000:
-                RATE.clear()
-            b.append(ts)
-            RATE[key] = b
+            except Exception:
+                return JSONResponse({"detail": "Request guard unavailable / নিরাপত্তা সেবা পাওয়া যাচ্ছে না"}, 503)
+            if not allowed:
+                return JSONResponse(
+                    {"detail": "Rate limit / কিছুক্ষণ পরে চেষ্টা করুন"}, 429,
+                    headers={"Retry-After": str(retry), "Cache-Control": "no-store"},
+                )
+        else:
+            with RATE_LOCK:
+                ts = time.time()
+                b = [t for t in RATE.get(key, []) if ts - t < 60]
+                if len(b) >= 60:
+                    return JSONResponse({"detail": "Rate limit / কিছুক্ষণ পরে চেষ্টা করুন"}, 429)
+                if len(RATE) > 10000:
+                    RATE.clear()
+                b.append(ts)
+                RATE[key] = b
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "same-origin"
@@ -161,6 +175,7 @@ def get_mod(slug, db):
     conf = db.get(Config, "module:" + slug)
     if conf:
         m.update(json.loads(conf.value))
+    m["execution_mode"] = "queued" if inference_queue.enabled() else "synchronous"
     m["fields"] = F[m["engine"]]
     if m["engine"] == "video" and pose_runtime.availability()["experimental_enabled"]:
         m["release_status"] = "experimental"
@@ -210,6 +225,7 @@ def health():
         "production_ready": False,
         "models": model_health(),
         "tools": 50,
+        "processing_mode": "queued" if inference_queue.enabled() else "synchronous",
     }
 
 
@@ -511,7 +527,74 @@ def withdraw(cid: str, u=Depends(identify), db=Depends(db_session)):
     return {"withdrawn": True, "training_corpus_uses": 0}
 
 
+@app.post("/api/tools/{slug}/jobs", status_code=202)
+def submit_job(slug: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session)):
+    return enqueue_request(slug, p, request, u, db)
+
+
+def enqueue_request(slug, p, request, u, db, parent=None):
+    m = get_mod(slug, db)
+    if m.get("enabled") is False:
+        raise HTTPException(503, "Tool disabled / টুলটি বন্ধ আছে")
+    if not p.consent or p.language not in ["bn", "en"]:
+        raise HTTPException(422, "Processing consent and supported language required")
+    if len(json.dumps(p.inputs)) > 100000:
+        raise HTTPException(413, "Input too large")
+    workspace = db.scalar(select(Workspace).where(
+        Workspace.user_id == u.id,
+        *([Workspace.id == p.workspace_id] if p.workspace_id else [])
+    ).limit(1))
+    if not workspace:
+        raise HTTPException(404, "Workspace not found")
+    for aid in p.asset_ids:
+        owner_asset(db, u, aid)
+    p.workspace_id = workspace.id
+    payload = p.model_dump()
+    if parent:
+        payload["_parent_run_id"] = parent
+    return inference_queue.submit(db, u, request.state.session, slug, payload)
+
+
+@app.get("/api/jobs")
+def pending_jobs(u=Depends(identify), db=Depends(db_session)):
+    return [inference_queue.view(j) for j in db.scalars(select(inference_queue.InferenceJob).where(
+        inference_queue.InferenceJob.user_id == u.id
+    ).order_by(inference_queue.InferenceJob.created_at.desc()).limit(100))]
+
+
+def owner_job(db, u, jid):
+    j = db.scalar(select(inference_queue.InferenceJob).where(
+        inference_queue.InferenceJob.id == jid, inference_queue.InferenceJob.user_id == u.id
+    ))
+    if not j:
+        raise HTTPException(404)
+    return j
+
+
+@app.get("/api/jobs/{jid}")
+def get_job(jid: str, u=Depends(identify), db=Depends(db_session)):
+    return inference_queue.view(owner_job(db, u, jid))
+
+
+@app.post("/api/jobs/{jid}/cancel")
+def cancel_job(jid: str, u=Depends(identify), db=Depends(db_session)):
+    j = owner_job(db, u, jid)
+    from sqlalchemy import update
+    db.execute(update(inference_queue.InferenceJob).where(
+        inference_queue.InferenceJob.id == j.id,
+        inference_queue.InferenceJob.state.in_(["queued", "running"])
+    ).values(state="cancelled", encrypted=seal({}), claim_token=None, lease_until=0))
+    db.refresh(j)
+    return inference_queue.view(j)
+
+
 @app.post("/api/tools/{slug}/runs", status_code=201)
+def create_run(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session)):
+    if inference_queue.enabled():
+        raise HTTPException(409, "Use the durable jobs endpoint / queue-তে কাজ জমা দিন")
+    return execute(slug, p, u, db)
+
+
 def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session)):
     m = get_mod(slug, db)
     if m.get("enabled") is False:
@@ -629,9 +712,11 @@ def save_run(rid: str, p: Body, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/runs/{rid}/correct", status_code=201)
-def correction(rid: str, p: RunInput, u=Depends(identify), db=Depends(db_session)):
+def correction(rid: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session)):
     old = owner_run(db, u, rid)
     p.workspace_id = old.workspace_id
+    if inference_queue.enabled():
+        return JSONResponse(enqueue_request(old.module, p, request, u, db, old.id), status_code=202)
     response = execute(old.module, p, u, db)
     r = db.get(Run, response["id"])
     r.parent_id = old.id
@@ -706,6 +791,11 @@ async def upload(
     data = await file.read(10 * 1024 * 1024 + 1)
     if len(data) > 10 * 1024 * 1024:
         raise HTTPException(413, "10 MB limit / সর্বোচ্চ ১০ MB")
+    return persist_asset(data, u, db)
+
+
+def persist_asset(data, u, db):
+    db.scalar(select(User.id).where(User.id == u.id).with_for_update())
     total = db.scalar(
         select(func.coalesce(func.sum(Asset.size), 0)).where(Asset.user_id == u.id)
     )
@@ -853,6 +943,15 @@ def account_export(u=Depends(identify), db=Depends(db_session)):
             for f in db.scalars(select(Feedback).where(Feedback.user_id == u.id))
         ],
         "assets": assets(u, db),
+        "inference_jobs": pending_jobs(u, db),
+        "pending_processing_inputs": [
+            {"id": j.id, "request": open_sealed(j.encrypted)} for j in db.scalars(
+                select(inference_queue.InferenceJob).where(
+                    inference_queue.InferenceJob.user_id == u.id,
+                    inference_queue.InferenceJob.state.in_(["queued", "running"])
+                )
+            )
+        ],
     }
     return Response(
         json.dumps(data, ensure_ascii=False, indent=2),

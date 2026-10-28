@@ -9,6 +9,7 @@ import os, secrets, time
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import select, delete, exists, text
+from sqlalchemy.orm import load_only
 from .store import (
     DB,
     User,
@@ -142,7 +143,7 @@ def purge_expired(factory=DB, at=None, limit=100):
     for identity in ids:
         with factory.begin() as db:
             u = db.scalar(
-                select(User)
+                select(User).options(load_only(User.id, User.role))
                 .where(User.id == identity, User.role == "guest")
                 .with_for_update()
             )

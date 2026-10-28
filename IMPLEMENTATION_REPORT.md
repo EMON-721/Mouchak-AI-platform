@@ -1,8 +1,21 @@
 # Mouchak AI implementation report — 28 October 2026
 
-**Tested account-free platform checkpoint; the full 50-tool production release is not finished.** This resolution continued from `36b485a`, preserving original source requirements and previous ports.
+**Tested account-free platform checkpoint; the full 50-tool production release is not finished.** Continued from the verified GitHub publication head, preserving all original requirements and prior implementation. The owner now selected Netlify for the website and a separate Linux/Docker host for the AI backend; Cloudflare may be added later for DNS/CDN.
 
 The owner's latest instruction removes public login, signup and visitor profiles, superseding the ZIP's end-user account-screen requirements. The Super Admin/operator system retains passwords, roles and MFA. See `docs/PUBLIC_ACCESS.md` for the decision and security details.
+
+## Netlify/Linux continuation — 28 October 2026
+
+- Completed the previously interrupted local fetch and merged the verified publication head without source changes or history loss.
+- Added owner-scoped encrypted 1 MiB chunk uploads, preserving the 10 MiB file contract, SHA-256 integrity, quota reservations, identical scanner/signature checks, idempotent finalization and expiry/clear cascades.
+- Added encrypted durable inference jobs with separate worker subprocesses, bounded attempts/timeouts, crash recovery, lease fencing, cancellation, live session checks and atomic run/consent/transfer publication. Queue mode refuses synchronous bypasses; corrections preserve lineage. The website polls jobs, offers cancellation and reopens completed work from `/work` without visitor accounts.
+- Added shared PostgreSQL request counters, per-owner and transport ceilings, HMAC-protected keys and fail-closed storage behavior. Forwarded client IPs remain untrusted; a shared proxy ceiling and high-volume abuse/load testing are explicit limits.
+- Added migration 005 (24 tables total), separate worker grants, a Netlify Next.js configuration/preflight and a Linux-only Compose/TLS/signature-update template. Actual Docker/Netlify/Linux deployment remains unverified because the required host/account/services are unavailable.
+- Current regression: **343 tests passed**; TypeScript, lint and Next production build pass. All five migrations/RLS/grants/fencing/UPSERT checks pass in actual PostgreSQL WASM. Client chunk/queue/preflight contract checks pass. Evidence: `docs/audit/async-*` and `scripts/test-private-processing.mjs`.
+- Managed browser: an original Bengali evaporation question went through a waiting job, actual MiniLM/BM25 retrieval and a completed result; it reopened through `/work`. Screenshot: `docs/audit/async-browser-rag.jpg`. Browser chunk upload and hosted operation are not claimed.
+- Deployment target and exact secure setup/remaining dependencies: [Netlify + Linux runbook](docs/NETLIFY.md). The 47 support flows, three production-unavailable cores, all advanced model/data/expert gates and the original 430 full-scope acceptance scenarios keep their previous statuses.
+
+The sections below retain earlier checkpoint evidence. New counts and infrastructure source changes above supersede their older totals; they do not certify cloud operation.
 
 ## Resolution update after the account-free checkpoint
 
@@ -30,13 +43,13 @@ The owner's latest instruction removes public login, signup and visitor profiles
 | Requirements | All 778 original-kit files, checksums and 16,269 indexed requirement entries retained | Indexing is not implementation; the 430 original acceptance cases are not all passed |
 | Public tools | All 50 API routes exercised without registration; 47 current support flows process inputs; three cores return explicit errors | No full advanced module is certified complete |
 | Security/privacy | Visitor isolation, expiry rotation, CSRF, clearing, upload/export, legacy preservation, expired-owner support denial and fresh operator MFA tested | Live PostgreSQL/S3/TLS and browser operator MFA still need staging |
-| Tests | **325 passed, zero failed/error/skipped** (59 public-access cases, eight real pose cases and one new pre-import privacy case). Authoritative current suite: `docs/audit/resolution-regression.xml`; focused new cases: `public-sessions.xml` | Earlier artifacts remain historical; they do not replace current results |
+| Tests | **343 passed, zero failed/error/skipped** (59 public-access cases, eight real pose cases and one new pre-import privacy case). Authoritative current suite: `docs/audit/async-regression.xml`; focused new cases: `public-sessions.xml` | Earlier artifacts remain historical; they do not replace current results |
 | Frontend | TypeScript, lint and Next.js production build passed. Logs: `docs/audit/resolution-*.log` | Build success is not cloud operation proof |
 | Browser | No signup: synthetic bill line 125, stated 150, difference 25; result reopened under `/work`; Bengali/English switch; JSON downloaded/parsed; `/admin` guarded; `/register` not found | PDF navigation is blocked by the cloud browser URL/security policy; pose upload automation timed out. Completed browser pose inference, three-width accessibility/responsiveness and operator MFA remain unverified |
 | PDF | Exact browser JSON rendered a valid 473,753-byte PDF locally in 0.08 seconds; anonymous API test opens a readable PDF | This is not a successful browser PDF download claim |
 | Real inference | Existing Bengali/English Tesseract, ONNX multilingual MiniLM + BM25 extractive retrieval, OpenCV registration and optional experimental anomaly/Whisper retained | Bangladesh holdouts, advanced domain/generative pipelines and production speech validation incomplete |
 | Data/legacy | Three local V3 snapshots (25 files), selected original-JS parity tests, 12 CC-BY reading passages, 81-entry commodity dictionary without prices, encrypted stock ledger | Four full remote repos/live migrations unavailable; candidate sources are not approved datasets |
-| Database/operations | Existing 20-table schema/migrations 001–004 preserved; PostgreSQL WASM RLS checks; CMS scheduler, dual rights review, triage, support/transfers and local encrypted recovery retained | External PostgreSQL, production backups, distributed limits/queues and cloud operations unverified |
+| Database/operations | 24-table schema/migrations 001–005; previous tables preserved; PostgreSQL WASM RLS checks; CMS scheduler, dual rights review, triage, support/transfers and local encrypted recovery retained | External PostgreSQL, production backups, hosted distributed limits/queues and cloud operations unverified |
 | GitHub | Complete source published to main at `d93b4f3`; fresh fetch/tree match verified; initial commit retained | GitHub Actions completed successfully; production deployment remains separate |
 
 ## All 50 modules
@@ -53,7 +66,7 @@ The **three unavailable cores** remain ClinicCompass BD (approved facility recor
 |---|---|---|
 | Complete advanced 50-tool pipelines | Partial; no full-module completion claim | Domain CV/PPE/crop/water segmentation, pose/video coaching, audio-event classification, evaluated forecasting, generative RAG and original workflows |
 | Bangladesh datasets/evaluation | Candidate registry and reviewed-import controls | Source-specific rights/freshness/provenance approval, labelled holdouts and expert medical/legal/child review; 244 candidates remain unapproved/unimported |
-| Full Super Admin scope | Selected controls implemented | Full layout/logo/form/locales CMS, remaining moderation, organization/guardian tenancy, canaries/hot-swap/drift, re-embedding and durable inference queues |
+| Full Super Admin scope | Selected controls implemented | Full layout/logo/form/locales CMS, remaining moderation, organization/guardian tenancy, canaries/hot-swap/drift, re-embedding and full model lifecycle controls |
 | Public user scope | Account-free processing implemented as instructed | Persistent profiles, cross-device accounts and signup intentionally removed. Notification API remains; public notification UI is not exposed |
 | Browser E2E | Public processing/history/JSON verified | Browser PDF blocked by cloud security policy; pose upload/inference unverified after automation timeout; operator MFA and accessibility/responsive matrix outstanding |
 | Production infrastructure | Templates/runbooks prepared | Private Python host, TLS domain, PostgreSQL roles, S3/scanner, SMTP, monitoring, distributed limits and production restore/retention not provisioned/verified |

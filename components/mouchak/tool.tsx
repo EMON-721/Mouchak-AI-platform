@@ -1,5 +1,10 @@
 "use client";
 import { requestId } from "./request-id";
+import {
+  uploadPrivateFile,
+  runQueued,
+  type ProcessingJob,
+} from "./private-processing";
 import { PoseReview, poseDetailSummary } from "./pose-review";
 import Link from "next/link";
 import Image from "next/image";
@@ -491,6 +496,9 @@ export function ToolWorkspace({ slug }: { slug: string }) {
   const [workspaces, setWorkspaces] = useState<Workspace[]>([]);
   const [workspaceId, setWorkspaceId] = useState("");
   const [transferId, setTransferId] = useState("");
+  const [pendingJob, setPendingJob] = useState<ProcessingJob | null>(null);
+  const runAbort = useRef<AbortController | null>(null);
+  useEffect(() => () => runAbort.current?.abort(), []);
   useEffect(() => {
     if (!user) return;
     let live = true;
@@ -577,24 +585,38 @@ export function ToolWorkspace({ slug }: { slug: string }) {
     setError("");
     setBusy(true);
     try {
-      const d = await api<RunResult>("/api/tools/" + slug + "/runs", {
-        method: "POST",
-        body: JSON.stringify({
-          inputs,
-          workspace_id: workspaceId || undefined,
-          transfer_id: transferId || undefined,
-          consent,
-          asset_ids: assetIds,
-          language: lang,
-          idempotency_key: requestId(),
-        }),
+      const payload = JSON.stringify({
+        inputs,
+        workspace_id: workspaceId || undefined,
+        transfer_id: transferId || undefined,
+        consent,
+        asset_ids: assetIds,
+        language: lang,
+        idempotency_key: requestId(),
       });
+      const controller = new AbortController();
+      runAbort.current = controller;
+      const d =
+        tool?.execution_mode === "queued"
+          ? await runQueued(
+              api,
+              slug,
+              payload,
+              controller.signal,
+              setPendingJob,
+            )
+          : await api<RunResult>("/api/tools/" + slug + "/runs", {
+              method: "POST",
+              body: payload,
+              signal: controller.signal,
+            });
       setResult(d);
       setTransferId("");
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setBusy(false);
+      setPendingJob(null);
     }
   }
   async function upload(files: FileList | null) {
@@ -611,13 +633,14 @@ export function ToolWorkspace({ slug }: { slug: string }) {
         );
       const ids = [];
       for (const f of Array.from(files).slice(0, 2)) {
-        const data = new FormData();
-        data.append("file", f);
-        data.append("consent", "true");
-        const a = await api<{ id: string; scan_state: string }>("/api/upload", {
-          method: "POST",
-          body: data,
-        });
+        const a = await uploadPrivateFile(api, f, (done, total) =>
+          setUploadNote(
+            t(
+              `ফাইলের ${done}/${total} অংশ পাঠানো হয়েছে`,
+              `Uploaded ${done}/${total} file parts`,
+            ),
+          ),
+        );
         ids.push(a.id);
         if (
           tool &&
@@ -1052,6 +1075,36 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                 ? t("প্রক্রিয়াকরণ চলছে…", "Processing…")
                 : t("পর্যালোচনা ও ফলাফল তৈরি", "Review & process")}
             </button>
+            {pendingJob ? (
+              <div role="status">
+                <p>
+                  {pendingJob.state === "queued"
+                    ? t("কাজটি অপেক্ষায় আছে।", "Your work is waiting.")
+                    : t(
+                        "কাজটি প্রক্রিয়াকরণ হচ্ছে।",
+                        "Your work is processing.",
+                      )}
+                </p>
+                <Link href="/work">
+                  {t("এই session-এর কাজ দেখুন", "View session work")}
+                </Link>
+                <button
+                  type="button"
+                  className="text-link"
+                  onClick={async () => {
+                    try {
+                      await api(`/api/jobs/${pendingJob.id}/cancel`, {
+                        method: "POST",
+                      });
+                    } catch (e) {
+                      setError((e as Error).message);
+                    }
+                  }}
+                >
+                  {t("কাজ বাতিল করুন", "Cancel work")}
+                </button>
+              </div>
+            ) : null}
             <p className="form-footnote">
               <ShieldCheck size={14} />
               {t(

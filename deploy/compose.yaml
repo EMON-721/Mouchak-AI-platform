@@ -42,7 +42,7 @@ services:
     environment:
       MOUCHAK_ENV: production
       DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
-      DATABASE_URL: ${DATABASE_URL:?required}
+      DATABASE_URL: ${RETENTION_DATABASE_URL:?required}
       VISITOR_RETENTION_POLL_SECONDS: 60
     restart: unless-stopped
 volumes:

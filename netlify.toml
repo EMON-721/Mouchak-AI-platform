@@ -1,0 +1,13 @@
+# Canonical Next.js target. Netlify automatically applies its current OpenNext adapter.
+[build]
+  command = "node scripts/check-netlify.mjs && pnpm build:next"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+  PNPM_FLAGS = "--frozen-lockfile"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# PRIVATE_API_URL and PRIVATE_API_TOKEN belong in Netlify's secret environment
+# settings, scoped to BOTH Builds and Functions. Never put them in this file.
+# Each preview requires its own backend origin/configuration and isolated secrets.

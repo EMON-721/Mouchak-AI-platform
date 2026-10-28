@@ -1,3 +1,15 @@
+# Current continuation: Netlify website + Linux backend
+
+The owner chose this architecture on 28 October 2026. Continued from verified GitHub `ca2dc17`; the interrupted fetch completed and local history was preserved. Added migration 005, encrypted bounded chunk uploads, durable leased inference/corrections/cancellation, separate worker roles, shared PostgreSQL request counters, website polling/reopen and Netlify/backend deployment configuration. Original 778-file kit and all prior models/ports remain unchanged.
+
+Current checks: 343 Python tests; TypeScript/lint/Next build; actual PostgreSQL WASM migrations/RLS/grants/fencing/UPSERT across 24 tables; client transport/preflight contracts. A browser queued an original Bengali learning question, received actual retrieval and reopened it from session work. See `docs/audit/async-*` and `docs/NETLIFY.md`.
+
+Not deployed: no Netlify site access/identity, authorized Linux host/API domain, operational PostgreSQL slot, private bucket/scanner/SMTP setup or cloud restore evidence. The former Vercel team grant is irrelevant to the chosen target. No paid upgrade or changes to unrelated resources occurred. The full 50-tool model/data/admin scope and 430 acceptance scenarios remain incomplete. Browser chunk upload, PDF/security-blocked download, pose inference and full operator/responsive/accessibility matrix are not marked passed.
+
+---
+
+Earlier checkpoint history follows and is superseded where it describes missing GitHub access, old test totals or an earlier deployment target.
+
 # GitHub publication completed — 28 October 2026
 
 The owner restored GitHub write access. Complete source was published to `main` at `d93b4f36163a1e0c8ab24bba40ea96b078f8a4da` and fetched back. Remote tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested source checkpoint `4c03fc0`. Initial remote history is preserved; no force-push. The earlier integration 403 is resolved: do not ask the owner to authorize it again. Actions run 40680371782 completed successfully; install, lint/typecheck, tests, PostgreSQL checks and build all passed.

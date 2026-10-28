@@ -30,6 +30,7 @@ export type Tool = {
   description_bn: string;
   release_status: string;
   enabled?: boolean;
+  execution_mode?: "queued" | "synchronous";
   fields?: FieldSpec[];
 };
 export type RunResult = {

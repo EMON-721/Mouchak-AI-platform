@@ -1,0 +1,14 @@
+{
+    email {$TLS_EMAIL}
+}
+
+{$API_HOSTNAME} {
+    request_body {
+        max_size 12MB
+    }
+    reverse_proxy api:8000
+    header {
+        -Server
+        X-Content-Type-Options nosniff
+    }
+}

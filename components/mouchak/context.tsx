@@ -156,7 +156,11 @@ export function Provider({ children }: { children: ReactNode }) {
   const api = useCallback(
     async <T,>(path: string, options: RequestInit = {}): Promise<T> => {
       const h = new Headers(options.headers);
-      if (options.body && !(options.body instanceof FormData))
+      if (
+        options.body &&
+        !(options.body instanceof FormData) &&
+        !h.has("Content-Type")
+      )
         h.set("Content-Type", "application/json");
       if (csrf && loadedMode === mode) h.set("X-CSRF-Token", csrf);
       const r = await fetch(path, { ...options, headers: h });
