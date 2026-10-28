@@ -82,6 +82,10 @@ def main():
     data_key = Fernet.generate_key().decode()
     secret_values = [*role_passwords.values(), pg_password, api_token, s3_password, data_key]
     report = {"fixture_only": True, "cloud_deployment": False, "full_50_tool_scope_certified": False}
+    # Replace checked-in historical evidence before any operation. A failed run
+    # must never upload an older passing report under the current workflow ID.
+    evidence = ROOT / "docs/audit/production-stack.json"
+    evidence.write_text(json.dumps({**report, "result": "running"}, indent=2) + "\n")
     with tempfile.TemporaryDirectory(prefix="mouchak-stack-") as temporary:
         folder = Path(temporary); folder.chmod(0o755)
         certificates(folder / "tls")
@@ -259,6 +263,7 @@ def main():
             (ROOT / "docs/audit/production-stack.json").write_text(json.dumps(report, indent=2) + "\n")
             print(json.dumps(report))
         except Exception as error:
+            evidence.write_text(json.dumps({**report, "result": "failed", "error_class": type(error).__name__}, indent=2) + "\n")
             # Never dump request/response bodies, passwords, tokens or raw DB URLs.
             logs = subprocess.run([*compose, "logs", "--no-color", "--tail", "180"], cwd=ROOT, env=env, capture_output=True, text=True).stdout
             logs = "\n".join(failed_operation) + "\n" + logs
