@@ -7,6 +7,7 @@ import base64, hashlib, io, json, os, re, secrets, ssl, subprocess, sys, tempfil
 from pathlib import Path
 from contextlib import contextmanager
 import boto3, httpx, psycopg
+from botocore.config import Config
 from cryptography.fernet import Fernet
 from PIL import Image, ImageDraw, ImageFont
 from argon2 import PasswordHasher
@@ -34,9 +35,10 @@ def certificates(directory):
     directory.mkdir(mode=0o755)
     def openssl(*args):
         subprocess.run(["openssl", *args], cwd=directory, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    openssl("req", "-x509", "-newkey", "rsa:2048", "-nodes", "-keyout", "ca.key", "-out", "ca.crt", "-days", "2", "-subj", "/CN=Mouchak Disposable Integration CA")
+    openssl("req", "-x509", "-newkey", "rsa:2048", "-nodes", "-keyout", "ca.key", "-out", "ca.crt", "-days", "2", "-subj", "/CN=Mouchak Disposable Integration CA",
+            "-addext", "keyUsage=critical,keyCertSign,cRLSign")
     openssl("req", "-newkey", "rsa:2048", "-nodes", "-keyout", "server.key", "-out", "server.csr", "-subj", "/CN=localhost")
-    (directory / "extensions").write_text("subjectAltName=DNS:localhost,DNS:database,DNS:objectstore,IP:127.0.0.1\nextendedKeyUsage=serverAuth\n")
+    (directory / "extensions").write_text("subjectAltName=DNS:localhost,DNS:database,DNS:objectstore,IP:127.0.0.1\nextendedKeyUsage=serverAuth\nbasicConstraints=critical,CA:FALSE\nkeyUsage=critical,digitalSignature,keyEncipherment\nsubjectKeyIdentifier=hash\nauthorityKeyIdentifier=keyid,issuer\n")
     openssl("x509", "-req", "-in", "server.csr", "-CA", "ca.crt", "-CAkey", "ca.key", "-CAcreateserial", "-out", "server.crt", "-days", "2", "-extfile", "extensions")
     (directory / "public.crt").write_bytes((directory / "server.crt").read_bytes())
     (directory / "private.key").write_bytes((directory / "server.key").read_bytes())
@@ -116,7 +118,8 @@ def main():
             report["four_isolated_roles"] = True
             s3 = boto3.client("s3", endpoint_url=f"https://127.0.0.1:{object_port}",
                               aws_access_key_id=s3_user, aws_secret_access_key=s3_password,
-                              region_name="us-east-1", verify=str(folder / "tls/ca.crt"))
+                              region_name="us-east-1", verify=str(folder / "tls/ca.crt"),
+                              config=Config(s3={"addressing_style":"path"}, connect_timeout=3, read_timeout=5, retries={"total_max_attempts":1}))
             wait_for(lambda: s3.list_buckets() is not None)
             s3.create_bucket(Bucket="mouchak-private-test")
             report["s3_tls_verified"] = True

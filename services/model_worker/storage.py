@@ -7,8 +7,18 @@ from .store import STATE, CIPHER, PRODUCTION
 
 def client():
     import boto3
+    from botocore.config import Config
 
-    return boto3.client("s3", endpoint_url=os.getenv("S3_ENDPOINT_URL") or None)
+    endpoint = os.getenv("S3_ENDPOINT_URL") or None
+    if PRODUCTION and endpoint and not endpoint.startswith("https://"):
+        raise RuntimeError("Production S3 endpoints require HTTPS")
+    style = os.getenv("S3_ADDRESSING_STYLE") or ("path" if endpoint else "auto")
+    if style not in ["auto", "path", "virtual"]:
+        raise RuntimeError("Invalid S3 addressing configuration")
+    return boto3.client("s3", endpoint_url=endpoint, config=Config(
+        s3={"addressing_style": style}, connect_timeout=3, read_timeout=15,
+        retries={"mode": "standard", "total_max_attempts": 1},
+    ))
 
 
 def put(aid, data):
