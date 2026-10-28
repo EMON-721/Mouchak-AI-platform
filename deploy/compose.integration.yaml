@@ -1,0 +1,104 @@
+# Disposable CI fixtures only. Not a cloud deployment or a production S3 server.
+# The harness generates isolated secrets/certificates and removes only its own project.
+x-image: &image
+  build: {context: .., dockerfile: deploy/Dockerfile.api}
+  image: ${MOUCHAK_TEST_IMAGE:?required}
+  init: true
+x-environment: &environment
+  MOUCHAK_ENV: production
+  DATA_ENCRYPTION_KEY: ${MOUCHAK_TEST_DATA_KEY:?required}
+  PRIVATE_API_TOKEN: ${MOUCHAK_TEST_API_TOKEN:?required}
+  PUBLIC_ORIGIN: https://mouchak.integration.test
+  DATABASE_URL: ${MOUCHAK_TEST_APP_DSN:?required}
+  S3_ENDPOINT_URL: https://objectstore:9000
+  S3_BUCKET: mouchak-private-test
+  AWS_ACCESS_KEY_ID: ${MOUCHAK_TEST_S3_USER:?required}
+  AWS_SECRET_ACCESS_KEY: ${MOUCHAK_TEST_S3_PASSWORD:?required}
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_CA_BUNDLE: /test-ca/ca.crt
+  ENABLE_DURABLE_INFERENCE: "1"
+  ENABLE_EXPERIMENTAL_POSE: "0"
+  ORT_DISABLE_TELEMETRY: "1"
+  HF_HUB_DISABLE_TELEMETRY: "1"
+
+services:
+  database:
+    image: postgres:17.7
+    entrypoint: [/bin/bash, -ec]
+    command:
+      - |
+        install -o postgres -g postgres -m 600 /test-tls/server.key /tmp/mouchak-server.key
+        exec /usr/local/bin/docker-entrypoint.sh postgres -c ssl=on -c ssl_cert_file=/test-tls/server.crt -c ssl_key_file=/tmp/mouchak-server.key
+    environment:
+      POSTGRES_DB: mouchak_integration
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${MOUCHAK_TEST_PG_PASSWORD:?required}
+    volumes: ["${MOUCHAK_TEST_DIR:?required}/tls:/test-tls:ro", "database:/var/lib/postgresql/data"]
+    ports: ["127.0.0.1::5432"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U postgres -d mouchak_integration"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  objectstore:
+    # Archived Community image retained ONLY as a protocol test fixture, not
+    # recommended or deployed for production. No real user data is placed here.
+    image: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z
+    user: root
+    command: [server, /data, --address, ":9000", --console-address, ":9001", --certs-dir, /test-tls]
+    environment:
+      MINIO_ROOT_USER: ${MOUCHAK_TEST_S3_USER:?required}
+      MINIO_ROOT_PASSWORD: ${MOUCHAK_TEST_S3_PASSWORD:?required}
+      MINIO_KMS_SECRET_KEY: ${MOUCHAK_TEST_S3_KMS:?required}
+    volumes: ["${MOUCHAK_TEST_DIR:?required}/tls:/test-tls:ro", "objects:/data"]
+    ports: ["127.0.0.1::9000"]
+  model-init:
+    <<: *image
+    command: [python, scripts/download-models.py]
+    volumes: [models:/app/models]
+  api:
+    <<: *image
+    environment: *environment
+    volumes:
+      - models:/app/models:ro
+      - "${MOUCHAK_TEST_DIR:?required}/tls/ca.crt:/test-ca/ca.crt:ro"
+      - "${MOUCHAK_TEST_DIR:?required}/signatures:/var/lib/clamav:ro"
+    depends_on:
+      model-init: {condition: service_completed_successfully}
+      database: {condition: service_healthy}
+    mem_limit: 3g
+  inference:
+    <<: *image
+    command: [python, -m, services.model_worker.inference_worker]
+    environment:
+      <<: *environment
+      DATABASE_URL: ${MOUCHAK_TEST_INFERENCE_DSN:?required}
+    volumes: ["models:/app/models:ro", "${MOUCHAK_TEST_DIR:?required}/tls/ca.crt:/test-ca/ca.crt:ro"]
+    stop_grace_period: 250s
+    mem_limit: 3g
+  scheduler:
+    <<: *image
+    command: [python, -m, services.model_worker.scheduler]
+    environment:
+      <<: *environment
+      DATABASE_URL: ${MOUCHAK_TEST_SCHEDULER_DSN:?required}
+      SCHEDULER_POLL_SECONDS: 1
+    volumes: ["${MOUCHAK_TEST_DIR:?required}/tls/ca.crt:/test-ca/ca.crt:ro"]
+  retention:
+    <<: *image
+    command: [python, -m, services.model_worker.visitor_retention]
+    environment:
+      <<: *environment
+      DATABASE_URL: ${MOUCHAK_TEST_RETENTION_DSN:?required}
+      VISITOR_RETENTION_POLL_SECONDS: 5
+    volumes: ["${MOUCHAK_TEST_DIR:?required}/tls/ca.crt:/test-ca/ca.crt:ro"]
+  gateway:
+    image: caddy:2-alpine
+    volumes: ["${MOUCHAK_TEST_DIR:?required}/tls:/test-tls:ro", "./Caddyfile.integration:/etc/caddy/Caddyfile:ro"]
+    ports: ["127.0.0.1::443"]
+    depends_on: [api]
+
+volumes:
+  database:
+  objects:
+  models:

@@ -1,5 +1,6 @@
 "use client";
 import { requestId } from "./request-id";
+import type { BillDraft } from "./bill-workbench";
 import {
   uploadPrivateFile,
   runQueued,
@@ -476,6 +477,8 @@ const uploadEngines = new Set([
   "audio",
   "video",
 ]);
+const BillWorkbench = dynamic(() => import("./bill-workbench"));
+
 export function ToolWorkspace({ slug }: { slug: string }) {
   const { t, lang, user, loading, api } = useApp();
   const initial = tools.find((m) => m.slug === slug);
@@ -496,6 +499,7 @@ export function ToolWorkspace({ slug }: { slug: string }) {
   const [workspaces, setWorkspaces] = useState<Workspace[]>([]);
   const [workspaceId, setWorkspaceId] = useState("");
   const [transferId, setTransferId] = useState("");
+  const [billDraft, setBillDraft] = useState<BillDraft | null>(null);
   const [pendingJob, setPendingJob] = useState<ProcessingJob | null>(null);
   const runAbort = useRef<AbortController | null>(null);
   useEffect(() => () => runAbort.current?.abort(), []);
@@ -649,11 +653,19 @@ export function ToolWorkspace({ slug }: { slug: string }) {
           tool.engine !== "image_compare" &&
           tool.engine !== "drain"
         ) {
-          const d = await api<{ pages: { text: string }[] }>(
-            "/api/assets/" + a.id + "/ocr",
-            { method: "POST" },
-          );
-          setOcrText(d.pages.map((p) => p.text).join("\n\n"));
+          if (tool.slug === "billdetect-ai") {
+            setBillDraft(
+              await api<BillDraft>("/api/bills/extract/" + a.id, {
+                method: "POST",
+              }),
+            );
+          } else {
+            const d = await api<{ pages: { text: string }[] }>(
+              "/api/assets/" + a.id + "/ocr",
+              { method: "POST" },
+            );
+            setOcrText(d.pages.map((p) => p.text).join("\n\n"));
+          }
         }
       }
       setAssetIds(ids);
@@ -1115,6 +1127,15 @@ export function ToolWorkspace({ slug }: { slug: string }) {
           </form>
           {result ? (
             <ResultView result={result} onDelete={() => setResult(null)} />
+          ) : null}
+          {slug === "billdetect-ai" ? (
+            <BillWorkbench
+              key={assetIds[0] || "manual"}
+              workspaceId={workspaceId}
+              processingConsent={consent}
+              draft={billDraft}
+              assetId={assetIds[0]}
+            />
           ) : null}
         </div>
         <aside className="tool-context">

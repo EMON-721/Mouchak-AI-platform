@@ -177,7 +177,7 @@ def retrieve(question, grade=None, lang="bn"):
     return r
 
 
-def ocr(data, kind):
+def ocr(data, kind, page_number=None):
     from io import BytesIO
 
     pages = []
@@ -187,11 +187,21 @@ def ocr(data, kind):
         pdf = pdfium.PdfDocument(data)
         if len(pdf) > 10:
             raise InputError("At most 10 PDF pages / সর্বোচ্চ ১০ পৃষ্ঠা")
-        for page in pdf:
+        total_pages = len(pdf)
+        if page_number is not None and not 1 <= page_number <= total_pages:
+            raise InputError("Page does not exist / এই পৃষ্ঠা নেই")
+        for index in ([page_number - 1] if page_number is not None else range(total_pages)):
+            page = pdf[index]
+            width, height = page.get_size()
+            if width * height * 4 > 24000000:
+                raise InputError("PDF page exceeds the image resolution limit")
             pages.append(page.render(scale=2).to_pil())
     else:
         im = Image.open(BytesIO(data))
         im.load()
+        if page_number not in [None, 1]:
+            raise InputError("Images have one page")
+        total_pages = 1
         pages = [im.convert("RGB")]
     text_pages = []
     bn = (MODEL_DIR / "ben.traineddata").exists()
@@ -204,7 +214,7 @@ def ocr(data, kind):
             args = [
                 "tesseract",
                 str(path),
-                "stdout",
+                str(Path(d) / f"ocr-{idx}"),
                 "-l",
                 "ben+eng" if bn else "eng",
                 "--psm",
@@ -212,15 +222,32 @@ def ocr(data, kind):
             ]
             if bn:
                 args += ["--tessdata-dir", str(MODEL_DIR)]
+            args += ["-c", "tessedit_create_tsv=1", "-c", "tessedit_create_txt=1"]
             try:
-                r = subprocess.run(
-                    args, capture_output=True, text=True, timeout=45, check=True
-                )
+                subprocess.run(args, capture_output=True, text=True, timeout=45, check=True)
             except (subprocess.CalledProcessError, subprocess.TimeoutExpired, OSError):
                 raise InputError("OCR failed or timed out / OCR ব্যর্থ বা সময় শেষ")
-            text_pages.append({"page": idx + 1, "text": r.stdout.strip()})
+            import csv
+            words = []
+            with (Path(d) / f"ocr-{idx}.tsv").open() as tabular:
+                for row in csv.DictReader(tabular, delimiter="\t", quoting=csv.QUOTE_NONE):
+                    if row.get("level") != "5" or not row.get("text", "").strip():
+                        continue
+                    if len(words) >= 10000:
+                        raise InputError("OCR word limit reached")
+                    confidence = float(row["conf"])
+                    words.append({"text": row["text"], "engine_word_confidence": confidence,
+                                  "low_confidence_heuristic": confidence < 60,
+                                  "x": int(row["left"]), "y": int(row["top"]),
+                                  "width": int(row["width"]), "height": int(row["height"]),
+                                  "line": f"{row['block_num']}:{row['par_num']}:{row['line_num']}"})
+            text_pages.append({"page": page_number or idx + 1,
+                               "text": (Path(d) / f"ocr-{idx}.txt").read_text().strip(),
+                               "words": words, "image_width": im.width, "image_height": im.height})
     return {
         "pages": text_pages,
+        "page_count": total_pages,
+        "word_confidence_is_calibrated": False,
         "model": "Tesseract 5 ben+eng" if bn else "Tesseract 5 eng only",
         "human_confirmation_required": True,
         "confidence": "not calibrated; review all digits",

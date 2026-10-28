@@ -11,6 +11,7 @@ from . import (
     collaboration,
     operations,
     anonymous,
+    bills,
     uploads, rate_limit, inference_queue,
 )  # register all additive tables before migration
 

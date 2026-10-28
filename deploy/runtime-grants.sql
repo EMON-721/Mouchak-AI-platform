@@ -26,3 +26,5 @@ GRANT SELECT,DELETE ON chunk_uploads,upload_parts,request_rate_buckets TO moucha
 
 -- Existing API/auth/CMS and scheduler grants remain in the prior deployment
 -- guide. This file adds only the new runtime/cleanup capabilities.
+
+GRANT SELECT,INSERT,UPDATE,DELETE ON bill_history_entries,bill_personal_models TO mouchak_app;

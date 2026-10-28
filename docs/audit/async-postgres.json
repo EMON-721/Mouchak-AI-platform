@@ -1,5 +1,5 @@
 {
-  "schema_tables": 24,
+  "schema_tables": 26,
   "additive_migration_reapplied": true,
   "owner_and_worker_rls": "passed",
   "stale_lease_fence": "passed",

@@ -20,3 +20,5 @@ faster-whisper==1.2.1
 boto3==1.43.119
 scikit-learn==1.8.0
 rapidfuzz==3.14.6
+onnx==1.23.2
+skl2onnx==1.20.0

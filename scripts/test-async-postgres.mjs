@@ -10,6 +10,7 @@ for (const file of [
   "003_retail_stock",
   "004_collaboration_operations",
   "005_async_runtime",
+  "006_private_bills",
 ])
   await db.exec(await readFile(`database/migrations/${file}.sql`, "utf8"));
 // Reapplying the additive migration preserves existing tables and policies.

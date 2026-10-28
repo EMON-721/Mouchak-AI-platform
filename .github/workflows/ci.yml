@@ -1,4 +1,6 @@
 name: Mouchak checks
+permissions:
+  contents: read
 env:
   ORT_DISABLE_TELEMETRY: '1'
   HF_HUB_DISABLE_TELEMETRY: '1'
@@ -16,7 +18,7 @@ jobs:
       - run: pnpm typecheck && pnpm lint
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-ben ffmpeg
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-ben ffmpeg fonts-dejavu-core
       - run: pip install -r requirements-python.txt
       - run: python scripts/check-registry.py
       - run: python scripts/download-models.py
@@ -30,3 +32,18 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: test-evidence, path: ci-results.xml}
+  private-stack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - name: Install integration-controller dependencies
+        run: pip install psycopg[binary]==3.3.6 cryptography==50.0.2 boto3==1.43.119 httpx==0.28.1 Pillow==12.3.0 argon2-cffi==25.1.0
+      - name: Verify isolated TLS database, storage, scanner, roles and model containers
+        run: python scripts/test-production-stack.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: private-stack-evidence, path: docs/audit/production-stack.json}

@@ -22,7 +22,7 @@ from .auth import *
 from .domain import process, F, InputError
 from .inference import model_health, ocr, compare_images, audio_stats, retrieve
 from . import storage, rate_limit, uploads, inference_queue
-from . import retail, collaboration, operations, anonymous
+from . import retail, collaboration, operations, anonymous, bills
 from . import pose_runtime, pose_video
 from .legacy_workflows import READING, PRODUCTS, reading_reflection, basket_compare
 
@@ -49,6 +49,7 @@ app.include_router(collaboration.router)
 app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
+app.include_router(bills.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
 
@@ -524,6 +525,11 @@ def withdraw(cid: str, u=Depends(identify), db=Depends(db_session)):
     if not c:
         raise HTTPException(404)
     c.granted = False
+    if c.module == "billdetect-ai" and c.purpose in ["private_bill_model_training", "training_contribution"]:
+        from sqlalchemy import update
+        db.scalar(select(User.id).where(User.id == u.id).with_for_update())
+        db.execute(delete(bills.BillModel).where(bills.BillModel.user_id == u.id))
+        db.execute(update(bills.BillEntry).where(bills.BillEntry.user_id == u.id).values(training_allowed=False))
     return {"withdrawn": True, "training_corpus_uses": 0}
 
 
@@ -944,6 +950,8 @@ def account_export(u=Depends(identify), db=Depends(db_session)):
         ],
         "assets": assets(u, db),
         "inference_jobs": pending_jobs(u, db),
+        "bill_history": [bills.entry_view(r) for r in db.scalars(select(bills.BillEntry).where(bills.BillEntry.user_id == u.id))],
+        "bill_model_cards": [open_sealed(r.encrypted)["card"] for r in db.scalars(select(bills.BillModel).where(bills.BillModel.user_id == u.id))],
         "pending_processing_inputs": [
             {"id": j.id, "request": open_sealed(j.encrypted)} for j in db.scalars(
                 select(inference_queue.InferenceJob).where(
