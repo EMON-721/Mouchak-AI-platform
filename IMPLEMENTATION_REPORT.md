@@ -11,7 +11,7 @@ The owner's latest instruction removes public login, signup and visitor profiles
 - Fixed development `.env` loading and restored a compatible Python executable path after environment maintenance. The actual live browser showed GoliCoach experimental controls. Upload automation timed out; its outcome is unknown and no completed browser pose processing is claimed.
 - Diagnosed the PDF verification issue as a cloud browser security/URL block (`ERR_BLOCKED_BY_CLIENT`), rather than a demonstrated PDF-generation failure. Actual API and readable-document checks pass. The browser restriction was not bypassed.
 - Added a checksum-controlled model-init Compose job, copied acquisition scripts/manifests into the API image, aligned image state/model paths, and made the API wait for successful model acquisition. Compose references are validated; no Docker daemon/image execution or cloud deployment is claimed.
-- Checked available hosting connections. The owner selected the connected Supabase organization. It quoted $0/month, then refused creation because the two-active-free-project quota was exhausted. No new project, pause/delete, paid upgrade or production deployment occurred. GitHub still returns an integration write 403. Exact remaining account actions are in `docs/ISSUE_RESOLUTION.md`.
+- Checked available hosting connections. The owner selected the connected Supabase organization. It quoted $0/month, then refused creation because the two-active-free-project quota was exhausted. No new project, pause/delete, paid upgrade or production deployment occurred. GitHub write access is now restored and complete source publication is verified. Exact remaining account actions are in `docs/ISSUE_RESOLUTION.md`.
 
 ## Completed in this continuation
 
@@ -37,7 +37,7 @@ The owner's latest instruction removes public login, signup and visitor profiles
 | Real inference | Existing Bengali/English Tesseract, ONNX multilingual MiniLM + BM25 extractive retrieval, OpenCV registration and optional experimental anomaly/Whisper retained | Bangladesh holdouts, advanced domain/generative pipelines and production speech validation incomplete |
 | Data/legacy | Three local V3 snapshots (25 files), selected original-JS parity tests, 12 CC-BY reading passages, 81-entry commodity dictionary without prices, encrypted stock ledger | Four full remote repos/live migrations unavailable; candidate sources are not approved datasets |
 | Database/operations | Existing 20-table schema/migrations 001–004 preserved; PostgreSQL WASM RLS checks; CMS scheduler, dual rights review, triage, support/transfers and local encrypted recovery retained | External PostgreSQL, production backups, distributed limits/queues and cloud operations unverified |
-| GitHub | Destination supplied/read verified: EMON-721/Mouchak-AI-platform; initial commit/README preserved | Writes rejected 403; no push, remote CI, PR or production deployment succeeded |
+| GitHub | Complete source published to main at `d93b4f3`; fresh fetch/tree match verified; initial commit retained | GitHub Actions completed successfully; production deployment remains separate |
 
 ## All 50 modules
 
@@ -57,15 +57,15 @@ The **three unavailable cores** remain ClinicCompass BD (approved facility recor
 | Public user scope | Account-free processing implemented as instructed | Persistent profiles, cross-device accounts and signup intentionally removed. Notification API remains; public notification UI is not exposed |
 | Browser E2E | Public processing/history/JSON verified | Browser PDF blocked by cloud security policy; pose upload/inference unverified after automation timeout; operator MFA and accessibility/responsive matrix outstanding |
 | Production infrastructure | Templates/runbooks prepared | Private Python host, TLS domain, PostgreSQL roles, S3/scanner, SMTP, monitoring, distributed limits and production restore/retention not provisioned/verified |
-| GitHub publication | Authorized destination identified; write blocked | Connected integration Contents write and workflow publication permission, or secure local Git authentication; no new repository URL needed |
+| GitHub publication | Published and verified; previous authorization blocker resolved | CI result and production deployment are separate checks |
 
 The government Open Data terms endpoint previously returned 403. No restricted corpus was scraped and no government, facility, pharmacy, price or model-evaluation data was invented. Dataset/model references remain preserved for lawful continuation.
 
-## GitHub findings and exact next action
+## GitHub publication result
 
-Fetched remote initial main: `d84fe4327693cb73dae0e0b80f936b9567eafd54` (README only). Its text is retained in `docs/reference/github-initial-README.md`; its commit is preserved in the prepared local branch history.
+The owner authorized repository access. Complete source was published to `main` at [d93b4f3](https://github.com/EMON-721/Mouchak-AI-platform/commit/d93b4f36163a1e0c8ab24bba40ea96b078f8a4da), preserving the initial remote parent `d84fe4327693cb73dae0e0b80f936b9567eafd54`. A fresh fetch verified tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested local source checkpoint `4c03fc0`. All 1,127 files, including all 778 original-kit files, are present. The Git Data API publication has its own commit metadata/SHA; the complete local development history remains in the delivered bundle.
 
-Repository metadata reports user push/admin rights, but two native blob writes returned **403: Resource not accessible by integration**. Terminal push dry-run failed because no HTTPS Git credential exists. No ref update/push succeeded and the remote was not overwritten. This is connection authorization, not a missing destination. Authorize the connected GitHub app for this repository with Contents write and workflow publication permission, or authenticate Git through your own secure credential flow. Never paste a token into chat. `docs/DEPLOYMENT.md` provides the prepared non-force branch push and host sequence.
+The previous integration 403 is resolved. [GitHub Actions](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782) completed successfully, including installation, lint/typecheck, tests, PostgreSQL checks and build. No production deployment or all-50 advanced-module certification is implied by publishing source.
 
 ## Deliverables and continuation
 

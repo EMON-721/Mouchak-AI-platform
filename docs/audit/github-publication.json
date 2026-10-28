@@ -1,0 +1,21 @@
+{
+  "repository": "EMON-721/Mouchak-AI-platform",
+  "branch": "main",
+  "write_access_verified": true,
+  "published": true,
+  "verified_checkpoint_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+  "verified_tree": "62570204e17e97886dd69fe82590d80d7c2575ef",
+  "tested_local_source_checkpoint": "4c03fc03241e4a910adfa8ba2cbf1ab5905826d4",
+  "source_paths": 1127,
+  "original_kit_files": 778,
+  "remote_fetch_tree_match": true,
+  "initial_remote_commit_preserved": "d84fe4327693cb73dae0e0b80f936b9567eafd54",
+  "transport": "Authorized GitHub Git Data API",
+  "force_push": false,
+  "ci_run_id": 40680371782,
+  "ci_pass_claim": true,
+  "production_deployed": false,
+  "ci_status": "completed",
+  "ci_conclusion": "success",
+  "ci_url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782"
+}

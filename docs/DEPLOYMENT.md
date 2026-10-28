@@ -16,21 +16,13 @@ The Next.js container uses the verified `build:next` path. The Sites-compatible 
 
 Production refuses SQLite and a missing stable encryption key. Uploads fail closed without scanning and private S3. Experimental speech/anomaly endpoints are disabled in production. Sensitive training/reuse requires matching independent asset reviews; schema-specific import/publication and evaluation remain separate gates. An admin flag cannot make a model production-validated.
 
-## GitHub destination and actual blocker
+## GitHub publication
 
-Authorized repository: `https://github.com/EMON-721/Mouchak-AI-platform`. Read access verified. Remote main was `d84fe4327693cb73dae0e0b80f936b9567eafd54` (initial README only); that README is retained at `docs/reference/github-initial-README.md`. Existing initial history is included in the local release branch without deleting its commit.
+Authorized repository: https://github.com/EMON-721/Mouchak-AI-platform. The earlier integration write 403 was resolved after the owner authorized access. The complete checkpoint was published to `main` at `d93b4f36163a1e0c8ab24bba40ea96b078f8a4da`. Its tree `62570204e17e97886dd69fe82590d80d7c2575ef` was verified against tested local checkpoint `4c03fc0` and fetched back with no source difference. The remote initial commit remains an ancestor, and its README is retained in `docs/reference/github-initial-README.md`. No force-push was used.
 
-Two native Git blob writes were rejected with HTTP 403, `Resource not accessible by integration`. Repository metadata reports the user's push/admin rights, but those are not proof that the connected integration can write. Terminal dry-run also failed because no HTTPS Git credential was available. No ref update or push succeeded, so no remote CI result exists.
+Publication used the connected GitHub Git Data API because terminal Git has no HTTPS credential. GitHub's commit SHA differs from the local development checkpoint, but all file contents/modes match cryptographically. The local history bundle preserves earlier development commits.
 
-Remaining action: authorize the connected GitHub app for this exact repository with Contents write access (and Workflows write access to publish `.github/workflows/ci.yml`), or authenticate Git locally in your own secure credential flow. Do not paste a token into chat or commit it. Then fetch and inspect the actual remote before pushing the prepared branch:
-
-```bash
-git fetch github main
-git log --oneline --all -8
-git push github feat/public-tools-no-accounts:feat/public-tools-no-accounts
-```
-
-The prepared local branch preserves the fetched initial commit as an ancestor. If remote main changed afterward, integrate that history first. Do not force-push. Review the resulting source and run remote CI before promoting a deployment.
+GitHub Actions completed successfully: https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782. Cloud deployment, Supabase capacity and the model/domain release gates remain separate. Future updates must fetch/inspect the actual remote, preserve concurrent changes and avoid force-push.
 
 ## Account-free session operations
 

@@ -4,31 +4,20 @@ This is the continuation of the existing platform, not a new homepage build. Pub
 
 | Issue | Completed work | Remaining restriction |
 |---|---|---|
-| GitHub 403 | Verified the supplied repository, preserved its initial commit and prepared the full source/history branch | Connected integration still rejects blob writes; no push or remote CI succeeded |
+| GitHub 403 | Resolved after owner authorization. Full source published to main, then fetched and tree-matched to the tested checkpoint; initial remote commit retained | Remote CI passed; no production deployment implied |
 | Full advanced models | Implemented and tested actual experimental GoliCoach person/pose inference, private MP4 handling, timestamps, angles, comparison and replay controls | No Bangladesh cricket holdout or coach-approved suggestions; all 50 full advanced acceptance gates remain incomplete |
 | Hosting | Inspected connected providers; corrected container state/model paths, acquisition tooling and Compose model-init dependency | Supabase project creation rejected at the two-active-free-project quota; live private compute/storage/scanning/SMTP/operations remain unconfigured |
 | Browser PDF | Actual API generation/readable PDF verified; identified `ERR_BLOCKED_BY_CLIENT` and explicit cloud browser URL/security denial | Browser download verification is blocked by this environment; no workaround/bypass or browser-pass claim |
 | Runtime telemetry | Disabled ONNX 1DS before import, disabled Hugging Face telemetry, added API opt-out, CI/container settings and initialization-order test | Earlier automatic-review-blocked telemetry attempt is historical; no prior absence-of-traffic claim |
 | Verification | 325 tests passed; TypeScript, lint and Next production build passed; exact registry/source checksums retained | Pose upload automation timed out; completed pose browser E2E, operator MFA browser flow and responsive/accessibility matrix are not verified |
 
-## GitHub — the URL is already known
+## GitHub publication verified
 
-Target: https://github.com/EMON-721/Mouchak-AI-platform. The actual error is `403 Resource not accessible by integration`. User push/admin rights in repository metadata do not give the integration those rights.
+Repository: https://github.com/EMON-721/Mouchak-AI-platform. The owner approved access; a real blob write succeeded. All 1,127 source paths were uploaded using the authorized GitHub Git Data API. Every separately uploaded blob SHA was checked. The complete remote tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches the tested local checkpoint `4c03fc0`.
 
-The required owner action is to authorize a write-capable GitHub connection for this exact repository. It needs Contents write access, and permission to publish the tracked workflow. Review the installed app/repository selection and any pending permission update. If that integration cannot request write access, use secure authenticated Git in your own environment instead. Changing GitHub Actions workflow-token permissions does not repair this external connector's token. Do not paste credentials into chat.
+First verified publication: [d93b4f3](https://github.com/EMON-721/Mouchak-AI-platform/commit/d93b4f36163a1e0c8ab24bba40ea96b078f8a4da). A fresh Git fetch and empty source diff verified it. Its parent is the original remote initial commit `d84fe4327693cb73dae0e0b80f936b9567eafd54`. No force-push occurred. Earlier local development history remains preserved in the source delivery's Git bundle; the API publication has its own commit SHA because GitHub creates its author/commit metadata.
 
-The complete prepared branch is `feat/public-tools-no-accounts`. Its history already includes remote initial commit `d84fe4327693cb73dae0e0b80f936b9567eafd54`; the initial README text is retained. After authorization, fetch/inspect changes and push without force:
-
-```bash
-git remote add github https://github.com/EMON-721/Mouchak-AI-platform.git # only if absent
-git fetch github main
-git log --oneline --all -8
-git push github feat/public-tools-no-accounts:feat/public-tools-no-accounts
-```
-
-If remote main changed, integrate that history first. Record the actual pushed commit and remote CI afterward. Nothing in this delivery claims that they already succeeded.
-
-GitHub's official explanation: https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api#resource-not-accessible
+The earlier `403 Resource not accessible by integration` blocker is resolved. No new repository URL, credentials in chat or permission confirmation is needed. [GitHub Actions](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782) completed successfully for this publication. This verifies CI, not production deployment.
 
 ## Hosting — creation was attempted, not assumed
 

@@ -1,3 +1,11 @@
+# GitHub publication completed — 28 October 2026
+
+The owner restored GitHub write access. Complete source was published to `main` at `d93b4f36163a1e0c8ab24bba40ea96b078f8a4da` and fetched back. Remote tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested source checkpoint `4c03fc0`. Initial remote history is preserved; no force-push. The earlier integration 403 is resolved: do not ask the owner to authorize it again. Actions run 40680371782 completed successfully; install, lint/typecheck, tests, PostgreSQL checks and build all passed.
+
+Runtime implementation and the 325 passing local tests are unchanged. Supabase free-project quota, private hosting, browser verification limits and full domain-model/data evaluation remain as documented. Resume current Git source; do not rebuild completed modules.
+
+---
+
 # Latest resolution checkpoint — resume this branch
 
 Continue after `36b485a` and the pose feature commit `6c1d384`; all earlier source/history is preserved. Do not reread/rebuild the original kit. The latest full regression is 325 passed in `docs/audit/resolution-regression.xml`; current TypeScript/lint/Next production build passed. Original 430 acceptance cases and all 50 complete advanced models remain unvalidated.

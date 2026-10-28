@@ -9,7 +9,7 @@
   "original_acceptance_complete": false,
   "next_build_passed": true,
   "sites_build_passed": true,
-  "github_pushed": false,
+  "github_pushed": true,
   "production_deployed": false,
   "test_artifact": "docs/audit/resolution-regression.xml",
   "resume_new_tests": 35,
@@ -31,5 +31,10 @@
   "pose_browser_form_verified": true,
   "pose_browser_inference_verified": false,
   "pdf_browser_verified": false,
-  "pdf_browser_blocker": "Browser security policy"
+  "pdf_browser_blocker": "Browser security policy",
+  "github_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+  "github_tree_verified": "62570204e17e97886dd69fe82590d80d7c2575ef",
+  "github_ci_verified": true,
+  "github_ci_run_id": 40680371782,
+  "github_ci_conclusion": "success"
 }

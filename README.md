@@ -64,7 +64,7 @@ Inference tests run actual OCR, multilingual embedding/retrieval, OpenCV and ano
 
 ## Deployment and GitHub
 
-Authorized destination: [EMON-721/Mouchak-AI-platform](https://github.com/EMON-721/Mouchak-AI-platform). Its initial commit and README are preserved. The connector reads the repository but rejects blob writes with HTTP 403 “Resource not accessible by integration”; terminal Git has no HTTPS credentials. No remote code push, CI success or production deployment is claimed. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the exact remaining connection and hosting steps.
+Source repository: [EMON-721/Mouchak-AI-platform](https://github.com/EMON-721/Mouchak-AI-platform). GitHub write authorization is now verified, and the complete 1,127-file checkpoint was published to `main` in [commit `d93b4f3`](https://github.com/EMON-721/Mouchak-AI-platform/commit/d93b4f36163a1e0c8ab24bba40ea96b078f8a4da). A fresh fetch verified its tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested local source checkpoint `4c03fc0`. The original remote initial commit remains an ancestor. GitHub Actions [run 40680371782](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782) completed successfully, including tests, PostgreSQL checks and the Next build. Production hosting remains unconfigured. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 Run the visitor retention worker alongside the API:
 
@@ -84,4 +84,4 @@ Shared support/transfer/rights/scheduling setup: [docs/COLLABORATION_AND_OPERATI
 
 ONNX/Hugging Face telemetry is disabled before model-runtime import. The API image and CI carry the same settings. Compose now includes a checksum-verified model-init service and blocks API startup until model acquisition succeeds. Its image/mount state paths agree. Docker image execution remains unverified because no daemon is available.
 
-The owner-selected Supabase organization returned a $0 quote but refused project creation because its two-active-free-project quota is full. No project was created, paused, deleted or upgraded. GitHub still rejects integration writes; source is prepared for the supplied repository. Browser PDF navigation is blocked by the cloud browser security policy; pose upload automation timed out, so no completed browser inference/upload claim is made. Current exact blockers and next actions are in [docs/ISSUE_RESOLUTION.md](docs/ISSUE_RESOLUTION.md).
+The owner-selected Supabase organization returned a $0 quote but refused project creation because its two-active-free-project quota is full. No project was created, paused, deleted or upgraded. GitHub publication is verified; the earlier integration 403 is resolved. Browser PDF navigation is blocked by the cloud browser security policy; pose upload automation timed out, so no completed browser inference/upload claim is made. Current hosting/model blockers and next actions are in [docs/ISSUE_RESOLUTION.md](docs/ISSUE_RESOLUTION.md).

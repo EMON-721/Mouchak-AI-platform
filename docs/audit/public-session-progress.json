@@ -17,12 +17,17 @@
     "repository": "EMON-721/Mouchak-AI-platform",
     "initial_main": "d84fe4327693cb73dae0e0b80f936b9567eafd54",
     "read_verified": true,
-    "write_attempts": 2,
-    "write_status": 403,
-    "error": "Resource not accessible by integration",
     "cli_push_dry_run": "No HTTPS credentials",
-    "pushed": false,
-    "remote_ci_verified": false
+    "pushed": true,
+    "remote_ci_verified": true,
+    "write": "verified; prior 403 resolved",
+    "first_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+    "remote_ci": "success",
+    "previous_write_status": 403,
+    "previous_error": "Resource not accessible by integration",
+    "initial_failed_write_attempts": 2,
+    "write_status": "verified",
+    "error": null
   },
   "hosting": "Private Python inference, managed PostgreSQL, S3/scanner/SMTP and production operations not provisioned or verified",
   "total_tests_passed": 316,
@@ -30,5 +35,11 @@
   "typescript": "passed",
   "lint": "passed",
   "next_production_build": "passed",
-  "focused_xml": "Subset derived from final regression run; no duplicate execution claimed"
+  "focused_xml": "Subset derived from final regression run; no duplicate execution claimed",
+  "github_pushed": true,
+  "github_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+  "github_tree_verified": "62570204e17e97886dd69fe82590d80d7c2575ef",
+  "github_ci_verified": true,
+  "github_ci_run_id": 40680371782,
+  "github_ci_conclusion": "success"
 }

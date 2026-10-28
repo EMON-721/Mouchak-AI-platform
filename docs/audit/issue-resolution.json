@@ -12,8 +12,13 @@
   "browser_pose_upload": "timed out; outcome unknown; processing not verified",
   "github": {
     "repository": "EMON-721/Mouchak-AI-platform",
-    "write": "403 Resource not accessible by integration",
-    "pushed": false
+    "write": "verified; prior 403 resolved",
+    "pushed": true,
+    "first_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+    "remote_ci": "success",
+    "write_status": "verified",
+    "error": null,
+    "remote_ci_verified": true
   },
   "supabase": {
     "owner_selected_connected_organization": true,
@@ -28,5 +33,11 @@
     "compose_references_validated": true,
     "docker_images_executed": false,
     "cloud_deployed": false
-  }
+  },
+  "github_pushed": true,
+  "github_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
+  "github_tree_verified": "62570204e17e97886dd69fe82590d80d7c2575ef",
+  "github_ci_verified": true,
+  "github_ci_run_id": 40680371782,
+  "github_ci_conclusion": "success"
 }
