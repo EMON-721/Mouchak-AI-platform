@@ -3,7 +3,7 @@
 No model/API responses are mocked. A tiny owned ClamAV test signature verifies
 the scanner rejection path; it is not a current threat-signature feed.
 """
-import base64, hashlib, io, json, os, re, secrets, ssl, subprocess, sys, tempfile, time, traceback, uuid
+import base64, hashlib, io, json, os, re, secrets, socket, ssl, subprocess, sys, tempfile, time, traceback, uuid
 from pathlib import Path
 import boto3, httpx, psycopg
 from botocore.config import Config
@@ -124,11 +124,18 @@ def main():
                 roles = owner.execute("SELECT rolname,rolsuper,rolbypassrls,rolcreatedb,rolcreaterole,rolinherit FROM pg_roles WHERE rolname=ANY(%s)", (list(ROLES),)).fetchall()
                 assert len(roles) == 4 and all(not any(row[1:]) for row in roles)
             report["four_isolated_roles"] = True
+            s3_context = ssl.create_default_context(cafile=str(folder / "tls/ca.crt"))
+            def verified_object_tls():
+                with socket.create_connection(("127.0.0.1", object_port), timeout=3) as raw_socket:
+                    with s3_context.wrap_socket(raw_socket, server_hostname="127.0.0.1") as verified_socket:
+                        return bool(verified_socket.getpeercert())
+            wait_for(verified_object_tls)
+            report["s3_tls_handshake_verified"] = True
             s3 = boto3.client("s3", endpoint_url=f"https://127.0.0.1:{object_port}",
                               aws_access_key_id=s3_user, aws_secret_access_key=s3_password,
                               region_name="us-east-1", verify=str(folder / "tls/ca.crt"),
                               config=Config(s3={"addressing_style":"path"}, connect_timeout=3, read_timeout=5, retries={"total_max_attempts":1}))
-            wait_for(lambda: s3.list_buckets() is not None)
+            wait_for(lambda: s3.list_buckets() is not None, seconds=180)
             s3.create_bucket(Bucket="mouchak-private-test")
             report["s3_tls_verified"] = True
             run("up", "-d", "api", "inference", "scheduler", "retention", "gateway", timeout=600)
@@ -221,14 +228,14 @@ def main():
             print(json.dumps(report))
         except Exception as error:
             # Never dump request/response bodies, passwords, tokens or raw DB URLs.
-            logs = subprocess.run([*compose, "logs", "--no-color", "--tail", "50"], cwd=ROOT, env=env, capture_output=True, text=True).stdout
+            logs = subprocess.run([*compose, "logs", "--no-color", "--tail", "180"], cwd=ROOT, env=env, capture_output=True, text=True).stdout
             logs = "\n".join(failed_operation) + "\n" + logs
             for secret in [*secret_values, env["MOUCHAK_TEST_S3_KEK"]]:
                 logs = logs.replace(secret, "[REDACTED]")
             logs = re.sub(r"SCRAM-SHA-256\$[^\s'\",]+|\$argon2(?:id|i|d)\$[^\s'\",]+", "[HASH REDACTED]", logs)
             print(json.dumps({"error_class": type(error).__name__, "sqlstate": getattr(error, "sqlstate", None)}), file=sys.stderr)
             print(json.dumps({"completed_checks": report, "failure_location": [{"file": Path(frame.filename).name, "line": frame.lineno} for frame in traceback.extract_tb(error.__traceback__)][-3:], "wait_diagnostic": str(error) if isinstance(error, AssertionError) and str(error).startswith("Timed out waiting for fixture operation:") else None}), file=sys.stderr)
-            print(logs[-16000:], file=sys.stderr)
+            print(logs[-36000:], file=sys.stderr)
             raise RuntimeError("Isolated production-stack integration failed; sanitized service logs above") from None
         finally:
             # Exact randomized fixture project only. Never prune other resources.
