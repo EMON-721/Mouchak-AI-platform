@@ -1,0 +1,188 @@
+{
+  "project": "SafeRoute BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "SAFEROUTE_BD_001",
+      "label_bn": "দুর্ঘটনার তারিখ",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_002",
+      "label_bn": "থানার নাম",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_003",
+      "label_bn": "দুর্ঘটনার ধরন",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_004",
+      "label_bn": "সোর্স ম্যাপ",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_005",
+      "label_bn": "পৌর এলাকা",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_006",
+      "label_bn": "গাড়ির ধরন",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_007",
+      "label_bn": "গণনার সময়কাল",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_008",
+      "label_bn": "ডেটার সম্পূর্ণতা",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_009",
+      "label_bn": "রিপোর্টিং বায়াস",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_010",
+      "label_bn": "হিটম্যাপ",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_011",
+      "label_bn": "রোড সেগমেন্ট",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_012",
+      "label_bn": "তুলনামূলক ট্রেন্ড",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_013",
+      "label_bn": "ঝুঁকির অনিশ্চয়তা",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_014",
+      "label_bn": "রুটের বিকল্প",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_015",
+      "label_bn": "ডেটার উৎস",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_016",
+      "label_bn": "শেষ হালনাগাদ",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_017",
+      "label_bn": "জনসংখ্যার ভিত্তি",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEROUTE_BD_018",
+      "label_bn": "নিরাপত্তা দাবি নয়",
+      "domain_bn": "সড়ক নিরাপত্তার ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

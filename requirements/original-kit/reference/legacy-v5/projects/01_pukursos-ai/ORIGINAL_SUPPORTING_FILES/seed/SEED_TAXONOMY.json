@@ -1,0 +1,188 @@
+{
+  "project": "PukurSOS AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "PUKURSOS_AI_001",
+      "label_bn": "পানির দৃশ্যমান রং",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_002",
+      "label_bn": "সকালের মাছের আচরণ",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_003",
+      "label_bn": "বিকেলের মাছের আচরণ",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_004",
+      "label_bn": "জলজ শৈবাল",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_005",
+      "label_bn": "পুকুরের গভীরতা",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_006",
+      "label_bn": "পানির তাপমাত্রা",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_007",
+      "label_bn": "দ্রবীভূত অক্সিজেন",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_008",
+      "label_bn": "পানির পিএইচ",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_009",
+      "label_bn": "খাদ্য দেওয়ার সময়",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_010",
+      "label_bn": "মাছের জাত",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_011",
+      "label_bn": "মাছের ঘনত্ব",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_012",
+      "label_bn": "পানি বদলের নথি",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_013",
+      "label_bn": "অস্বাভাবিক গন্ধ",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_014",
+      "label_bn": "মৃত মাছের নথি",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_015",
+      "label_bn": "পরীক্ষার তারিখ",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_016",
+      "label_bn": "পুকুরের ছবি",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_017",
+      "label_bn": "বৃষ্টির তথ্য",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "PUKURSOS_AI_018",
+      "label_bn": "মাছ চাষের ব্যয়",
+      "domain_bn": "পুকুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

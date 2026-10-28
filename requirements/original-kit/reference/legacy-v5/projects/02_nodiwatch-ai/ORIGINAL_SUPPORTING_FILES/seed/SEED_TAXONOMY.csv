@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+NODIWATCH_AI_001,নদীর নাম,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_002,তীরের ছবি,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_003,পূর্বের ছবি,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_004,ছবির দিক,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_005,ছবির সময়,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_006,জিপিএস অবস্থান,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_007,পাড়ের মাটির অবস্থা,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_008,দৃশ্যমান ফাটল,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_009,পাড়ের গাছ,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_010,নদীর জলস্তর,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_011,স্থানীয় পর্যবেক্ষণ,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_012,দূরত্বের আনুমানিক স্কেল,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_013,উচ্ছেদের নথি,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_014,পাড় সুরক্ষা,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_015,বৃষ্টির দিন,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_016,বন্যা সতর্কতা,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_017,ছবির উৎস,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NODIWATCH_AI_018,রিপোর্ট যাচাই,নদীতীর পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

@@ -1,0 +1,106 @@
+{
+  "project": "BazarCompare AI",
+  "sources": [
+    {
+      "id": "BazarCompare_AI-SRC01",
+      "name": "Department of Agricultural Marketing",
+      "url": "https://market.dam.gov.bd/?L=E",
+      "source_type": "public_price_portal",
+      "description": "Daily market price reporting by geography, product and date; access method may require manual interaction.",
+      "rights_or_license_note": "do not assume public API or bulk commercial reuse",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BazarCompare_AI-SRC02",
+      "name": "DAM commodity-wise report",
+      "url": "https://market.dam.gov.bd/commodity_wise_report/damweb/PublicPortal/",
+      "source_type": "public_report",
+      "description": "Commodity/time/location filters; PDF reports possible; not documented as public API.",
+      "rights_or_license_note": "access and copying terms to validate",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BazarCompare_AI-SRC03",
+      "name": "Trading Corporation of Bangladesh daily retail prices",
+      "url": "https://tcb.gov.bd/pages/daily-rmps",
+      "source_type": "official_report_index",
+      "description": "Dated retail market reports, chiefly Dhaka; attachments may need manual acquisition.",
+      "rights_or_license_note": "human-reviewed ingestion; verify reuse rights",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BazarCompare_AI-SRC04",
+      "name": "Bangladesh Open Data",
+      "url": "https://data.gov.bd/dataset",
+      "source_type": "catalogue",
+      "description": "Search for approved data as new feeds emerge.",
+      "rights_or_license_note": "per-resource license",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BazarCompare_AI-SRC05",
+      "name": "Bangladesh official divisions",
+      "url": "https://bangladesh.gov.bd/site/view/division-list/division-list",
+      "source_type": "official_reference",
+      "description": "Eight administrative divisions.",
+      "rights_or_license_note": "administrative reference",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "DAM daily market prices",
+      "url": "https://market.dam.gov.bd/market_daily_price_report/damweb/damweb/PublicPortal/index.php",
+      "intended_use": "Official visible report; no promised public API/bulk dataset",
+      "data_license_review_state": "web_reference_until_reuse_verified",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "government_site_links_not_full_datasets": true,
+  "reuse_review_required": true,
+  "project_specific_data_plan": "DAM online reports subject to permission, users price sightings moderated, original commodity mapping"
+}

@@ -1,0 +1,188 @@
+{
+  "project": "VaccinePath BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "VACCINEPATH_BD_001",
+      "label_bn": "শিশুর জন্মতারিখ",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_002",
+      "label_bn": "টিকা কার্ডের ছবি",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_003",
+      "label_bn": "কার্ডের লেখা যাচাই",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_004",
+      "label_bn": "টিকার নাম",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_005",
+      "label_bn": "প্রাপ্তির তারিখ",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_006",
+      "label_bn": "অপ্রাপ্ত তথ্য",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_007",
+      "label_bn": "সরকারি সূচির সংস্করণ",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_008",
+      "label_bn": "পরবর্তী ভিজিট প্রশ্ন",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_009",
+      "label_bn": "অভিভাবকের সম্মতি",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_010",
+      "label_bn": "কার্ডের ভুল পড়া",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_011",
+      "label_bn": "সরকারি উৎস",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_012",
+      "label_bn": "কেন্দ্র খোঁজা",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_013",
+      "label_bn": "ডাক্তারের পরামর্শ",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_014",
+      "label_bn": "রেকর্ড আপডেট",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_015",
+      "label_bn": "রিমাইন্ডার",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_016",
+      "label_bn": "প্রাইভেসি",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_017",
+      "label_bn": "ডেটা এক্সপোর্ট",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "VACCINEPATH_BD_018",
+      "label_bn": "তথ্য মুছে ফেলা",
+      "domain_bn": "টিকা রেকর্ড",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

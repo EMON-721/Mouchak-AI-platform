@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+BILLDETECT_AI_001,বিলের ধরন,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_002,মাস,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_003,গ্রাহক নম্বর লুকানো,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_004,বর্তমান রিডিং,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_005,আগের রিডিং,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_006,ব্যবহৃত ইউনিট,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_007,প্রতি ইউনিট মূল্য,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_008,স্থির চার্জ,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_009,ভ্যাট,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_010,বকেয়া,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_011,মোট চার্জ,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_012,পরিশোধের তারিখ,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_013,বিলের ছবি,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_014,OCR যাচাই,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_015,আগের মাসের তুলনা,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_016,শুল্কের কার্যকর তারিখ,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_017,অভিযোগ প্রশ্ন,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+BILLDETECT_AI_018,বিল সংরক্ষণ,বিল যাচাই,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

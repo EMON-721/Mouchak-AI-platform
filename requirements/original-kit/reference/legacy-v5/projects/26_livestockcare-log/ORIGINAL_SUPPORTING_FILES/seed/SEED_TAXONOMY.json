@@ -1,0 +1,188 @@
+{
+  "project": "LivestockCare Log",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "LIVESTOCKCARE_LOG_001",
+      "label_bn": "পশুর নাম",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_002",
+      "label_bn": "পশুর ধরন",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_003",
+      "label_bn": "ওজনের নথি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_004",
+      "label_bn": "খাদ্যের নথি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_005",
+      "label_bn": "পানির তথ্য",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_006",
+      "label_bn": "ভ্যাকসিন রেকর্ড",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_007",
+      "label_bn": "ভেটেরিনারি ভিজিট",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_008",
+      "label_bn": "অস্বাভাবিক আচরণ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_009",
+      "label_bn": "খাওয়ার পরিমাণ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_010",
+      "label_bn": "দুধের নথি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_011",
+      "label_bn": "জন্মতারিখ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_012",
+      "label_bn": "খামার আইডি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_013",
+      "label_bn": "পরিচর্যার খরচ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_014",
+      "label_bn": "সতর্কতার প্রশ্ন",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_015",
+      "label_bn": "ফলোআপ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_016",
+      "label_bn": "ছবির নথি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_017",
+      "label_bn": "বিশেষজ্ঞের নির্দেশ",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LIVESTOCKCARE_LOG_018",
+      "label_bn": "ডেটা রপ্তানি",
+      "domain_bn": "পশুর পরিচর্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

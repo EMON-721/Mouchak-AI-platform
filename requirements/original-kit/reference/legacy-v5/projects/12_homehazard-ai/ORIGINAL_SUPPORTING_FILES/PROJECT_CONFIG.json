@@ -1,0 +1,39 @@
+{
+  "project_number": 12,
+  "project_name": "HomeHazard AI",
+  "slug": "homehazard-ai",
+  "category": "Household Safety / Computer Vision",
+  "about_bn": "দেয়ালের ফাটল, স্যাঁতসেঁতে দাগ বা লিকের ছবি দিয়ে দৃশ্যমান সমস্যা নথিবদ্ধ ও মেরামতের প্রস্তুতিমূলক চেকলিস্ট তৈরি করবে।",
+  "inputs": "Wall/ceiling photo; text descriptions; optional repeated photo",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Wall/ceiling photo, text descriptions, optional repeated photo",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Room-by-room inspection boards",
+    "Repeat photograph alignment and changelog",
+    "Repair inquiry checklist",
+    "Contractor-quote comparison",
+    "Property issue reporting export",
+    "Structural hazard uncertainty banner"
+  ],
+  "ai_contract": "CV for visible moisture marks/crack-like patterns with unknown category; comparison embeddings; retrieval from vetted home maintenance references; prioritize urgent human inspection for exposed electrical damage.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

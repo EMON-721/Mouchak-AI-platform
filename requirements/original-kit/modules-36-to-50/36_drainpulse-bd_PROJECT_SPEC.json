@@ -1,0 +1,93 @@
+{
+  "id": 36,
+  "slug": "drainpulse-bd",
+  "name": "DrainPulse BD",
+  "name_bn": "শহরের ড্রেন, রাস্তা ও জলাবদ্ধতা পর্যবেক্ষণ",
+  "category": "climate",
+  "route": "/tools/drainpulse-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "ঢাকাসহ বিভিন্ন শহরে সামান্য বৃষ্টির পর জলাবদ্ধতা, বন্ধ ড্রেন ও চলাচলের বিঘ্ন নথিবদ্ধ করা কঠিন।",
+    "target_users": "বাসিন্দা, দোকানদার, সিটি করপোরেশনের অভিযোগকারীরা",
+    "inputs": "তারিখসহ ছবি, এলাকা/ওয়ার্ড, পানির আনুমানিক গভীরতা ঐচ্ছিক, বৃষ্টির সময় ও লিখিত বিবরণ",
+    "outputs": "একই জায়গার আগে-পরে ছবি তুলনা, waterlogging observation timeline, redacted complaint packet ও map marker",
+    "distinctive_workflow": "ড্রেনেজ সমস্যা নিয়ে স্থান-সময়সাপেক্ষ কমিউনিটি পর্যবেক্ষণ; RoadFix-এর গর্ত শনাক্তকরণ থেকে আলাদা।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "image-water segmentation + image similarity + deduplication + rule-based temporal trend",
+    "candidate_models": [
+      {
+        "label": "SegFormer pretrained segmentation backbone",
+        "link": "https://huggingface.co/docs/transformers/model_doc/segformer"
+      },
+      {
+        "label": "scikit-learn DBSCAN duplicate-cluster baseline",
+        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html"
+      }
+    ],
+    "test_target": "একই জায়গার দুই সময়ের ছবি এবং ভিন্ন জায়গার ছবি আলাদা করতে হবে; মেঘ/ছায়াকে পানি ধরে নেওয়ার false positive ট্র্যাক করো।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Meteorological Department",
+        "url": "https://bmd.gov.bd/web/",
+        "purpose": "official forecast/rainfall reference; not licensed bulk dataset",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Dhaka North City Corporation",
+        "url": "https://dncc.gov.bd/",
+        "purpose": "city service reference; check city applicability and rights",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org/",
+        "purpose": "map data requires ODbL attribution and share-alike analysis",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "ফটো দেখে পানির সঠিক গভীরতা বা বাস্তব সময়ে রাস্তা নিরাপদ কিনা ঘোষণা করবে না; crowd report = verified official flood warning নয়।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/36_drainpulse-bd.svg"
+}

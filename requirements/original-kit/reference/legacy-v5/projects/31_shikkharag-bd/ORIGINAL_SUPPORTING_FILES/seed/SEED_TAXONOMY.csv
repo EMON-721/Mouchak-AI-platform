@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+SHIKKHARAG_BD_001,শ্রেণি,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_002,বিষয়,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_003,অধ্যায়,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_004,পাঠ্যবই,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_005,প্রকাশের বছর,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_006,উৎসের পৃষ্ঠা,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_007,প্রশ্ন,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_008,উত্তরের উৎস,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_009,ব্যাখ্যার সহজতা,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_010,শব্দার্থ,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_011,উদাহরণ,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_012,অনুশীলনী,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_013,প্রশ্নের ধরন,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_014,পাঠের সারাংশ,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_015,সূত্রের নির্ভরযোগ্যতা,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_016,ভুল উত্তর রিপোর্ট,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_017,টপিক অনুসন্ধান,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SHIKKHARAG_BD_018,শেখার অগ্রগতি,বাংলাদেশের পাঠ্যসূচি ও শেখা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

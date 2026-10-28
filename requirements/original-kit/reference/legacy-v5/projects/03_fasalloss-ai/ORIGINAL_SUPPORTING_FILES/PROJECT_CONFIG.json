@@ -1,0 +1,39 @@
+{
+  "project_number": 3,
+  "project_name": "FasalLoss AI",
+  "slug": "fasalloss-ai",
+  "category": "Agriculture / Climate Recovery",
+  "about_bn": "কৃষক ফসলের ক্ষতির ছবি, জমির পরিমাণ ও নিজের ব্যাখ্যা দিয়ে ক্ষতির ডায়েরি এবং সহায়তা চাওয়ার প্রমাণভিত্তিক সারাংশ বানাতে পারবেন।",
+  "inputs": "Field images/videos; acreage/quantity numbers; farmer explanation",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Field images/videos, acreage/quantity numbers, farmer explanation",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Crop loss journal by plot and season",
+    "Multi-photo annotation with review",
+    "Itemized input-cost evidence vault",
+    "Weather event reference and sourced timeline",
+    "Damage documentation export",
+    "Consent-only anonymized aggregated insights"
+  ],
+  "ai_contract": "Image damage-area annotation with explicit scale uncertainty; OCR for receipts; conservative crop-type recognition where trained; calculators using user-entered area/yield; Bangla RAG agronomic recovery guidance.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 4,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

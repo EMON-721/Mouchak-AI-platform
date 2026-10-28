@@ -1,0 +1,19 @@
+# Implemented architecture and boundary decisions
+
+One Next.js 16 App Router application owns the public catalogue, 50 `/tools/[slug]` workspaces, account pages and admin console. It proxies `/api/*` server-side to one private FastAPI service. Cookies and CSRF tokens use this single website origin. Python model workers are not a second public application.
+
+The implementation uses **SQLAlchemy**, rather than the Drizzle/Prisma reference choice in the kit, for the Python-owned relational boundary. The generated PostgreSQL schema contains 20 implemented tables. Additional organization, support-grant, vector-index, model-evaluation and advanced-domain tables from the specification remain unimplemented; the original requirements are preserved and are not claimed as completed.
+
+Development explicitly uses SQLite, with exact-decimal domain operations and encrypted record bodies/files. Production refuses a SQLite database. PostgreSQL DDL and owner RLS were executed against PostgreSQL 18.6 through PGlite, with no-identity read denial, owner A/B isolation and cross-owner write denial. An external managed PostgreSQL instance and psycopg connection have **not** been validated. Apply migrations with a separate owner role; run the API as a NOSUPERUSER, NOBYPASSRLS application role.
+
+Private file storage supports encrypted local development files and an encrypted private S3 adapter. S3 integration is not tested against a live provider. Production uploads fail closed without a functioning malware scanner; development uploads explicitly expose their unscanned status. The scanner signature-update service, Redis/queue workers, durable async jobs, scheduled source refresh and backup/restore operations remain deployment work.
+
+Implemented role names match the required hierarchy, but permission enforcement currently covers CMS, source review, model inspection, module flags, users, jobs and audit. Organization memberships and tenant sharing are not enabled. Admins cannot read another owner's private result or file through general endpoints, even when the role is Super Admin. Privileged endpoints require a recently verified TOTP. The current TOTP implementation does not provide passkeys, recovery codes or automated lost-device recovery.
+
+Numeric tools run labelled deterministic support calculations. OCR uses actual Tesseract Bengali/English weights; retrieval uses a real ONNX multilingual MiniLM checkpoint with BM25 and exact source-passage output. It is an extractive retrieval pipeline, not a deployed generative LLM. The corpus is five original CC0 learning passages, not an official NCTB corpus. Speech runs a local quantized Whisper tiny checkpoint behind an experimental adapter, with an English runtime smoke test and no claim of Bengali accuracy. Domain vision classifiers, PPE detection, crop segmentation, validated forecasts and most advanced RAG collections are not deployed.
+
+No production release is asserted. See `IMPLEMENTATION_REPORT.md`, `MODULE_PROGRESS.csv`, `docs/audit/requirements-checklist.json` and the preserved original acceptance matrix for the exact gap.
+
+Selected legacy workflows share central authentication, consent and encrypted storage. Stock items/movements are additive tables; writes require an expected revision and owner-scoped retry key. Item metadata and movement payloads are encrypted. SQL RLS also checks workspace/item links. Reading and basket outputs reuse private tool runs. Full static source snapshots are references, not separate hosted apps.
+
+Migration 004 adds selected-facts support snapshots, typed cross-tool drafts, CMS schedules and independent source rights reviews. Recipient snapshots avoid bypassing private-run RLS. SQL policy checks include transaction-local recent MFA. The scheduler uses a dedicated database role and no public listener; see COLLABORATION_AND_OPERATIONS.md.

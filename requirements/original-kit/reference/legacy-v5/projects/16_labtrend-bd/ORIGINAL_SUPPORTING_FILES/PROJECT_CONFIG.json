@@ -1,0 +1,39 @@
+{
+  "project_number": 16,
+  "project_name": "LabTrend BD",
+  "slug": "labtrend-bd",
+  "category": "Clinical Data / Health Literacy",
+  "about_bn": "নিজের বিভিন্ন তারিখের ল্যাব পরীক্ষার সংখ্যা বা রিপোর্ট দিয়ে সময়ের পরিবর্তন চার্টে দেখা যাবে এবং চিকিৎসককে প্রশ্ন করার শিট তৈরি হবে।",
+  "inputs": "User-entered lab numbers/units; optional PDF/image of lab reports",
+  "user_3step": [
+    "রিপোর্টের ছবি দিন অথবা নিজে test value লিখুন",
+    "AI পড়া নাম/ইউনিট ব্যবহারকারী যাচাই করুন",
+    "তারিখভিত্তিক চার্ট ও ডাক্তারের প্রশ্নপত্র সংরক্ষণ করুন"
+  ],
+  "domain_features": [
+    "Manual lab number input and OCR review",
+    "Test vocabulary and unit validation",
+    "Same-test historical trends with source ranges",
+    "Printable doctor discussion sheet",
+    "Family data separation and consent",
+    "Unknown-value refusal"
+  ],
+  "ai_contract": "Layout-aware OCR with human verification; deterministic unit normalization only for validated conversion pairs; robust time-series display; retrieval of peer-reviewed public explanations with citation; no medical prediction labels.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

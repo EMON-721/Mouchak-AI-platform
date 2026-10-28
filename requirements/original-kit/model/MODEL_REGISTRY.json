@@ -1,0 +1,1343 @@
+{
+  "notes": "Candidates, not deployed/benchmarked models. Models must be evaluated against real license-cleared Bangladesh examples; fake success prohibited.",
+  "models": [
+    {
+      "module": "pukursos-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/01_pukursos-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "nodiwatch-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/02_nodiwatch-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "fasalloss-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/03_fasalloss-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "roofwise-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/04_roofwise-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "noisetrace-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "YAMNet audio event classifier",
+          "url": "https://www.tensorflow.org/hub/tutorials/yamnet",
+          "must_smoke_test": "Known test sound returns ordered class scores; never imply calibrated dB",
+          "task": "audio_event_classification"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/05_noisetrace-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "chuktishield-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "rank-bm25 lexical retrieval",
+          "url": "https://pypi.org/project/rank-bm25/",
+          "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID",
+          "task": "lexical_retrieval"
+        },
+        {
+          "name": "Qwen/Qwen2.5-1.5B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+          "must_smoke_test": "Generate from provided excerpts and refuse when no cited evidence; output JSON validated",
+          "task": "constrained_text_generation"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/06_chuktishield-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "billdetect-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/07_billdetect-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "carejourney-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "openai/whisper-small",
+          "url": "https://huggingface.co/openai/whisper-small",
+          "must_smoke_test": "Transcribe licensed Bangla 5-sec fixture; store transcript without raw audio by default",
+          "task": "asr"
+        },
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/08_carejourney-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "golicoach-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "MediaPipe Pose Landmark model",
+          "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker",
+          "must_smoke_test": "Known short fixture video yields time-indexed body landmark values; empty frame handled",
+          "task": "pose_landmarks"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/09_golicoach-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "dokanlens-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/10_dokanlens-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "bazarcompare-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/11_bazarcompare-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "homehazard-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/12_homehazard-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "wastewise-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/13_wastewise-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "worksafe-vision-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/14_worksafe-vision-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "cliniccompass-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/15_cliniccompass-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "labtrend-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/16_labtrend-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "doseclear-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/17_doseclear-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "vaccinepath-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "rank-bm25 lexical retrieval",
+          "url": "https://pypi.org/project/rank-bm25/",
+          "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID",
+          "task": "lexical_retrieval"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/18_vaccinepath-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "maternalroute-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "rank-bm25 lexical retrieval",
+          "url": "https://pypi.org/project/rank-bm25/",
+          "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID",
+          "task": "lexical_retrieval"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/19_maternalroute-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "denguesignal-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+          "url": "https://www.statsmodels.org/stable/tsa.html",
+          "must_smoke_test": "Real chronological records produce reproducible backtested MAE; no synthetic public forecast",
+          "task": "time_series"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/20_denguesignal-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "rentalfair-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/21_rentalfair-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "roadfix-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID",
+          "task": "vision_embeddings"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/22_roadfix-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "saferoute-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/23_saferoute-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "waterguard-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/24_waterguard-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "agroprice-planner",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage",
+          "task": "supervised_forecast"
+        },
+        {
+          "name": "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+          "url": "https://www.statsmodels.org/stable/tsa.html",
+          "must_smoke_test": "Real chronological records produce reproducible backtested MAE; no synthetic public forecast",
+          "task": "time_series"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/25_agroprice-planner/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "livestockcare-log",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/26_livestockcare-log/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "civicform-ai",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "rank-bm25 lexical retrieval",
+          "url": "https://pypi.org/project/rank-bm25/",
+          "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID",
+          "task": "lexical_retrieval"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/27_civicform-ai/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "heatsafe-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+          "url": "https://www.statsmodels.org/stable/tsa.html",
+          "must_smoke_test": "Real chronological records produce reproducible backtested MAE; no synthetic public forecast",
+          "task": "time_series"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/28_heatsafe-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "hospitalbillguard-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "sklearn.ensemble.IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores",
+          "task": "anomaly_detection"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/29_hospitalbillguard-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "safeblood-connect-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/30_safeblood-connect-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "shikkharag-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        },
+        {
+          "name": "rank-bm25 lexical retrieval",
+          "url": "https://pypi.org/project/rank-bm25/",
+          "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID",
+          "task": "lexical_retrieval"
+        },
+        {
+          "name": "Qwen/Qwen2.5-1.5B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+          "must_smoke_test": "Generate from provided excerpts and refuse when no cited evidence; output JSON validated",
+          "task": "constrained_text_generation"
+        },
+        {
+          "name": "Tesseract OCR with ben+eng language packs",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag",
+          "task": "ocr"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/31_shikkharag-bd/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "banglaread-coach",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "openai/whisper-small",
+          "url": "https://huggingface.co/openai/whisper-small",
+          "must_smoke_test": "Transcribe licensed Bangla 5-sec fixture; store transcript without raw audio by default",
+          "task": "asr"
+        },
+        {
+          "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID",
+          "task": "sentence_embedding"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": "reference/legacy-v5/projects/32_banglaread-coach/MODEL_IMPLEMENTATION_SPEC.json"
+    },
+    {
+      "module": "landledger-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR ben+eng",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "task": "OCR",
+          "must_smoke_test": "Extract field from synthetic deed scan with explicit OCR confidence"
+        },
+        {
+          "name": "Multilingual MiniLM",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "task": "semantic legal reference retrieval",
+          "must_smoke_test": "Retrieve applicable excerpt with same-document citation"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": null
+    },
+    {
+      "module": "wageguard-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR ben+eng",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "task": "OCR",
+          "must_smoke_test": "Read workday and total in synthetic salary slip"
+        },
+        {
+          "name": "Isolation Forest scikit-learn",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "task": "anomaly detection",
+          "must_smoke_test": "Compare 6 months consented or synthetic baseline with explicit sample flag"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": null
+    },
+    {
+      "module": "shobdosetu-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Whisper small multilingual",
+          "url": "https://huggingface.co/openai/whisper-small",
+          "task": "automatic speech recognition",
+          "must_smoke_test": "Transcribe opted-in Bangla audio and report WER on held-out samples"
+        },
+        {
+          "name": "Piper TTS or deployable Bengali voice with checked license",
+          "url": "https://github.com/rhasspy/piper",
+          "task": "text-to-speech",
+          "must_smoke_test": "Generate intelligible Bangla phonemes from approved voice resource, or disable TTS"
+        }
+      ],
+      "minimum_evaluation": [
+        "real inference test",
+        "holdout evaluation",
+        "Bangla failure cases",
+        "confidence/abstention",
+        "no mocked production predictions"
+      ],
+      "budget_note": "Large model may require separate inference runtime; static/Vercel UI cannot run GPU model by itself",
+      "legacy_original_spec": null
+    },
+    {
+      "module": "drainpulse-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "SegFormer pretrained segmentation backbone",
+          "url": "https://huggingface.co/docs/transformers/model_doc/segformer",
+          "must_smoke_test": "একই জায়গার দুই সময়ের ছবি এবং ভিন্ন জায়গার ছবি আলাদা করতে হবে; মেঘ/ছায়াকে পানি ধরে নেওয়ার false positive ট্র্যাক করো।",
+          "task": "image-water segmentation + image similarity + deduplication + rule-based temporal trend"
+        },
+        {
+          "name": "scikit-learn DBSCAN duplicate-cluster baseline",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html",
+          "must_smoke_test": "একই জায়গার দুই সময়ের ছবি এবং ভিন্ন জায়গার ছবি আলাদা করতে হবে; মেঘ/ছায়াকে পানি ধরে নেওয়ার false positive ট্র্যাক করো।",
+          "task": "image-water segmentation + image similarity + deduplication + rule-based temporal trend"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "image-water segmentation + image similarity + deduplication + rule-based temporal trend",
+      "evaluation_cases": "একই জায়গার দুই সময়ের ছবি এবং ভিন্ন জায়গার ছবি আলাদা করতে হবে; মেঘ/ছায়াকে পানি ধরে নেওয়ার false positive ট্র্যাক করো।"
+    },
+    {
+      "module": "agunpath-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "PaddleOCR",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "must_smoke_test": "ফ্লোর প্ল্যান OCR ভুল ও সিঁড়ি বাধার দুইটি negative case; নিরাপদ exit route গণনাকে expert approval ছাড়া map/guarantee দেবে না।",
+          "task": "diagram OCR + object labeling + constraint-check rules + citation RAG"
+        },
+        {
+          "name": "sentence-transformers multilingual text embeddings",
+          "url": "https://www.sbert.net/",
+          "must_smoke_test": "ফ্লোর প্ল্যান OCR ভুল ও সিঁড়ি বাধার দুইটি negative case; নিরাপদ exit route গণনাকে expert approval ছাড়া map/guarantee দেবে না।",
+          "task": "diagram OCR + object labeling + constraint-check rules + citation RAG"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "diagram OCR + object labeling + constraint-check rules + citation RAG",
+      "evaluation_cases": "ফ্লোর প্ল্যান OCR ভুল ও সিঁড়ি বাধার দুইটি negative case; নিরাপদ exit route গণনাকে expert approval ছাড়া map/guarantee দেবে না।"
+    },
+    {
+      "module": "matisense-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "PaddleOCR",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "must_smoke_test": "EC dS/m বনাম µS/cm, pH এবং দশমিক বাংলা অঙ্ক; নমুনার উৎস না থাকলে কোনো নির্দিষ্ট সারের ডোজ নির্ধারণ করবে না।",
+          "task": "OCR + unit parsing + outlier detection + locally reviewed soil/crop RAG"
+        },
+        {
+          "name": "IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "EC dS/m বনাম µS/cm, pH এবং দশমিক বাংলা অঙ্ক; নমুনার উৎস না থাকলে কোনো নির্দিষ্ট সারের ডোজ নির্ধারণ করবে না।",
+          "task": "OCR + unit parsing + outlier detection + locally reviewed soil/crop RAG"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "OCR + unit parsing + outlier detection + locally reviewed soil/crop RAG",
+      "evaluation_cases": "EC dS/m বনাম µS/cm, pH এবং দশমিক বাংলা অঙ্ক; নমুনার উৎস না থাকলে কোনো নির্দিষ্ট সারের ডোজ নির্ধারণ করবে না।"
+    },
+    {
+      "module": "biddutplan-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "Tesseract OCR",
+          "url": "https://github.com/tesseract-ocr/tesseract",
+          "must_smoke_test": "W বনাম kW, peak/off-peak, slab boundary, tax and fixed charges; published tariff effective date mismatch flagged।",
+          "task": "OCR-assisted appliance label extraction + regression only with authorized histories + deterministic tariff calculator"
+        },
+        {
+          "name": "scikit-learn HistGradientBoostingRegressor",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html",
+          "must_smoke_test": "W বনাম kW, peak/off-peak, slab boundary, tax and fixed charges; published tariff effective date mismatch flagged।",
+          "task": "OCR-assisted appliance label extraction + regression only with authorized histories + deterministic tariff calculator"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "OCR-assisted appliance label extraction + regression only with authorized histories + deterministic tariff calculator",
+      "evaluation_cases": "W বনাম kW, peak/off-peak, slab boundary, tax and fixed charges; published tariff effective date mismatch flagged।"
+    },
+    {
+      "module": "scamsignal-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "multilingual-e5-small embeddings",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "benign official notification বনাম fraudulent appeal, Banglish misspelling, adversarial prompt injection ও protected PII masking test।",
+          "task": "Bangla text classification + URL heuristics + screenshot OCR + RAG to verified security advice"
+        },
+        {
+          "name": "PaddleOCR",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "must_smoke_test": "benign official notification বনাম fraudulent appeal, Banglish misspelling, adversarial prompt injection ও protected PII masking test।",
+          "task": "Bangla text classification + URL heuristics + screenshot OCR + RAG to verified security advice"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "Bangla text classification + URL heuristics + screenshot OCR + RAG to verified security advice",
+      "evaluation_cases": "benign official notification বনাম fraudulent appeal, Banglish misspelling, adversarial prompt injection ও protected PII masking test।"
+    },
+    {
+      "module": "oshudhkhoj-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers multilingual MiniLM",
+          "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+          "must_smoke_test": "একই নামের আলাদা strength (250mg vs 500mg) ভুল মিল নয়; expired inventory excluded; only partner-verified records shown।",
+          "task": "entity normalization + typo-tolerant retrieval + inventory freshness scoring (not prescription advice)"
+        },
+        {
+          "name": "RapidFuzz",
+          "url": "https://github.com/rapidfuzz/RapidFuzz",
+          "must_smoke_test": "একই নামের আলাদা strength (250mg vs 500mg) ভুল মিল নয়; expired inventory excluded; only partner-verified records shown।",
+          "task": "entity normalization + typo-tolerant retrieval + inventory freshness scoring (not prescription advice)"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "entity normalization + typo-tolerant retrieval + inventory freshness scoring (not prescription advice)",
+      "evaluation_cases": "একই নামের আলাদা strength (250mg vs 500mg) ভুল মিল নয়; expired inventory excluded; only partner-verified records shown।"
+    },
+    {
+      "module": "shebaqueue-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "BM25 retrieval",
+          "url": "https://github.com/dorianbrown/rank_bm25",
+          "must_smoke_test": "অফিস/সেবার ভুল jurisdiction, পুরোনো ফি/কাগজের তালিকা এবং ভুয়া government link detect করা।",
+          "task": "Bangla intent routing + official service document RAG + deterministic readiness checklist"
+        },
+        {
+          "name": "multilingual E5 embeddings",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "অফিস/সেবার ভুল jurisdiction, পুরোনো ফি/কাগজের তালিকা এবং ভুয়া government link detect করা।",
+          "task": "Bangla intent routing + official service document RAG + deterministic readiness checklist"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "Bangla intent routing + official service document RAG + deterministic readiness checklist",
+      "evaluation_cases": "অফিস/সেবার ভুল jurisdiction, পুরোনো ফি/কাগজের তালিকা এবং ভুয়া government link detect করা।"
+    },
+    {
+      "module": "jatrapulse-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "NetworkX shortest path",
+          "url": "https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html",
+          "must_smoke_test": "যেখানে line নেই সেখানে route বানিয়ে বলবে না; একটি stale route ও একাধিক same-name stop test।",
+          "task": "graph shortest-path on authorized route data + retrieval + duplicate-stop matching + optionally historic time bands"
+        },
+        {
+          "name": "sentence-transformers retrieval",
+          "url": "https://www.sbert.net/",
+          "must_smoke_test": "যেখানে line নেই সেখানে route বানিয়ে বলবে না; একটি stale route ও একাধিক same-name stop test।",
+          "task": "graph shortest-path on authorized route data + retrieval + duplicate-stop matching + optionally historic time bands"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "graph shortest-path on authorized route data + retrieval + duplicate-stop matching + optionally historic time bands",
+      "evaluation_cases": "যেখানে line নেই সেখানে route বানিয়ে বলবে না; একটি stale route ও একাধিক same-name stop test।"
+    },
+    {
+      "module": "skillbridge-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "multilingual-e5-small",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "নকল training centre, uncertified provider, নাম এক হলেও প্রতিষ্ঠানের পৃথক location শনাক্ত; no fabricated placement guarantee।",
+          "task": "text skill extraction + multilingual embeddings + bipartite course matching with transparent weights"
+        },
+        {
+          "name": "spaCy EntityRuler",
+          "url": "https://spacy.io/api/entityruler",
+          "must_smoke_test": "নকল training centre, uncertified provider, নাম এক হলেও প্রতিষ্ঠানের পৃথক location শনাক্ত; no fabricated placement guarantee।",
+          "task": "text skill extraction + multilingual embeddings + bipartite course matching with transparent weights"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "text skill extraction + multilingual embeddings + bipartite course matching with transparent weights",
+      "evaluation_cases": "নকল training centre, uncertified provider, নাম এক হলেও প্রতিষ্ঠানের পৃথক location শনাক্ত; no fabricated placement guarantee।"
+    },
+    {
+      "module": "foodlabel-lens-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "PaddleOCR",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "must_smoke_test": "\"may contain\" বনাম নিশ্চিত ingredient; অস্পষ্ট বা কাটা লেবেল; expiry date format BD vs ISO।",
+          "task": "OCR + ingredient named entity recognition + reviewed allergen lexicon + grounded RAG"
+        },
+        {
+          "name": "spaCy rule matching",
+          "url": "https://spacy.io/usage/rule-based-matching",
+          "must_smoke_test": "\"may contain\" বনাম নিশ্চিত ingredient; অস্পষ্ট বা কাটা লেবেল; expiry date format BD vs ISO।",
+          "task": "OCR + ingredient named entity recognition + reviewed allergen lexicon + grounded RAG"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "OCR + ingredient named entity recognition + reviewed allergen lexicon + grounded RAG",
+      "evaluation_cases": "\"may contain\" বনাম নিশ্চিত ingredient; অস্পষ্ট বা কাটা লেবেল; expiry date format BD vs ISO।"
+    },
+    {
+      "module": "odhikarsetu-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "BM25 + vector hybrid RAG",
+          "url": "https://python.langchain.com/docs/how_to/hybrid/",
+          "must_smoke_test": "পুরোনো ভাতার পরিমাণ বা শর্তে historical-date mismatch; uncertain applicant status না জেনে eligible বলবে না।",
+          "task": "Bangla benefits intent classifier + policy RAG + versioned eligibility rules"
+        },
+        {
+          "name": "multilingual-e5-small",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "পুরোনো ভাতার পরিমাণ বা শর্তে historical-date mismatch; uncertain applicant status না জেনে eligible বলবে না।",
+          "task": "Bangla benefits intent classifier + policy RAG + versioned eligibility rules"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "Bangla benefits intent classifier + policy RAG + versioned eligibility rules",
+      "evaluation_cases": "পুরোনো ভাতার পরিমাণ বা শর্তে historical-date mismatch; uncertain applicant status না জেনে eligible বলবে না।"
+    },
+    {
+      "module": "repairright-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "multilingual-e5-small",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "ফোলা ব্যাটারি, পোড়া গন্ধ, খোলা তার বা গ্যাস যন্ত্রে safe-stop classification; unsupported model type no fabricated fault।",
+          "task": "fault symptom text classifier + image component labeler + transparent numeric cost model"
+        },
+        {
+          "name": "MobileNetV3",
+          "url": "https://pytorch.org/vision/stable/models.html",
+          "must_smoke_test": "ফোলা ব্যাটারি, পোড়া গন্ধ, খোলা তার বা গ্যাস যন্ত্রে safe-stop classification; unsupported model type no fabricated fault।",
+          "task": "fault symptom text classifier + image component labeler + transparent numeric cost model"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "fault symptom text classifier + image component labeler + transparent numeric cost model",
+      "evaluation_cases": "ফোলা ব্যাটারি, পোড়া গন্ধ, খোলা তার বা গ্যাস যন্ত্রে safe-stop classification; unsupported model type no fabricated fault।"
+    },
+    {
+      "module": "jhoralert-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "multilingual-e5-small",
+          "url": "https://huggingface.co/intfloat/multilingual-e5-small",
+          "must_smoke_test": "old warning must show expired; city mismatched region refused; source text vs generated paraphrase entailment audited।",
+          "task": "retrieval + Bengali summarization with entailment and bulletin-diff monitoring; deterministic alert trigger"
+        },
+        {
+          "name": "Qwen2.5 model card",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+          "must_smoke_test": "old warning must show expired; city mismatched region refused; source text vs generated paraphrase entailment audited।",
+          "task": "retrieval + Bengali summarization with entailment and bulletin-diff monitoring; deterministic alert trigger"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "retrieval + Bengali summarization with entailment and bulletin-diff monitoring; deterministic alert trigger",
+      "evaluation_cases": "old warning must show expired; city mismatched region refused; source text vs generated paraphrase entailment audited।"
+    },
+    {
+      "module": "schoolroute-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "sentence-transformers matching",
+          "url": "https://www.sbert.net/",
+          "must_smoke_test": "school-name duplicates, wrong village, child GPS attempt rejected and unsafe street-report privacy case।",
+          "task": "hazard taxonomy classifier + source directory matching + map-layer display; no unsafe live child tracking"
+        },
+        {
+          "name": "scikit-learn text classifier",
+          "url": "https://scikit-learn.org/stable/supervised_learning.html",
+          "must_smoke_test": "school-name duplicates, wrong village, child GPS attempt rejected and unsafe street-report privacy case।",
+          "task": "hazard taxonomy classifier + source directory matching + map-layer display; no unsafe live child tracking"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "hazard taxonomy classifier + source directory matching + map-layer display; no unsafe live child tracking",
+      "evaluation_cases": "school-name duplicates, wrong village, child GPS attempt rejected and unsafe street-report privacy case।"
+    },
+    {
+      "module": "hishabbondhu-bd",
+      "mandatory_actual_model": true,
+      "model_candidates": [
+        {
+          "name": "PaddleOCR",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "must_smoke_test": "debit/credit reversal, duplicate receipt, partial payment, Bangla numerals and wrong-currency; no profit claim if cost absent।",
+          "task": "Bangla transaction extraction + receipt OCR + anomaly score with optional trained baseline; deterministic ledger arithmetic"
+        },
+        {
+          "name": "scikit-learn IsolationForest",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+          "must_smoke_test": "debit/credit reversal, duplicate receipt, partial payment, Bangla numerals and wrong-currency; no profit claim if cost absent।",
+          "task": "Bangla transaction extraction + receipt OCR + anomaly score with optional trained baseline; deterministic ledger arithmetic"
+        }
+      ],
+      "release_gate": "working actual inference or truthful unavailable state; no fake model label",
+      "methodology": "Bangla transaction extraction + receipt OCR + anomaly score with optional trained baseline; deterministic ledger arithmetic",
+      "evaluation_cases": "debit/credit reversal, duplicate receipt, partial payment, Bangla numerals and wrong-currency; no profit claim if cost absent।"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+VACCINEPATH_BD_001,শিশুর জন্মতারিখ,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_002,টিকা কার্ডের ছবি,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_003,কার্ডের লেখা যাচাই,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_004,টিকার নাম,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_005,প্রাপ্তির তারিখ,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_006,অপ্রাপ্ত তথ্য,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_007,সরকারি সূচির সংস্করণ,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_008,পরবর্তী ভিজিট প্রশ্ন,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_009,অভিভাবকের সম্মতি,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_010,কার্ডের ভুল পড়া,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_011,সরকারি উৎস,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_012,কেন্দ্র খোঁজা,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_013,ডাক্তারের পরামর্শ,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_014,রেকর্ড আপডেট,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_015,রিমাইন্ডার,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_016,প্রাইভেসি,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_017,ডেটা এক্সপোর্ট,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+VACCINEPATH_BD_018,তথ্য মুছে ফেলা,টিকা রেকর্ড,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

@@ -1,0 +1,39 @@
+{
+  "project_number": 19,
+  "project_name": "MaternalRoute BD",
+  "slug": "maternalroute-bd",
+  "category": "Maternal Health / Appointment Organizer",
+  "about_bn": "গর্ভাবস্থার তারিখ, ডাক্তারের ভিজিট ও প্রশ্নের ব্যক্তিগত ক্যালেন্ডার এবং সূত্রভিত্তিক মাতৃস্বাস্থ্য তথ্য দেখাবে।",
+  "inputs": "Gestational week or expected date; typed visit notes; voluntary symptoms notes",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Gestational week or expected date, typed visit notes, voluntary symptoms notes",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Visit organizer and personal calendar",
+    "Evidence-linked prenatal reading library",
+    "Appointment question builder",
+    "Sensitive note access segregation",
+    "Caregiver delegation by permission",
+    "Urgent symptom help notice"
+  ],
+  "ai_contract": "Rule-based timeline for generic reminders with reviewed evidence; Bengali RAG FAQ citing approved maternal health guidance; summarize user notes without giving individual diagnosis.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

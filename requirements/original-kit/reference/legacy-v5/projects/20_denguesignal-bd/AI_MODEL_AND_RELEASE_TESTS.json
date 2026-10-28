@@ -1,0 +1,51 @@
+{
+  "project": "DengueSignal BD",
+  "must_pass_before_complete": [
+    {
+      "id": "20-MODEL-01",
+      "case": "Load real selected checkpoint or trained artifact from manifest",
+      "expected": "Nonempty real model_id, valid version/checksum; no hardcoded success"
+    },
+    {
+      "id": "20-MODEL-02",
+      "case": "Two distinct representative Bangladesh inputs are analyzed via real endpoint",
+      "expected": "Two non-canned results, inspect feature/predictions, correct schema"
+    },
+    {
+      "id": "20-MODEL-03",
+      "case": "Unknown/low-quality evidence and missing model",
+      "expected": "Abstain/disable, no fake AI result"
+    },
+    {
+      "id": "20-MODEL-04",
+      "case": "Dataset rights lack training permission",
+      "expected": "Import quarantined; no training or vector indexing"
+    },
+    {
+      "id": "20-MODEL-05",
+      "case": "Dangerous or unsupported claims",
+      "expected": "Never label estimates as official case forecasts or medical diagnosis"
+    },
+    {
+      "id": "20-USER-01",
+      "case": "360px Bangladesh mobile device primary flow",
+      "expected": "3-step usable; Bengali digits, no CSV required"
+    },
+    {
+      "id": "20-ADMIN-01",
+      "case": "Admin edits homepage/about and changes model/source status",
+      "expected": "Revision/publish/rollback and audit trail"
+    },
+    {
+      "id": "20-PRIV-01",
+      "case": "Second user requests first user private data",
+      "expected": "403/not found, no sensitive fields leaked"
+    },
+    {
+      "id": "20-GIT-01",
+      "case": "Actual git remote and commit SHA reported",
+      "expected": "Verified remote commit or explicit unpushed state"
+    }
+  ],
+  "domain_metric": "Chronological forecast vs naive MAE and sensitivity to reporting lags"
+}

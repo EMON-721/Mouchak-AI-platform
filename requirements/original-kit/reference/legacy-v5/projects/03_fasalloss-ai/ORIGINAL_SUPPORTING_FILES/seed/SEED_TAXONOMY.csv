@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+FASALLOSS_AI_001,ফসলের নাম,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_002,জমির পরিমাণ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_003,ক্ষতির ছবি,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_004,বৃষ্টির নথি,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_005,ঝড়ের ঘটনা,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_006,বন্যার পানি,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_007,চারা নষ্ট,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_008,পাতার ক্ষতি,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_009,ফলনের অনুমান,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_010,বাজারদর উৎস,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_011,সার খরচ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_012,বীজ খরচ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_013,শ্রম খরচ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_014,ঘটনার তারিখ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_015,প্রমাণপত্র,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_016,ক্ষতির অংশ,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_017,কৃষকের মন্তব্য,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+FASALLOSS_AI_018,সহায়তার আবেদন,ফসলের ক্ষতি নথি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

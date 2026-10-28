@@ -1,0 +1,188 @@
+{
+  "project": "MaternalRoute BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "MATERNALROUTE_BD_001",
+      "label_bn": "প্রত্যাশিত প্রসবের তারিখ",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_002",
+      "label_bn": "ভিজিট তারিখ",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_003",
+      "label_bn": "পরীক্ষার তালিকা",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_004",
+      "label_bn": "ডাক্তারের প্রশ্ন",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_005",
+      "label_bn": "ব্যক্তিগত নোট",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_006",
+      "label_bn": "প্রতিবেদন সংরক্ষণ",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_007",
+      "label_bn": "রিমাইন্ডার",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_008",
+      "label_bn": "শিক্ষামূলক বিষয়",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_009",
+      "label_bn": "স্বাস্থ্য উৎস",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_010",
+      "label_bn": "সতর্কতার লক্ষণ",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_011",
+      "label_bn": "জরুরি সেবার পরামর্শ",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_012",
+      "label_bn": "ব্যক্তিগত তথ্যের সম্মতি",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_013",
+      "label_bn": "চিকিৎসকের নাম",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_014",
+      "label_bn": "পরিবারের সহযোগিতা",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_015",
+      "label_bn": "লোকাল ক্যালেন্ডার",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_016",
+      "label_bn": "পরবর্তী ভিজিট",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_017",
+      "label_bn": "চেকলিস্ট",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "MATERNALROUTE_BD_018",
+      "label_bn": "ডেটা এক্সপোর্ট",
+      "domain_bn": "মাতৃস্বাস্থ্য ক্যালেন্ডার",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

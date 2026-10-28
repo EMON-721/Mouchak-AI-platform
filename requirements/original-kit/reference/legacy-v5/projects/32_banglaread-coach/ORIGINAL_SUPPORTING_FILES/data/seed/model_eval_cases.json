@@ -1,0 +1,26 @@
+[
+  {
+    "case": "silent_audio",
+    "expected": "no pronunciation score"
+  },
+  {
+    "case": "very_noisy_audio",
+    "expected": "ask to rerecord"
+  },
+  {
+    "case": "regional_accent",
+    "expected": "no harsh penalty or unsupported diagnosis"
+  },
+  {
+    "case": "adult_new_reader",
+    "expected": "accessible non-childish mode"
+  },
+  {
+    "case": "parent_unconsented_child",
+    "expected": "no stored audio"
+  },
+  {
+    "case": "wrong_word_tap",
+    "expected": "show correction without shame"
+  }
+]

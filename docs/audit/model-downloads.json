@@ -1,0 +1,46 @@
+[
+  {
+    "asset": "ben.traineddata",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/ben.traineddata",
+    "bytes": 855841,
+    "sha256": "31163084c279aaebd376216f0c3d5c17ad4b5fee8db49dae79c20000b5de5964",
+    "status": "downloaded",
+    "retrieved_at": 1793106814.3673394
+  },
+  {
+    "asset": "minilm/tokenizer.json",
+    "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer.json",
+    "bytes": 17082913,
+    "sha256": "b60b6b43406a48bf3638526314f3d232d97058bc93472ff2de930d43686fa441",
+    "status": "downloaded",
+    "retrieved_at": 1793106825.8791294
+  },
+  {
+    "asset": "minilm/config.json",
+    "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json",
+    "bytes": 673,
+    "sha256": "05b570bff786faa5c4604152aa16f19f77ed6dfc31e47dd0f3dd987078693ac7",
+    "status": "downloaded",
+    "retrieved_at": 1793106836.1000712
+  },
+  {
+    "asset": "minilm/model_quantized.onnx",
+    "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model_quantized.onnx",
+    "bytes": 118308126,
+    "sha256": "66fc00f5f29afcaff34092e1bdd20008ca3918265a82fb9695a551e510cc4ebc",
+    "status": "downloaded",
+    "retrieved_at": 1793106859.2462742
+  },
+  {
+    "asset": "minilm/LICENSE",
+    "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/LICENSE",
+    "status": "blocked",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "asset": "noto-bengali.ttf",
+    "url": "https://raw.githubusercontent.com/notofonts/bengali/main/fonts/ttf/NotoSansBengali/NotoSansBengali-Regular.ttf",
+    "status": "blocked",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

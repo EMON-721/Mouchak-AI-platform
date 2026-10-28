@@ -1,0 +1,30 @@
+{
+  "skills": [
+    {
+      "id": "letter_match",
+      "name_bn": "বর্ণ চেনা",
+      "type": "deterministic"
+    },
+    {
+      "id": "word_segment",
+      "name_bn": "শব্দ ভাগ",
+      "type": "text_rules"
+    },
+    {
+      "id": "sight_word",
+      "name_bn": "চেনা শব্দ",
+      "type": "recall"
+    },
+    {
+      "id": "reading_fluency",
+      "name_bn": "পড়ার সাবলীলতা",
+      "type": "audio_assisted_optional"
+    },
+    {
+      "id": "comprehension",
+      "name_bn": "অর্থ বোঝা",
+      "type": "MCQ/human reviewed"
+    }
+  ],
+  "note": "Original progression suggestion; not an NCTB-endorsed assessment rubric."
+}

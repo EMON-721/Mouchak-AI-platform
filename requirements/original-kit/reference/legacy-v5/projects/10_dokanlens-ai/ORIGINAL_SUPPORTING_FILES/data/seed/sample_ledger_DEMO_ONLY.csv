@@ -1,0 +1,6 @@
+﻿date,sku,movement,quantity,unit,is_demo
+2026-10-01,BDP001,opening,10,kg,True
+2026-10-01,BDP001,purchase,5,kg,True
+2026-10-01,BDP001,sale,2,kg,True
+2026-10-01,BDP001,damage,1,kg,True
+2026-10-01,BDP001,sale,3,kg,True

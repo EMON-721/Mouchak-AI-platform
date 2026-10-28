@@ -1,0 +1,39 @@
+{
+  "project_number": 27,
+  "project_name": "CivicForm AI",
+  "slug": "civicform-ai",
+  "category": "Government Services / Document RAG",
+  "about_bn": "সরকারি ফর্ম বা আবেদন পদ্ধতির নথি থেকে উৎসসহ কীভাবে ফর্ম পূরণ করতে হবে তা সহজ বাংলায় বুঝিয়ে দেবে।",
+  "inputs": "Plain text questions; uploaded official public forms; optional user-supplied filled draft",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Plain text questions, uploaded official public forms, optional user-supplied filled draft",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Service and form search",
+    "Official-source citation assistant",
+    "Step-by-step form explanation",
+    "Documents needed checklist",
+    "Version and fee date comparison",
+    "Private document retention control"
+  ],
+  "ai_contract": "RAG constrained to curated up-to-date official service instructions; entity extraction for form names; form-field OCR with manual review; contradictions surfaced, abstain if not cited.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

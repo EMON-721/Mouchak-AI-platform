@@ -1,0 +1,132 @@
+{
+  "project": "NoiseTrace AI",
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "TEST-001",
+      "scenario_bn": "স্বাভাবিক ইনপুট",
+      "role": "guest",
+      "case_key": "happy_path",
+      "input_note_bn": "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন — হর্ন",
+      "expected_bn": "ব্যবহারকারী প্রথমবার কাজ সম্পন্ন করে; source limitation দৃশ্যমান",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-002",
+      "scenario_bn": "অসম্পূর্ণ ইনপুট",
+      "role": "guest",
+      "case_key": "missing_fields",
+      "input_note_bn": "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন — নির্মাণের শব্দ",
+      "expected_bn": "সব প্রয়োজনীয় অনুপস্থিত মান বাংলায় চিহ্নিত; অনুমান নয়",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-003",
+      "scenario_bn": "বাংলা সংখ্যা",
+      "role": "user",
+      "case_key": "bn_digits",
+      "input_note_bn": "সহজ ইনপুট দিন—20-60-second audio, text tags, optional time/location — মানুষের ভিড়",
+      "expected_bn": "বাংলা ডিজিটকে সঠিক সংখ্যায় normalise; ইউনিট ধরে রাখা",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-004",
+      "scenario_bn": "দ্ব্যর্থক টেক্সট",
+      "role": "user",
+      "case_key": "ambiguous_text",
+      "input_note_bn": "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন — মেশিনের শব্দ",
+      "expected_bn": "review step; low-confidence abstain",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-005",
+      "scenario_bn": "অতিরিক্ত বড় ফাইল",
+      "role": "user",
+      "case_key": "oversized_file",
+      "input_note_bn": "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন — জেনারেটরের শব্দ",
+      "expected_bn": "safe rejection; clear limit + retry",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-006",
+      "scenario_bn": "অনুমতি না থাকা ডেটা",
+      "role": "guest",
+      "case_key": "source_blocked",
+      "input_note_bn": "সহজ ইনপুট দিন—20-60-second audio, text tags, optional time/location — মাইকের শব্দ",
+      "expected_bn": "সুস্পষ্ট unavailable; ভুয়া live data নয়",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-007",
+      "scenario_bn": "ডেটাসেটের পুরোনো সংস্করণ",
+      "role": "admin",
+      "case_key": "stale_source",
+      "input_note_bn": "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন — রেকর্ডিং সময়",
+      "expected_bn": "as-of এবং downgrade/report alert",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-008",
+      "scenario_bn": "অনুমতি ছাড়া অন্যের ডেটা",
+      "role": "user",
+      "case_key": "cross_user_access",
+      "input_note_bn": "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন — রেকর্ডিং দৈর্ঘ্য",
+      "expected_bn": "403 deny; audit event",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-009",
+      "scenario_bn": "admin data quarantine",
+      "role": "curator",
+      "case_key": "unlicensed_import",
+      "input_note_bn": "সহজ ইনপুট দিন—20-60-second audio, text tags, optional time/location — অবস্থান সম্মতি",
+      "expected_bn": "publish disabled until license reviewed",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-010",
+      "scenario_bn": "বেঠিক ইউনিট",
+      "role": "user",
+      "case_key": "unit_mismatch",
+      "input_note_bn": "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন — অডিও আপলোড",
+      "expected_bn": "validation rejection; কোনো মিথ্যা পরামর্শ নয়",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-011",
+      "scenario_bn": "AI model বন্ধ",
+      "role": "user",
+      "case_key": "inference_offline",
+      "input_note_bn": "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন — অডিও গোপনীয়তা",
+      "expected_bn": "simple rule/manual fallback and honest badge",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-012",
+      "scenario_bn": "অ্যাডমিন কন্টেন্ট rollback",
+      "role": "admin",
+      "case_key": "cms_rollback",
+      "input_note_bn": "সহজ ইনপুট দিন—20-60-second audio, text tags, optional time/location — শব্দের উৎসের অনুমান",
+      "expected_bn": "previous published version restored with log",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-013",
+      "scenario_bn": "ডেটা মুছে ফেলা",
+      "role": "user",
+      "case_key": "account_delete",
+      "input_note_bn": "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন — বিরক্তির নথি",
+      "expected_bn": "data removed according to retention policy, verified",
+      "synthetic_test_case": true
+    },
+    {
+      "id": "TEST-014",
+      "scenario_bn": "প্রমাণ ছাড়া আত্মবিশ্বাসী দাবি",
+      "role": "guest",
+      "case_key": "unsupported_claim",
+      "input_note_bn": "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন — ঘটনার পুনরাবৃত্তি",
+      "expected_bn": "explain uncertainty and citation requirement",
+      "synthetic_test_case": true
+    }
+  ]
+}

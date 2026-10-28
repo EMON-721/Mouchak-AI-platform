@@ -1,0 +1,111 @@
+{
+  "project_number": 29,
+  "name": "HospitalBillGuard BD",
+  "slug": "hospitalbillguard-bd",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "hospital charge breakdown",
+  "model_pipeline": "OCR bill + charge-category semantic normalization + consent-based outlier stats",
+  "model_candidates": [
+    {
+      "alias": "tesseract",
+      "name": "Tesseract OCR with ben+eng language packs",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "task": "ocr",
+      "license_observed": "Apache-2.0 source; language files verify",
+      "runtime": "Python OCR worker",
+      "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag"
+    },
+    {
+      "alias": "semantic-embed",
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "task": "sentence_embedding",
+      "license_observed": "Apache-2.0; verify current card",
+      "runtime": "sentence-transformers on CPU Python worker",
+      "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID"
+    },
+    {
+      "alias": "isoforest",
+      "name": "sklearn.ensemble.IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "task": "anomaly_detection",
+      "license_observed": "scikit-learn BSD-3-Clause; verify",
+      "runtime": "CPU Python, persist fitted artifacts + training data card",
+      "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores"
+    }
+  ],
+  "evaluation": "Charge extraction agreement, duplicate detection precision",
+  "bangladesh_data_plan": "Anonymized consented patient bills and approved public hospital fee schedules",
+  "hard_safety_limit": "No guarantee fraud or fee illegality; hospital review required",
+  "simple_user_flow": "invoice photo > confirm > clear breakdown",
+  "advanced_features": "cost category report, patient data deletion, redactions",
+  "recommended_repo_slug": "hospitalbillguard-bd",
+  "original_prompt_sha256": "ea7df72ee689232f37eac6b59d1da206356bca8de7e87d7b1fb38f7742f4f5fd",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "DGHS — Bangladesh Facility Registry",
+      "url": "https://hris.mohfw.gov.bd/public/facility-registry/",
+      "category": "official_public_facility_registry",
+      "intended_use": "Hospital/facility types, locality and agency metadata",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "National Consumer Rights Protection — complaints and rules",
+      "url": "https://dncrp.gov.bd/",
+      "category": "government_consumer_guidance",
+      "intended_use": "Consumer complaint steps, supporting receipts, and official referral",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "Consumer Complaint Management System",
+      "url": "https://dncrp.com/",
+      "category": "official_complaint_service",
+      "intended_use": "Link to official complaint process; NEVER automate account claims without explicit approval",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

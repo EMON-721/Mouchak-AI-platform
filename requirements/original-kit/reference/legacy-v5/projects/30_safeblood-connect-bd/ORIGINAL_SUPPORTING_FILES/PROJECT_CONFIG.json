@@ -1,0 +1,39 @@
+{
+  "project_number": 30,
+  "project_name": "SafeBlood Connect BD",
+  "slug": "safeblood-connect-bd",
+  "category": "Health / Blood Donation Coordination",
+  "about_bn": "স্বেচ্ছায় সম্মত রক্তদাতা ও খোঁজকারীকে গোপনীয়তা রক্ষা করে তথ্য বিনিময়ের ব্যবস্থা দেবে; রক্তের নিরাপত্তা, সামঞ্জস্য বা চিকিৎসার সিদ্ধান্ত নেবে না।",
+  "inputs": "Text search by district, blood group; opt-in donor status, messages and consent",
+  "user_3step": [
+    "সেবা খুঁজুন অথবা স্বেচ্ছায় donor profile তৈরি করুন",
+    "লোকেশন, রক্তের গ্রুপ এবং সম্মতি নিশ্চিত করুন",
+    "উভয়ের সম্মতিতে মেসেজ করুন; হাসপাতালের যাচাই অনুসরণ করুন"
+  ],
+  "domain_features": [
+    "Double-opt-in volunteer status",
+    "Request verification and expiry",
+    "Privacy-preserving location matching",
+    "One-time relay communication",
+    "Anti-spam and report/block tools",
+    "Clear donor-screening by licensed professionals"
+  ],
+  "ai_contract": "Bengali semantic search and entity-normalization for locality terms; explainable ranking of consented opted-in listings by district/availability only; user-controlled filters; RAG against approved safe-blood educational materials. NO clinical eligibility prediction.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

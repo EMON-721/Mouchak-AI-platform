@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+CAREJOURNEY_AI_001,ডাক্তারের পরামর্শ,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_002,পরবর্তী ভিজিট,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_003,পরীক্ষার তালিকা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_004,পরীক্ষার দিন,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_005,রোগীর নিজের প্রশ্ন,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_006,ওষুধের নামের বানান,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_007,ওষুধের সময়ের অনিশ্চয়তা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_008,লিখিত নির্দেশনা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_009,অডিওর সম্মতি,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_010,চিকিৎসকের নাম,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_011,হাসপাতালের নাম,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_012,রেকর্ডের তারিখ,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_013,ফলোআপের তালিকা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_014,অস্পষ্ট বক্তব্য,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_015,তথ্য সংশোধন,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_016,জরুরি লক্ষণ সতর্কতা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_017,নথি মুছে ফেলা,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CAREJOURNEY_AI_018,কেয়ারগিভারের অনুমতি,চিকিৎসা ভিজিট নোট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

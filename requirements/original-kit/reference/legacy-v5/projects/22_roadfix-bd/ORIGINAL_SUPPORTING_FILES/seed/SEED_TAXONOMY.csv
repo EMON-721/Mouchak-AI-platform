@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+ROADFIX_BD_001,গর্ত,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_002,পানি জমা,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_003,ভাঙা কালভার্ট,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_004,রাস্তার ফাটল,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_005,খোলা ম্যানহোল,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_006,অপর্যাপ্ত সাইন,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_007,ফুটপাতের বাধা,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_008,ছবির সময়,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_009,জিপিএস অবস্থান,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_010,সড়কের নাম,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_011,নিরাপদে ছবি তোলা,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_012,একই সমস্যা রিপোর্ট,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_013,নতুন ছবি,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_014,সংশোধনের প্রমাণ,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_015,কর্তৃপক্ষের অবস্থা,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_016,পাবলিক রিপোর্ট,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_017,ব্যক্তিগত তথ্য লুকানো,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROADFIX_BD_018,নথির রপ্তানি,রাস্তার সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

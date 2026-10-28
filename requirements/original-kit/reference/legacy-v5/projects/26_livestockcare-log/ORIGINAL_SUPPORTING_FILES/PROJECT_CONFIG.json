@@ -1,0 +1,39 @@
+{
+  "project_number": 26,
+  "project_name": "LivestockCare Log",
+  "slug": "livestockcare-log",
+  "category": "Animal Husbandry / Farm Records",
+  "about_bn": "গরু/ছাগলের পরিচর্যা, খাবার, টিকার রেকর্ড ও দৈনিক পর্যবেক্ষণ ধরে রাখতে এবং প্রশ্নের তালিকা বানাতে পারবে।",
+  "inputs": "Text symptoms; numeric temperatures; livestock photos optional; vaccination records",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Text symptoms, numeric temperatures, livestock photos optional, vaccination records",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Per-animal timeline",
+    "Vet visit and vaccine notes",
+    "Feeding and expense diary",
+    "Owner-entered observation trends",
+    "Question checklist for vet",
+    "Animal medical safety guard"
+  ],
+  "ai_contract": "Time-series anomaly prompts over entered numbers; Bangla symptom language normalization; RAG over licensed veterinary/husbandry guides; optional photo classification only of visible categories after rigorous evaluation.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

@@ -1,0 +1,128 @@
+{
+  "project_number": 2,
+  "name": "NodiWatch AI",
+  "slug": "nodiwatch-ai",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "riverbank observation",
+  "model_pipeline": "OpenCV feature registration + MobileNet embeddings + geo time-series novelty; change imagery must match view",
+  "model_candidates": [
+    {
+      "alias": "torchvision",
+      "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "url": "https://pytorch.org/vision/stable/models.html",
+      "task": "vision_embeddings",
+      "license_observed": "Check torchvision library license and selected checkpoint weight terms",
+      "runtime": "torchvision in FastAPI inference worker",
+      "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID"
+    },
+    {
+      "alias": "isoforest",
+      "name": "sklearn.ensemble.IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "task": "anomaly_detection",
+      "license_observed": "scikit-learn BSD-3-Clause; verify",
+      "runtime": "CPU Python, persist fitted artifacts + training data card",
+      "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores"
+    }
+  ],
+  "evaluation": "Paired-image registration success / false-change rate on reviewed Bangladesh locations",
+  "bangladesh_data_plan": "FFWC water-level reference + rights-cleared satellite/riverside photos + voluntary photos",
+  "hard_safety_limit": "Never state definite erosion forecast from a picture",
+  "simple_user_flow": "map/photo/date > compare > evidence timeline",
+  "advanced_features": "shoreline observation versioning, location blur, evidence checklist",
+  "recommended_repo_slug": "nodiwatch-ai",
+  "original_prompt_sha256": "06fa1c022c3ec40e47b83ba728826745148879cfcbd6b7500ef829dc0d1f776a",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "FFWC observed water levels",
+      "url": "https://ffwc.gov.bd/app/observed-water-level",
+      "category": "reference_or_observation",
+      "intended_use": "historical/current station observations; API/reuse permission TBD",
+      "coverage": "Bangladesh or as documented in source",
+      "access_verified": "Verified public observation interface; download rights unknown (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "FFWC API docs landing",
+      "url": "https://api.ffwc.gov.bd/?format=json",
+      "category": "reference_or_observation",
+      "intended_use": "API capabilities, registration and terms need verification",
+      "coverage": "Bangladesh or as documented in source",
+      "access_verified": "Verified API information landing page; registration/auth/access restrictions still to determine (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "BWDB Hydrology — river/water monitoring",
+      "url": "https://hydrology.bwdb.gov.bd/",
+      "category": "official_hydrology_portal",
+      "intended_use": "River reach or published monthly reports, water observation metadata",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-04",
+      "publisher_or_title": "FFWC — flood and river hydrological information",
+      "url": "https://ffwc.gov.bd/",
+      "category": "official_monitoring_dashboard",
+      "intended_use": "River levels, flood/water situation, station context",
+      "coverage": "Bangladesh",
+      "access_verified": "Verified public FFWC dashboard (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-05",
+      "publisher_or_title": "OpenStreetMap — Bangladesh Geofabrik extract",
+      "url": "https://download.geofabrik.de/asia/bangladesh.html",
+      "category": "downloadable_geospatial_dataset",
+      "intended_use": "Bangladesh roads, places, pathways, waterways and locality reference",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

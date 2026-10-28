@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+ROOFWISE_AI_001,ছাদের দৈর্ঘ্য,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_002,ছাদের প্রস্থ,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_003,ছাদের ঢাল,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_004,ছায়ার ধরন,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_005,পানির পথ,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_006,ড্রেনের অবস্থা,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_007,জলাবদ্ধতা,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_008,বৃষ্টির পানি সংগ্রহ,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_009,ট্যাংকের ধারণক্ষমতা,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_010,পানি ব্যবহারের উদ্দেশ্য,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_011,ছাদের উপাদান,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_012,সূর্যালোকের সময়,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_013,গাছের অবস্থান,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_014,বাতাসের প্রবাহ,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_015,বর্ষাকালের ছবি,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_016,নিরাপত্তা সতর্কতা,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_017,বাজেট হিসাব,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+ROOFWISE_AI_018,প্রকৌশলী যাচাই,ছাদ ও বৃষ্টির পানি,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

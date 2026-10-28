@@ -1,0 +1,39 @@
+{
+  "project_number": 20,
+  "project_name": "DengueSignal BD",
+  "slug": "denguesignal-bd",
+  "category": "Public Health / Environmental Intelligence",
+  "about_bn": "বাংলাদেশের প্রকাশিত ডেঙ্গু পরিসংখ্যানকে সহজ জেলা/বিভাগভিত্তিক ট্রেন্ড, তারিখ এবং সচেতনতামূলক তথ্য হিসেবে দেখাবে।",
+  "inputs": "District selection; publicly reported counts; user community observations",
+  "user_3step": [
+    "সহজ ইনপুট দিন—District selection, publicly reported counts, user community observations",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Official publication snapshots and revisions",
+    "Division-wise historical charts",
+    "Date and source link on every card",
+    "Missing-day data quality labels",
+    "Data CSV export subject to rights",
+    "No individual risk prediction"
+  ],
+  "ai_contract": "Time series anomaly highlights with confidence; plain Bangla NLP narrative for charts; geospatial clustering ONLY on aggregated public datasets; source-grounded RAG about prevention.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

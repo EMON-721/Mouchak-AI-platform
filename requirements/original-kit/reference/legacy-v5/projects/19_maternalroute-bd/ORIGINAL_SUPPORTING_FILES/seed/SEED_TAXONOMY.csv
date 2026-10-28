@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+MATERNALROUTE_BD_001,প্রত্যাশিত প্রসবের তারিখ,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_002,ভিজিট তারিখ,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_003,পরীক্ষার তালিকা,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_004,ডাক্তারের প্রশ্ন,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_005,ব্যক্তিগত নোট,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_006,প্রতিবেদন সংরক্ষণ,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_007,রিমাইন্ডার,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_008,শিক্ষামূলক বিষয়,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_009,স্বাস্থ্য উৎস,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_010,সতর্কতার লক্ষণ,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_011,জরুরি সেবার পরামর্শ,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_012,ব্যক্তিগত তথ্যের সম্মতি,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_013,চিকিৎসকের নাম,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_014,পরিবারের সহযোগিতা,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_015,লোকাল ক্যালেন্ডার,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_016,পরবর্তী ভিজিট,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_017,চেকলিস্ট,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+MATERNALROUTE_BD_018,ডেটা এক্সপোর্ট,মাতৃস্বাস্থ্য ক্যালেন্ডার,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

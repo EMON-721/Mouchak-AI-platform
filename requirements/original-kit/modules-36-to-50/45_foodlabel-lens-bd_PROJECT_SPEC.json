@@ -1,0 +1,93 @@
+{
+  "id": 45,
+  "slug": "foodlabel-lens-bd",
+  "name": "FoodLabel Lens BD",
+  "name_bn": "খাদ্যপণ্যের মোড়কের লেখা ও অ্যালার্জেন তথ্য সহজ বাংলায়",
+  "category": "health",
+  "route": "/tools/foodlabel-lens-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "ইংরেজি উপাদান তালিকা, অ্যালার্জেন, পুষ্টি দাবি এবং মেয়াদ সম্পর্কে ভুল বোঝাবুঝি হয়।",
+    "target_users": "পরিবার, অভিভাবক, খাদ্য-অ্যালার্জি থাকা ব্যক্তি ও ছোট ব্যবসা",
+    "inputs": "নিজস্ব কেনা প্যাকেটের ছবি, লেবেলের লেখা, পরিচিত অ্যালার্জেন concern",
+    "outputs": "ingredient transcription, explicit allergen warnings if label states it, uncertain-text flags, manufacturer questions",
+    "distinctive_workflow": "food label understanding; DokanLens-এর দোকান স্টক বা WasteWise-এর বর্জ্য শনাক্তকরণ থেকে আলাদা।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "OCR + ingredient named entity recognition + reviewed allergen lexicon + grounded RAG",
+    "candidate_models": [
+      {
+        "label": "PaddleOCR",
+        "link": "https://github.com/PaddlePaddle/PaddleOCR"
+      },
+      {
+        "label": "spaCy rule matching",
+        "link": "https://spacy.io/usage/rule-based-matching"
+      }
+    ],
+    "test_target": "\"may contain\" বনাম নিশ্চিত ingredient; অস্পষ্ট বা কাটা লেবেল; expiry date format BD vs ISO।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Food Safety Authority",
+        "url": "https://bfsa.gov.bd/",
+        "purpose": "official food safety guidance; not ingredient database",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "BFSA laws/rules",
+        "url": "https://bfsa.gov.bd/pages/laws",
+        "purpose": "labeling rules, version/date verify",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "BSTI",
+        "url": "https://bsti.gov.bd/",
+        "purpose": "standards reference; not claim of product certification",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "খাবার নিরাপদ বা অ্যালার্জেন-মুক্ত নিশ্চিত করবে না; মারাত্মক অ্যালার্জির সিদ্ধান্তে চিকিৎসা নির্দেশ দেবে না; যাচাইকৃত প্রস্তুতকারী তথ্যকে অগ্রাধিকার।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/45_foodlabel-lens-bd.svg"
+}

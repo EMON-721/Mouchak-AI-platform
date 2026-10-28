@@ -1,0 +1,51 @@
+﻿label_id,label,label_bn,review_question_bn,severity_default,source_kind
+CLC001,payment_due_date,পরিশোধের নির্ধারিত তারিখ,কত তারিখে কত টাকা দিতে হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC002,late_fee,বিলম্ব ফি,বিলম্বে ফি কবে আরোপ হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC003,security_deposit,জামানত,জামানত ফেরতের শর্ত কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC004,notice_period,নোটিশের সময়,চুক্তি শেষ করতে কত আগে জানাতে হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC005,automatic_renewal,স্বয়ংক্রিয় নবায়ন,নিজে থেকে মেয়াদ বাড়বে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC006,termination,চুক্তি বাতিল,কোন পরিস্থিতিতে বাতিল হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC007,refund,অর্থ ফেরত,অর্থ ফেরতের শর্ত আছে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC008,scope_of_services,সেবার পরিধি,কোন কাজ অন্তর্ভুক্ত,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC009,deliverables,ডেলিভারেবল,কী কাজ জমা দিতে হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC010,timeline,সময়সীমা,কবে কাজ শেষ হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC011,price_revision,মূল্য পরিবর্তন,ফি/ভাড়া কখন বাড়তে পারে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC012,utilities,ইউটিলিটি বিল,বিদ্যুৎ/গ্যাস কার দায়িত্ব,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC013,repair_maintenance,মেরামত,রক্ষণাবেক্ষণের দায় কার,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC014,handover,হস্তান্তর,ঘর বা কাজ হস্তান্তরের শর্ত,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC015,damage_claim,ক্ষতির দাবি,কীভাবে ক্ষতির হিসাব হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC016,privacy,গোপনীয়তা,ব্যক্তিগত তথ্য কে দেখবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC017,personal_data_use,ডেটা ব্যবহার,তথ্য কোন কাজে ব্যবহার হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC018,confidentiality,গোপন তথ্য,কোন তথ্য গোপন থাকবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC019,intellectual_property,মেধাস্বত্ব,তৈরি কাজের মালিক কে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC020,non_compete,প্রতিযোগিতা নিষেধ,কোন কাজ সীমাবদ্ধ,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC021,non_solicitation,সম্পর্কিত পক্ষকে প্রস্তাব নিষেধ,কাদের সঙ্গে কাজ সীমাবদ্ধ,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC022,exclusivity,একক অধিকার,অন্য কারও সঙ্গে কাজ করা যাবে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC023,liability_cap,দায়ের সর্বোচ্চ সীমা,দায়ের সীমা কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC024,indemnity,ক্ষতিপূরণ দায়,কে কাকে ক্ষতি পূরণ করবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC025,force_majeure,অপ্রত্যাশিত ঘটনা,দুর্যোগে কী হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC026,dispute_resolution,বিরোধ নিষ্পত্তি,বিরোধে কোথায় যোগাযোগ,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC027,jurisdiction,বিচারিক এলাকা,কোন আদালত বা কর্তৃপক্ষ,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC028,governing_law,প্রযোজ্য আইন,কোন আইনের উল্লেখ আছে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC029,arbitration,সালিশ,সালিশের শর্ত কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC030,warranty,গুণগত নিশ্চয়তা,সেবার নিশ্চয়তা কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC031,inspection,পরিদর্শন,কখন পরিদর্শন করা যাবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC032,assignment,অধিকার হস্তান্তর,অন্যকে চুক্তি দিতে পারবে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC033,subcontract,উপ-ঠিকাদার,অন্য কাউকে কাজ দেওয়া যাবে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC034,service_level,সেবার মান,সেবা কতটুকু সময় পাওয়া যাবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC035,penalty,জরিমানা,কোন কারণে জরিমানা,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC036,working_hours,কর্মঘণ্টা,কর্মঘণ্টা কত,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC037,leave,ছুটি,ছুটির শর্ত কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC038,probation,প্রবেশনারি মেয়াদ,পরীক্ষামূলক সময় কত,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC039,salary,বেতন,বেতন ও প্রদানের সময়,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC040,benefits,সুবিধা,অতিরিক্ত সুবিধা কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC041,gratuity,আনুতোষিক,কখন প্রযোজ্য,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC042,overtime,অতিরিক্ত সময়ের কাজ,অতিরিক্ত কাজের হিসাব কী,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC043,ownership,মালিকানা,সম্পদের মালিক কে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC044,access_right,প্রবেশাধিকার,কে প্রবেশ করতে পারবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC045,alteration,পরিবর্তন,কাঠামো পরিবর্তন করা যাবে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC046,pets,পোষা প্রাণী,কোনো শর্ত আছে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC047,guest_policy,অতিথি,অতিথি থাকার সীমা আছে কি,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC048,renewal_option,নবায়নের সুযোগ,নতুন মেয়াদ কীভাবে হবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC049,signature,স্বাক্ষর,কে স্বাক্ষর করবে,needs_review_not_legal_judgment,original_curated_taxonomy
+CLC050,witness,সাক্ষী,সাক্ষী লাগবে কি,needs_review_not_legal_judgment,original_curated_taxonomy

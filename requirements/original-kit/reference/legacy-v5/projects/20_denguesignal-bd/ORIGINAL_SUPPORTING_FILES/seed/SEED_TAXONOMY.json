@@ -1,0 +1,188 @@
+{
+  "project": "DengueSignal BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "DENGUESIGNAL_BD_001",
+      "label_bn": "তারিখ",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_002",
+      "label_bn": "বিভাগ",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_003",
+      "label_bn": "নতুন রোগী",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_004",
+      "label_bn": "মোট রোগী",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_005",
+      "label_bn": "মৃত্যুর সংখ্যা",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_006",
+      "label_bn": "প্রকাশকের নাম",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_007",
+      "label_bn": "উৎস লিংক",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_008",
+      "label_bn": "সর্বশেষ হালনাগাদ",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_009",
+      "label_bn": "অসম্পূর্ণ ডেটা",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_010",
+      "label_bn": "রিভিশনের চিহ্ন",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_011",
+      "label_bn": "দৈনিক ট্রেন্ড",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_012",
+      "label_bn": "সাপ্তাহিক ট্রেন্ড",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_013",
+      "label_bn": "গ্রাফের ব্যাখ্যা",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_014",
+      "label_bn": "ভৌগোলিক সীমা",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_015",
+      "label_bn": "জনসংখ্যার ভিত্তি",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_016",
+      "label_bn": "ডেটা চেক",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_017",
+      "label_bn": "আর্কাইভ",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DENGUESIGNAL_BD_018",
+      "label_bn": "জনসচেতনতার উৎস",
+      "domain_bn": "ডেঙ্গুর প্রকাশিত তথ্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

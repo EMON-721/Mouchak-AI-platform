@@ -1,0 +1,93 @@
+{
+  "id": 38,
+  "slug": "matisense-bd",
+  "name": "MatiSense BD",
+  "name_bn": "মাটি পরীক্ষার রিপোর্ট থেকে কৃষকের সিদ্ধান্তে সহায়তা",
+  "category": "agri",
+  "route": "/tools/matisense-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "মাটি পরীক্ষার pH, EC, organic matter ও nutrient value বুঝে ফসলের সিদ্ধান্ত নেওয়া কঠিন।",
+    "target_users": "ক্ষুদ্র কৃষক, কৃষি উদ্যোক্তা ও উপসহকারী কৃষি কর্মকর্তা",
+    "inputs": "ল্যাব রিপোর্টের ছবি/PDF অথবা pH/EC/N/P/K সংখ্যা, ফসল, জেলা, মাটির টেক্সচার",
+    "outputs": "ইউনিট-যাচাইকৃত soil profile, অস্বাভাবিক সূচক ব্যাখ্যা, প্রশ্নের তালিকা, ফসলভিত্তিক গবেষণা রেফারেন্স",
+    "distinctive_workflow": "পরিমাপ-প্রথম soil lab interpretation; FasalLoss ও AgroPrice Planner থেকে আলাদা।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "OCR + unit parsing + outlier detection + locally reviewed soil/crop RAG",
+    "candidate_models": [
+      {
+        "label": "PaddleOCR",
+        "link": "https://github.com/PaddlePaddle/PaddleOCR"
+      },
+      {
+        "label": "IsolationForest",
+        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html"
+      }
+    ],
+    "test_target": "EC dS/m বনাম µS/cm, pH এবং দশমিক বাংলা অঙ্ক; নমুনার উৎস না থাকলে কোনো নির্দিষ্ট সারের ডোজ নির্ধারণ করবে না।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Soil Resource Development Institute",
+        "url": "https://srdi.gov.bd/",
+        "purpose": "official soil-analysis services and reports",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Department of Agricultural Extension",
+        "url": "https://dae.gov.bd/",
+        "purpose": "regional crop advisory references",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Bangladesh Open Data",
+        "url": "https://data.gov.bd/",
+        "purpose": "discover only; asset-specific rights",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "অনুমোদিত agronomist ও স্থানীয় সুপারিশ ছাড়া সার/কীটনাশকের নির্দিষ্ট ডোজ বা ফলনের নিশ্চয়তা দেবে না।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/38_matisense-bd.svg"
+}

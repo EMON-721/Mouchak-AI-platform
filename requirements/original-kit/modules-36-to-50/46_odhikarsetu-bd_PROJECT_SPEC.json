@@ -1,0 +1,93 @@
+{
+  "id": 46,
+  "slug": "odhikarsetu-bd",
+  "name": "OdhikarSetu BD",
+  "name_bn": "সামাজিক সুরক্ষা সহায়তার তথ্য ও প্রস্তুতি",
+  "category": "civic",
+  "route": "/tools/odhikarsetu-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "বয়স্ক ভাতা, প্রতিবন্ধী ভাতা ও অন্য সামাজিক সহায়তার প্রকৃত নিয়ম, আবেদনস্থান ও কাগজ সাধারণ ব্যবহারকারীদের কাছে ছড়িয়ে আছে।",
+    "target_users": "বয়স্ক নাগরিক, প্রতিবন্ধী ব্যক্তি, পরিবার ও সেবাদাতা",
+    "inputs": "ব্যবহারকারীর স্বেচ্ছা eligibility facts (বয়সের পরিসর, জেলা), নিজস্ব নির্বাচিত কর্মসূচি",
+    "outputs": "policy source citation, potential programs to ask about, required-document preparation, official channel links",
+    "distinctive_workflow": "program eligibility education and verification trail; CivicForm-এর নির্দিষ্ট ফর্ম পূরণের টুল নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "Bangla benefits intent classifier + policy RAG + versioned eligibility rules",
+    "candidate_models": [
+      {
+        "label": "BM25 + vector hybrid RAG",
+        "link": "https://python.langchain.com/docs/how_to/hybrid/"
+      },
+      {
+        "label": "multilingual-e5-small",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      }
+    ],
+    "test_target": "পুরোনো ভাতার পরিমাণ বা শর্তে historical-date mismatch; uncertain applicant status না জেনে eligible বলবে না।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Social Protection Programme Dashboard",
+        "url": "https://mne.socialprotection.gov.bd/",
+        "purpose": "programme overview/budget; no personal eligibility database",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Social Protection Policy Support",
+        "url": "https://socialprotection.gov.bd/data-2/",
+        "purpose": "programme statistics and references",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Department of Social Services",
+        "url": "https://dss.gov.bd/",
+        "purpose": "service rules confirm effective dates",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "সরকারি ভাতা নিশ্চিত করবে না, অনুমোদন দেবে না; দারিদ্র্য/প্রতিবন্ধিতা সংক্রান্ত গোপন তথ্য user consent ছাড়া রাখবে না।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/46_odhikarsetu-bd.svg"
+}

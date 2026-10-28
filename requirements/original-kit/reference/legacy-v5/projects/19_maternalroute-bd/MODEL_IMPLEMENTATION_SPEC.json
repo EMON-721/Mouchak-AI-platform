@@ -1,0 +1,109 @@
+{
+  "project_number": 19,
+  "name": "MaternalRoute BD",
+  "slug": "maternalroute-bd",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "maternal health guidance",
+  "model_pipeline": "Hybrid retrieval embeddings + BM25 over clinician-reviewed advice, symptom escalation fixed triage",
+  "model_candidates": [
+    {
+      "alias": "semantic-embed",
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "task": "sentence_embedding",
+      "license_observed": "Apache-2.0; verify current card",
+      "runtime": "sentence-transformers on CPU Python worker",
+      "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID"
+    },
+    {
+      "alias": "bm25",
+      "name": "rank-bm25 lexical retrieval",
+      "url": "https://pypi.org/project/rank-bm25/",
+      "task": "lexical_retrieval",
+      "license_observed": "Check current library terms",
+      "runtime": "Python search adapter",
+      "must_smoke_test": "Original, permitted Bengali corpus sample returns correct evidence chunk ID"
+    }
+  ],
+  "evaluation": "Evidence recall and critical red-flag trigger recall on approved synthetic cases",
+  "bangladesh_data_plan": "DGHS health education and WHO Bangladesh public materials only when allowed",
+  "hard_safety_limit": "No diagnosis or reassurance for warning signs; immediate-care guidance",
+  "simple_user_flow": "pregnancy stage > question > approved source summary",
+  "advanced_features": "care checklist, multilingual accessibility",
+  "recommended_repo_slug": "maternalroute-bd",
+  "original_prompt_sha256": "b52666701740248f2fac3ce2e3f5c754a4d079bfab1854b8306971688d250f08",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "DGHS — official health services portal",
+      "url": "https://dghs.gov.bd/",
+      "category": "official_health_guidance_portal",
+      "intended_use": "Source for current public health education and referral links",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "DGHS — Bangladesh Facility Registry",
+      "url": "https://hris.mohfw.gov.bd/public/facility-registry/",
+      "category": "official_public_facility_registry",
+      "intended_use": "Hospital/facility types, locality and agency metadata",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "Bangladesh Open Data — searchable datasets",
+      "url": "https://data.gov.bd/dataset",
+      "category": "dataset_catalog",
+      "intended_use": "Find filtered Bangladesh CSV/XLSX datasets by topic and year",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

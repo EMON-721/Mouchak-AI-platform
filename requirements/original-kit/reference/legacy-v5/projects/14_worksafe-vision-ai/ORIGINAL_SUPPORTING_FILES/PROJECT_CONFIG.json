@@ -1,0 +1,39 @@
+{
+  "project_number": 14,
+  "project_name": "WorkSafe Vision AI",
+  "slug": "worksafe-vision-ai",
+  "category": "Workplace Safety / Vision",
+  "about_bn": "কারখানা/ওয়ার্কশপের সম্মতিসাপেক্ষ ছবি ও চেকলিস্ট দিয়ে দৃশ্যমান কর্মক্ষেত্রের নিরাপত্তা সমস্যা নথিবদ্ধ করা যাবে।",
+  "inputs": "Worksite images; checklist responses; optional incident notes",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Worksite images, checklist responses, optional incident notes",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Worksite hazard observations",
+    "PPE visibility checks on consensual images",
+    "Corrective-action assignment and closure evidence",
+    "Checklist templates by worksite type",
+    "Safety audit history",
+    "No inspection certification claims"
+  ],
+  "ai_contract": "CV object/scene detection limited to visible conditions; deterministic checklist score with editable severity; document-grounded RAG from current occupational safety guidance; human reviewer step.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

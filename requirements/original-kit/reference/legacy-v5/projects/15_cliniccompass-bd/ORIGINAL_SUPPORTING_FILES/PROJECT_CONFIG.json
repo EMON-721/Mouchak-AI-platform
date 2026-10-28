@@ -1,0 +1,39 @@
+{
+  "project_number": 15,
+  "project_name": "ClinicCompass BD",
+  "slug": "cliniccompass-bd",
+  "category": "Health / Facility Navigation",
+  "about_bn": "জেলা, উপজেলা ও প্রয়োজনীয় সেবার নাম লিখে সরকারি রেজিস্ট্রিতে তালিকাভুক্ত চিকিৎসা প্রতিষ্ঠান খুঁজে পাওয়া যাবে; খোলা আছে বা সেবা নিশ্চিত আছে দাবি করবে না।",
+  "inputs": "Text symptoms in plain terms, service needs, location manually selected",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Text symptoms in plain terms, service needs, location manually selected",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Location and service filter",
+    "Registry-backed facility cards",
+    "Last-verified status and edit requests",
+    "Facility comparison without fake availability",
+    "Transport-neutral contact sheet",
+    "Community corrections with admin moderation"
+  ],
+  "ai_contract": "Retrieval/rule-based facility matching on verified structured registry, Bengali NLP query normalization, citations and freshness; no invented availability, doctor schedule or distance.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

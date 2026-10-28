@@ -1,0 +1,109 @@
+{
+  "project_number": 26,
+  "name": "LivestockCare Log",
+  "slug": "livestockcare-log",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "livestock care tracker",
+  "model_pipeline": "Semantic search over vet-reviewed care material + time-based outlier detector for owner records",
+  "model_candidates": [
+    {
+      "alias": "semantic-embed",
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "task": "sentence_embedding",
+      "license_observed": "Apache-2.0; verify current card",
+      "runtime": "sentence-transformers on CPU Python worker",
+      "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID"
+    },
+    {
+      "alias": "isoforest",
+      "name": "sklearn.ensemble.IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "task": "anomaly_detection",
+      "license_observed": "scikit-learn BSD-3-Clause; verify",
+      "runtime": "CPU Python, persist fitted artifacts + training data card",
+      "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores"
+    }
+  ],
+  "evaluation": "Recall@5 vet references; change alert precision with vetted thresholds",
+  "bangladesh_data_plan": "DLS public livestock reference, consented herd logs and vet-authored original notes",
+  "hard_safety_limit": "No illness diagnosis or dosing advice",
+  "simple_user_flow": "animal log > choose concern > checklist",
+  "advanced_features": "vaccination log, feeding journal, referral directory",
+  "recommended_repo_slug": "livestockcare-log",
+  "original_prompt_sha256": "92e1024b4be3a4cacfcd3a6afde17e28ccdafdf54bfe7221e774bf37b7b3da40",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "Ministry of Fisheries and Livestock Annual Reports",
+      "url": "https://mofl.gov.bd/pages/annual-reports/",
+      "category": "government_yearbooks",
+      "intended_use": "National livestock/fishery context and published statistics",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "BAMIS — agricultural weather and advisories",
+      "url": "https://www.bamis.gov.bd/en/home/",
+      "category": "government_reference_portal",
+      "intended_use": "Crop weather, 64-district advisories, climate tables and agriculture risk context",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "Bangladesh Open Data — searchable datasets",
+      "url": "https://data.gov.bd/dataset",
+      "category": "dataset_catalog",
+      "intended_use": "Find filtered Bangladesh CSV/XLSX datasets by topic and year",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

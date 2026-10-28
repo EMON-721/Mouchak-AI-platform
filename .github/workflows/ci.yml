@@ -1,0 +1,30 @@
+name: Mouchak checks
+env:
+  ORT_DISABLE_TELEMETRY: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+on: [push, pull_request]
+jobs:
+  platform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '24'}
+      - uses: pnpm/action-setup@v4
+        with: {version: '11.25.0'}
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck && pnpm lint
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-ben ffmpeg
+      - run: pip install -r requirements-python.txt
+      - run: python scripts/check-registry.py
+      - run: python scripts/download-models.py
+      - run: python scripts/download-pose.py --test-fixture
+      - run: python -m pytest tests --ignore=tests/verify_postgres.py -q --junitxml=ci-results.xml
+      - run: node scripts/test-postgres.mjs
+      - run: node scripts/test-collaboration-postgres.mjs
+      - run: pnpm build:next
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: test-evidence, path: ci-results.xml}

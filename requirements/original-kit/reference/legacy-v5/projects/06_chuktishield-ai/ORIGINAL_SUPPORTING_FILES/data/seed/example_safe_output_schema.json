@@ -1,0 +1,24 @@
+{
+  "document_id": "uuid",
+  "clauses": [
+    {
+      "clause_text": "original-user-supplied-or-synthetic",
+      "label": "termination",
+      "plain_bangla": "ব্যাখ্যা, চূড়ান্ত মতামত নয়",
+      "red_flags": [
+        "unclear notice period"
+      ],
+      "source_passages": [
+        {
+          "title": "source law title",
+          "url": "official law url",
+          "section": "exact validated section",
+          "retrieval_date": "2026-10-25"
+        }
+      ],
+      "confidence": 0.0,
+      "needs_professional_review": true
+    }
+  ],
+  "no_law_match": "আইনি ভিত্তি নিশ্চিত করা যায়নি; বিশেষজ্ঞের সাহায্য নিন"
+}

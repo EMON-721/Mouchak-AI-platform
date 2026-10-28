@@ -1,0 +1,188 @@
+{
+  "project": "BillDetect AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "BILLDETECT_AI_001",
+      "label_bn": "বিলের ধরন",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_002",
+      "label_bn": "মাস",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_003",
+      "label_bn": "গ্রাহক নম্বর লুকানো",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_004",
+      "label_bn": "বর্তমান রিডিং",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_005",
+      "label_bn": "আগের রিডিং",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_006",
+      "label_bn": "ব্যবহৃত ইউনিট",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_007",
+      "label_bn": "প্রতি ইউনিট মূল্য",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_008",
+      "label_bn": "স্থির চার্জ",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_009",
+      "label_bn": "ভ্যাট",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_010",
+      "label_bn": "বকেয়া",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_011",
+      "label_bn": "মোট চার্জ",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_012",
+      "label_bn": "পরিশোধের তারিখ",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_013",
+      "label_bn": "বিলের ছবি",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_014",
+      "label_bn": "OCR যাচাই",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_015",
+      "label_bn": "আগের মাসের তুলনা",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_016",
+      "label_bn": "শুল্কের কার্যকর তারিখ",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_017",
+      "label_bn": "অভিযোগ প্রশ্ন",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "BILLDETECT_AI_018",
+      "label_bn": "বিল সংরক্ষণ",
+      "domain_bn": "বিল যাচাই",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

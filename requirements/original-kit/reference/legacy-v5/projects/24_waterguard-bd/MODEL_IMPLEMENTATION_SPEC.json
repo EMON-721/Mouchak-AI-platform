@@ -1,0 +1,102 @@
+{
+  "project_number": 24,
+  "name": "WaterGuard BD",
+  "slug": "waterguard-bd",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "water lab report companion",
+  "model_pipeline": "Tesseract for lab PDFs + numeric outlier scoring based on permitted measurements",
+  "model_candidates": [
+    {
+      "alias": "tesseract",
+      "name": "Tesseract OCR with ben+eng language packs",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "task": "ocr",
+      "license_observed": "Apache-2.0 source; language files verify",
+      "runtime": "Python OCR worker",
+      "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag"
+    },
+    {
+      "alias": "isoforest",
+      "name": "sklearn.ensemble.IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "task": "anomaly_detection",
+      "license_observed": "scikit-learn BSD-3-Clause; verify",
+      "runtime": "CPU Python, persist fitted artifacts + training data card",
+      "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores"
+    }
+  ],
+  "evaluation": "OCR unit parsing; numeric rule concordance vs approved test specs",
+  "bangladesh_data_plan": "DPHE/DoE water quality guidance; opted-in independent lab readings",
+  "hard_safety_limit": "Cannot certify potable water from photo or a single incomplete test",
+  "simple_user_flow": "test readings/image > verify units > source-based interpretation",
+  "advanced_features": "sample locations coarse, export result, explain gaps",
+  "recommended_repo_slug": "waterguard-bd",
+  "original_prompt_sha256": "1fb3becea5672461bf3c57f73871f039979646ea48331029ae46c5ecd74b52d5",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "DPHE — water quality testing system links",
+      "url": "https://dphe.gov.bd/pages/static-pages/6922dd01933eb65569e13226",
+      "category": "official_water_services_directory",
+      "intended_use": "Water-testing report management context and verified official service references",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "WHO 2026 drinking-water quality guidelines",
+      "url": "https://www.who.int/publications/i/item/9789240121225",
+      "category": "international_guideline",
+      "intended_use": "Human-reviewable water-parameter context; local Bangladesh standards take precedence",
+      "coverage": "Global (reference only)",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "Bangladesh Open Data — searchable datasets",
+      "url": "https://data.gov.bd/dataset",
+      "category": "dataset_catalog",
+      "intended_use": "Find filtered Bangladesh CSV/XLSX datasets by topic and year",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "BazarCompare AI",
+  "version": "v3-existing-site-upgrade",
+  "date": "2026-10-25",
+  "mode": "upgrade_existing_repo_only",
+  "source_files": [
+    "location_divisions.json",
+    "sample_user_price_input_DEMO_ONLY.csv",
+    "conversion_rules.json",
+    "bd_commodity_dictionary.csv"
+  ],
+  "master_prompt": "MASTER_PROMPT_UPGRADE_V3.md",
+  "source_registry": "data/sources.json",
+  "github_pushed": false,
+  "app_built_or_updated": false,
+  "licensed_external_data_downloaded": false
+}

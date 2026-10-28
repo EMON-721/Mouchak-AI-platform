@@ -1,0 +1,188 @@
+{
+  "project": "RoadFix BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "ROADFIX_BD_001",
+      "label_bn": "গর্ত",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_002",
+      "label_bn": "পানি জমা",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_003",
+      "label_bn": "ভাঙা কালভার্ট",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_004",
+      "label_bn": "রাস্তার ফাটল",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_005",
+      "label_bn": "খোলা ম্যানহোল",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_006",
+      "label_bn": "অপর্যাপ্ত সাইন",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_007",
+      "label_bn": "ফুটপাতের বাধা",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_008",
+      "label_bn": "ছবির সময়",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_009",
+      "label_bn": "জিপিএস অবস্থান",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_010",
+      "label_bn": "সড়কের নাম",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_011",
+      "label_bn": "নিরাপদে ছবি তোলা",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_012",
+      "label_bn": "একই সমস্যা রিপোর্ট",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_013",
+      "label_bn": "নতুন ছবি",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_014",
+      "label_bn": "সংশোধনের প্রমাণ",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_015",
+      "label_bn": "কর্তৃপক্ষের অবস্থা",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_016",
+      "label_bn": "পাবলিক রিপোর্ট",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_017",
+      "label_bn": "ব্যক্তিগত তথ্য লুকানো",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "ROADFIX_BD_018",
+      "label_bn": "নথির রপ্তানি",
+      "domain_bn": "রাস্তার সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

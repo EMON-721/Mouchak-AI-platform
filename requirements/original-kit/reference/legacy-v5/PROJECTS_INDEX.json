@@ -1,0 +1,495 @@
+[
+  {
+    "number": 1,
+    "name": "PukurSOS AI",
+    "slug": "pukursos-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "423a844f1d0f64e7ded10e5efb0bdca441f3a83a3fd4a1e5cfa007b4fbc40450",
+    "v5_master_words": 11743,
+    "v5_master_bytes": 94348,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sklearn.ensemble.IsolationForest",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 2,
+    "name": "NodiWatch AI",
+    "slug": "nodiwatch-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "06fa1c022c3ec40e47b83ba728826745148879cfcbd6b7500ef829dc0d1f776a",
+    "v5_master_words": 11726,
+    "v5_master_bytes": 93805,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 7
+  },
+  {
+    "number": 3,
+    "name": "FasalLoss AI",
+    "slug": "fasalloss-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "3e27d79c7ab1adab40b4d0f02c53e41003a21617ebc6320bfd8f5a156afa45d8",
+    "v5_master_words": 11650,
+    "v5_master_bytes": 92966,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 7
+  },
+  {
+    "number": 4,
+    "name": "RoofWise AI",
+    "slug": "roofwise-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "1ed413ae050c8aa2f1b1cf0d595098f475770be4edbcd217a4191321848cb090",
+    "v5_master_words": 11588,
+    "v5_master_bytes": 92379,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 5,
+    "name": "NoiseTrace AI",
+    "slug": "noisetrace-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "ceb04d5d4e194d4fe403d47e159deaccb91fd10624ce0dbf0600c4c755494fa3",
+    "v5_master_words": 11551,
+    "v5_master_bytes": 92390,
+    "models": [
+      "YAMNet audio event classifier",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 6,
+    "name": "ChuktiShield AI",
+    "slug": "chuktishield-ai",
+    "existing_site": true,
+    "prior_version": "V3",
+    "prior_sha256": "099cabcd5373b3baa81412af15c29f0805943255d8da5e3479667fda7d417ce4",
+    "v5_master_words": 11249,
+    "v5_master_bytes": 88382,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "rank-bm25 lexical retrieval",
+      "Qwen/Qwen2.5-1.5B-Instruct"
+    ],
+    "source_links": 9
+  },
+  {
+    "number": 7,
+    "name": "BillDetect AI",
+    "slug": "billdetect-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "3646b32b902f45525784423c82d39172ed4ea29818c253f7000b0ac8f4d79160",
+    "v5_master_words": 11587,
+    "v5_master_bytes": 92058,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 8,
+    "name": "CareJourney AI",
+    "slug": "carejourney-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "715a214a1a99f2e993b8916c581bc0fd9e6aece87192053261bfdd9fcd08d10e",
+    "v5_master_words": 11697,
+    "v5_master_bytes": 93581,
+    "models": [
+      "openai/whisper-small",
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 7
+  },
+  {
+    "number": 9,
+    "name": "GoliCoach AI",
+    "slug": "golicoach-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "9d7e0a99e0d316cb5577bd123bfcb1361cbc37dd23e2ac996975c2fa9c937703",
+    "v5_master_words": 11642,
+    "v5_master_bytes": 92825,
+    "models": [
+      "MediaPipe Pose Landmark model",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 10,
+    "name": "DokanLens AI",
+    "slug": "dokanlens-ai",
+    "existing_site": true,
+    "prior_version": "V3",
+    "prior_sha256": "d652b4e5bc52077bd5ffad45f5559f73a67b3d7c81e49cde4b8cd1fd3bee7152",
+    "v5_master_words": 11185,
+    "v5_master_bytes": 87552,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor"
+    ],
+    "source_links": 7
+  },
+  {
+    "number": 11,
+    "name": "BazarCompare AI",
+    "slug": "bazarcompare-ai",
+    "existing_site": true,
+    "prior_version": "V3",
+    "prior_sha256": "c14723e80da62a66c87d79653743786954c828c8ceb27088bd5e8daaaf672f1b",
+    "v5_master_words": 11147,
+    "v5_master_bytes": 87378,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor"
+    ],
+    "source_links": 9
+  },
+  {
+    "number": 12,
+    "name": "HomeHazard AI",
+    "slug": "homehazard-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "cbb84d34bca0459f1031b1778e2aeef8465a31b83505cbdcd4d51770ab00d464",
+    "v5_master_words": 11570,
+    "v5_master_bytes": 92367,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 13,
+    "name": "WasteWise BD",
+    "slug": "wastewise-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "6fb4a38e7bb9d1f261fb5ef630f58ddd4e6ef8c9b1f8db13dfeea0a2fd66cdb6",
+    "v5_master_words": 11565,
+    "v5_master_bytes": 92400,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 14,
+    "name": "WorkSafe Vision AI",
+    "slug": "worksafe-vision-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "0b4f98e73632f4098fdb8372f9e466339912c61d765e7c4f6a56afa1e89d57af",
+    "v5_master_words": 11576,
+    "v5_master_bytes": 92387,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 15,
+    "name": "ClinicCompass BD",
+    "slug": "cliniccompass-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "feb150dc07dd63872f6dfcc7900746e4574e57824228f2fa205b06db1a150876",
+    "v5_master_words": 11588,
+    "v5_master_bytes": 92781,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 16,
+    "name": "LabTrend BD",
+    "slug": "labtrend-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "f50b14ea5dc73b45510d2e655438d4a7d8b93d8601be0e87ae2e113d58406aac",
+    "v5_master_words": 11627,
+    "v5_master_bytes": 92734,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 17,
+    "name": "DoseClear BD",
+    "slug": "doseclear-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "e28e2f219503e694e275978c342372990bde5e60faeabfcffe694ec77df4b7b0",
+    "v5_master_words": 11618,
+    "v5_master_bytes": 92987,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 18,
+    "name": "VaccinePath BD",
+    "slug": "vaccinepath-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "3c45e6cb97594ba7d0caa39ec195ec4d7fed8c656a2450c004f7f3307b2efce0",
+    "v5_master_words": 11606,
+    "v5_master_bytes": 92580,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "rank-bm25 lexical retrieval"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 19,
+    "name": "MaternalRoute BD",
+    "slug": "maternalroute-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "b52666701740248f2fac3ce2e3f5c754a4d079bfab1854b8306971688d250f08",
+    "v5_master_words": 11605,
+    "v5_master_bytes": 92736,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "rank-bm25 lexical retrieval"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 20,
+    "name": "DengueSignal BD",
+    "slug": "denguesignal-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "de1c3597a7333903c739a6b1b7bf58496b9ca0ae27051c9002e9e92528fac3cc",
+    "v5_master_words": 11600,
+    "v5_master_bytes": 92813,
+    "models": [
+      "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 21,
+    "name": "RentalFair BD",
+    "slug": "rentalfair-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "334fa4bc58257ae60e086501fcaad6e4255c1a2b548c546cdb42796b28e2808e",
+    "v5_master_words": 11638,
+    "v5_master_bytes": 92754,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 22,
+    "name": "RoadFix BD",
+    "slug": "roadfix-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "a0d48851613a978794fcc5f6ef2ff96fd8c711c9b32b9905180496440366bceb",
+    "v5_master_words": 11542,
+    "v5_master_bytes": 92003,
+    "models": [
+      "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 23,
+    "name": "SafeRoute BD",
+    "slug": "saferoute-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "88a1ed487e5ed26006c9272f31291eb4d749dcaeb217e2c8783c34fa4dcee677",
+    "v5_master_words": 11645,
+    "v5_master_bytes": 93430,
+    "models": [
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 24,
+    "name": "WaterGuard BD",
+    "slug": "waterguard-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "1fb3becea5672461bf3c57f73871f039979646ea48331029ae46c5ecd74b52d5",
+    "v5_master_words": 11618,
+    "v5_master_bytes": 92498,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 25,
+    "name": "AgroPrice Planner",
+    "slug": "agroprice-planner",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "a50a4c5563dac6a8a50cc1bb01bd6915f96090ff787948f29fe82cf5913669f7",
+    "v5_master_words": 11762,
+    "v5_master_bytes": 93902,
+    "models": [
+      "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+      "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 8
+  },
+  {
+    "number": 26,
+    "name": "LivestockCare Log",
+    "slug": "livestockcare-log",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "92e1024b4be3a4cacfcd3a6afde17e28ccdafdf54bfe7221e774bf37b7b3da40",
+    "v5_master_words": 11593,
+    "v5_master_bytes": 92528,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 27,
+    "name": "CivicForm AI",
+    "slug": "civicform-ai",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "338f7f11b0d4cf0604fbcca0bced14c4c8d9a71d3a7af42b6458ae529038b825",
+    "v5_master_words": 11658,
+    "v5_master_bytes": 92696,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "rank-bm25 lexical retrieval"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 28,
+    "name": "HeatSafe BD",
+    "slug": "heatsafe-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "4e6cce9f54d7a86ee3325bfe9dfeb490509d39476c7773db6ac0fbf15259d78c",
+    "v5_master_words": 11654,
+    "v5_master_bytes": 93366,
+    "models": [
+      "statsmodels ExponentialSmoothing baseline + prediction intervals when validated",
+      "sklearn.ensemble.IsolationForest",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 29,
+    "name": "HospitalBillGuard BD",
+    "slug": "hospitalbillguard-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "ea7df72ee689232f37eac6b59d1da206356bca8de7e87d7b1fb38f7742f4f5fd",
+    "v5_master_words": 11720,
+    "v5_master_bytes": 93603,
+    "models": [
+      "Tesseract OCR with ben+eng language packs",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "sklearn.ensemble.IsolationForest"
+    ],
+    "source_links": 5
+  },
+  {
+    "number": 30,
+    "name": "SafeBlood Connect BD",
+    "slug": "safeblood-connect-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "43844c544b4eb4d123a87058e65b864658b238c2eb0115d6a9cdb64b020c90c6",
+    "v5_master_words": 11673,
+    "v5_master_bytes": 93510,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 6
+  },
+  {
+    "number": 31,
+    "name": "ShikkhaRAG BD",
+    "slug": "shikkharag-bd",
+    "existing_site": false,
+    "prior_version": "V4",
+    "prior_sha256": "58e33f1d07a0c95e489085cfdf02dec12e9b6ac1c5a8c920b9206ab8d529cac2",
+    "v5_master_words": 11859,
+    "v5_master_bytes": 94907,
+    "models": [
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "rank-bm25 lexical retrieval",
+      "Qwen/Qwen2.5-1.5B-Instruct",
+      "Tesseract OCR with ben+eng language packs"
+    ],
+    "source_links": 7
+  },
+  {
+    "number": 32,
+    "name": "BanglaRead Coach",
+    "slug": "banglaread-coach",
+    "existing_site": true,
+    "prior_version": "V3",
+    "prior_sha256": "89fcba02c62b8cb8695425b7e1a69c58f47ddfa9e811a9fb7470dd37329b262f",
+    "v5_master_words": 13554,
+    "v5_master_bytes": 111307,
+    "models": [
+      "openai/whisper-small",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "source_links": 9
+  }
+]

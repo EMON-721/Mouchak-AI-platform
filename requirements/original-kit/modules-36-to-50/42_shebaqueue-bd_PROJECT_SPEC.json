@@ -1,0 +1,87 @@
+{
+  "id": 42,
+  "slug": "shebaqueue-bd",
+  "name": "ShebaQueue BD",
+  "name_bn": "সরকারি সেবা নিতে কোথায় যাবেন ও কী প্রস্তুতি লাগবে",
+  "category": "civic",
+  "route": "/tools/shebaqueue-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "কোন অফিসে যেতে হবে, সময়, আসল সরকারি লিংক, প্রয়োজনীয় নথি এবং সেবার প্রক্রিয়া সম্পর্কে অস্পষ্টতা থাকে।",
+    "target_users": "সরকারি সেবা গ্রহীতা, প্রবীণ, প্রতিবন্ধী ও অভিভাবক",
+    "inputs": "সেবার নাম/ছোট প্রশ্ন, এলাকা ও প্রাপ্ত ডকুমেন্টের checkbox",
+    "outputs": "step-by-step service journey, checklist, public office directory, verified link and source date",
+    "distinctive_workflow": "সেবা প্রাপ্তির বাস্তব প্রস্তুতি ও follow-up tracker; CivicForm-এর কাগজ পূরণের ফিচার নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "Bangla intent routing + official service document RAG + deterministic readiness checklist",
+    "candidate_models": [
+      {
+        "label": "BM25 retrieval",
+        "link": "https://github.com/dorianbrown/rank_bm25"
+      },
+      {
+        "label": "multilingual E5 embeddings",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      }
+    ],
+    "test_target": "অফিস/সেবার ভুল jurisdiction, পুরোনো ফি/কাগজের তালিকা এবং ভুয়া government link detect করা।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "myGov Bangladesh",
+        "url": "https://www.mygov.bd/",
+        "purpose": "official portal reference; verify each service",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Bangladesh National Portal",
+        "url": "https://bangladesh.gov.bd/",
+        "purpose": "office/service reference, check current pages",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "সরকারি অ্যাপয়েন্টমেন্ট, আবেদন জমা বা লাইভ queue length নিশ্চিত বলবে না যদি প্রকৃত অফিসের অনুমোদিত integration না থাকে।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/42_shebaqueue-bd.svg"
+}

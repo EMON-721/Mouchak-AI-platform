@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+DENGUESIGNAL_BD_001,তারিখ,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_002,বিভাগ,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_003,নতুন রোগী,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_004,মোট রোগী,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_005,মৃত্যুর সংখ্যা,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_006,প্রকাশকের নাম,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_007,উৎস লিংক,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_008,সর্বশেষ হালনাগাদ,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_009,অসম্পূর্ণ ডেটা,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_010,রিভিশনের চিহ্ন,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_011,দৈনিক ট্রেন্ড,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_012,সাপ্তাহিক ট্রেন্ড,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_013,গ্রাফের ব্যাখ্যা,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_014,ভৌগোলিক সীমা,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_015,জনসংখ্যার ভিত্তি,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_016,ডেটা চেক,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_017,আর্কাইভ,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DENGUESIGNAL_BD_018,জনসচেতনতার উৎস,ডেঙ্গুর প্রকাশিত তথ্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

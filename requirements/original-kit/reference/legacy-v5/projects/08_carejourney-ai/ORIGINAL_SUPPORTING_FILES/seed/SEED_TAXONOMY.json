@@ -1,0 +1,188 @@
+{
+  "project": "CareJourney AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "CAREJOURNEY_AI_001",
+      "label_bn": "ডাক্তারের পরামর্শ",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_002",
+      "label_bn": "পরবর্তী ভিজিট",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_003",
+      "label_bn": "পরীক্ষার তালিকা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_004",
+      "label_bn": "পরীক্ষার দিন",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_005",
+      "label_bn": "রোগীর নিজের প্রশ্ন",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_006",
+      "label_bn": "ওষুধের নামের বানান",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_007",
+      "label_bn": "ওষুধের সময়ের অনিশ্চয়তা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_008",
+      "label_bn": "লিখিত নির্দেশনা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_009",
+      "label_bn": "অডিওর সম্মতি",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_010",
+      "label_bn": "চিকিৎসকের নাম",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_011",
+      "label_bn": "হাসপাতালের নাম",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_012",
+      "label_bn": "রেকর্ডের তারিখ",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_013",
+      "label_bn": "ফলোআপের তালিকা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_014",
+      "label_bn": "অস্পষ্ট বক্তব্য",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_015",
+      "label_bn": "তথ্য সংশোধন",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_016",
+      "label_bn": "জরুরি লক্ষণ সতর্কতা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_017",
+      "label_bn": "নথি মুছে ফেলা",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CAREJOURNEY_AI_018",
+      "label_bn": "কেয়ারগিভারের অনুমতি",
+      "domain_bn": "চিকিৎসা ভিজিট নোট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

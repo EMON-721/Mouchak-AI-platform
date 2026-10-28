@@ -1,0 +1,33 @@
+﻿project_number,name,slug,repository_url,mode,github_push_state,model_required,recommended_branch,master_prompt
+1,PukurSOS AI,pukursos-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/01_pukursos-ai/MASTER_PROMPT_V5.md
+2,NodiWatch AI,nodiwatch-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/02_nodiwatch-ai/MASTER_PROMPT_V5.md
+3,FasalLoss AI,fasalloss-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/03_fasalloss-ai/MASTER_PROMPT_V5.md
+4,RoofWise AI,roofwise-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/04_roofwise-ai/MASTER_PROMPT_V5.md
+5,NoiseTrace AI,noisetrace-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/05_noisetrace-ai/MASTER_PROMPT_V5.md
+6,ChuktiShield AI,chuktishield-ai,,EXISTING_REPO_UPGRADE,NOT_PUSHED,YES,upgrade/v5-real-models,projects/06_chuktishield-ai/MASTER_PROMPT_V5.md
+7,BillDetect AI,billdetect-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/07_billdetect-ai/MASTER_PROMPT_V5.md
+8,CareJourney AI,carejourney-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/08_carejourney-ai/MASTER_PROMPT_V5.md
+9,GoliCoach AI,golicoach-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/09_golicoach-ai/MASTER_PROMPT_V5.md
+10,DokanLens AI,dokanlens-ai,,EXISTING_REPO_UPGRADE,NOT_PUSHED,YES,upgrade/v5-real-models,projects/10_dokanlens-ai/MASTER_PROMPT_V5.md
+11,BazarCompare AI,bazarcompare-ai,,EXISTING_REPO_UPGRADE,NOT_PUSHED,YES,upgrade/v5-real-models,projects/11_bazarcompare-ai/MASTER_PROMPT_V5.md
+12,HomeHazard AI,homehazard-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/12_homehazard-ai/MASTER_PROMPT_V5.md
+13,WasteWise BD,wastewise-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/13_wastewise-bd/MASTER_PROMPT_V5.md
+14,WorkSafe Vision AI,worksafe-vision-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/14_worksafe-vision-ai/MASTER_PROMPT_V5.md
+15,ClinicCompass BD,cliniccompass-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/15_cliniccompass-bd/MASTER_PROMPT_V5.md
+16,LabTrend BD,labtrend-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/16_labtrend-bd/MASTER_PROMPT_V5.md
+17,DoseClear BD,doseclear-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/17_doseclear-bd/MASTER_PROMPT_V5.md
+18,VaccinePath BD,vaccinepath-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/18_vaccinepath-bd/MASTER_PROMPT_V5.md
+19,MaternalRoute BD,maternalroute-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/19_maternalroute-bd/MASTER_PROMPT_V5.md
+20,DengueSignal BD,denguesignal-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/20_denguesignal-bd/MASTER_PROMPT_V5.md
+21,RentalFair BD,rentalfair-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/21_rentalfair-bd/MASTER_PROMPT_V5.md
+22,RoadFix BD,roadfix-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/22_roadfix-bd/MASTER_PROMPT_V5.md
+23,SafeRoute BD,saferoute-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/23_saferoute-bd/MASTER_PROMPT_V5.md
+24,WaterGuard BD,waterguard-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/24_waterguard-bd/MASTER_PROMPT_V5.md
+25,AgroPrice Planner,agroprice-planner,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/25_agroprice-planner/MASTER_PROMPT_V5.md
+26,LivestockCare Log,livestockcare-log,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/26_livestockcare-log/MASTER_PROMPT_V5.md
+27,CivicForm AI,civicform-ai,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/27_civicform-ai/MASTER_PROMPT_V5.md
+28,HeatSafe BD,heatsafe-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/28_heatsafe-bd/MASTER_PROMPT_V5.md
+29,HospitalBillGuard BD,hospitalbillguard-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/29_hospitalbillguard-bd/MASTER_PROMPT_V5.md
+30,SafeBlood Connect BD,safeblood-connect-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/30_safeblood-connect-bd/MASTER_PROMPT_V5.md
+31,ShikkhaRAG BD,shikkharag-bd,,CREATE_NEW_IF_AUTHORIZED,NOT_PUSHED,YES,main,projects/31_shikkharag-bd/MASTER_PROMPT_V5.md
+32,BanglaRead Coach,banglaread-coach,,EXISTING_REPO_UPGRADE,NOT_PUSHED,YES,upgrade/v5-real-models,projects/32_banglaread-coach/MASTER_PROMPT_V5.md

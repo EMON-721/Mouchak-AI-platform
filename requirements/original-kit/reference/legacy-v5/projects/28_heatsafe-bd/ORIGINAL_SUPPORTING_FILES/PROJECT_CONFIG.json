@@ -1,0 +1,39 @@
+{
+  "project_number": 28,
+  "project_name": "HeatSafe BD",
+  "slug": "heatsafe-bd",
+  "category": "Climate / Public Heat Awareness",
+  "about_bn": "বাংলাদেশের এলাকার প্রকাশিত আবহাওয়ার তথ্য ও নিজের সময়সূচি দিয়ে গরমের ঝুঁকির সাধারণ সচেতনতা ও পরিকল্পনা বুঝতে সাহায্য করবে।",
+  "inputs": "District selection; current public weather reports; simple schedule/age-free activity preferences",
+  "user_3step": [
+    "সহজ ইনপুট দিন—District selection, current public weather reports, simple schedule/age-free activity preferenc",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Bangladesh locality weather source viewer",
+    "Heat-related planning checklist",
+    "Historical-vs-current labels",
+    "School/work schedule planning without health diagnosis",
+    "Source freshness badge",
+    "User-configurable notification consent"
+  ],
+  "ai_contract": "Rule-based temperature/heat guidance labels on verified data, time-series trend explanations, Bangla RAG across reviewed BMD and public health messages; unavailable feed -> cached as-of notice.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

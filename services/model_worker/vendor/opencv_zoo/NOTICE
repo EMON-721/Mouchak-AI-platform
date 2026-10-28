@@ -1,0 +1,6 @@
+Unmodified adapters from OpenCV Zoo, commit 48b10fa505aeb51fbd127fc60a5c660040e823b7.
+https://github.com/opencv/opencv_zoo
+mp_pose.py: models/pose_estimation_mediapipe/mp_pose.py
+mp_persondet.py: models/person_detection_mediapipe/mp_persondet.py
+Both upstream directories explicitly license all files under Apache-2.0.
+Their LICENSE is included. Model weights are checksum-controlled downloads, excluded from Git.

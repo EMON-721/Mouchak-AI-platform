@@ -1,0 +1,87 @@
+{
+  "id": 43,
+  "slug": "jatrapulse-bd",
+  "name": "JatraPulse BD",
+  "name_bn": "বাংলাদেশের বাস, লঞ্চ ও লোকাল যাত্রাপথের কমিউনিটি গাইড",
+  "category": "transport",
+  "route": "/tools/jatrapulse-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "স্থানীয় স্টপ, যাত্রাপথ, ভাড়া, অ্যাক্সেসিবিলিটি ও হালনাগাদ পরিবর্তন খুঁজে পাওয়া কঠিন।",
+    "target_users": "শিক্ষার্থী, কর্মী, বয়স্ক যাত্রী, নতুন শহরের বাসিন্দা",
+    "inputs": "যাত্রার শুরু-গন্তব্য, যাত্রার ধরন, কমিউনিটির যাচাইকৃত স্টপ ও সময়-তারিখযুক্ত route report",
+    "outputs": "candidate route options, stop notes, verified last-updated timestamp, uncertainty and offline printable trip card",
+    "distinctive_workflow": "সম্প্রদায়ভিত্তিক বাংলাদেশি লোকাল ট্রান্সপোর্ট নলেজ; SafeRoute-এর crash hazard map নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "graph shortest-path on authorized route data + retrieval + duplicate-stop matching + optionally historic time bands",
+    "candidate_models": [
+      {
+        "label": "NetworkX shortest path",
+        "link": "https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html"
+      },
+      {
+        "label": "sentence-transformers retrieval",
+        "link": "https://www.sbert.net/"
+      }
+    ],
+    "test_target": "যেখানে line নেই সেখানে route বানিয়ে বলবে না; একটি stale route ও একাধিক same-name stop test।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Road Transport Authority",
+        "url": "https://brta.gov.bd/",
+        "purpose": "transport policy/reference; live routes not guaranteed",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org/",
+        "purpose": "map features under ODbL, check route rights",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "ভাড়া/সময় real-time দাবি নয়; রুটের safety guarantee নয়; map license অনুযায়ী attribution।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/43_jatrapulse-bd.svg"
+}

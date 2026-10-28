@@ -1,0 +1,188 @@
+{
+  "project": "LabTrend BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "LABTREND_BD_001",
+      "label_bn": "পরীক্ষার নাম",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_002",
+      "label_bn": "পরীক্ষার তারিখ",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_003",
+      "label_bn": "রিপোর্টের একক",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_004",
+      "label_bn": "ফলাফলের সংখ্যা",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_005",
+      "label_bn": "ল্যাবের রেফারেন্স রেঞ্জ",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_006",
+      "label_bn": "একক অমিল",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_007",
+      "label_bn": "OCR অনিশ্চয়তা",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_008",
+      "label_bn": "ম্যানুয়াল সংশোধন",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_009",
+      "label_bn": "রিপোর্টের ছবি",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_010",
+      "label_bn": "পুরোনো রিপোর্ট তুলনা",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_011",
+      "label_bn": "সময়ের চার্ট",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_012",
+      "label_bn": "ট্রেন্ডের পরিবর্তন",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_013",
+      "label_bn": "ডাক্তারের প্রশ্ন",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_014",
+      "label_bn": "হাসপাতালের নাম",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_015",
+      "label_bn": "তথ্যের গোপনীয়তা",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_016",
+      "label_bn": "ডেটা এক্সপোর্ট",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_017",
+      "label_bn": "ডেটা মুছে ফেলা",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "LABTREND_BD_018",
+      "label_bn": "রেফারেন্স সূত্র",
+      "domain_bn": "ল্যাব রিপোর্টের ইতিহাস",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": 39,
+  "slug": "biddutplan-bd",
+  "name": "BiddutPlan BD",
+  "name_bn": "বাড়ি ও দোকানের বিদ্যুৎ খরচের পরিকল্পনা",
+  "category": "home",
+  "route": "/tools/biddutplan-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "একাধিক যন্ত্রের কিলোওয়াট ঘণ্টা, বিলের slab ও সাশ্রয় সম্ভাবনা মানুষ সহজে বুঝতে পারেন না।",
+    "target_users": "পরিবার, দোকান, শিক্ষার্থী ও বাড়ির মালিক",
+    "inputs": "যন্ত্রের ওয়াট, দৈনিক ঘণ্টা, মিটার শ্রেণি, বিলের ছবি বা ম্যানুয়ালি রেট ও usage",
+    "outputs": "transparent kWh calculator, editable bill scenarios, cost breakdown, offline backup-hours estimate",
+    "distinctive_workflow": "যন্ত্রভিত্তিক what-if energy simulation; BillDetect-এর বিল অসংগতি শনাক্ত করার কাজ নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "OCR-assisted appliance label extraction + regression only with authorized histories + deterministic tariff calculator",
+    "candidate_models": [
+      {
+        "label": "Tesseract OCR",
+        "link": "https://github.com/tesseract-ocr/tesseract"
+      },
+      {
+        "label": "scikit-learn HistGradientBoostingRegressor",
+        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html"
+      }
+    ],
+    "test_target": "W বনাম kW, peak/off-peak, slab boundary, tax and fixed charges; published tariff effective date mismatch flagged।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Power Division retail tariff",
+        "url": "https://powerdivision.gov.bd/pages/static-pages/694032a035ce18e1c055f992",
+        "purpose": "official tariff document verify date/version",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Power Division service links",
+        "url": "https://powerdivision.gov.bd/pages/static-pages/6940329b35ce18e1c055f398",
+        "purpose": "provider lookup only",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "সরকারি শুল্ক সময় ও বিদ্যুৎ বিতরণকারী অনুসারে বদলায়; অনুমোদিত রেট-টেবিল ছাড়া বিলের সঠিক অঙ্ক দাবি নয়। বৈদ্যুতিক সংযোগ/সার্কিট নির্দেশনা নয়।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/39_biddutplan-bd.svg"
+}

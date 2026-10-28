@@ -1,0 +1,47 @@
+{
+  "project": "HomeHazard AI",
+  "compiled_on": "2026-10-25",
+  "source_links_are_not_bundled_datasets": true,
+  "total_sources": 3,
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "BAMIS — agricultural weather and advisories",
+      "url": "https://www.bamis.gov.bd/en/home/",
+      "category": "government_reference_portal",
+      "intended_use": "Crop weather, 64-district advisories, climate tables and agriculture risk context",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "Bangladesh Open Data — searchable datasets",
+      "url": "https://data.gov.bd/dataset",
+      "category": "dataset_catalog",
+      "intended_use": "Find filtered Bangladesh CSV/XLSX datasets by topic and year",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "FFWC — flood and river hydrological information",
+      "url": "https://ffwc.gov.bd/",
+      "category": "official_monitoring_dashboard",
+      "intended_use": "River levels, flood/water situation, station context",
+      "coverage": "Bangladesh",
+      "access_verified": "Verified public FFWC dashboard (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    }
+  ]
+}

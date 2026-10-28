@@ -1,0 +1,188 @@
+{
+  "project": "RentalFair BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "RENTALFAIR_BD_001",
+      "label_bn": "মাসিক ভাড়া",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_002",
+      "label_bn": "অগ্রিম",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_003",
+      "label_bn": "জামানত",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_004",
+      "label_bn": "সার্ভিস চার্জ",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_005",
+      "label_bn": "ইউটিলিটি বিল",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_006",
+      "label_bn": "বাসার আয়তন",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_007",
+      "label_bn": "চুক্তির মেয়াদ",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_008",
+      "label_bn": "নোটিশ পিরিয়ড",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_009",
+      "label_bn": "ভাড়া বৃদ্ধির শর্ত",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_010",
+      "label_bn": "চুক্তির অস্পষ্টতা",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_011",
+      "label_bn": "বাড়িওয়ালার প্রশ্ন",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_012",
+      "label_bn": "ভাড়াটিয়ার প্রশ্ন",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_013",
+      "label_bn": "টাকা ফেরতের নথি",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_014",
+      "label_bn": "আলাদা খরচ",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_015",
+      "label_bn": "মাসভিত্তিক বাজেট",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_016",
+      "label_bn": "চুক্তির ছবি",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_017",
+      "label_bn": "রসিদের নথি",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "RENTALFAIR_BD_018",
+      "label_bn": "ব্যক্তিগত তথ্য লুকানো",
+      "domain_bn": "বাড়িভাড়ার হিসাব",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

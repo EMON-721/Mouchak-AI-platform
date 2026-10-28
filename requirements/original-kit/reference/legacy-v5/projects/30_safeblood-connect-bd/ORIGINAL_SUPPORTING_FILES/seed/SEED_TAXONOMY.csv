@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+SAFEBLOOD_CONNECT_BD_001,রক্তের গ্রুপ,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_002,স্বেচ্ছাসেবীর সম্মতি,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_003,ডোনারের শেষ অনলাইন স্ট্যাটাস,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_004,জেলা,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_005,উপজেলা,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_006,অনুরোধের সময়,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_007,হাসপাতালের অবস্থান,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_008,যোগাযোগ গোপন,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_009,ইচ্ছামতো উপলব্ধতা,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_010,রিকোয়েস্ট যাচাই,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_011,ডোনারের পরিচয় সুরক্ষা,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_012,স্প্যাম রিপোর্ট,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_013,ব্যবহারকারী ব্লক,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_014,নিরাপদ যোগাযোগ,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_015,স্বেচ্ছাসেবী নীতি,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_016,ডোনার অপ্ট আউট,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_017,কোনো মেডিকেল ক্লিয়ারেন্স নয়,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEBLOOD_CONNECT_BD_018,মডারেশন,রক্তদানের সমন্বয়,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

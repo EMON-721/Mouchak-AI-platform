@@ -1,0 +1,188 @@
+{
+  "project": "WaterGuard BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "WATERGUARD_BD_001",
+      "label_bn": "পানির উৎস",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_002",
+      "label_bn": "পরীক্ষার তারিখ",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_003",
+      "label_bn": "pH",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_004",
+      "label_bn": "আর্সেনিক",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_005",
+      "label_bn": "লোহা",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_006",
+      "label_bn": "টিডিএস",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_007",
+      "label_bn": "জীবাণু পরীক্ষার ফল",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_008",
+      "label_bn": "এককের ধরন",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_009",
+      "label_bn": "পরীক্ষাগারের নাম",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_010",
+      "label_bn": "মানদণ্ডের সংস্করণ",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_011",
+      "label_bn": "রেফারেন্স মান",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_012",
+      "label_bn": "অস্পষ্ট OCR",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_013",
+      "label_bn": "সংশোধন",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_014",
+      "label_bn": "পরবর্তী পরীক্ষার প্রশ্ন",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_015",
+      "label_bn": "ফলাফলের চার্ট",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_016",
+      "label_bn": "স্যাম্পল আইডি গোপন",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_017",
+      "label_bn": "প্রতিবেদন রপ্তানি",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WATERGUARD_BD_018",
+      "label_bn": "ডেটা মুছে ফেলা",
+      "domain_bn": "পানির পরীক্ষার রিপোর্ট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

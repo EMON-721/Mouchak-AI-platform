@@ -1,0 +1,188 @@
+{
+  "project": "NodiWatch AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "NODIWATCH_AI_001",
+      "label_bn": "নদীর নাম",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_002",
+      "label_bn": "তীরের ছবি",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_003",
+      "label_bn": "পূর্বের ছবি",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_004",
+      "label_bn": "ছবির দিক",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_005",
+      "label_bn": "ছবির সময়",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_006",
+      "label_bn": "জিপিএস অবস্থান",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_007",
+      "label_bn": "পাড়ের মাটির অবস্থা",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_008",
+      "label_bn": "দৃশ্যমান ফাটল",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_009",
+      "label_bn": "পাড়ের গাছ",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_010",
+      "label_bn": "নদীর জলস্তর",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_011",
+      "label_bn": "স্থানীয় পর্যবেক্ষণ",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_012",
+      "label_bn": "দূরত্বের আনুমানিক স্কেল",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_013",
+      "label_bn": "উচ্ছেদের নথি",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_014",
+      "label_bn": "পাড় সুরক্ষা",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_015",
+      "label_bn": "বৃষ্টির দিন",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_016",
+      "label_bn": "বন্যা সতর্কতা",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_017",
+      "label_bn": "ছবির উৎস",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NODIWATCH_AI_018",
+      "label_bn": "রিপোর্ট যাচাই",
+      "domain_bn": "নদীতীর পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

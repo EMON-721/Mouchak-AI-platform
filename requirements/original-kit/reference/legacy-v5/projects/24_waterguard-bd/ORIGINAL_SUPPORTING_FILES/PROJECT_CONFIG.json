@@ -1,0 +1,39 @@
+{
+  "project_number": 24,
+  "project_name": "WaterGuard BD",
+  "slug": "waterguard-bd",
+  "category": "Drinking Water / Numeric Decision Support",
+  "about_bn": "পানির ল্যাব টেস্টের pH, আর্সেনিক, লোহা ইত্যাদির সংখ্যা দিলে ইউনিট ও উৎসসহ সাধারণ মানদণ্ডের তুলনা দেখাবে।",
+  "inputs": "Water-test strip/report numbers; pH/arsenic/iron units; optional photo of lab result",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Water-test strip/report numbers, pH/arsenic/iron units, optional photo of lab result",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Lab report field extraction",
+    "Analyte unit handling and conversion tests",
+    "Versioned standards reference registry",
+    "More testing questions instead of unsupported assurances",
+    "Multi-date records",
+    "Unknown value and invalid unit controls"
+  ],
+  "ai_contract": "Numeric rules on confirmed analytes and correct units; lab-report OCR plus manual confirmation; explanation RAG from Bangladesh water standards / WHO documents; uncertainty labels.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

@@ -1,0 +1,9 @@
+{
+  "model": "Systran/faster-whisper-tiny",
+  "test_input": "Official Whisper repository JFK public-domain speech test",
+  "runtime_inference_passed": true,
+  "duration_seconds": 11.0,
+  "latency_ms": 22843.0,
+  "bangla_evaluation_passed": false,
+  "production_enabled": false
+}

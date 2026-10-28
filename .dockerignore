@@ -1,0 +1,12 @@
+node_modules
+.venv
+.state
+.models
+models
+.git
+.env
+.env.local
+.wrangler
+.sites-runtime
+.next
+dist

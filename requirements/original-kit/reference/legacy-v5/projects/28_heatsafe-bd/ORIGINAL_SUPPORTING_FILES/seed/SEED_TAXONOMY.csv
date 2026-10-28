@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+HEATSAFE_BD_001,জেলার নাম,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_002,তাপমাত্রা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_003,আর্দ্রতা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_004,পূর্বাভাসের সময়,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_005,আবহাওয়া উৎস,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_006,গরমের সতর্কতা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_007,বাইরের কাজের সময়,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_008,পানির প্রস্তুতি,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_009,শিশুর নিরাপত্তা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_010,প্রবীণদের নিরাপত্তা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_011,কর্মস্থলের সচেতনতা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_012,ছায়াযুক্ত স্থান,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_013,ডেটার তারিখ,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_014,অনিশ্চয়তা,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_015,আবহাওয়ার ট্রেন্ড,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_016,রিমাইন্ডার,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_017,স্বাস্থ্য পরামর্শ উৎস,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HEATSAFE_BD_018,অ্যালার্টের ভেরিফিকেশন,তাপপ্রবাহ ও আবহাওয়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

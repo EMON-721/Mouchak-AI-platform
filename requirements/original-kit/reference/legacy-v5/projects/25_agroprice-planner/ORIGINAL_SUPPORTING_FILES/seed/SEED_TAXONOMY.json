@@ -1,0 +1,188 @@
+{
+  "project": "AgroPrice Planner",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "AGROPRICE_PLANNER_001",
+      "label_bn": "ফসল",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_002",
+      "label_bn": "জমির পরিমাণ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_003",
+      "label_bn": "বীজের খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_004",
+      "label_bn": "সারের খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_005",
+      "label_bn": "সেচের খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_006",
+      "label_bn": "শ্রম খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_007",
+      "label_bn": "পরিবহন খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_008",
+      "label_bn": "অন্যান্য খরচ",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_009",
+      "label_bn": "পূর্বের ফলন",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_010",
+      "label_bn": "প্রত্যাশিত ফলন",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_011",
+      "label_bn": "আসল বিক্রয়দর",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_012",
+      "label_bn": "দামের উৎস",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_013",
+      "label_bn": "ব্রেকইভেন পয়েন্ট",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_014",
+      "label_bn": "খরচের চার্ট",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_015",
+      "label_bn": "আয়ের সম্ভাবনা",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_016",
+      "label_bn": "সিনারিও তুলনা",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_017",
+      "label_bn": "ফসলের মৌসুম",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "AGROPRICE_PLANNER_018",
+      "label_bn": "রিপোর্ট",
+      "domain_bn": "কৃষকের বাজেট",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

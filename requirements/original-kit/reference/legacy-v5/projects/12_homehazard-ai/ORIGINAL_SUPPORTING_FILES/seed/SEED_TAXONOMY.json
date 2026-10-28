@@ -1,0 +1,188 @@
+{
+  "project": "HomeHazard AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "HOMEHAZARD_AI_001",
+      "label_bn": "দেয়ালের ফাটল",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_002",
+      "label_bn": "স্যাঁতসেঁতে দাগ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_003",
+      "label_bn": "রং খসে যাওয়া",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_004",
+      "label_bn": "ছাদের দাগ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_005",
+      "label_bn": "পানির লিক",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_006",
+      "label_bn": "সিলিংয়ের দাগ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_007",
+      "label_bn": "জানালার কোণ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_008",
+      "label_bn": "ফ্লোরের ফাটল",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_009",
+      "label_bn": "তারের দৃশ্যমান অবস্থা",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_010",
+      "label_bn": "বৃষ্টির পরে ছবি",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_011",
+      "label_bn": "পুরোনো ছবির তুলনা",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_012",
+      "label_bn": "মেরামতের প্রশ্ন",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_013",
+      "label_bn": "বিশেষজ্ঞ পরিদর্শন",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_014",
+      "label_bn": "রুমের অবস্থান",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_015",
+      "label_bn": "ঘটনার তারিখ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_016",
+      "label_bn": "ছত্রাকের সন্দেহ",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_017",
+      "label_bn": "নিরাপত্তা সীমা",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOMEHAZARD_AI_018",
+      "label_bn": "ফলোআপ নথি",
+      "domain_bn": "বাসাবাড়ির দৃশ্যমান সমস্যা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

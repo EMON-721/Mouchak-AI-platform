@@ -1,0 +1,93 @@
+{
+  "id": 48,
+  "slug": "jhoralert-bd",
+  "name": "JhorAlert BD",
+  "name_bn": "ঝড়, বজ্রপাত ও প্রবল বৃষ্টির সরকারি সতর্কতা বোঝা",
+  "category": "climate",
+  "route": "/tools/jhoralert-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "দ্রুত পরিবর্তনশীল আবহাওয়া সতর্কতা অনেকের কাছে জটিল ভাষায় পৌঁছায় বা স্থানীয় অর্থ বোঝা যায় না।",
+    "target_users": "কৃষক, নৌযাত্রী, বাইরে কাজ করা শ্রমিক ও পরিবার",
+    "inputs": "বিভাগ/জেলা নির্বাচন, সরকারি সতর্কতার প্রকাশনার সময়, ঐচ্ছিক যোগাযোগ পছন্দ",
+    "outputs": "verified BMD bulletin summary, issued-at timestamp, applicability explanation, pre-disaster preparedness checklist",
+    "distinctive_workflow": "official alerts into understandable messages with strict provenance; HeatSafe-এর তাপঝুঁকির বিপরীতে multi-hazard bulletin literacy।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "retrieval + Bengali summarization with entailment and bulletin-diff monitoring; deterministic alert trigger",
+    "candidate_models": [
+      {
+        "label": "multilingual-e5-small",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      {
+        "label": "Qwen2.5 model card",
+        "link": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct"
+      }
+    ],
+    "test_target": "old warning must show expired; city mismatched region refused; source text vs generated paraphrase entailment audited।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Meteorological Department",
+        "url": "https://bmd.gov.bd/web/",
+        "purpose": "official forecasts/warnings; licensing and API status verify",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Flood Forecasting and Warning Centre",
+        "url": "https://ffwc.gov.bd/",
+        "purpose": "water bulletins reference; not same as weather forecasts",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Fire Service",
+        "url": "https://fireservice.gov.bd/",
+        "purpose": "public safety preparation reference",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "কোনো নিজস্ব, অনুমোদনহীন early-warning ঘোষণা নয়; official latest bulletin unavailable হলে পরিষ্কার জানাবে; জরুরি পরিস্থিতিতে official channels।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/48_jhoralert-bd.svg"
+}

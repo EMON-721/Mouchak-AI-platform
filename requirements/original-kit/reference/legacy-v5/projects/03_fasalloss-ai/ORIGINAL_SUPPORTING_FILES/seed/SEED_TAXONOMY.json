@@ -1,0 +1,188 @@
+{
+  "project": "FasalLoss AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "FASALLOSS_AI_001",
+      "label_bn": "ফসলের নাম",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_002",
+      "label_bn": "জমির পরিমাণ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_003",
+      "label_bn": "ক্ষতির ছবি",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_004",
+      "label_bn": "বৃষ্টির নথি",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_005",
+      "label_bn": "ঝড়ের ঘটনা",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_006",
+      "label_bn": "বন্যার পানি",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_007",
+      "label_bn": "চারা নষ্ট",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_008",
+      "label_bn": "পাতার ক্ষতি",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_009",
+      "label_bn": "ফলনের অনুমান",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_010",
+      "label_bn": "বাজারদর উৎস",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_011",
+      "label_bn": "সার খরচ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_012",
+      "label_bn": "বীজ খরচ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_013",
+      "label_bn": "শ্রম খরচ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_014",
+      "label_bn": "ঘটনার তারিখ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_015",
+      "label_bn": "প্রমাণপত্র",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_016",
+      "label_bn": "ক্ষতির অংশ",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_017",
+      "label_bn": "কৃষকের মন্তব্য",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "FASALLOSS_AI_018",
+      "label_bn": "সহায়তার আবেদন",
+      "domain_bn": "ফসলের ক্ষতি নথি",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

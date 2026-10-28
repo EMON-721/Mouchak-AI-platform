@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+RENTALFAIR_BD_001,মাসিক ভাড়া,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_002,অগ্রিম,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_003,জামানত,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_004,সার্ভিস চার্জ,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_005,ইউটিলিটি বিল,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_006,বাসার আয়তন,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_007,চুক্তির মেয়াদ,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_008,নোটিশ পিরিয়ড,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_009,ভাড়া বৃদ্ধির শর্ত,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_010,চুক্তির অস্পষ্টতা,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_011,বাড়িওয়ালার প্রশ্ন,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_012,ভাড়াটিয়ার প্রশ্ন,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_013,টাকা ফেরতের নথি,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_014,আলাদা খরচ,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_015,মাসভিত্তিক বাজেট,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_016,চুক্তির ছবি,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_017,রসিদের নথি,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+RENTALFAIR_BD_018,ব্যক্তিগত তথ্য লুকানো,বাড়িভাড়ার হিসাব,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

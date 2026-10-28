@@ -1,0 +1,61 @@
+{
+  "project": "DengueSignal BD",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "DGHS dengue dynamic dashboard",
+      "url": "https://dashboard.dghs.gov.bd/pages/heoc_dengue_v1.php",
+      "category": "reference_or_observation",
+      "intended_use": "daily aggregate health surveillance only",
+      "coverage": "Bangladesh or as documented in source",
+      "access_verified": "Verified DGHS public aggregate dashboard with date (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "DGHS — Dengue clinical guidelines",
+      "url": "https://dghs.gov.bd/pages/static-pages/6922e05c933eb65569e26afe",
+      "category": "official_medical_guidelines",
+      "intended_use": "Cited public health education and referral warning language",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "Bangladesh Open Data — searchable datasets",
+      "url": "https://data.gov.bd/dataset",
+      "category": "dataset_catalog",
+      "intended_use": "Find filtered Bangladesh CSV/XLSX datasets by topic and year",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "government_site_links_not_full_datasets": true,
+  "reuse_review_required": true,
+  "project_specific_data_plan": "DGHS dengue dashboard time-stamped observations or authorized exports; optional own user reports separately"
+}

@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+NOISETRACE_AI_001,ট্রাফিক শব্দ,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_002,হর্ন,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_003,নির্মাণের শব্দ,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_004,মানুষের ভিড়,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_005,মেশিনের শব্দ,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_006,জেনারেটরের শব্দ,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_007,মাইকের শব্দ,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_008,রেকর্ডিং সময়,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_009,রেকর্ডিং দৈর্ঘ্য,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_010,অবস্থান সম্মতি,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_011,অডিও আপলোড,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_012,অডিও গোপনীয়তা,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_013,শব্দের উৎসের অনুমান,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_014,বিরক্তির নথি,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_015,ঘটনার পুনরাবৃত্তি,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_016,ক্যালিব্রেশনের অবস্থা,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_017,অভিযোগের খসড়া,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+NOISETRACE_AI_018,সাউন্ড ডায়েরি,শব্দ পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

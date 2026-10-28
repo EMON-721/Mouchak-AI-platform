@@ -1,0 +1,188 @@
+{
+  "project": "ShikkhaRAG BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "SHIKKHARAG_BD_001",
+      "label_bn": "শ্রেণি",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_002",
+      "label_bn": "বিষয়",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_003",
+      "label_bn": "অধ্যায়",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_004",
+      "label_bn": "পাঠ্যবই",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_005",
+      "label_bn": "প্রকাশের বছর",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_006",
+      "label_bn": "উৎসের পৃষ্ঠা",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_007",
+      "label_bn": "প্রশ্ন",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_008",
+      "label_bn": "উত্তরের উৎস",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_009",
+      "label_bn": "ব্যাখ্যার সহজতা",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_010",
+      "label_bn": "শব্দার্থ",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_011",
+      "label_bn": "উদাহরণ",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_012",
+      "label_bn": "অনুশীলনী",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_013",
+      "label_bn": "প্রশ্নের ধরন",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_014",
+      "label_bn": "পাঠের সারাংশ",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_015",
+      "label_bn": "সূত্রের নির্ভরযোগ্যতা",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_016",
+      "label_bn": "ভুল উত্তর রিপোর্ট",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_017",
+      "label_bn": "টপিক অনুসন্ধান",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SHIKKHARAG_BD_018",
+      "label_bn": "শেখার অগ্রগতি",
+      "domain_bn": "বাংলাদেশের পাঠ্যসূচি ও শেখা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

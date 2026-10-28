@@ -1,0 +1,23 @@
+[
+  {
+    "grade": "grade_1",
+    "year": 2026,
+    "book_bn": "আমার বাংলা বই",
+    "official_listing": "https://nctb.gov.bd/pages/static-pages/695b9adec4774958d7b708cd",
+    "resource_type": "official_book_metadata_only_not_book_text"
+  },
+  {
+    "grade": "grade_1",
+    "year": 2026,
+    "book_bn": "English for Today",
+    "official_listing": "https://nctb.gov.bd/pages/static-pages/695b9adec4774958d7b708cd",
+    "resource_type": "official_book_metadata_only_not_book_text"
+  },
+  {
+    "grade": "grade_1",
+    "year": 2026,
+    "book_bn": "প্রাথমিক গণিত",
+    "official_listing": "https://nctb.gov.bd/pages/static-pages/695b9adec4774958d7b708cd",
+    "resource_type": "official_book_metadata_only_not_book_text"
+  }
+]

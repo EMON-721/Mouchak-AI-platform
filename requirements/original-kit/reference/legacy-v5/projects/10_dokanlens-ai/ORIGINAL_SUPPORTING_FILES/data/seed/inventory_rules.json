@@ -1,0 +1,28 @@
+{
+  "unit_conversions": [
+    {
+      "from": "kg",
+      "to": "g",
+      "factor": 1000
+    },
+    {
+      "from": "l",
+      "to": "ml",
+      "factor": 1000
+    },
+    {
+      "from": "dozen",
+      "to": "piece",
+      "factor": 12
+    },
+    {
+      "from": "hundred",
+      "to": "piece",
+      "factor": 100
+    }
+  ],
+  "stock_formula": "opening_qty + incoming_qty - sold_qty - damaged_qty - returned_to_supplier_qty + customer_returns_qty",
+  "days_of_cover": "current_saleable_units / max(average_daily_sold_units,epsilon) with zero-sales abstention",
+  "expiry_policy": "only parse clearly visible dates; require owner confirmation; FEFO suggestions require confirmed dates",
+  "note": "No observations about actual stock included."
+}

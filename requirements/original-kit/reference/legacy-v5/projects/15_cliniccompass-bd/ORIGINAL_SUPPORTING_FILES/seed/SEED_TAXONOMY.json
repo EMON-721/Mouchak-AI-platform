@@ -1,0 +1,188 @@
+{
+  "project": "ClinicCompass BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "CLINICCOMPASS_BD_001",
+      "label_bn": "জেলা",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_002",
+      "label_bn": "উপজেলা",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_003",
+      "label_bn": "সরকারি হাসপাতাল",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_004",
+      "label_bn": "কমিউনিটি ক্লিনিক",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_005",
+      "label_bn": "উপজেলা স্বাস্থ্য কমপ্লেক্স",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_006",
+      "label_bn": "বিশেষায়িত কেন্দ্র",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_007",
+      "label_bn": "সেবার ধরন",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_008",
+      "label_bn": "প্রতিষ্ঠানের কোড",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_009",
+      "label_bn": "ভিজিটের কারণ",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_010",
+      "label_bn": "যোগাযোগের তথ্য",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_011",
+      "label_bn": "ঠিকানার উৎস",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_012",
+      "label_bn": "নথি যাচাই",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_013",
+      "label_bn": "শেষ হালনাগাদ",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_014",
+      "label_bn": "নিবন্ধনের অবস্থা",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_015",
+      "label_bn": "মানচিত্র নির্দেশনা",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_016",
+      "label_bn": "যাচাই-না-হওয়া তথ্য",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_017",
+      "label_bn": "সেবা উপলব্ধতা অজানা",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CLINICCOMPASS_BD_018",
+      "label_bn": "ফিডব্যাক",
+      "domain_bn": "স্বাস্থ্যসেবা খোঁজা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

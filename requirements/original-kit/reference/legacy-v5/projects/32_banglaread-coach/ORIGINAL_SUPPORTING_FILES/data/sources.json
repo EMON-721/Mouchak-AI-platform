@@ -1,0 +1,72 @@
+[
+  {
+    "id": "BanglaRead_Coach-SRC01",
+    "name": "NCTB primary 2026 textbooks",
+    "url": "https://nctb.gov.bd/pages/static-pages/695b9b7cc4774958d7b70a12",
+    "source_type": "official_reference",
+    "description": "Primary-grade book listing; book text should NOT be copied into the product without rights review.",
+    "rights_or_license_note": "verify reuse permission for textbook text/PDF before ingest",
+    "observed_on": "2026-10-25",
+    "availability": "landing_page_located_not_bulk_downloaded",
+    "ingestion": "manual_admin_review_required",
+    "rights_cleared": false,
+    "source_is_model_training_data": false,
+    "asserts_real_time_data": false
+  },
+  {
+    "id": "BanglaRead_Coach-SRC02",
+    "name": "NCTB grade 1 book metadata",
+    "url": "https://nctb.gov.bd/pages/static-pages/695b9adec4774958d7b708cd",
+    "source_type": "official_reference",
+    "description": "Grade 1 textbook titles and links, including Amar Bangla Boi.",
+    "rights_or_license_note": "metadata citations only by default",
+    "observed_on": "2026-10-25",
+    "availability": "landing_page_located_not_bulk_downloaded",
+    "ingestion": "manual_admin_review_required",
+    "rights_cleared": false,
+    "source_is_model_training_data": false,
+    "asserts_real_time_data": false
+  },
+  {
+    "id": "BanglaRead_Coach-SRC03",
+    "name": "Mozilla Common Voice Bengali",
+    "url": "https://commonvoice.mozilla.org/bn/datasets",
+    "source_type": "downloadable_dataset",
+    "description": "Bengali volunteer recordings and transcripts; check current release at source.",
+    "rights_or_license_note": "source release license may be CC0; confirm exact downloaded release and terms",
+    "observed_on": "2026-10-25",
+    "availability": "landing_page_located_not_bulk_downloaded",
+    "ingestion": "manual_admin_review_required",
+    "rights_cleared": false,
+    "source_is_model_training_data": true,
+    "asserts_real_time_data": false
+  },
+  {
+    "id": "BanglaRead_Coach-SRC04",
+    "name": "OpenSLR SLR53 Bengali ASR",
+    "url": "https://www.openslr.org/53",
+    "source_type": "downloadable_dataset",
+    "description": "Bengali ASR corpus; listed ~196K utterances.",
+    "rights_or_license_note": "CC BY-SA 4.0 on source; attribution and share-alike obligations",
+    "observed_on": "2026-10-25",
+    "availability": "landing_page_located_not_bulk_downloaded",
+    "ingestion": "manual_admin_review_required",
+    "rights_cleared": false,
+    "source_is_model_training_data": true,
+    "asserts_real_time_data": false
+  },
+  {
+    "id": "BanglaRead_Coach-SRC05",
+    "name": "Bangladesh official divisions",
+    "url": "https://bangladesh.gov.bd/site/view/division-list/division-list",
+    "source_type": "official_reference",
+    "description": "Eight administrative division names.",
+    "rights_or_license_note": "reference metadata only; no need for scraping",
+    "observed_on": "2026-10-25",
+    "availability": "landing_page_located_not_bulk_downloaded",
+    "ingestion": "manual_admin_review_required",
+    "rights_cleared": false,
+    "source_is_model_training_data": false,
+    "asserts_real_time_data": false
+  }
+]

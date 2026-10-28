@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+PUKURSOS_AI_001,পানির দৃশ্যমান রং,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_002,সকালের মাছের আচরণ,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_003,বিকেলের মাছের আচরণ,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_004,জলজ শৈবাল,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_005,পুকুরের গভীরতা,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_006,পানির তাপমাত্রা,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_007,দ্রবীভূত অক্সিজেন,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_008,পানির পিএইচ,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_009,খাদ্য দেওয়ার সময়,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_010,মাছের জাত,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_011,মাছের ঘনত্ব,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_012,পানি বদলের নথি,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_013,অস্বাভাবিক গন্ধ,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_014,মৃত মাছের নথি,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_015,পরীক্ষার তারিখ,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_016,পুকুরের ছবি,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_017,বৃষ্টির তথ্য,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+PUKURSOS_AI_018,মাছ চাষের ব্যয়,পুকুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

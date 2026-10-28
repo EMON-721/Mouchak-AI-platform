@@ -1,0 +1,188 @@
+{
+  "project": "DoseClear BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "DOSECLEAR_BD_001",
+      "label_bn": "ওষুধের নাম",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_002",
+      "label_bn": "জেনেরিক নামের অনিশ্চয়তা",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_003",
+      "label_bn": "ডোজ লেখা",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_004",
+      "label_bn": "সেবনের সময় লেখা",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_005",
+      "label_bn": "ডাক্তারের স্বাক্ষর",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_006",
+      "label_bn": "প্রেসক্রিপশনের ছবি",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_007",
+      "label_bn": "হাতের লেখা অস্পষ্ট",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_008",
+      "label_bn": "পড়া না যাওয়া অংশ",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_009",
+      "label_bn": "ফার্মাসিস্টকে জিজ্ঞেস",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_010",
+      "label_bn": "ব্যবহারকারীর নিশ্চিতকরণ",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_011",
+      "label_bn": "একই নামে একাধিক ওষুধ",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_012",
+      "label_bn": "OCR ভুল সংশোধন",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_013",
+      "label_bn": "ওষুধের নির্দেশনার উৎস",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_014",
+      "label_bn": "তথ্য গোপন রাখা",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_015",
+      "label_bn": "সংরক্ষিত প্রেসক্রিপশন",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_016",
+      "label_bn": "রিমাইন্ডার খসড়া",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_017",
+      "label_bn": "ফলোআপ তারিখ",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "DOSECLEAR_BD_018",
+      "label_bn": "ডেটা মুছুন",
+      "domain_bn": "প্রেসক্রিপশন পড়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

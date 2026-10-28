@@ -1,0 +1,87 @@
+{
+  "id": 41,
+  "slug": "oshudhkhoj-bd",
+  "name": "OshudhKhoj BD",
+  "name_bn": "ওষুধ পাওয়া যেতে পারে কোথায়—যাচাইকৃত খোঁজ",
+  "category": "health",
+  "route": "/tools/oshudhkhoj-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "দুর্লভ ওষুধের দোকানে ফোন করে খোঁজ নিতে সময় লাগে এবং ভুয়া available স্ট্যাটাস সমস্যাজনক।",
+    "target_users": "রোগী ও অনুমতিপ্রাপ্ত পরিবারের সদস্য, রেজিস্টার্ড ফার্মেসি কর্মী",
+    "inputs": "ওষুধের বানান/জেনেরিক নাম, শহর, ফার্মেসির স্বেচ্ছায় দেওয়া স্টক রিপোর্ট",
+    "outputs": "pharmacy-confirmed availability leads, last-verified timestamp, phone-before-visiting prompt, authorized medicine spelling reference",
+    "distinctive_workflow": "permissioned দোকান-প্রদত্ত স্টক availability network; DoseClear-এর ডোজ ব্যাখ্যা নয়, ClinicCompass-এর হাসপাতাল ডিরেক্টরি নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "entity normalization + typo-tolerant retrieval + inventory freshness scoring (not prescription advice)",
+    "candidate_models": [
+      {
+        "label": "sentence-transformers multilingual MiniLM",
+        "link": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+      },
+      {
+        "label": "RapidFuzz",
+        "link": "https://github.com/rapidfuzz/RapidFuzz"
+      }
+    ],
+    "test_target": "একই নামের আলাদা strength (250mg vs 500mg) ভুল মিল নয়; expired inventory excluded; only partner-verified records shown।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Directorate General of Drug Administration",
+        "url": "https://dgda.gov.bd/",
+        "purpose": "registered products/regulatory reference, NOT local pharmacy stock",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "DGHS facility registry",
+        "url": "https://hris.mohfw.gov.bd/public/facility-registry",
+        "purpose": "health-facility metadata only, NOT pharmacy stock",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "বিকল্প ওষুধ/ডোজ প্রস্তাব নয়; urgent treatment delay করাবে না; ব্যক্তিগত প্রেসক্রিপশন ছাড়া বিক্রির প্রতিশ্রুতি নয়; ফার্মেসি consent এবং লাইসেন্স যাচাই।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/41_oshudhkhoj-bd.svg"
+}

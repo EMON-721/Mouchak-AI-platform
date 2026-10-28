@@ -1,0 +1,39 @@
+{
+  "project_number": 21,
+  "project_name": "RentalFair BD",
+  "slug": "rentalfair-bd",
+  "category": "Housing / Tenant Tools",
+  "about_bn": "বাসার ভাড়া, জামানত, অগ্রিম এবং চুক্তির শর্ত লিখে মোট খরচ ও সম্ভাব্য প্রশ্নের তালিকা তৈরি হবে।",
+  "inputs": "Typed rent terms; scanned lease; rent amount numbers; listing description",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Typed rent terms, scanned lease, rent amount numbers, listing description",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Monthly move-in cost breakdown",
+    "Deposit, advance and fee calculators",
+    "Agreement OCR clause checklist",
+    "Maintenance issue correspondence templates",
+    "Area-unit conversion and user-confirmation",
+    "No definitive legal verdict"
+  ],
+  "ai_contract": "Numeric cash-flow calculator; lease clause extraction; Bengali RAG from public applicable tenancy/contract references with citation; listing text normalization; no unverified market valuation.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

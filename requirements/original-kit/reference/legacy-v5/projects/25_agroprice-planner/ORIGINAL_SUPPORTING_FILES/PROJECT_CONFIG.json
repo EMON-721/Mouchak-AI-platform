@@ -1,0 +1,39 @@
+{
+  "project_number": 25,
+  "project_name": "AgroPrice Planner",
+  "slug": "agroprice-planner",
+  "category": "Farming / Agricultural Economics",
+  "about_bn": "কৃষক শুধু খরচ, ফলন, জমির পরিমাণ ও নিজের দেখা বিক্রয়দর লিখে লাভ-লোকসানের কয়েকটি সম্ভাব্য হিসাব দেখতে পারবেন।",
+  "inputs": "Crop quantities, land area, production costs, observed market prices; no file needed",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Crop quantities, land area, production costs, observed market prices, no file needed",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Crop-specific cost ledger",
+    "Price scenario calculator",
+    "Break-even and sensitivity charts",
+    "Season and plot comparisons",
+    "Government market-price source links",
+    "No guaranteed future prices"
+  ],
+  "ai_contract": "Deterministic finance equations; time-series summary if true historical inputs; Bengali market summary RAG from cited bulletins; optional explanatory uncertainty bands for price scenarios, not guaranteed forecasts.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 5,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

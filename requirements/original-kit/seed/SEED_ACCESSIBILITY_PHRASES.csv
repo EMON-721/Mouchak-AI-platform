@@ -1,0 +1,11 @@
+﻿phrase_id,category,bn,en,owner_created,notes
+ph001,health,আমার সাহায্য দরকার,I need help,True,Original illustrative phrase; nonmedical decision
+ph002,daily,দয়া করে একটু ধীরে বলুন,Please speak more slowly,True,Original illustrative phrase; nonmedical decision
+ph003,daily,আমি লিখে বলতে চাই,I would like to communicate in writing,True,Original illustrative phrase; nonmedical decision
+ph004,travel,আমি কোথায় নামব?,Where should I get off?,True,Original illustrative phrase; nonmedical decision
+ph005,health,আমার ওষুধের নামটি লিখে দিন,Please write down my medicine name,True,Original illustrative phrase; nonmedical decision
+ph006,daily,আমি আপনাকে বুঝতে পারিনি,I did not understand you,True,Original illustrative phrase; nonmedical decision
+ph007,shop,এই পণ্যের দাম কত?,How much does this cost?,True,Original illustrative phrase; nonmedical decision
+ph008,safety,জরুরি সাহায্য চাই,I need emergency assistance,True,Original illustrative phrase; nonmedical decision
+ph009,daily,ধন্যবাদ,Thank you,True,Original illustrative phrase; nonmedical decision
+ph010,travel,নিকটতম হাসপাতালে যেতে চাই,I want to go to the nearest hospital,True,Original illustrative phrase; nonmedical decision

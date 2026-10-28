@@ -1,0 +1,980 @@
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
+import Image from "next/image";
+import {
+  ArrowRight,
+  LockKeyhole,
+  ShieldCheck,
+  FolderLock,
+  FileText,
+  Download,
+  Trash2,
+  LogOut,
+  Plus,
+  Bookmark,
+  Bell,
+  Clock,
+  KeyRound,
+} from "lucide-react";
+import { useApp } from "./context";
+import { ResultView } from "./tool";
+import { tools } from "./catalogue";
+import { CollaborationPanel } from "./collaboration";
+import type { RunResult, Workspace } from "./types";
+export function AuthPage({ mode }: { mode: string }) {
+  const router = useRouter();
+  const { t, api, refresh, user } = useApp();
+  const params = useSearchParams();
+  const [email, setEmail] = useState(""),
+    [password, setPassword] = useState(""),
+    [name, setName] = useState(""),
+    [busy, setBusy] = useState(false),
+    [error, setError] = useState(""),
+    [message, setMessage] = useState("");
+  const register = mode === "register";
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setBusy(true);
+    setError("");
+    try {
+      if (mode === "forgot") {
+        const d = await api<{ message: string }>("/api/auth/request-reset", {
+          method: "POST",
+          body: JSON.stringify({ value: { email } }),
+        });
+        setMessage(d.message);
+      } else if (mode === "reset" || mode === "verify") {
+        await api("/api/auth/" + mode, {
+          method: "POST",
+          body: JSON.stringify({
+            value: { token: params.get("token"), password },
+          }),
+        });
+        setMessage(
+          t(
+            "পরিবর্তন সম্পন্ন। এবার লগইন করুন।",
+            "Completed. You can now sign in.",
+          ),
+        );
+      } else {
+        await api("/api/auth/" + (register ? "register" : "login"), {
+          method: "POST",
+          body: JSON.stringify({ email, password, name }),
+        });
+        await refresh();
+        const next = params.get("next");
+        router.push(
+          next && next.startsWith("/") && !next.startsWith("//")
+            ? next
+            : "/workspace",
+        );
+      }
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="auth-page page-width">
+      <div className="auth-story">
+        <span className="eyebrow">
+          {t("নিজের কাজের নিজস্ব জায়গা", "A WORKSPACE OF YOUR OWN")}
+        </span>
+        <h1>
+          {t("এক অ্যাকাউন্টে,", "One account.")}
+          <br />
+          {t("আপনার সব কাজ।", "All your work.")}
+        </h1>
+        <p>
+          {t(
+            "ফলাফল সংরক্ষণ করুন, নথি ব্যক্তিগত রাখুন, আর নিজের তথ্যের নিয়ন্ত্রণ নিজের হাতে রাখুন।",
+            "Save useful results, keep your documents private and stay in control of your information.",
+          )}
+        </p>
+        <div className="auth-promise">
+          <ShieldCheck />
+          <span>
+            {t(
+              "অ্যাডমিনের জন্যও আলাদা গোপনীয়তার সীমানা।",
+              "Privacy boundaries also apply to administrators.",
+            )}
+          </span>
+        </div>
+        <div className="auth-tiles">
+          <span>
+            <FolderLock />
+            {t("ব্যক্তিগত ভল্ট", "Private vault")}
+          </span>
+          <span>
+            <FileText />
+            {t("সংরক্ষিত রিপোর্ট", "Saved reports")}
+          </span>
+        </div>
+      </div>
+      <section className="panel auth-card">
+        <div className="context-icon">
+          <LockKeyhole />
+        </div>
+        <h2>
+          {mode === "forgot"
+            ? t("পাসওয়ার্ড ভুলে গেছেন?", "Forgot your password?")
+            : mode === "reset"
+              ? t("নতুন পাসওয়ার্ড", "Reset password")
+              : mode === "verify"
+                ? t("ইমেইল যাচাই", "Verify email")
+                : register
+                  ? t("আপনার অ্যাকাউন্ট তৈরি করুন", "Create your account")
+                  : t("আবার স্বাগতম", "Welcome back")}
+        </h2>
+        <p>
+          {register
+            ? t(
+                "শুরু করতে শুধু প্রয়োজনীয় তথ্য।",
+                "Just the essentials to get started.",
+              )
+            : t(
+                "একই লগইন ব্যবহারকারী ও অনুমোদিত প্রশাসকের জন্য।",
+                "One sign-in for users and authorized administrators.",
+              )}
+        </p>
+        <form onSubmit={submit}>
+          {register ? (
+            <label className="form-field">
+              {t("নাম", "Name")}
+              <input
+                autoComplete="name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </label>
+          ) : null}
+          {!["verify", "reset"].includes(mode) ? (
+            <label className="form-field">
+              {t("ইমেইল", "Email")}
+              <input
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
+          ) : null}
+          {!["verify", "forgot"].includes(mode) ? (
+            <label className="form-field">
+              {t("পাসওয়ার্ড", "Password")}
+              <input
+                type="password"
+                autoComplete={
+                  register || mode === "reset"
+                    ? "new-password"
+                    : "current-password"
+                }
+                minLength={register || mode === "reset" ? 12 : 1}
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {register ? (
+                <small>
+                  {t(
+                    "অন্তত ১২ অক্ষরের শক্তিশালী পাসওয়ার্ড দিন।",
+                    "Use a strong password of at least 12 characters.",
+                  )}
+                </small>
+              ) : null}
+            </label>
+          ) : null}
+          {register ? (
+            <label className="consent-check">
+              <input required type="checkbox" />
+              <span>
+                {t(
+                  "গোপনীয়তা ও ব্যবহারবিধি পড়েছি এবং সম্মত।",
+                  "I have read and agree to the privacy policy and terms.",
+                )}{" "}
+                <Link href="/privacy">{t("পড়ুন", "Read")}</Link>
+              </span>
+            </label>
+          ) : null}
+          {error ? (
+            <p className="error" role="alert">
+              {error}
+            </p>
+          ) : null}
+          {message ? (
+            <p className="notice" role="status">
+              {message}
+            </p>
+          ) : null}
+          <button className="button dark full" disabled={busy}>
+            {busy
+              ? t("অপেক্ষা করুন…", "Please wait…")
+              : register
+                ? t("অ্যাকাউন্ট তৈরি করুন", "Create account")
+                : mode === "login"
+                  ? t("লগইন", "Sign in")
+                  : t("নিশ্চিত করুন", "Confirm")}
+            <ArrowRight size={17} />
+          </button>
+        </form>
+        <div className="auth-bottom">
+          {mode === "login" ? (
+            <>
+              <Link href="/forgot">
+                {t("পাসওয়ার্ড ভুলে গেছি", "Forgot password")}
+              </Link>
+              <p>
+                {t("নতুন এখানে?", "New here?")}{" "}
+                <Link href="/register">
+                  {t("অ্যাকাউন্ট তৈরি করুন", "Create account")}
+                </Link>
+              </p>
+            </>
+          ) : (
+            <Link href="/admin/login">
+              {t("লগইনে ফিরুন", "Back to sign-in")}
+            </Link>
+          )}
+        </div>
+        {user ? (
+          <p className="subtle">
+            {t("আপনি ইতিমধ্যে লগইন আছেন।", "You are already signed in.")}
+          </p>
+        ) : null}
+      </section>
+    </div>
+  );
+}
+export function WorkspacePage({ pane = "history" }: { pane?: string }) {
+  const router = useRouter();
+  const { t, user, loading, api, refresh } = useApp();
+  const [spaces, setSpaces] = useState<Workspace[]>([]),
+    [selected, setSelected] = useState(""),
+    [history, setHistory] = useState<
+      { id: string; module: string; created_at: string; saved: boolean }[]
+    >([]),
+    [assets, setAssets] = useState<
+      { id: string; kind: string; size: number; scan_state: string }[]
+    >([]),
+    [notifications, setNotifications] = useState<unknown[]>([]),
+    [active, setActive] = useState<RunResult | null>(null),
+    [error, setError] = useState(""),
+    [name, setName] = useState(""),
+    [filter, setFilter] = useState("all"),
+    [password, setPassword] = useState(""),
+    [confirmDelete, setConfirmDelete] = useState(false);
+  useEffect(() => {
+    if (!user) return;
+    let live = true;
+    api<Workspace[]>("/api/workspaces")
+      .then((d) => {
+        if (live) {
+          setSpaces(d);
+          setSelected(d[0]?.id || "");
+        }
+      })
+      .catch((e) => setError(e.message));
+    return () => {
+      live = false;
+    };
+  }, [api, user]);
+  useEffect(() => {
+    if (!selected || !user) return;
+    let live = true;
+    Promise.all([
+      api<typeof history>("/api/workspaces/" + selected + "/history"),
+      api<typeof assets>("/api/assets"),
+      api<unknown[]>("/api/notifications"),
+    ])
+      .then(([h, a, n]) => {
+        if (live) {
+          setHistory(h);
+          setAssets(a);
+          setNotifications(n);
+        }
+      })
+      .catch((e) => setError(e.message));
+    return () => {
+      live = false;
+    };
+  }, [api, selected, user]);
+  async function open(id: string) {
+    try {
+      const r = await api<{ id: string; output: RunResult }>("/api/runs/" + id);
+      setActive({ ...r.output, id: r.id });
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+  async function create() {
+    try {
+      const w = await api<Workspace>("/api/workspaces", {
+        method: "POST",
+        body: JSON.stringify({ value: { name } }),
+      });
+      setSpaces([...spaces, w]);
+      setSelected(w.id);
+      setName("");
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+  async function deleteAsset(id: string) {
+    try {
+      await api("/api/assets/" + id, { method: "DELETE" });
+      setAssets(assets.filter((a) => a.id !== id));
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+  async function removeAccount() {
+    try {
+      await api("/api/privacy/account", {
+        method: "DELETE",
+        body: JSON.stringify({ value: { password } }),
+      });
+      await refresh();
+      router.push("/");
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+  if (loading)
+    return (
+      <div className="page-width empty">{t("লোড হচ্ছে…", "Loading…")}</div>
+    );
+  if (!user) return <SignInPrompt />;
+  const shown = history.filter(
+    (x) =>
+      (pane !== "saved" || x.saved) &&
+      (filter === "all" || x.module === filter),
+  );
+  return (
+    <div className="page-width dashboard">
+      <aside className="workspace-sidebar">
+        <p className="eyebrow">{t("আমার কর্মক্ষেত্র", "MY WORKSPACE")}</p>
+        {[
+          ["history", Clock, t("সাম্প্রতিক কাজ", "Recent work")],
+          ["saved", Bookmark, t("সংরক্ষিত ফলাফল", "Saved results")],
+          ["files", FolderLock, t("ব্যক্তিগত ভল্ট", "Private vault")],
+          ["reports", FileText, t("রিপোর্ট ডাউনলোড", "Download reports")],
+          ["notifications", Bell, t("নোটিফিকেশন", "Notifications")],
+          [
+            "sharing",
+            ShieldCheck,
+            t("সহায়তা ও তথ্য স্থানান্তর", "Support & transfers"),
+          ],
+          ["privacy", ShieldCheck, t("তথ্য ও গোপনীয়তা", "Data & privacy")],
+        ].map(([key, Icon, label]) => {
+          const I = Icon as typeof Clock;
+          return (
+            <Link
+              className={pane === key ? "selected" : ""}
+              href={"/workspace/" + key}
+              key={String(key)}
+            >
+              <I size={18} />
+              {String(label)}
+            </Link>
+          );
+        })}
+        <Link href="/admin/security">
+          <KeyRound size={18} />
+          {t("অ্যাকাউন্ট নিরাপত্তা", "Account security")}
+        </Link>
+        <div className="aside-note">
+          <ShieldCheck />
+          <p>
+            {t(
+              "আপনার ভল্টের তথ্য অ্যাডমিনের সাধারণ ভিউতে নেই।",
+              "Vault contents are excluded from general admin views.",
+            )}
+          </p>
+        </div>
+      </aside>
+      <section className="workspace-content">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">
+              {t("আপনার নিজস্ব জায়গা", "YOUR PRIVATE SPACE")}
+            </span>
+            <h1>
+              {t("শুভেচ্ছা, ", "Hello, ")}
+              {user.name}।
+            </h1>
+            <p>
+              {t(
+                "এখানে আপনার কাজ, আপনার নিয়ন্ত্রণে।",
+                "Your work, under your control.",
+              )}
+            </p>
+          </div>
+          <Link className="button dark" href="/explore">
+            <Plus size={17} />
+            {t("নতুন কাজ", "New task")}
+          </Link>
+        </div>
+        {error ? (
+          <p className="error" role="alert">
+            {error}
+          </p>
+        ) : null}
+        <div className="workspace-picker">
+          <label>
+            {t("কর্মক্ষেত্র", "Workspace")}
+            <select
+              value={selected}
+              onChange={(e) => {
+                setSelected(e.target.value);
+                setActive(null);
+              }}
+            >
+              {spaces.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <details>
+            <summary>
+              {t("আলাদা কর্মক্ষেত্র তৈরি", "Create a separate workspace")}
+            </summary>
+            <div className="inline-form">
+              <input
+                aria-label={t("নাম", "Name")}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder={t(
+                  "যেমন: পরিবারের হিসাব",
+                  "e.g. Household records",
+                )}
+              />
+              <button className="button outline small" onClick={create}>
+                {t("তৈরি", "Create")}
+              </button>
+            </div>
+          </details>
+        </div>
+        {pane === "sharing" ? (
+          <CollaborationPanel
+            key={`${user?.id}:${selected}`}
+            workspaceId={selected}
+            history={history}
+          />
+        ) : pane === "privacy" ? (
+          <div className="panel">
+            <h2>{t("আপনার তথ্যের নিয়ন্ত্রণ", "Control your information")}</h2>
+            <p>
+              {t(
+                "সংরক্ষিত ইনপুট, ফলাফল ও সম্মতির রেকর্ড JSON-এ ডাউনলোড করুন। মূল ফাইল ভল্ট থেকে আলাদাভাবে ডাউনলোড করা যায়।",
+                "Download your saved inputs, results and consent records as JSON. Original files can be downloaded separately from the vault.",
+              )}
+            </p>
+            <a className="button outline" download href="/api/privacy/export">
+              <Download size={17} />
+              {t("আমার তথ্য ডাউনলোড", "Export my data")}
+            </a>
+            <div className="rule-line" />
+            <h3>
+              {t(
+                "অ্যাকাউন্ট ও সক্রিয় তথ্য মুছুন",
+                "Delete account and active data",
+              )}
+            </h3>
+            <p>
+              {t(
+                "এটি অ্যাকাউন্ট, ব্যক্তিগত ফলাফল ও ভল্টের ফাইল মুছে দেবে। অপারেটরের ব্যাকআপ নিজস্ব রিটেনশন নীতি মেনে মেয়াদশেষে মুছবে।",
+                "This deletes your account, private results and vault files. Operator backups expire under a separate retention policy.",
+              )}
+            </p>
+            <label className="form-field">
+              {t("পাসওয়ার্ড দিয়ে নিশ্চিত করুন", "Confirm with your password")}
+              <input
+                type="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+            <label className="consent-check">
+              <input
+                type="checkbox"
+                checked={confirmDelete}
+                onChange={(e) => setConfirmDelete(e.target.checked)}
+              />
+              {t(
+                "সক্রিয় তথ্য স্থায়ীভাবে মুছে দিতে চাই।",
+                "I want to permanently delete my active data.",
+              )}
+            </label>
+            <button
+              disabled={!confirmDelete || !password}
+              className="button danger-solid"
+              onClick={removeAccount}
+            >
+              <Trash2 size={17} />
+              {t("অ্যাকাউন্ট মুছুন", "Delete account")}
+            </button>
+          </div>
+        ) : pane === "files" ? (
+          <div className="panel">
+            <h2>{t("ব্যক্তিগত ভল্ট", "Private vault")}</h2>
+            <p>
+              {t(
+                "নিজের নথি সংশ্লিষ্ট টুলের কর্মক্ষেত্র থেকে যোগ করুন।",
+                "Add your documents from the relevant tool workspace.",
+              )}
+            </p>
+            {assets.length ? (
+              <div className="asset-list">
+                {assets.map((a) => (
+                  <div key={a.id}>
+                    <FileText />
+                    <div>
+                      <strong>
+                        {a.kind.toUpperCase()} · {(a.size / 1024).toFixed(1)} KB
+                      </strong>
+                      <small>
+                        {a.id.slice(0, 8)} ·{" "}
+                        {a.scan_state === "clean"
+                          ? t("স্ক্যান সম্পন্ন", "Scanned")
+                          : t(
+                              "ডেভেলপমেন্টে স্ক্যান অনুপস্থিত",
+                              "Unscanned in development",
+                            )}
+                      </small>
+                    </div>
+                    <a
+                      className="icon-button"
+                      href={"/api/assets/" + a.id}
+                      aria-label="Download"
+                    >
+                      <Download size={18} />
+                    </a>
+                    <button
+                      className="icon-button danger"
+                      aria-label="Delete"
+                      onClick={() => deleteAsset(a.id)}
+                    >
+                      <Trash2 size={18} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <Empty text={t("এখনো কোনো ফাইল নেই।", "No files yet.")} />
+            )}
+          </div>
+        ) : pane === "notifications" ? (
+          <div className="panel">
+            <h2>{t("নোটিফিকেশন", "Notifications")}</h2>
+            {notifications.length ? (
+              <NotificationCenter entries={notifications} />
+            ) : (
+              <Empty
+                text={t(
+                  "এখন নতুন নোটিফিকেশন নেই।",
+                  "No notifications right now.",
+                )}
+              />
+            )}
+          </div>
+        ) : (
+          <>
+            <div className="workspace-stats">
+              <article>
+                <Clock />
+                <strong>{history.length}</strong>
+                <span>
+                  {t("এই কর্মক্ষেত্রের রেকর্ড", "Records in this workspace")}
+                </span>
+              </article>
+              <article>
+                <Bookmark />
+                <strong>{history.filter((x) => x.saved).length}</strong>
+                <span>{t("সংরক্ষিত ফলাফল", "Saved results")}</span>
+              </article>
+              <article>
+                <FolderLock />
+                <strong>{assets.length}</strong>
+                <span>{t("ব্যক্তিগত ফাইল", "Private files")}</span>
+              </article>
+            </div>
+            <div className="panel">
+              <div className="section-heading compact">
+                <h2>
+                  {pane === "saved"
+                    ? t("সংরক্ষিত ফলাফল", "Saved results")
+                    : pane === "reports"
+                      ? t("ডাউনলোডের জন্য রিপোর্ট", "Reports to download")
+                      : t("আপনার সাম্প্রতিক কাজ", "Your recent work")}
+                </h2>
+                <select
+                  aria-label="Filter module"
+                  value={filter}
+                  onChange={(e) => setFilter(e.target.value)}
+                >
+                  <option value="all">{t("সব টুল", "All tools")}</option>
+                  {Array.from(new Set(history.map((x) => x.module))).map(
+                    (slug) => (
+                      <option key={slug} value={slug}>
+                        {tools.find((x) => x.slug === slug)?.name}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </div>
+              {shown.length ? (
+                <div className="history-list">
+                  {shown.map((r) => (
+                    <div key={r.id}>
+                      <div className="history-logo">
+                        <Image
+                          unoptimized
+                          src={
+                            tools.find((m) => m.slug === r.module)?.logo ||
+                            "/logos/01_pukursos-ai.svg"
+                          }
+                          alt=""
+                          width="38"
+                          height="38"
+                        />
+                      </div>
+                      <button onClick={() => open(r.id)}>
+                        <strong>
+                          {tools.find((m) => m.slug === r.module)?.name}
+                        </strong>
+                        <small>
+                          {new Date(r.created_at).toLocaleString("en-BD", {
+                            timeZone: "Asia/Dhaka",
+                          })}
+                        </small>
+                      </button>
+                      <a
+                        className="icon-button"
+                        aria-label="Export JSON"
+                        href={"/api/runs/" + r.id + "/export"}
+                      >
+                        <Download size={18} />
+                      </a>
+                      <button
+                        className="icon-button"
+                        onClick={() => open(r.id)}
+                        aria-label="Open result"
+                      >
+                        <ArrowRight size={18} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <Empty
+                  text={t(
+                    "প্রথম কাজটি এখানেই অপেক্ষা করছে। একটি টুল বেছে শুরু করুন।",
+                    "Your first task is waiting. Choose a tool to begin.",
+                  )}
+                />
+              )}
+            </div>
+            {active ? (
+              <ResultView
+                result={active}
+                onDelete={() => {
+                  setHistory(history.filter((x) => x.id !== active.id));
+                  setActive(null);
+                }}
+              />
+            ) : null}
+          </>
+        )}
+      </section>
+    </div>
+  );
+}
+export function Empty({ text }: { text: string }) {
+  return (
+    <div className="empty">
+      <FolderLock size={32} />
+      <p>{text}</p>
+    </div>
+  );
+}
+export function SignInPrompt() {
+  const { t } = useApp();
+  return (
+    <div className="page-width empty signin-prompt">
+      <LockKeyhole size={40} />
+      <h1>{t("প্রশাসনিক প্রবেশ প্রয়োজন", "Operator access required")}</h1>
+      <p>
+        {t(
+          "প্রশাসনিক নিয়ন্ত্রণের জন্য অনুমোদিত পরিচয় ও MFA প্রয়োজন। টুল ব্যবহারে কোনো অ্যাকাউন্ট লাগে না।",
+          "Administrative controls require an authorized operator and MFA. Tool use needs no account.",
+        )}
+      </p>
+      <Link className="button dark" href="/admin/login">
+        {t("লগইন করুন", "Sign in")}
+        <ArrowRight size={17} />
+      </Link>
+    </div>
+  );
+}
+export function SettingsPage({ pane }: { pane: string }) {
+  const router = useRouter();
+  const { t, user, api, refresh, lang, setLang } = useApp();
+  const [name, setName] = useState(user?.name || ""),
+    [sessions, setSessions] = useState<Record<string, unknown>[]>([]),
+    [secret, setSecret] = useState(""),
+    [code, setCode] = useState(""),
+    [message, setMessage] = useState(""),
+    [error, setError] = useState("");
+  useEffect(() => {
+    if (user) {
+      api<Record<string, unknown>[]>("/api/auth/sessions")
+        .then((d) => {
+          setName(user.name);
+          setSessions(d);
+        })
+        .catch((e) => setError(e.message));
+    }
+  }, [api, user]);
+  if (!user) return <SignInPrompt />;
+  async function action(f: () => Promise<unknown>) {
+    try {
+      await f();
+      setMessage(t("পরিবর্তন সম্পন্ন।", "Updated successfully."));
+      await refresh();
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+  return (
+    <div className="page-width settings-page">
+      <div className="page-heading">
+        <span className="eyebrow">{t("অ্যাকাউন্ট", "ACCOUNT")}</span>
+        <h1>
+          {pane === "security"
+            ? t("নিরাপত্তা", "Security")
+            : t("প্রোফাইল ও পছন্দ", "Profile & preferences")}
+        </h1>
+      </div>
+      <nav className="tabs">
+        <Link href="/admin/security">{t("নিরাপত্তা", "Security")}</Link>
+        <Link href="/work">{t("তথ্য নিয়ন্ত্রণ", "Data controls")}</Link>
+      </nav>
+      {error ? (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      ) : null}
+      {message ? (
+        <p className="success" role="status">
+          {message}
+        </p>
+      ) : null}
+      <section className="panel">
+        {pane === "security" ? (
+          <>
+            <h2>
+              {t("দুই ধাপে নিরাপত্তা (MFA)", "Two-factor authentication")}
+            </h2>
+            <p>
+              {t(
+                "প্রশাসনিক কাজের জন্য MFA আবশ্যক। Authenticator অ্যাপে SHA1, ৬ সংখ্যা, ৩০ সেকেন্ড ব্যবহার করুন।",
+                "MFA is required for administrative actions. Use SHA1, 6 digits and a 30-second period in your authenticator app.",
+              )}
+            </p>
+            {!user.mfa_enabled && !secret ? (
+              <button
+                className="button outline"
+                onClick={() =>
+                  action(async () => {
+                    const r = await api<{ secret: string }>(
+                      "/api/auth/mfa/enroll",
+                      { method: "POST" },
+                    );
+                    setSecret(r.secret);
+                  })
+                }
+              >
+                {t("MFA চালু করুন", "Set up MFA")}
+              </button>
+            ) : null}
+            {secret ? (
+              <div className="notice">
+                <p>
+                  {t(
+                    "এই গোপন কী শুধু আপনার authenticator-এ যোগ করুন। অন্য কাউকে দেবেন না।",
+                    "Add this secret only to your authenticator. Do not share it.",
+                  )}
+                </p>
+                <code>{secret}</code>
+              </div>
+            ) : null}
+            <label className="form-field">
+              {t("Authenticator কোড", "Authenticator code")}
+              <input
+                inputMode="numeric"
+                autoComplete="one-time-code"
+                maxLength={6}
+                value={code}
+                onChange={(e) => setCode(e.target.value)}
+              />
+            </label>
+            <button
+              className="button dark"
+              onClick={() =>
+                action(() =>
+                  api("/api/auth/mfa/verify", {
+                    method: "POST",
+                    body: JSON.stringify({ value: { code } }),
+                  }),
+                )
+              }
+            >
+              {t("MFA যাচাই করুন", "Verify MFA")}
+            </button>
+            <div className="rule-line" />
+            <h2>{t("লগইন সেশন", "Login sessions")}</h2>
+            {sessions.map((s) => (
+              <div className="session-row" key={String(s.id)}>
+                <div>
+                  <strong>{String(s.device).slice(0, 100)}</strong>
+                  <p>
+                    {s.current
+                      ? t("বর্তমান ডিভাইস", "Current device")
+                      : t("অন্য সেশন", "Other session")}
+                  </p>
+                </div>
+                <button
+                  className="button outline small"
+                  onClick={() =>
+                    action(async () => {
+                      await api("/api/auth/sessions/" + s.id, {
+                        method: "DELETE",
+                      });
+                      setSessions(sessions.filter((x) => x.id !== s.id));
+                    })
+                  }
+                >
+                  {t("বাতিল", "Revoke")}
+                </button>
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
+            <label className="form-field">
+              {t("নাম", "Name")}
+              <input value={name} onChange={(e) => setName(e.target.value)} />
+            </label>
+            <p>{user.email}</p>
+            <label className="form-field">
+              {t("ভাষা", "Language")}
+              <select
+                value={lang}
+                onChange={(e) => setLang(e.target.value as "bn" | "en")}
+              >
+                <option value="bn">বাংলা</option>
+                <option value="en">English</option>
+              </select>
+            </label>
+            <button
+              className="button dark"
+              onClick={() =>
+                action(() =>
+                  api("/api/profile", {
+                    method: "PATCH",
+                    body: JSON.stringify({ value: { name, language: lang } }),
+                  }),
+                )
+              }
+            >
+              {t("সংরক্ষণ", "Save changes")}
+            </button>
+          </>
+        )}
+        <div className="rule-line" />
+        <button
+          className="button outline"
+          onClick={() =>
+            action(async () => {
+              await api("/api/auth/logout", { method: "POST" });
+              router.push("/");
+            })
+          }
+        >
+          <LogOut size={17} />
+          {t("লগআউট", "Sign out")}
+        </button>
+      </section>
+    </div>
+  );
+}
+
+function NotificationCenter({ entries }: { entries: unknown[] }) {
+  const { api, t, lang } = useApp();
+  const [read, setRead] = useState<Record<string, boolean>>({}),
+    [error, setError] = useState("");
+  const rows = entries as {
+    id: string;
+    body: string;
+    read: boolean;
+    created_at: string;
+  }[];
+  function message(body: string) {
+    try {
+      const d = JSON.parse(body);
+      return typeof d?.[lang] === "string" ? d[lang] : body;
+    } catch {
+      return body;
+    }
+  }
+  return (
+    <div>
+      {rows.map((n) => (
+        <article className="grant-card" key={n.id}>
+          <p>{message(n.body)}</p>
+          <small>
+            {new Date(n.created_at).toLocaleString(
+              lang === "bn" ? "bn-BD" : "en-GB",
+              { timeZone: "Asia/Dhaka" },
+            )}
+          </small>
+          <button
+            className="text-link"
+            onClick={async () => {
+              try {
+                const next = await api<{ read: boolean }>(
+                  "/api/notifications/" + n.id,
+                  {
+                    method: "PATCH",
+                    body: JSON.stringify({ read: !(read[n.id] ?? n.read) }),
+                  },
+                );
+                setRead({ ...read, [n.id]: next.read });
+                setError("");
+              } catch (e) {
+                setError((e as Error).message);
+              }
+            }}
+          >
+            {(read[n.id] ?? n.read)
+              ? t("পড়া হয়নি হিসেবে রাখুন", "Mark unread")
+              : t("পড়া হয়েছে", "Mark read")}
+          </button>
+        </article>
+      ))}
+      {error ? (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      ) : null}
+    </div>
+  );
+}

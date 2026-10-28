@@ -1,0 +1,87 @@
+{
+  "id": 47,
+  "slug": "repairright-bd",
+  "name": "RepairRight BD",
+  "name_bn": "নষ্ট যন্ত্রপাতি মেরামতের সম্ভাবনা ও ই-বর্জ্য এড়ানো",
+  "category": "home",
+  "route": "/tools/repairright-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "ফ্যান, ব্লেন্ডার, স্মার্টফোন, রাইস কুকার বা অন্য পণ্যের সমস্যায় মানুষ মেরামত সম্ভব কিনা বুঝতে পারেন না।",
+    "target_users": "পরিবার, মোবাইল সার্ভিস দোকান ও ক্ষুদ্র উদ্যোগ",
+    "inputs": "পণ্যের ক্যাটাগরি, উপসর্গের টেক্সট, ছবি, বয়স ও সার্ভিস ইতিহাস",
+    "outputs": "non-invasive troubleshooting questions, warranty checklist, repair-vs-replace cost comparison, e-waste options",
+    "distinctive_workflow": "পণ্যের lifecycle, warranty ও মেরামত সিদ্ধান্ত; HomeHazard-এর কাঠামোগত ঝুঁকি থেকে আলাদা।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "fault symptom text classifier + image component labeler + transparent numeric cost model",
+    "candidate_models": [
+      {
+        "label": "multilingual-e5-small",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      {
+        "label": "MobileNetV3",
+        "link": "https://pytorch.org/vision/stable/models.html"
+      }
+    ],
+    "test_target": "ফোলা ব্যাটারি, পোড়া গন্ধ, খোলা তার বা গ্যাস যন্ত্রে safe-stop classification; unsupported model type no fabricated fault।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Department of Environment",
+        "url": "https://doe.gov.bd/",
+        "purpose": "waste and e-waste regulation reference",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "BSTI",
+        "url": "https://bsti.gov.bd/",
+        "purpose": "standards guidance; model part compatibility not guaranteed",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "বৈদ্যুতিক যন্ত্র খুলে ঝুঁকিপূর্ণ মেরামতের ধাপ দেওয়া যাবে না; ব্যাটারি/মেইনস/গ্যাসে টেকনিশিয়ান; কোনো warranty guarantee নয়।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/47_repairright-bd.svg"
+}

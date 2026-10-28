@@ -1,0 +1,39 @@
+{
+  "project_number": 23,
+  "project_name": "SafeRoute BD",
+  "slug": "saferoute-bd",
+  "category": "Transportation / Crash Data Literacy",
+  "about_bn": "সড়ক দুর্ঘটনার ঐতিহাসিক তথ্য থেকে বিভিন্ন এলাকায় ঘটনার প্যাটার্ন বোঝাবে; কোনো রাস্তা শতভাগ নিরাপদ তা বলবে না।",
+  "inputs": "Origin/destination search; route preference; map taps",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Origin/destination search, route preference, map taps",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Historic accident heatmap with time filters",
+    "Different dataset coverage badges",
+    "Route explanation with limitations",
+    "Map-matched crash locations",
+    "No safe-route guarantee",
+    "Source licensing and update schedule"
+  ],
+  "ai_contract": "Geospatial joins, normalized historical exposure proxies with major caveats, route summarization, RAG from approved safety guides; no individual-crash prediction.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 4,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

@@ -1,0 +1,39 @@
+{
+  "project_number": 9,
+  "project_name": "GoliCoach AI",
+  "slug": "golicoach-ai",
+  "category": "SportsTech / Cricket Movement Analysis",
+  "about_bn": "নিজের ক্রিকেট অনুশীলনের ভিডিও দিলে দেহভঙ্গি ও ব্যাটিং/বোলিংয়ের দৃশ্যমান মুভমেন্টের সহজ বিশ্লেষণ এবং অনুশীলনের ধারণা দেবে।",
+  "inputs": "10-30-second cricket video; dominant hand; skill level",
+  "user_3step": [
+    "সহজ ইনপুট দিন—10-30-second cricket video, dominant hand, skill level",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Pose landmarks over video frames",
+    "Batting and bowling separate journeys",
+    "Practice comparison sessions",
+    "Movement metric glossary and camera-quality check",
+    "Drill library and progress journal",
+    "No injury diagnosis"
+  ],
+  "ai_contract": "On-device or permitted backend pose estimation; temporal keypoint features; rules-based coaching prompts with confidence; skill comparison with own baseline, not fabricated professional player scoring.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

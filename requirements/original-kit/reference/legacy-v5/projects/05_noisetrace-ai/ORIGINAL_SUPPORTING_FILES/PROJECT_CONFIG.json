@@ -1,0 +1,39 @@
+{
+  "project_number": 5,
+  "project_name": "NoiseTrace AI",
+  "slug": "noisetrace-ai",
+  "category": "Urban Environment / Audio AI",
+  "about_bn": "শব্দের ছোট অডিও রেকর্ড করে শব্দের ধরন বোঝা, সময়ভিত্তিক ডায়েরি রাখা এবং তথ্যভিত্তিক অভিযোগের খসড়া বানানো যাবে।",
+  "inputs": "20-60-second audio; text tags; optional time/location",
+  "user_3step": [
+    "সহজ ইনপুট দিন—20-60-second audio, text tags, optional time/location",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Privacy-first consented audio journal",
+    "Auditory event type suggestions",
+    "Time-of-day repeat exposure view",
+    "Recordings auto-expiry setting",
+    "Printable civic issue summary",
+    "No uncalibrated regulatory sound-level claims"
+  ],
+  "ai_contract": "Audio event classification and sound-type embeddings; simple duration summaries; clustering repeated patterns; Bengali speech anonymization where possible; uncertainty-aware explanations.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

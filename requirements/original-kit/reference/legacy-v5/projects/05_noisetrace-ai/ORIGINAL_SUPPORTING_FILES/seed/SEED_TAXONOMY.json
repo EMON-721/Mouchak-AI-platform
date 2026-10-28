@@ -1,0 +1,188 @@
+{
+  "project": "NoiseTrace AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "NOISETRACE_AI_001",
+      "label_bn": "ট্রাফিক শব্দ",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_002",
+      "label_bn": "হর্ন",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_003",
+      "label_bn": "নির্মাণের শব্দ",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_004",
+      "label_bn": "মানুষের ভিড়",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_005",
+      "label_bn": "মেশিনের শব্দ",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_006",
+      "label_bn": "জেনারেটরের শব্দ",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_007",
+      "label_bn": "মাইকের শব্দ",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_008",
+      "label_bn": "রেকর্ডিং সময়",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_009",
+      "label_bn": "রেকর্ডিং দৈর্ঘ্য",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_010",
+      "label_bn": "অবস্থান সম্মতি",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_011",
+      "label_bn": "অডিও আপলোড",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_012",
+      "label_bn": "অডিও গোপনীয়তা",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_013",
+      "label_bn": "শব্দের উৎসের অনুমান",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_014",
+      "label_bn": "বিরক্তির নথি",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_015",
+      "label_bn": "ঘটনার পুনরাবৃত্তি",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_016",
+      "label_bn": "ক্যালিব্রেশনের অবস্থা",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_017",
+      "label_bn": "অভিযোগের খসড়া",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "NOISETRACE_AI_018",
+      "label_bn": "সাউন্ড ডায়েরি",
+      "domain_bn": "শব্দ পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

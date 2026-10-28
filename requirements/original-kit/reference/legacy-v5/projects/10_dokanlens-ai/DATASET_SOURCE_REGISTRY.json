@@ -1,0 +1,85 @@
+{
+  "project": "DokanLens AI",
+  "sources": [
+    {
+      "id": "DokanLens_AI-SRC01",
+      "name": "BSTI mandatory product categories",
+      "url": "https://bsti.portal.gov.bd/pages/static-pages/6922dcba933eb65569e11af8",
+      "source_type": "official_reference",
+      "description": "Mandatory product/certification list, not product barcode or stock dataset.",
+      "rights_or_license_note": "verify reuse/updates; do not treat as SKU registry",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC02",
+      "name": "BBS Economic Census",
+      "url": "https://bbs.gov.bd/",
+      "source_type": "official_reference",
+      "description": "Bangladesh business statistics and sector context, not individual stock.",
+      "rights_or_license_note": "specific publication rights; browse manually",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC03",
+      "name": "Bangladesh Open Data",
+      "url": "https://data.gov.bd/dataset",
+      "source_type": "catalogue",
+      "description": "Searchable public data catalogue; check individual dataset format and license.",
+      "rights_or_license_note": "each dataset separately approved",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC04",
+      "name": "Bangladesh administrative divisions",
+      "url": "https://bangladesh.gov.bd/site/view/division-list/division-list",
+      "source_type": "official_reference",
+      "description": "Official division list for address select.",
+      "rights_or_license_note": "metadata reference",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "government_site_links_not_full_datasets": true,
+  "reuse_review_required": true,
+  "project_specific_data_plan": "Original BD product alias catalog + opted-in retailer shelf photos + BSTI links"
+}

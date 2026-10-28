@@ -1,0 +1,18 @@
+{
+  "project": "ChuktiShield AI",
+  "version": "v3-existing-site-upgrade",
+  "date": "2026-10-25",
+  "mode": "upgrade_existing_repo_only",
+  "source_files": [
+    "section_heading_references.json",
+    "clause_taxonomy.csv",
+    "example_safe_output_schema.json",
+    "illustrative_clauses.json",
+    "law_reference_registry.json"
+  ],
+  "master_prompt": "MASTER_PROMPT_UPGRADE_V3.md",
+  "source_registry": "data/sources.json",
+  "github_pushed": false,
+  "app_built_or_updated": false,
+  "licensed_external_data_downloaded": false
+}

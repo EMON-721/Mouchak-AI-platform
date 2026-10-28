@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+WATERGUARD_BD_001,পানির উৎস,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_002,পরীক্ষার তারিখ,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_003,pH,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_004,আর্সেনিক,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_005,লোহা,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_006,টিডিএস,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_007,জীবাণু পরীক্ষার ফল,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_008,এককের ধরন,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_009,পরীক্ষাগারের নাম,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_010,মানদণ্ডের সংস্করণ,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_011,রেফারেন্স মান,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_012,অস্পষ্ট OCR,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_013,সংশোধন,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_014,পরবর্তী পরীক্ষার প্রশ্ন,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_015,ফলাফলের চার্ট,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_016,স্যাম্পল আইডি গোপন,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_017,প্রতিবেদন রপ্তানি,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WATERGUARD_BD_018,ডেটা মুছে ফেলা,পানির পরীক্ষার রিপোর্ট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

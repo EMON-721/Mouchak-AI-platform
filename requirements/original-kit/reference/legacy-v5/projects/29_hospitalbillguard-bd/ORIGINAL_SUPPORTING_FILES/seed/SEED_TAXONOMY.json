@@ -1,0 +1,188 @@
+{
+  "project": "HospitalBillGuard BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_001",
+      "label_bn": "চিকিৎসা প্রতিষ্ঠানের নাম",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_002",
+      "label_bn": "বিলের তারিখ",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_003",
+      "label_bn": "পরীক্ষার চার্জ",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_004",
+      "label_bn": "ডাক্তারের ফি",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_005",
+      "label_bn": "বেড চার্জ",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_006",
+      "label_bn": "ওষুধের চার্জ",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_007",
+      "label_bn": "সেবার চার্জ",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_008",
+      "label_bn": "ছাড়",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_009",
+      "label_bn": "কর",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_010",
+      "label_bn": "মোট টাকা",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_011",
+      "label_bn": "আগাম জমা",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_012",
+      "label_bn": "ডুপ্লিকেট লাইন",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_013",
+      "label_bn": "OCR সংশোধন",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_014",
+      "label_bn": "আইটেমাইজড বিল",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_015",
+      "label_bn": "মূল্যতালিকার উৎস",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_016",
+      "label_bn": "প্রশ্নের তালিকা",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_017",
+      "label_bn": "বিলের ছবি",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HOSPITALBILLGUARD_BD_018",
+      "label_bn": "ব্যক্তিগত তথ্য লুকানো",
+      "domain_bn": "হাসপাতালের বিল",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

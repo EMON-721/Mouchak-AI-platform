@@ -1,0 +1,82 @@
+id,name,aliases,unit,category,data_kind,publisher,source_url,license,rights_status,source_published_at,quality_status
+dl-ref-001,চাল,rice,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-002,আটা,atta|wheat flour,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-003,ময়দা,maida|flour,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-004,সুজি,semolina,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-005,চিড়া,flattened rice,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-006,মুড়ি,puffed rice,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-007,খই,popped rice,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-008,ওটস,oats,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-009,মসুর ডাল,lentil|masoor dal,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-010,মুগ ডাল,mung dal,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-011,ছোলা,chickpea|chola,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-012,বুটের ডাল,chana dal,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-013,মটর ডাল,split pea,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-014,বেসন,gram flour,kg,শস্য ও ডাল,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-015,সয়াবিন তেল,soybean oil|সয়াবিন তেল,L,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-016,সরিষার তেল,mustard oil,L,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-017,সূর্যমুখী তেল,sunflower oil,L,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-018,ঘি,ghee,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-019,লবণ,salt,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-020,চিনি,sugar,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-021,গুড়,jaggery,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-022,হলুদ,turmeric,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-023,মরিচ গুঁড়া,chilli powder,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-024,ধনে,coriander,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-025,জিরা,cumin,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-026,গরম মসলা,garam masala,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-027,তেজপাতা,bay leaf,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-028,দারুচিনি,cinnamon,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-029,এলাচ,cardamom,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-030,লবঙ্গ,clove,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-031,গোলমরিচ,black pepper,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-032,আদা,ginger,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-033,রসুন,garlic,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-034,পেঁয়াজ,onion|পিঁয়াজ,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-035,আলু,potato,kg,রান্নার উপকরণ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-036,চা পাতা,tea|চা,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-037,কফি,coffee,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-038,গুঁড়া দুধ,milk powder,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-039,তরল দুধ,milk,L,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-040,দই,yogurt,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-041,মাখন,butter,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-042,পনির,cheese,kg,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-043,পানি,water,L,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-044,ফলের জুস,juice,L,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-045,কোমল পানীয়,soft drink,L,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-046,লাচ্ছি,lassi,L,পানীয় ও দুগ্ধ,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-047,বিস্কুট,biscuit|cookies,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-048,পাউরুটি,bread,piece,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-049,কেক,cake,piece,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-050,টোস্ট,toast,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-051,নুডলস,noodles,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-052,পাস্তা,pasta,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-053,সেমাই,vermicelli,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-054,চানাচুর,chanachur,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-055,চিপস,chips,packet,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-056,চকলেট,chocolate,piece,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-057,ক্যান্ডি,candy,piece,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-058,জ্যাম,jam,kg,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-059,মধু,honey,kg,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-060,সস,sauce|ketchup,L,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-061,আচার,pickle,kg,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-062,ডিম,egg,piece,স্ন্যাকস ও খাবার,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-063,গায়ের সাবান,soap|সাবান,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-064,কাপড়ের সাবান,laundry soap,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-065,ডিটারজেন্ট,detergent,kg,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-066,বাসন ধোয়ার তরল,dishwashing liquid,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-067,শ্যাম্পু,shampoo,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-068,টুথপেস্ট,toothpaste,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-069,টুথব্রাশ,toothbrush,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-070,টিস্যু,tissue,packet,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-071,টয়লেট ক্লিনার,toilet cleaner,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-072,ফ্লোর ক্লিনার,floor cleaner,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-073,ব্লিচ,bleach,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-074,হ্যান্ডওয়াশ,handwash,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-075,স্যানিটারি প্যাড,sanitary pad,packet,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-076,ডায়াপার,diaper,packet,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-077,নারকেল তেল,coconut oil,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-078,বডি লোশন,body lotion,L,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-079,মশার কয়েল,mosquito coil,packet,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-080,ম্যাচ,matchbox|দিয়াশলাই,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price
+dl-ref-081,মোমবাতি,candle,piece,পরিচ্ছন্নতা ও ব্যক্তিগত যত্ন,original_seed,DokanLens project-authored reference,,CC0-1.0,original_authored,2026-10-25,reference_only_no_stock_or_price

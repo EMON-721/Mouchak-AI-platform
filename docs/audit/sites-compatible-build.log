@@ -1,0 +1,54 @@
+/usr/bin/timeout
+Running bounded vinext build...
+
+  vinext build  (Vite 8.0.13)
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 238 modules transformed.
+rendering chunks...
+✓ built in 2.99s
+[2/5] analyze server references...
+[2Ktransforming...✓ 237 modules transformed.
+rendering chunks...
+✓ built in 1.23s
+[3/5] build rsc environment...
+[2Ktransforming...✓ 235 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.17s
+[4/5] build client environment...
+[2Ktransforming...✓ 1972 modules transformed.
+rendering chunks...
+computing gzip size...
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugins. Here is a breakdown:
+  - vinext:middleware-server-only (49%)
+  - vinext:css-data-url (9%)
+  - vinext:jsx-in-js (8%)
+  - rsc:virtual-client-package (8%)
+  - vinext:validate-middleware-exports (7%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 4.88s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 239 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 1.96s
+[0m
+  Route (app)
+  ┌ ? /           
+  ├ ƒ /:path+     
+  ├ λ /api/:path+ 
+  └ ƒ /tools/:slug
+
+  λ API  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+

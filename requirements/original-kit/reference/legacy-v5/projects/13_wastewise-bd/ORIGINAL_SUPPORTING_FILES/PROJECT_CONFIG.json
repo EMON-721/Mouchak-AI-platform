@@ -1,0 +1,39 @@
+{
+  "project_number": 13,
+  "project_name": "WasteWise BD",
+  "slug": "wastewise-bd",
+  "category": "Sustainability / Waste Sorting",
+  "about_bn": "যেকোনো বর্জ্যের ছবি বা নাম দিয়ে কোন বর্জ্য কীভাবে আলাদা করবে, কী ঝুঁকি আছে এবং কোথায় যাচাইকৃত সেবা আছে তা জানাবে।",
+  "inputs": "Object photo or typed item name; location category",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Object photo or typed item name, location category",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Everyday material sorting assistant",
+    "Hazardous materials special-handling routes",
+    "Bangladesh municipality guidance source registry",
+    "Community recycling point submissions with verification",
+    "Multi-material image ambiguity review",
+    "Reuse suggestion gallery"
+  ],
+  "ai_contract": "Lightweight material classification + RAG from reviewed municipal/waste guidance; rule table for contamination caveats; approximate environmental education metrics explicitly modeled not real emissions measured.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

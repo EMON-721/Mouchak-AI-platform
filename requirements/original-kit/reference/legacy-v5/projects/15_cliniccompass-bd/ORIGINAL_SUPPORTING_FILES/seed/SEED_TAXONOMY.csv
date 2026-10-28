@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+CLINICCOMPASS_BD_001,জেলা,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_002,উপজেলা,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_003,সরকারি হাসপাতাল,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_004,কমিউনিটি ক্লিনিক,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_005,উপজেলা স্বাস্থ্য কমপ্লেক্স,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_006,বিশেষায়িত কেন্দ্র,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_007,সেবার ধরন,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_008,প্রতিষ্ঠানের কোড,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_009,ভিজিটের কারণ,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_010,যোগাযোগের তথ্য,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_011,ঠিকানার উৎস,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_012,নথি যাচাই,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_013,শেষ হালনাগাদ,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_014,নিবন্ধনের অবস্থা,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_015,মানচিত্র নির্দেশনা,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_016,যাচাই-না-হওয়া তথ্য,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_017,সেবা উপলব্ধতা অজানা,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CLINICCOMPASS_BD_018,ফিডব্যাক,স্বাস্থ্যসেবা খোঁজা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

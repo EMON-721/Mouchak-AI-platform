@@ -1,0 +1,26 @@
+{
+  "units": [
+    {
+      "from": "kg",
+      "to": "g",
+      "factor": 1000
+    },
+    {
+      "from": "l",
+      "to": "ml",
+      "factor": 1000
+    },
+    {
+      "from": "dozen",
+      "to": "piece",
+      "factor": 12
+    },
+    {
+      "from": "hundred",
+      "to": "piece",
+      "factor": 100
+    }
+  ],
+  "arithmetic": "unit_price = amount_bdt / normalized_quantity; checkout = sum(item_price*quantity)",
+  "no_data_message_bn": "এই বাজার/পণ্যের জন্য যাচাইকৃত বর্তমান দর নেই—নিজে দাম লিখতে পারেন।"
+}

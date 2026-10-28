@@ -1,0 +1,6 @@
+{
+  "candidate_source_paths_checked": 1103,
+  "credential_signatures_found": 0,
+  "runtime_files_in_source": 0,
+  "note": "Pattern scan plus ignored runtime directories; not an exhaustive secret-detection guarantee."
+}

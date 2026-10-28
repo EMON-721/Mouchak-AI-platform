@@ -1,0 +1,177 @@
+[
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/content.js",
+    "sha256": "d64475e751479cbd3f2fb3631f16dd0c3d004f30d08ad0eb21b15dc18d6016ed",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/app.js",
+    "sha256": "2f884e28bb07c39875891c4d165f5f306acb89f7ecc9feefb2d3d0c77a9a463c",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/.openai/hosting.json",
+    "sha256": "f4261de339397c25f0a5dd9048f89dc238943034b08db9b79dba79cb6b17c54f",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/upgrade.js",
+    "sha256": "d40fed49a1a962a27f9443f269e69b0eef820709912e000aca42cd5ee615e9ab",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/sw.js",
+    "sha256": "85ada85c716669a364483bf03566092e850c3743b96b706377fc40d635418a46",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/index.html",
+    "sha256": "ad8ff7775f52aaed062677bdf652e4ba883821422286cb6642a69587db780450",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/style.css",
+    "sha256": "60fc26c20dcd984f3b09df08626da1c448114f6d11240487d90ef97c8cad66bc",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "banglaread",
+    "file": "reference/legacy-snapshots/banglaread/engine.js",
+    "sha256": "f8b8487a55fc4e4f894e5001ed4bb4c639df652a67e8638f233389f35c461edc",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/data/seed/bd_product_ontology.csv",
+    "sha256": "5872649c10138c29e41ba9e2322aca0a42c081dfd7d2f7354da271b152d7357b",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/v3-core.js",
+    "sha256": "dcd96bc77b0b2f9b835f981aae0ddaf6222600d2134fd5531ac611b6469cd6e7",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/app.js",
+    "sha256": "d3fa1d1fcb5096eeacc9a843c8e401dba00657a3042fd3865bb992dfa8ecd2e0",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/.openai/hosting.json",
+    "sha256": "4115dac2a4b375c7f7714502f4c9507895d0434173f81b1001f06cbddae837a4",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/upgrade.js",
+    "sha256": "2f695909e4d0c382d91a7feafccb54585a9e32bee32460899343e7d7a490aeae",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/catalog.js",
+    "sha256": "2ba40624331baecbaaa21d04e07194b0443caf04a526730617577794ac965559",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/index.html",
+    "sha256": "c98131cf65f89a395c1137411f184e582d5e608f0d7967178c067fe910076037",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/core.js",
+    "sha256": "cb17b6c1369150a21fc10e1fc06605d2597032d63fedb273bfdddb4abf5b6857",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "dokanlens",
+    "file": "reference/legacy-snapshots/dokanlens/style.css",
+    "sha256": "8a6904cfa4ac0882457a9b157ac131f402c9a5d3750a09617526fa430b448b2d",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/app.js",
+    "sha256": "6d0c63738c54dbeae8d4c6a460a40eb3d2d9ca32d3fe2cee9bbfc1e8e9d5f98b",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/.openai/hosting.json",
+    "sha256": "c4264999017cb01495b9dfb924f3d1909571d4588f21a2538622dffe68a6b0ab",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/approved-prices.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/catalogue.js",
+    "sha256": "cf6d97e9bfe2b37b8a5a6a4a05e4bbf57a381126c8ed984fb674cbc8af0fa894",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/index.html",
+    "sha256": "376a76c72382f61d8eeb799a9cdc54cf10d43b1733f7def0ff8e869e70ae8a39",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/v3.js",
+    "sha256": "4a73ac38ae8db5dcc0b9c960edbb0b799e2c5a9b830a0678ab0adcfaf80e0df2",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/style.css",
+    "sha256": "34b9863c21e7fcf51c363f4704dd4edc91fac37481f6ec0263a5a93a1d2a967a",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  },
+  {
+    "module": "bazarcompare",
+    "file": "reference/legacy-snapshots/bazarcompare/engine.js",
+    "sha256": "429c589dded13af10404f3fe455030824a7c37bf8e8aa9c4db778e09ca604786",
+    "origin": "existing local deployment archive; user-owned project snapshot",
+    "not_live_user_data": true
+  }
+]

@@ -1,0 +1,188 @@
+{
+  "project": "SafeBlood Connect BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_001",
+      "label_bn": "রক্তের গ্রুপ",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_002",
+      "label_bn": "স্বেচ্ছাসেবীর সম্মতি",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_003",
+      "label_bn": "ডোনারের শেষ অনলাইন স্ট্যাটাস",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_004",
+      "label_bn": "জেলা",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_005",
+      "label_bn": "উপজেলা",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_006",
+      "label_bn": "অনুরোধের সময়",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_007",
+      "label_bn": "হাসপাতালের অবস্থান",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_008",
+      "label_bn": "যোগাযোগ গোপন",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_009",
+      "label_bn": "ইচ্ছামতো উপলব্ধতা",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_010",
+      "label_bn": "রিকোয়েস্ট যাচাই",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_011",
+      "label_bn": "ডোনারের পরিচয় সুরক্ষা",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_012",
+      "label_bn": "স্প্যাম রিপোর্ট",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_013",
+      "label_bn": "ব্যবহারকারী ব্লক",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_014",
+      "label_bn": "নিরাপদ যোগাযোগ",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_015",
+      "label_bn": "স্বেচ্ছাসেবী নীতি",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_016",
+      "label_bn": "ডোনার অপ্ট আউট",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_017",
+      "label_bn": "কোনো মেডিকেল ক্লিয়ারেন্স নয়",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "SAFEBLOOD_CONNECT_BD_018",
+      "label_bn": "মডারেশন",
+      "domain_bn": "রক্তদানের সমন্বয়",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

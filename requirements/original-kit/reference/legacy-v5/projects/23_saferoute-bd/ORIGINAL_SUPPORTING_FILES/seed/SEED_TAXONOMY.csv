@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+SAFEROUTE_BD_001,দুর্ঘটনার তারিখ,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_002,থানার নাম,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_003,দুর্ঘটনার ধরন,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_004,সোর্স ম্যাপ,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_005,পৌর এলাকা,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_006,গাড়ির ধরন,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_007,গণনার সময়কাল,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_008,ডেটার সম্পূর্ণতা,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_009,রিপোর্টিং বায়াস,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_010,হিটম্যাপ,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_011,রোড সেগমেন্ট,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_012,তুলনামূলক ট্রেন্ড,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_013,ঝুঁকির অনিশ্চয়তা,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_014,রুটের বিকল্প,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_015,ডেটার উৎস,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_016,শেষ হালনাগাদ,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_017,জনসংখ্যার ভিত্তি,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+SAFEROUTE_BD_018,নিরাপত্তা দাবি নয়,সড়ক নিরাপত্তার ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

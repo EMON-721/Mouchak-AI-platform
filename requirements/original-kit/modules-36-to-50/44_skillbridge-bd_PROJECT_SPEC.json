@@ -1,0 +1,87 @@
+{
+  "id": 44,
+  "slug": "skillbridge-bd",
+  "name": "SkillBridge BD",
+  "name_bn": "দক্ষতার মানচিত্র থেকে স্বীকৃত প্রশিক্ষণ খুঁজে পাওয়া",
+  "category": "education",
+  "route": "/tools/skillbridge-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "কোন দক্ষতা শিখতে হবে, কোন প্রতিষ্ঠানের স্বীকৃতি আছে, আর কোন প্রশিক্ষণ নিজের বাজেট ও জেলা অনুযায়ী উপযুক্ত তা বোঝা কঠিন।",
+    "target_users": "চাকরিপ্রার্থী, কর্মজীবী, নারী উদ্যোক্তা, কারিগরি শিক্ষার্থী",
+    "inputs": "নিজের শেখা দক্ষতা, পছন্দের কাজ, সময়, জেলা, ভাষা এবং বাজেট",
+    "outputs": "explainable skill gap map, reviewed course/provider shortlist, learning roadmap, portfolio task checklist",
+    "distinctive_workflow": "ক্যারিয়ার-পথের দক্ষতা mapping এবং স্বীকৃত training verification; WageGuard-এর payroll নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "text skill extraction + multilingual embeddings + bipartite course matching with transparent weights",
+    "candidate_models": [
+      {
+        "label": "multilingual-e5-small",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      {
+        "label": "spaCy EntityRuler",
+        "link": "https://spacy.io/api/entityruler"
+      }
+    ],
+    "test_target": "নকল training centre, uncertified provider, নাম এক হলেও প্রতিষ্ঠানের পৃথক location শনাক্ত; no fabricated placement guarantee।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "NSDA National Skills Portal",
+        "url": "https://skillsportal.gov.bd/",
+        "purpose": "provider/course accreditation metadata; access rights verify",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Bangladesh Technical Education Board",
+        "url": "https://bteb.gov.bd/",
+        "purpose": "curriculum/recognized program reference",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "কোর্স বা সার্টিফিকেটের স্বীকৃতি না যাচাই করে নিশ্চিত বলবে না; চাকরি পাইয়ে দেওয়ার দাবি নয়।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/44_skillbridge-bd.svg"
+}

@@ -1,0 +1,188 @@
+{
+  "project": "WasteWise BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "WASTEWISE_BD_001",
+      "label_bn": "প্লাস্টিক বোতল",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_002",
+      "label_bn": "কাচের বোতল",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_003",
+      "label_bn": "কাগজ",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_004",
+      "label_bn": "কার্ডবোর্ড",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_005",
+      "label_bn": "খাবারের উচ্ছিষ্ট",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_006",
+      "label_bn": "ব্যাটারি",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_007",
+      "label_bn": "ইলেকট্রনিক বর্জ্য",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_008",
+      "label_bn": "মেডিকেল শার্পস",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_009",
+      "label_bn": "রাসায়নিক পাত্র",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_010",
+      "label_bn": "ধাতব ক্যান",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_011",
+      "label_bn": "কাপড়",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_012",
+      "label_bn": "জৈব বর্জ্য",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_013",
+      "label_bn": "ভেজা প্যাকেট",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_014",
+      "label_bn": "ময়লাযুক্ত প্লাস্টিক",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_015",
+      "label_bn": "বর্জ্য সংগ্রহকারীর ঠিকানা",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_016",
+      "label_bn": "রিসাইক্লিং পয়েন্ট",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_017",
+      "label_bn": "সুরক্ষা নির্দেশনা",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WASTEWISE_BD_018",
+      "label_bn": "অজানা উপাদান",
+      "domain_bn": "বর্জ্য আলাদা করা",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

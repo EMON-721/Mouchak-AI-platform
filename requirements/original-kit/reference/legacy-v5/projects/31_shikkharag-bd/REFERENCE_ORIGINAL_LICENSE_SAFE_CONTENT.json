@@ -1,0 +1,26 @@
+[
+  {
+    "id": "own-math-01",
+    "class": 6,
+    "subject": "গণিত",
+    "chapter": "ভগ্নাংশ",
+    "text": "ভগ্নাংশের লব উপরে এবং হর নিচে থাকে। দুই ভগ্নাংশের হর সমান হলে লব যোগ করতে হয়।",
+    "rights": "original_author_written"
+  },
+  {
+    "id": "own-sci-01",
+    "class": 6,
+    "subject": "বিজ্ঞান",
+    "chapter": "পানি",
+    "text": "পানি গরম হয়ে বাষ্পে পরিণত হলে তাকে বাষ্পীভবন বলে।",
+    "rights": "original_author_written"
+  },
+  {
+    "id": "own-bn-01",
+    "class": 6,
+    "subject": "বাংলা",
+    "chapter": "বাক্য",
+    "text": "সম্পূর্ণ অর্থ প্রকাশকারী শব্দসমষ্টিকে বাক্য বলা হয়।",
+    "rights": "original_author_written"
+  }
+]

@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+AGROPRICE_PLANNER_001,ফসল,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_002,জমির পরিমাণ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_003,বীজের খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_004,সারের খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_005,সেচের খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_006,শ্রম খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_007,পরিবহন খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_008,অন্যান্য খরচ,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_009,পূর্বের ফলন,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_010,প্রত্যাশিত ফলন,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_011,আসল বিক্রয়দর,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_012,দামের উৎস,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_013,ব্রেকইভেন পয়েন্ট,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_014,খরচের চার্ট,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_015,আয়ের সম্ভাবনা,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_016,সিনারিও তুলনা,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_017,ফসলের মৌসুম,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+AGROPRICE_PLANNER_018,রিপোর্ট,কৃষকের বাজেট,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

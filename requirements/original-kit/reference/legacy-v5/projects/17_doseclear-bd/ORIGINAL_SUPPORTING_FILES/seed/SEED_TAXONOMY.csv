@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+DOSECLEAR_BD_001,ওষুধের নাম,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_002,জেনেরিক নামের অনিশ্চয়তা,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_003,ডোজ লেখা,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_004,সেবনের সময় লেখা,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_005,ডাক্তারের স্বাক্ষর,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_006,প্রেসক্রিপশনের ছবি,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_007,হাতের লেখা অস্পষ্ট,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_008,পড়া না যাওয়া অংশ,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_009,ফার্মাসিস্টকে জিজ্ঞেস,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_010,ব্যবহারকারীর নিশ্চিতকরণ,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_011,একই নামে একাধিক ওষুধ,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_012,OCR ভুল সংশোধন,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_013,ওষুধের নির্দেশনার উৎস,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_014,তথ্য গোপন রাখা,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_015,সংরক্ষিত প্রেসক্রিপশন,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_016,রিমাইন্ডার খসড়া,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_017,ফলোআপ তারিখ,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+DOSECLEAR_BD_018,ডেটা মুছুন,প্রেসক্রিপশন পড়া,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

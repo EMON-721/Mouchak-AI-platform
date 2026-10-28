@@ -1,0 +1,188 @@
+{
+  "project": "WorkSafe Vision AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "WORKSAFE_VISION_AI_001",
+      "label_bn": "সুরক্ষা হেলমেট",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_002",
+      "label_bn": "হাতমোজা",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_003",
+      "label_bn": "মুখরক্ষী",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_004",
+      "label_bn": "সুরক্ষা চশমা",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_005",
+      "label_bn": "খোলা তার",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_006",
+      "label_bn": "যাতায়াতের পথ",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_007",
+      "label_bn": "জরুরি নির্গমন",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_008",
+      "label_bn": "অগ্নিনির্বাপক যন্ত্র",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_009",
+      "label_bn": "মেশিনের গার্ড",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_010",
+      "label_bn": "সতর্কতামূলক সাইন",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_011",
+      "label_bn": "উচ্চতায় কাজ",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_012",
+      "label_bn": "মেঝেতে পানি",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_013",
+      "label_bn": "যন্ত্রপাতির দূরত্ব",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_014",
+      "label_bn": "প্রশিক্ষণ রেকর্ড",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_015",
+      "label_bn": "ঝুঁকিপূর্ণ ছবি",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_016",
+      "label_bn": "সংশোধন কাজ",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_017",
+      "label_bn": "পরিদর্শকের মন্তব্য",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "WORKSAFE_VISION_AI_018",
+      "label_bn": "অডিটের তারিখ",
+      "domain_bn": "কর্মক্ষেত্র পর্যবেক্ষণ",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

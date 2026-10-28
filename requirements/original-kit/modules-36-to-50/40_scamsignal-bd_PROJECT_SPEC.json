@@ -1,0 +1,87 @@
+{
+  "id": 40,
+  "slug": "scamsignal-bd",
+  "name": "ScamSignal BD",
+  "name_bn": "বাংলা বার্তা ও ওয়েব লিংকের প্রতারণার লক্ষণ ব্যাখ্যা",
+  "category": "digital",
+  "route": "/tools/scamsignal-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "ভুয়া চাকরির অফার, OTP চাওয়া, বিকাশ/নগদ প্রতারণা, মিথ্যা প্রাইজ SMS ও ফিশিং লিংক সাধারণ মানুষ শনাক্ত করতে পারেন না।",
+    "target_users": "মোবাইল ব্যাংকিং ব্যবহারকারী, চাকরিপ্রার্থী, অনলাইন ক্রেতা",
+    "inputs": "সন্দেহজনক বার্তার লেখা/স্ক্রিনশট/URL (টোকেন, OTP ও ব্যক্তিগত তথ্য স্বয়ংক্রিয় redaction)",
+    "outputs": "risk indicators, কেন সন্দেহ হচ্ছে ব্যাখ্যা, নিরাপদ verification checklist, evidence preservation guide",
+    "distinctive_workflow": "ব্যক্তিগত বাংলা ভাষার scam pattern ও evidence literacy; সাধারণ generic spam filter নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "Bangla text classification + URL heuristics + screenshot OCR + RAG to verified security advice",
+    "candidate_models": [
+      {
+        "label": "multilingual-e5-small embeddings",
+        "link": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      {
+        "label": "PaddleOCR",
+        "link": "https://github.com/PaddlePaddle/PaddleOCR"
+      }
+    ],
+    "test_target": "benign official notification বনাম fraudulent appeal, Banglish misspelling, adversarial prompt injection ও protected PII masking test।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Bangladesh Police",
+        "url": "https://www.police.gov.bd/",
+        "purpose": "official safety and reporting links",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Bangladesh e-GOV CIRT",
+        "url": "https://www.cirt.gov.bd/",
+        "purpose": "cybersecurity advisory references; verify availability",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "কোনো লিংক স্বয়ংক্রিয়ভাবে খুলবে না, OTP চাইবে না, অপরাধী শনাক্তের দাবি করবে না; সংশ্লিষ্ট ব্যাংক/পুলিশে যাওয়ার নিরাপদ পরামর্শ।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/40_scamsignal-bd.svg"
+}

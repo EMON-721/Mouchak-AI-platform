@@ -1,0 +1,188 @@
+{
+  "project": "GoliCoach AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "GOLICOACH_AI_001",
+      "label_bn": "ব্যাটিং স্টান্স",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_002",
+      "label_bn": "ফুটওয়ার্ক",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_003",
+      "label_bn": "বোলিং রানআপ",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_004",
+      "label_bn": "ব্যালান্স",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_005",
+      "label_bn": "বল ছাড়ার মুহূর্ত",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_006",
+      "label_bn": "পিচে অবস্থান",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_007",
+      "label_bn": "কাঁধের দিক",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_008",
+      "label_bn": "হাতের গতি",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_009",
+      "label_bn": "ভিডিওর অ্যাঙ্গেল",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_010",
+      "label_bn": "ভিডিওর দৈর্ঘ্য",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_011",
+      "label_bn": "স্লো মোশন",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_012",
+      "label_bn": "ফ্রেম টাইমলাইন",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_013",
+      "label_bn": "মুভমেন্ট তুলনা",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_014",
+      "label_bn": "প্র্যাকটিস ড্রিল",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_015",
+      "label_bn": "ওয়ার্মআপ",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_016",
+      "label_bn": "চোটের সতর্কতা",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_017",
+      "label_bn": "খেলোয়াড়ের সম্মতি",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "GOLICOACH_AI_018",
+      "label_bn": "সেশন ইতিহাস",
+      "domain_bn": "ক্রিকেট অনুশীলন",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

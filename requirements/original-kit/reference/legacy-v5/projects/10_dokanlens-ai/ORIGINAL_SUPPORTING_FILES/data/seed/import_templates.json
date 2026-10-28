@@ -1,0 +1,25 @@
+{
+  "shop_example": {
+    "shop_name": "DEMO মুদি দোকান",
+    "location_division": "ঢাকা",
+    "real_business": false
+  },
+  "inventory_upload_columns": [
+    "store_id",
+    "sku",
+    "name",
+    "unit",
+    "opening_qty",
+    "reorder_point",
+    "expiry_date",
+    "updated_at"
+  ],
+  "photo_label_schema": [
+    "image_id",
+    "sku_proposal",
+    "bounding_box",
+    "ocr_text",
+    "verified_by_owner",
+    "confidence"
+  ]
+}

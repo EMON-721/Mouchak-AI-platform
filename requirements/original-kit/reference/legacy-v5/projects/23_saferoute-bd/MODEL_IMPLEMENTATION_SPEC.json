@@ -1,0 +1,115 @@
+{
+  "project_number": 23,
+  "name": "SafeRoute BD",
+  "slug": "saferoute-bd",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": false,
+  "mandatory_real_model": true,
+  "task": "safer route context",
+  "model_pipeline": "Historical incident geospatial clustering + fit route risk model only on reviewed records",
+  "model_candidates": [
+    {
+      "alias": "sklearn-reg",
+      "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "task": "supervised_forecast",
+      "license_observed": "BSD-3-Clause; verify",
+      "runtime": "CPU Python worker; chronological train-validation-test",
+      "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage"
+    },
+    {
+      "alias": "isoforest",
+      "name": "sklearn.ensemble.IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "task": "anomaly_detection",
+      "license_observed": "scikit-learn BSD-3-Clause; verify",
+      "runtime": "CPU Python, persist fitted artifacts + training data card",
+      "must_smoke_test": "Non-demo 25+ consented rows required for production; fit/predict yields reproducible test scores"
+    }
+  ],
+  "evaluation": "Spatial out-of-sample calibration, ranking stability, coverage gaps",
+  "bangladesh_data_plan": "Bangladesh police/DMP/BRTA public incident summaries where permitted, community hazard annotations",
+  "hard_safety_limit": "Never promise safe route or current traffic; explain data coverage",
+  "simple_user_flow": "origin/destination > historical context > route cautions",
+  "advanced_features": "hazard overlay, coverage meter, user reports",
+  "recommended_repo_slug": "saferoute-bd",
+  "original_prompt_sha256": "88a1ed487e5ed26006c9272f31291eb4d749dcaeb217e2c8783c34fa4dcee677",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "publisher_or_title": "DMP road crash dashboard",
+      "url": "https://roadcrashinfo.dmp.gov.bd/",
+      "category": "reference_or_observation",
+      "intended_use": "Dhaka metropolitan crash summary; not national coverage",
+      "coverage": "Bangladesh or as documented in source",
+      "access_verified": "Verified DMP road crash dashboard, DMP coverage only (2026-10-25)",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-02",
+      "publisher_or_title": "Bangladesh Road Traffic Accident Dataset 2007–2024 — Figshare",
+      "url": "https://figshare.com/articles/dataset/Bangladesh_Road_Traffic_Accident_Dataset_2007_2024_Multi-Source_Integration_/30631292",
+      "category": "downloadable_research_dataset",
+      "intended_use": "Historical multi-source road crash study; validate provenance, methodology, duplicates, representativeness",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-03",
+      "publisher_or_title": "BRTA — Road Safety data and limitations",
+      "url": "https://www.bsp.brta.gov.bd/roadSafety?lan=en",
+      "category": "government_road_statistics",
+      "intended_use": "Reported-accident history and explanation of underreporting",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "id": "SRC-04",
+      "publisher_or_title": "OpenStreetMap — Bangladesh Geofabrik extract",
+      "url": "https://download.geofabrik.de/asia/bangladesh.html",
+      "category": "downloadable_geospatial_dataset",
+      "intended_use": "Bangladesh roads, places, pathways, waterways and locality reference",
+      "coverage": "Bangladesh",
+      "access_verified": "Prior V2 reference; LIVE availability not independently rechecked today",
+      "download_and_license_status": "To check for each linked document, API endpoint and use case; DO NOT assume redistribution/training rights",
+      "review_state": "candidate_not_imported",
+      "ingested_rows": 0,
+      "requires_attribution": true
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

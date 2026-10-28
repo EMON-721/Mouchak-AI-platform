@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+LABTREND_BD_001,পরীক্ষার নাম,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_002,পরীক্ষার তারিখ,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_003,রিপোর্টের একক,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_004,ফলাফলের সংখ্যা,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_005,ল্যাবের রেফারেন্স রেঞ্জ,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_006,একক অমিল,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_007,OCR অনিশ্চয়তা,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_008,ম্যানুয়াল সংশোধন,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_009,রিপোর্টের ছবি,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_010,পুরোনো রিপোর্ট তুলনা,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_011,সময়ের চার্ট,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_012,ট্রেন্ডের পরিবর্তন,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_013,ডাক্তারের প্রশ্ন,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_014,হাসপাতালের নাম,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_015,তথ্যের গোপনীয়তা,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_016,ডেটা এক্সপোর্ট,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_017,ডেটা মুছে ফেলা,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LABTREND_BD_018,রেফারেন্স সূত্র,ল্যাব রিপোর্টের ইতিহাস,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

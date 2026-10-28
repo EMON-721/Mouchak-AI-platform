@@ -1,0 +1,144 @@
+{
+  "project_number": 10,
+  "name": "DokanLens AI",
+  "slug": "dokanlens-ai",
+  "prompt_version": "v5-2026-10-25",
+  "upgrade_existing_repo": true,
+  "mandatory_real_model": true,
+  "task": "small retailer stock intelligence",
+  "model_pipeline": "Tesseract OCR and pretrained MobileNet product embeddings + product master catalog; supervised fine-tune ONLY if enough photos",
+  "model_candidates": [
+    {
+      "alias": "tesseract",
+      "name": "Tesseract OCR with ben+eng language packs",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "task": "ocr",
+      "license_observed": "Apache-2.0 source; language files verify",
+      "runtime": "Python OCR worker",
+      "must_smoke_test": "Extract Bangla digits/Latin amounts from owned sample image; low-confidence flag"
+    },
+    {
+      "alias": "torchvision",
+      "name": "torchvision pretrained MobileNetV3/EfficientNet-B0 feature backbone",
+      "url": "https://pytorch.org/vision/stable/models.html",
+      "task": "vision_embeddings",
+      "license_observed": "Check torchvision library license and selected checkpoint weight terms",
+      "runtime": "torchvision in FastAPI inference worker",
+      "must_smoke_test": "Two local licensed/test images produce finite embeddings and predictable nearest-neighbor ID"
+    },
+    {
+      "alias": "semantic-embed",
+      "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "task": "sentence_embedding",
+      "license_observed": "Apache-2.0; verify current card",
+      "runtime": "sentence-transformers on CPU Python worker",
+      "must_smoke_test": "Encode two real Bengali strings and assert different finite vectors; search should return expected source ID"
+    },
+    {
+      "alias": "sklearn-reg",
+      "name": "scikit-learn HistGradientBoostingRegressor / RandomForestRegressor",
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "task": "supervised_forecast",
+      "license_observed": "BSD-3-Clause; verify",
+      "runtime": "CPU Python worker; chronological train-validation-test",
+      "must_smoke_test": "Dataset has sufficient lawful historical rows; fit/test with MAE vs naive baseline, no leakage"
+    }
+  ],
+  "evaluation": "Top-1/top-5 on consented locally labeled product photos; barcode exact match",
+  "bangladesh_data_plan": "Original BD product alias catalog + opted-in retailer shelf photos + BSTI links",
+  "hard_safety_limit": "No real stock counts from single photo without confirmed stock ledger",
+  "simple_user_flow": "shelf photo/barcode > confirm items > stock actions",
+  "advanced_features": "purchase ledger, expiry tracker, reorder forecasting",
+  "recommended_repo_slug": "dokanlens-ai",
+  "original_prompt_sha256": "d652b4e5bc52077bd5ffad45f5559f73a67b3d7c81e49cde4b8cd1fd3bee7152",
+  "sources": [
+    {
+      "id": "DokanLens_AI-SRC01",
+      "name": "BSTI mandatory product categories",
+      "url": "https://bsti.portal.gov.bd/pages/static-pages/6922dcba933eb65569e11af8",
+      "source_type": "official_reference",
+      "description": "Mandatory product/certification list, not product barcode or stock dataset.",
+      "rights_or_license_note": "verify reuse/updates; do not treat as SKU registry",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC02",
+      "name": "BBS Economic Census",
+      "url": "https://bbs.gov.bd/",
+      "source_type": "official_reference",
+      "description": "Bangladesh business statistics and sector context, not individual stock.",
+      "rights_or_license_note": "specific publication rights; browse manually",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC03",
+      "name": "Bangladesh Open Data",
+      "url": "https://data.gov.bd/dataset",
+      "source_type": "catalogue",
+      "description": "Searchable public data catalogue; check individual dataset format and license.",
+      "rights_or_license_note": "each dataset separately approved",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "DokanLens_AI-SRC04",
+      "name": "Bangladesh administrative divisions",
+      "url": "https://bangladesh.gov.bd/site/view/division-list/division-list",
+      "source_type": "official_reference",
+      "description": "Official division list for address select.",
+      "rights_or_license_note": "metadata reference",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "verified_production_dataset_rows_in_zip": 0,
+  "user_supplied_data_never_in_git": true,
+  "prohibited": [
+    "mock predictions represented as AI",
+    "model health hardcoded OK",
+    "unlicensed training",
+    "dataset counterfeit",
+    "push fake deployed website",
+    "wipe existing app data"
+  ]
+}

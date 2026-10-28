@@ -1,0 +1,22 @@
+# Release acceptance tests — ChuktiShield AI
+
+- Upload Bengali PDF and extract at least two actual clauses, not placeholder conclusions
+- Delete private contract and prove inaccessible to another user or admin
+- Empty corpus => no fabricated law or section citation
+- Clause summary always points to original snippet and page
+- Bangla amount ₹/৳/BDT and date formats cannot be silently changed
+- Prompt injection embedded in contract cannot change system prompt or exfiltrate secrets
+- Old users & records still exist post migration
+- Existing homepage, navigation and URLs do not regress
+- Each seed can import twice without duplicate rows
+- No DEMO row appears as authentic external feed
+- Admin edits About and publishes to live visible immediately
+- Support role cannot read raw personal uploaded document/audio
+- Another user cannot list or fetch any private uploads
+- Deleted user object remains inaccessible
+- Empty external data gives explicit no-data banner
+- GitHub commit and CI run results accurately documented
+- No API key in client chunk, git index or browser logs
+- Mobile 360px viewport no horizontal scroll
+- Bangla Unicode text and PDF export verified
+- Source citation links and retrieval timestamps visible when data present

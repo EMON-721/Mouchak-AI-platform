@@ -1,0 +1,39 @@
+{
+  "project_number": 2,
+  "project_name": "NodiWatch AI",
+  "slug": "nodiwatch-ai",
+  "category": "Rivers / Climate Intelligence",
+  "about_bn": "একই নদীর তীরের বিভিন্ন দিনের ছবি ও অবস্থান নিয়ে ভাঙনের পরিবর্তনের প্রমাণভিত্তিক টাইমলাইন তৈরি হবে; নদীভাঙনের নিশ্চিত পূর্বাভাস নয়।",
+  "inputs": "Geotagged or manually located bank photos; repeat observations; text reports",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Geotagged or manually located bank photos, repeat observations, text reports",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Riverbank photo timeline with stable reference point",
+    "Geospatial station overlays with provenance",
+    "Community-submitted reports and duplicate review",
+    "Before-after swipe viewer",
+    "Evidence PDF for household reports",
+    "Map uncertainty and scale calibration"
+  ],
+  "ai_contract": "Optional image alignment and visible-bank change estimation with scale limitations; geographic clustering of user reports; short source-grounded RAG briefs; change-confidence score separate from actual displacement metres.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 5,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

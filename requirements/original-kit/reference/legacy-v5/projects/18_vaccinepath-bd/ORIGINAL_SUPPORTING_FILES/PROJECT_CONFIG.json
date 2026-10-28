@@ -1,0 +1,39 @@
+{
+  "project_number": 18,
+  "project_name": "VaccinePath BD",
+  "slug": "vaccinepath-bd",
+  "category": "Preventive Health / Schedule Navigator",
+  "about_bn": "অভিভাবক শিশুর টিকার রেকর্ড ব্যক্তিগতভাবে লিখে রাখতে এবং যাচাইকৃত সরকারি সময়সূচি থেকে ভিজিটের প্রস্তুতি নিতে পারবেন।",
+  "inputs": "Child age/date; chosen schedule; user-entered vaccination history",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Child age/date, chosen schedule, user-entered vaccination history",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Private vaccination card timeline",
+    "Official schedule version manager",
+    "Admin approval before schedule publish",
+    "Date reminders as opt-in only",
+    "Missed/unknown visit questions",
+    "Parent export-and-delete controls"
+  ],
+  "ai_contract": "Rule engine on explicitly versioned schedule tables, Bengali NLP FAQ via document RAG, OCR of card dates with correction; no predictive medicine or automatic catch-up schedule.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

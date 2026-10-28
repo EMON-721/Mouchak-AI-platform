@@ -1,0 +1,1 @@
+$ eslint app components/mouchak scripts/dev-platform.mjs scripts/test-postgres.mjs scripts/legacy-golden.mjs next.config.ts vite.config.ts eslint.config.mjs

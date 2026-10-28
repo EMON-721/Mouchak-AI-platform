@@ -1,0 +1,93 @@
+{
+  "id": 50,
+  "slug": "hishabbondhu-bd",
+  "name": "HishabBondhu BD",
+  "name_bn": "ক্ষুদ্র ব্যবসার দৈনিক আয়-ব্যয় ও নগদ প্রবাহ",
+  "category": "retail",
+  "route": "/tools/hishabbondhu-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "খাতায় লেখা নগদ বিক্রি, বাকির হিসাব, সরবরাহকারীর বকেয়া ও দৈনিক লাভ আলাদা করা কঠিন।",
+    "target_users": "দোকানদার, ক্ষুদ্র ব্যবসা ও বাসার ক্ষুদ্র উদ্যোগ",
+    "inputs": "ক্যাশ ইন/আউট সংখ্যা, বাংলা টেক্সট, খাতার ছবি, বিল/রসিদ, category",
+    "outputs": "owner-only cashbook, daily reconciliation, receivables, profit estimate (cost-known only), cashflow warning",
+    "distinctive_workflow": "ব্যবসার আর্থিক খাতা ও ট্রানজ্যাকশন; DokanLens-এর stock camera এবং BazarCompare-এর price shopping নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "Bangla transaction extraction + receipt OCR + anomaly score with optional trained baseline; deterministic ledger arithmetic",
+    "candidate_models": [
+      {
+        "label": "PaddleOCR",
+        "link": "https://github.com/PaddlePaddle/PaddleOCR"
+      },
+      {
+        "label": "scikit-learn IsolationForest",
+        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html"
+      }
+    ],
+    "test_target": "debit/credit reversal, duplicate receipt, partial payment, Bangla numerals and wrong-currency; no profit claim if cost absent।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "National Board of Revenue",
+        "url": "https://nbr.gov.bd/",
+        "purpose": "tax definitions and guides, not personal transactions",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Department of Agricultural Marketing",
+        "url": "https://market.dam.gov.bd/",
+        "purpose": "optional verified commodity reference only",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Bangladesh Open Data",
+        "url": "https://data.gov.bd/",
+        "purpose": "business environment data discovery; check rights",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "কর/ঋণ/বিনিয়োগের অনুমোদিত পরামর্শ নয়; ব্যবসার private cashbook অন্য module-এ শেয়ার নিষিদ্ধ by default।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/50_hishabbondhu-bd.svg"
+}

@@ -1,0 +1,188 @@
+{
+  "project": "CivicForm AI",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "CIVICFORM_AI_001",
+      "label_bn": "ফর্মের নাম",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_002",
+      "label_bn": "সেবার নাম",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_003",
+      "label_bn": "প্রকাশক",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_004",
+      "label_bn": "সরকারি উৎস",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_005",
+      "label_bn": "আবেদন ফি",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_006",
+      "label_bn": "ফি যাচাই",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_007",
+      "label_bn": "প্রয়োজনীয় কাগজ",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_008",
+      "label_bn": "শেষ তারিখ",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_009",
+      "label_bn": "ফর্মের ভাষা",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_010",
+      "label_bn": "ফর্মের ঘর",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_011",
+      "label_bn": "সঠিক নাম বানান",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_012",
+      "label_bn": "ফিল্ড নির্দেশনা",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_013",
+      "label_bn": "ডকুমেন্ট চেকলিস্ট",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_014",
+      "label_bn": "যাচাইয়ের সময়",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_015",
+      "label_bn": "প্রশ্নোত্তর",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_016",
+      "label_bn": "তথ্যের গোপনীয়তা",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_017",
+      "label_bn": "অফিসিয়াল লিংক",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "CIVICFORM_AI_018",
+      "label_bn": "সংস্করণের পার্থক্য",
+      "domain_bn": "সরকারি ফর্ম সাহায্য",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

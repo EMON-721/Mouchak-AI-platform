@@ -1,0 +1,4 @@
+The bundled unmodified font identifies itself as:
+Copyright 2025 The Noto Project Authors (https://github.com/notofonts/bengali)
+Licensed under the SIL Open Font License, Version 1.1.
+See OFL.txt for the license text, as published by the same project.

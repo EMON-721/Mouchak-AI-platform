@@ -1,0 +1,39 @@
+{
+  "project_number": 29,
+  "project_name": "HospitalBillGuard BD",
+  "slug": "hospitalbillguard-bd",
+  "category": "Medical Bills / Patient Consumer Rights",
+  "about_bn": "হাসপাতাল বা ডায়াগনস্টিক সেন্টারের বিলের ছবি/সংখ্যা দিয়ে পরিষ্কার চার্জ তালিকা, মোট টাকা যাচাই এবং অভিযোগ/প্রশ্নের নথি তৈরি করবে—ভুল বিল নিশ্চিত ঘোষণার বদলে প্রমাণ দেখাবে।",
+  "inputs": "Hospital/diagnostic bill photo/PDF; typed line items; BDT numbers",
+  "user_3step": [
+    "বিলের ছবি দিন অথবা চার্জ লিখুন",
+    "প্রতিটি আইটেম ও মোট টাকার অঙ্ক যাচাই করুন",
+    "সন্দেহজনক চার্জের প্রশ্নপত্র/রশিদের সারাংশ নিন"
+  ],
+  "domain_features": [
+    "Invoice OCR and line-item edit table",
+    "Arithmetic validation and repeated-charge check",
+    "Patient-identifying details redaction",
+    "Missing official tariff status warnings",
+    "Evidence-based provider questions",
+    "Private PDF summary"
+  ],
+  "ai_contract": "OCR + field extraction and arithmetic validator; anomaly checks on repeated user invoices and duplicates; optional RAG for verified consumer-rights and published hospital-fee documents; NEVER label a hospital fraudulent on image evidence alone.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

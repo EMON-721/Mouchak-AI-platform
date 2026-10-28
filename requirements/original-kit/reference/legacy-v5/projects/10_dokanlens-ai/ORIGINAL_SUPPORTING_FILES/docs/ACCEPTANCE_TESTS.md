@@ -1,0 +1,22 @@
+# Release acceptance tests — DokanLens AI
+
+- Create shop, add SKU without photo and record sale; stock counts reflect ledger
+- Unknown barcode returns “পণ্য চিনতে পারিনি” + add manually, never fake identity
+- Two SKUs with same name but different pack sizes stay separate
+- Expiry OCR cannot add date without user confirmation
+- Negative stock protection and offline duplicate-sync tested
+- Two stores never access each other’s receipts or photos
+- Old users & records still exist post migration
+- Existing homepage, navigation and URLs do not regress
+- Each seed can import twice without duplicate rows
+- No DEMO row appears as authentic external feed
+- Admin edits About and publishes to live visible immediately
+- Support role cannot read raw personal uploaded document/audio
+- Another user cannot list or fetch any private uploads
+- Deleted user object remains inaccessible
+- Empty external data gives explicit no-data banner
+- GitHub commit and CI run results accurately documented
+- No API key in client chunk, git index or browser logs
+- Mobile 360px viewport no horizontal scroll
+- Bangla Unicode text and PDF export verified
+- Source citation links and retrieval timestamps visible when data present

@@ -1,0 +1,50 @@
+# Deployment template. Do not expose the private API or database publicly.
+# Bring your own reviewed PostgreSQL TLS, SMTP, malware signatures and secrets.
+services:
+  model-init:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: ["python", "scripts/download-models.py"]
+    volumes: ["model-weights:/app/models"]
+    restart: "no"
+  web:
+    build: {context: .., dockerfile: deploy/Dockerfile.web}
+    ports: ["3000:3000"]
+    environment:
+      PRIVATE_API_URL: http://api:8000
+      PRIVATE_API_TOKEN: ${PRIVATE_API_TOKEN:?required}
+    depends_on: [api]
+  api:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    env_file: ../.env
+    environment:
+      MOUCHAK_ENV: production
+      PRIVATE_API_TOKEN: ${PRIVATE_API_TOKEN:?required}
+      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
+      DATABASE_URL: ${DATABASE_URL:?required}
+    volumes: ["private-state:/app/state", "model-weights:/app/models"]
+    depends_on:
+      model-init:
+        condition: service_completed_successfully
+  scheduler:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    env_file: ../.env
+    command: ["python", "-m", "services.model_worker.scheduler"]
+    environment:
+      MOUCHAK_ENV: production
+      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
+      DATABASE_URL: ${SCHEDULER_DATABASE_URL:?required}
+      SCHEDULER_POLL_SECONDS: 15
+    restart: unless-stopped
+  visitor-retention:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    env_file: ../.env
+    command: ["python", "-m", "services.model_worker.visitor_retention"]
+    environment:
+      MOUCHAK_ENV: production
+      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
+      DATABASE_URL: ${DATABASE_URL:?required}
+      VISITOR_RETENTION_POLL_SECONDS: 60
+    restart: unless-stopped
+volumes:
+  private-state:
+  model-weights:

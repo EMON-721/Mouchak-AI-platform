@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Laws of Bangladesh — Contract Act 1872",
+    "url": "https://bdlaws.minlaw.gov.bd/act-details-26.html?lang=en",
+    "document_type": "official_law_reference",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  },
+  {
+    "title": "Laws of Bangladesh — Transfer of Property Act 1882",
+    "url": "https://bdlaws.minlaw.gov.bd/act-print-48.html",
+    "document_type": "official_law_reference",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  },
+  {
+    "title": "Laws of Bangladesh — Labour Act 2006",
+    "url": "https://bdlaws.minlaw.gov.bd/act-details-952.html?lang=en",
+    "document_type": "official_law_reference",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  },
+  {
+    "title": "Ministry of Labour legislative information",
+    "url": "https://mole.gov.bd/pages/legislative-informations",
+    "document_type": "official_amendment_index",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  },
+  {
+    "title": "DNCRP",
+    "url": "https://dncrp.gov.bd/",
+    "document_type": "official_guidance",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  },
+  {
+    "title": "National Legal Aid Services Organization",
+    "url": "https://nlaso.gov.bd/",
+    "document_type": "official_guidance",
+    "use": "reference/link only until rights-cleared import",
+    "needs_effective_date_refresh": true
+  }
+]

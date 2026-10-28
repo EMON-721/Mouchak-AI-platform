@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+HOSPITALBILLGUARD_BD_001,চিকিৎসা প্রতিষ্ঠানের নাম,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_002,বিলের তারিখ,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_003,পরীক্ষার চার্জ,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_004,ডাক্তারের ফি,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_005,বেড চার্জ,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_006,ওষুধের চার্জ,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_007,সেবার চার্জ,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_008,ছাড়,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_009,কর,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_010,মোট টাকা,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_011,আগাম জমা,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_012,ডুপ্লিকেট লাইন,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_013,OCR সংশোধন,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_014,আইটেমাইজড বিল,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_015,মূল্যতালিকার উৎস,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_016,প্রশ্নের তালিকা,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_017,বিলের ছবি,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOSPITALBILLGUARD_BD_018,ব্যক্তিগত তথ্য লুকানো,হাসপাতালের বিল,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

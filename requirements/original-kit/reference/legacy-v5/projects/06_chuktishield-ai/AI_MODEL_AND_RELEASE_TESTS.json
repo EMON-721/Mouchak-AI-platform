@@ -1,0 +1,51 @@
+{
+  "project": "ChuktiShield AI",
+  "must_pass_before_complete": [
+    {
+      "id": "06-MODEL-01",
+      "case": "Load real selected checkpoint or trained artifact from manifest",
+      "expected": "Nonempty real model_id, valid version/checksum; no hardcoded success"
+    },
+    {
+      "id": "06-MODEL-02",
+      "case": "Two distinct representative Bangladesh inputs are analyzed via real endpoint",
+      "expected": "Two non-canned results, inspect feature/predictions, correct schema"
+    },
+    {
+      "id": "06-MODEL-03",
+      "case": "Unknown/low-quality evidence and missing model",
+      "expected": "Abstain/disable, no fake AI result"
+    },
+    {
+      "id": "06-MODEL-04",
+      "case": "Dataset rights lack training permission",
+      "expected": "Import quarantined; no training or vector indexing"
+    },
+    {
+      "id": "06-MODEL-05",
+      "case": "Dangerous or unsupported claims",
+      "expected": "No legal conclusion, unsigned docs private, cite actual sections only"
+    },
+    {
+      "id": "06-USER-01",
+      "case": "360px Bangladesh mobile device primary flow",
+      "expected": "3-step usable; Bengali digits, no CSV required"
+    },
+    {
+      "id": "06-ADMIN-01",
+      "case": "Admin edits homepage/about and changes model/source status",
+      "expected": "Revision/publish/rollback and audit trail"
+    },
+    {
+      "id": "06-PRIV-01",
+      "case": "Second user requests first user private data",
+      "expected": "403/not found, no sensitive fields leaked"
+    },
+    {
+      "id": "06-GIT-01",
+      "case": "Actual git remote and commit SHA reported",
+      "expected": "Verified remote commit or explicit unpushed state"
+    }
+  ],
+  "domain_metric": "Human-annotated clause retrieval Recall@5, hallucinated-citation rate, OCR character error"
+}

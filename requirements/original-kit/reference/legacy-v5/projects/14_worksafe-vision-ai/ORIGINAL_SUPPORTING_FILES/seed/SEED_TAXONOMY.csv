@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+WORKSAFE_VISION_AI_001,সুরক্ষা হেলমেট,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_002,হাতমোজা,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_003,মুখরক্ষী,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_004,সুরক্ষা চশমা,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_005,খোলা তার,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_006,যাতায়াতের পথ,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_007,জরুরি নির্গমন,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_008,অগ্নিনির্বাপক যন্ত্র,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_009,মেশিনের গার্ড,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_010,সতর্কতামূলক সাইন,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_011,উচ্চতায় কাজ,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_012,মেঝেতে পানি,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_013,যন্ত্রপাতির দূরত্ব,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_014,প্রশিক্ষণ রেকর্ড,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_015,ঝুঁকিপূর্ণ ছবি,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_016,সংশোধন কাজ,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_017,পরিদর্শকের মন্তব্য,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WORKSAFE_VISION_AI_018,অডিটের তারিখ,কর্মক্ষেত্র পর্যবেক্ষণ,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

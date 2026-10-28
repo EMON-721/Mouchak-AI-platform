@@ -1,0 +1,39 @@
+{
+  "project_number": 31,
+  "project_name": "ShikkhaRAG BD",
+  "slug": "shikkharag-bd",
+  "category": "Education / Curriculum Q&A",
+  "about_bn": "বাংলাদেশের ক্লাস/বিষয়/অধ্যায় বেছে শিক্ষার্থী সহজ ভাষায় প্রশ্ন করবে; অনুমোদিত পাঠ্যসূচি/পাঠ্য থেকে উৎসসহ ব্যাখ্যা ও অনুশীলন পাবে।",
+  "inputs": "Bengali/English text questions, grade/subject/chapter selection; optional document image",
+  "user_3step": [
+    "ক্লাস, বিষয় এবং অধ্যায় বাছুন",
+    "একটি প্রশ্ন লিখুন বা কথা বলুন",
+    "পাঠ্য-উৎসসহ উত্তর, ছোট কুইজ ও সংশোধন দেখুন"
+  ],
+  "domain_features": [
+    "Class-subject-chapter discovery",
+    "Bangla hybrid retrieval with exact chapter/paragraph citation",
+    "Document license and NCTB edition approval",
+    "Student-friendly stepwise worked explanations",
+    "Adaptive chapter quizzes with learner corrections",
+    "Teacher/editor curriculum mapping and stale chapter alert"
+  ],
+  "ai_contract": "Hybrid text retrieval + vector RAG over permission-verified NCTB/curriculum materials; Bangla query rewrite, OCR of self-owned homework; refuse unsupported answers; deterministic MCQ evaluation; metadata with year/class/chapter and document version.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 4,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

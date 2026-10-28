@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+CIVICFORM_AI_001,ফর্মের নাম,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_002,সেবার নাম,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_003,প্রকাশক,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_004,সরকারি উৎস,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_005,আবেদন ফি,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_006,ফি যাচাই,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_007,প্রয়োজনীয় কাগজ,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_008,শেষ তারিখ,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_009,ফর্মের ভাষা,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_010,ফর্মের ঘর,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_011,সঠিক নাম বানান,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_012,ফিল্ড নির্দেশনা,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_013,ডকুমেন্ট চেকলিস্ট,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_014,যাচাইয়ের সময়,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_015,প্রশ্নোত্তর,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_016,তথ্যের গোপনীয়তা,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_017,অফিসিয়াল লিংক,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+CIVICFORM_AI_018,সংস্করণের পার্থক্য,সরকারি ফর্ম সাহায্য,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

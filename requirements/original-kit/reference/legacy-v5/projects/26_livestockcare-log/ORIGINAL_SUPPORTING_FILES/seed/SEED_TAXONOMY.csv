@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+LIVESTOCKCARE_LOG_001,পশুর নাম,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_002,পশুর ধরন,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_003,ওজনের নথি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_004,খাদ্যের নথি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_005,পানির তথ্য,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_006,ভ্যাকসিন রেকর্ড,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_007,ভেটেরিনারি ভিজিট,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_008,অস্বাভাবিক আচরণ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_009,খাওয়ার পরিমাণ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_010,দুধের নথি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_011,জন্মতারিখ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_012,খামার আইডি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_013,পরিচর্যার খরচ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_014,সতর্কতার প্রশ্ন,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_015,ফলোআপ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_016,ছবির নথি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_017,বিশেষজ্ঞের নির্দেশ,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+LIVESTOCKCARE_LOG_018,ডেটা রপ্তানি,পশুর পরিচর্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

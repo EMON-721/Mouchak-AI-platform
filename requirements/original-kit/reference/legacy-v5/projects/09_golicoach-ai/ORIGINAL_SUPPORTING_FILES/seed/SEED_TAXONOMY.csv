@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+GOLICOACH_AI_001,ব্যাটিং স্টান্স,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_002,ফুটওয়ার্ক,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_003,বোলিং রানআপ,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_004,ব্যালান্স,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_005,বল ছাড়ার মুহূর্ত,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_006,পিচে অবস্থান,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_007,কাঁধের দিক,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_008,হাতের গতি,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_009,ভিডিওর অ্যাঙ্গেল,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_010,ভিডিওর দৈর্ঘ্য,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_011,স্লো মোশন,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_012,ফ্রেম টাইমলাইন,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_013,মুভমেন্ট তুলনা,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_014,প্র্যাকটিস ড্রিল,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_015,ওয়ার্মআপ,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_016,চোটের সতর্কতা,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_017,খেলোয়াড়ের সম্মতি,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+GOLICOACH_AI_018,সেশন ইতিহাস,ক্রিকেট অনুশীলন,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

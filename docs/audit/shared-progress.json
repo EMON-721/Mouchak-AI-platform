@@ -1,0 +1,114 @@
+[
+  {
+    "requirement": "support_grants",
+    "status": "implemented_selected_facts",
+    "implemented": "Owner consent, recipient-only encrypted snapshot, expiry/revocation, fresh MFA and audited views",
+    "remaining": "Raw document support access is not implemented",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "cross_tool_transfer",
+    "status": "implemented_typed_drafts",
+    "implemented": "Selected compatible inputs, preview, consent, private draft and separately consented processing lineage",
+    "remaining": "No automatic raw-asset transfer or conversion; full domain pipelines remain incomplete",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "scheduled_cms",
+    "status": "implemented_local_worker_verified",
+    "implemented": "Durable schedules, conflict/cancellation/author checks and real worker subprocess",
+    "remaining": "Production worker/database provisioning not verified",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "asset_dual_review",
+    "status": "implemented_workflow_only",
+    "implemented": "Independent matching reviews, revocation round and strict URLs/date validation",
+    "remaining": "No actual dataset rights or production model validation supplied by test fixtures",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "feedback_notices",
+    "status": "implemented_api_ui",
+    "implemented": "Triage, bilingual per-account service notices and read receipts",
+    "remaining": "Broader campaign/moderation workflows not implemented",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "backup_restore",
+    "status": "implemented_local_drill_only",
+    "implemented": "Authenticated encrypted SQLite/assets archive, no overwrite, revoked access on restore",
+    "remaining": "PostgreSQL/S3 provider recovery remains blocked/unverified",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "browser_e2e",
+    "status": "partial",
+    "implemented": "Public live API, language/reading/basket interactions and logged-out guards",
+    "remaining": "Authenticated user/admin E2E and multiple viewport widths remain unverified",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  },
+  {
+    "requirement": "deployment_github",
+    "status": "blocked",
+    "implemented": "Git-ready source, CI and deployment/runbook configuration",
+    "remaining": "No exact Mouchak destination repo or provisioned full-stack runtime is available",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
+    "evidence": [
+      "tests/test_collaboration_operations.py",
+      "tests/test_backup_recovery.py",
+      "docs/audit/continuation-regression.xml",
+      "docs/audit/collaboration-postgres.json",
+      "docs/audit/preview-status.json"
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "project_number": 1,
+  "project_name": "PukurSOS AI",
+  "slug": "pukursos-ai",
+  "category": "Aquaculture / FarmTech",
+  "about_bn": "মাছচাষি পুকুরের ছবি, মাছের আচরণ এবং ইচ্ছামতো পানির pH/তাপমাত্রা/অক্সিজেনের পরীক্ষার ফল দিয়ে দৈনিক অবস্থা নথিবদ্ধ করবেন। AI দৃশ্যমান পরিবর্তন বুঝিয়ে বলবে, তবে ছবি থেকে রাসায়নিক মাত্রা মাপবে না।",
+  "inputs": "Pond photo/video; daily notes; numeric pH/DO/temp entries; voice",
+  "user_3step": [
+    "ছবি তুলুন অথবা পর্যবেক্ষণ লিখুন",
+    "পানির পরীক্ষার সংখ্যা থাকলে লিখুন; না থাকলেও চলবে",
+    "সম্ভাব্য সতর্কতা, পুনরায় পরীক্ষার চেকলিস্ট ও ডায়েরি দেখুন"
+  ],
+  "domain_features": [
+    "Multiple pond folders & offline pond diary",
+    "Water-test entry and per-unit numeric guards",
+    "Photo side-by-side comparison",
+    "Species-aware records without unsupported diagnosis",
+    "Opt-in field image labeling and expert approval",
+    "Monthly pond-cost and operational log"
+  ],
+  "ai_contract": "Image classification for algae/visible discoloration only; time-series anomaly scoring on entered measurements; Bengali RAG answers from verified aquaculture guides; descriptive video tagging; confidence + missing measurement notices.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 4,
+  "high_sensitivity": false,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

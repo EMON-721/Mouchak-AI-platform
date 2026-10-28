@@ -1,0 +1,22 @@
+# Release acceptance tests — BanglaRead Coach
+
+- A first-time low-literacy learner completes a 60-second text-only passage without signing in
+- A guardian explicitly denies microphone retention; no audio object, transcript or server request is stored
+- Bangla graphemes like ক্ষ, জ্ঞ, য়, ৎ, ্র, ্য, ং display correctly across devices
+- A wrong word tap produces meaningful correction, not canned “Excellent!”
+- A noisy or silent recording never receives fake pronunciation percentage
+- App remains usable when optional ASR model unavailable
+- Old users & records still exist post migration
+- Existing homepage, navigation and URLs do not regress
+- Each seed can import twice without duplicate rows
+- No DEMO row appears as authentic external feed
+- Admin edits About and publishes to live visible immediately
+- Support role cannot read raw personal uploaded document/audio
+- Another user cannot list or fetch any private uploads
+- Deleted user object remains inaccessible
+- Empty external data gives explicit no-data banner
+- GitHub commit and CI run results accurately documented
+- No API key in client chunk, git index or browser logs
+- Mobile 360px viewport no horizontal scroll
+- Bangla Unicode text and PDF export verified
+- Source citation links and retrieval timestamps visible when data present

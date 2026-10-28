@@ -1,0 +1,39 @@
+{
+  "project_number": 17,
+  "project_name": "DoseClear BD",
+  "slug": "doseclear-bd",
+  "category": "Medication Literacy / OCR",
+  "about_bn": "প্রেসক্রিপশনের ছবি বা লেখা থেকে কেবল স্পষ্ট ও ব্যবহারকারী-নিশ্চিত নির্দেশনা পড়ে বোঝার ব্যবস্থা থাকবে; ডোজ অনুমান করা হবে না।",
+  "inputs": "Prescription image/PDF; typed medication instruction; voice for reminders",
+  "user_3step": [
+    "সহজ ইনপুট দিন—Prescription image/PDF, typed medication instruction, voice for reminders",
+    "AI/নিয়মের শনাক্ত তথ্য নিজে যাচাই করুন",
+    "সূত্রসহ ফলাফল দেখুন, ভুল সংশোধন করুন এবং নিজের রিপোর্ট সংরক্ষণ/শেয়ার করুন"
+  ],
+  "domain_features": [
+    "Prescription readability score",
+    "Show extracted text alongside image",
+    "Difficult handwritten terms flagged",
+    "Verified medication references only",
+    "Pharmacist question checklist",
+    "No assumed dose or duration"
+  ],
+  "ai_contract": "OCR and script-aware text recognition; NER for medication-related tokens; source-grounded plain-language paraphrasing; strict no-inference parser; reminder scheduler from confirmed fields only.",
+  "dataset_records_created": 18,
+  "test_cases_created": 14,
+  "sources": 3,
+  "high_sensitivity": true,
+  "public_navigation_max": 5,
+  "admin_roles": [
+    "Super Admin",
+    "Site Manager",
+    "Editorial Admin",
+    "Data Curator",
+    "AI Reviewer",
+    "Security Auditor",
+    "Moderator",
+    "Support (metadata-only)"
+  ],
+  "country": "Bangladesh",
+  "locale": "bn-BD"
+}

@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "48b10fa505aeb51fbd127fc60a5c660040e823b7",
+  "model_license": "Apache-2.0, explicitly covering all files in both OpenCV Zoo model directories",
+  "license_evidence": [
+    "https://github.com/opencv/opencv_zoo/blob/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/pose_estimation_mediapipe/README.md#license",
+    "https://github.com/opencv/opencv_zoo/blob/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/person_detection_mediapipe/README.md#license"
+  ],
+  "production_validated": false,
+  "assets": [
+    {"file":"pose.onnx","kind":"model","url":"https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/pose_estimation_mediapipe/pose_estimation_mediapipe_2023mar.onnx","bytes":5557238,"sha256":"9d89c599319a18fb7d2e28451a883476164543182bafca5f09eb2cf767ed2f3f","license":"Apache-2.0"},
+    {"file":"person.onnx","kind":"model","url":"https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/person_detection_mediapipe/person_detection_mediapipe_2023mar.onnx","bytes":11990159,"sha256":"47fd5599d6fa17608f03e0eb0ae230baa6e597d7e8a2c8199fe00abea55a701f","license":"Apache-2.0"},
+    {"file":"smoke-fixture.jpg","kind":"test_fixture","url":"https://storage.googleapis.com/mediapipe-assets/pose.jpg","bytes":44100,"sha256":"c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b","permission_basis":"Public Google MediaPipe smoke-test reference; local runtime verification only. No redistribution or training permission is inferred.","license":"Not asserted for redistribution","redistributed":false,"allowed_for_train":false,"allowed_for_rag":false,"allowed_for_ui":false,"location_scope":"Non-Bangladesh reference; not a representative cricket holdout"}
+  ]
+}

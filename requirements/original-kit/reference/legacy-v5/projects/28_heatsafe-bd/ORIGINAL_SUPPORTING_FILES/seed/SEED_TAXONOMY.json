@@ -1,0 +1,188 @@
+{
+  "project": "HeatSafe BD",
+  "created_on": "2026-10-25",
+  "origin": "original_curated_project_vocabulary",
+  "not_official_dataset": true,
+  "entries": [
+    {
+      "term_id": "HEATSAFE_BD_001",
+      "label_bn": "জেলার নাম",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_002",
+      "label_bn": "তাপমাত্রা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_003",
+      "label_bn": "আর্দ্রতা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_004",
+      "label_bn": "পূর্বাভাসের সময়",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_005",
+      "label_bn": "আবহাওয়া উৎস",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_006",
+      "label_bn": "গরমের সতর্কতা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_007",
+      "label_bn": "বাইরের কাজের সময়",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_008",
+      "label_bn": "পানির প্রস্তুতি",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_009",
+      "label_bn": "শিশুর নিরাপত্তা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_010",
+      "label_bn": "প্রবীণদের নিরাপত্তা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_011",
+      "label_bn": "কর্মস্থলের সচেতনতা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_012",
+      "label_bn": "ছায়াযুক্ত স্থান",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_013",
+      "label_bn": "ডেটার তারিখ",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_014",
+      "label_bn": "অনিশ্চয়তা",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_015",
+      "label_bn": "আবহাওয়ার ট্রেন্ড",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_016",
+      "label_bn": "রিমাইন্ডার",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_017",
+      "label_bn": "স্বাস্থ্য পরামর্শ উৎস",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    },
+    {
+      "term_id": "HEATSAFE_BD_018",
+      "label_bn": "অ্যালার্টের ভেরিফিকেশন",
+      "domain_bn": "তাপপ্রবাহ ও আবহাওয়া",
+      "seed_type": "ORIGINAL_CURATED_VOCABULARY",
+      "verification": "vocabulary/field label only; NOT a published/clinical datum",
+      "is_demo": true,
+      "source": "independently authored for this project",
+      "category": "field_label"
+    }
+  ]
+}

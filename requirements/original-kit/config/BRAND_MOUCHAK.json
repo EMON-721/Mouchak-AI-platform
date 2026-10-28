@@ -1,0 +1,18 @@
+{
+  "name": "Mouchak AI",
+  "name_bn": "মৌচাক এআই",
+  "tagline_bn": "প্রতিদিনের কাজে, একসঙ্গে পঞ্চাশ AI।",
+  "tagline_en": "One central home for 50 practical Bangladesh-first AI tools.",
+  "logo_concept": "original honeycomb cluster; editable",
+  "total_modules": 50,
+  "domains": 1,
+  "admin_panel": 1,
+  "user_login": 1,
+  "existing_sites_migrate": [
+    "banglaread-coach",
+    "dokanlens-ai",
+    "bazarcompare-ai",
+    "chuktishield-ai"
+  ],
+  "module_order_policy": "equal discoverability, sort by user intent, not \"new 3\" marker"
+}

@@ -1,0 +1,113 @@
+{
+  "project": "ChuktiShield AI",
+  "sources": [
+    {
+      "id": "ChuktiShield_AI-SRC01",
+      "name": "Laws of Bangladesh — Contract Act 1872",
+      "url": "https://bdlaws.minlaw.gov.bd/act-details-26.html?lang=en",
+      "source_type": "official_law_reference",
+      "description": "Contract Act; sections, amendments and effective dates must be checked at time of query.",
+      "rights_or_license_note": "links and section metadata safe baseline; full text reuse permission review",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "ChuktiShield_AI-SRC02",
+      "name": "Laws of Bangladesh — Transfer of Property Act 1882",
+      "url": "https://bdlaws.minlaw.gov.bd/act-print-48.html",
+      "source_type": "official_law_reference",
+      "description": "Property/lease-related law; check actual applicability.",
+      "rights_or_license_note": "law texts may change; log update date",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "ChuktiShield_AI-SRC03",
+      "name": "Laws of Bangladesh — Labour Act 2006",
+      "url": "https://bdlaws.minlaw.gov.bd/act-details-952.html?lang=en",
+      "source_type": "official_law_reference",
+      "description": "Employment-related statute and amendments.",
+      "rights_or_license_note": "check current amendment/version; do not give definitive advice",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "ChuktiShield_AI-SRC04",
+      "name": "Ministry of Labour legislative information",
+      "url": "https://mole.gov.bd/pages/legislative-informations",
+      "source_type": "official_amendment_index",
+      "description": "Updates/amendments and published documents.",
+      "rights_or_license_note": "reference not unrestricted republishing license",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "ChuktiShield_AI-SRC05",
+      "name": "DNCRP",
+      "url": "https://dncrp.gov.bd/",
+      "source_type": "official_guidance",
+      "description": "Consumer rights guidance and referral.",
+      "rights_or_license_note": "do not claim to submit government complaint automatically",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "ChuktiShield_AI-SRC06",
+      "name": "National Legal Aid Services Organization",
+      "url": "https://nlaso.gov.bd/",
+      "source_type": "official_guidance",
+      "description": "Official legal aid resource.",
+      "rights_or_license_note": "contact/hotline checked on date used; never guess",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "government_site_links_not_full_datasets": true,
+  "reuse_review_required": true,
+  "project_specific_data_plan": "Bangladesh laws portal as LINK ONLY until rights checked + owner-authored sample clauses + permitted legal aid public texts"
+}

@@ -1,0 +1,1922 @@
+[
+  {
+    "question_id": "BRQ001",
+    "passage_id": "BRP001",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ002",
+    "passage_id": "BRP002",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ003",
+    "passage_id": "BRP003",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ004",
+    "passage_id": "BRP004",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ005",
+    "passage_id": "BRP005",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ006",
+    "passage_id": "BRP006",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ007",
+    "passage_id": "BRP007",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "আকাশ",
+      "মিনা",
+      "রবি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ008",
+    "passage_id": "BRP008",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "রূপা",
+      "নাবিল",
+      "সুমি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ009",
+    "passage_id": "BRP009",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "রাকিব",
+      "তানিয়া",
+      "ইমরান"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ010",
+    "passage_id": "BRP010",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "নাহিদ",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ011",
+    "passage_id": "BRP011",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ012",
+    "passage_id": "BRP012",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ013",
+    "passage_id": "BRP013",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ014",
+    "passage_id": "BRP014",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ015",
+    "passage_id": "BRP015",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ016",
+    "passage_id": "BRP016",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ017",
+    "passage_id": "BRP017",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ018",
+    "passage_id": "BRP018",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ019",
+    "passage_id": "BRP019",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "জাহিদ",
+      "মৌ",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ020",
+    "passage_id": "BRP020",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ021",
+    "passage_id": "BRP021",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ022",
+    "passage_id": "BRP022",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ023",
+    "passage_id": "BRP023",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ024",
+    "passage_id": "BRP024",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ025",
+    "passage_id": "BRP025",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ026",
+    "passage_id": "BRP026",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "আকাশ",
+      "মিনা",
+      "রবি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ027",
+    "passage_id": "BRP027",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "রূপা",
+      "নাবিল",
+      "সুমি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ028",
+    "passage_id": "BRP028",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "রাকিব",
+      "তানিয়া",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ029",
+    "passage_id": "BRP029",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ030",
+    "passage_id": "BRP030",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ031",
+    "passage_id": "BRP031",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ032",
+    "passage_id": "BRP032",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ033",
+    "passage_id": "BRP033",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ034",
+    "passage_id": "BRP034",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ035",
+    "passage_id": "BRP035",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ036",
+    "passage_id": "BRP036",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ037",
+    "passage_id": "BRP037",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ038",
+    "passage_id": "BRP038",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "জাহিদ",
+      "লিমা",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ039",
+    "passage_id": "BRP039",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ040",
+    "passage_id": "BRP040",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ041",
+    "passage_id": "BRP041",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ042",
+    "passage_id": "BRP042",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ043",
+    "passage_id": "BRP043",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ044",
+    "passage_id": "BRP044",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ045",
+    "passage_id": "BRP045",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "আকাশ",
+      "মিনা",
+      "রবি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ046",
+    "passage_id": "BRP046",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "রূপা",
+      "নাবিল",
+      "সুমি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ047",
+    "passage_id": "BRP047",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "রাকিব",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ048",
+    "passage_id": "BRP048",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ049",
+    "passage_id": "BRP049",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ050",
+    "passage_id": "BRP050",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ051",
+    "passage_id": "BRP051",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ052",
+    "passage_id": "BRP052",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ053",
+    "passage_id": "BRP053",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ054",
+    "passage_id": "BRP054",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ055",
+    "passage_id": "BRP055",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ056",
+    "passage_id": "BRP056",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "নওশিন",
+      "আরিফ",
+      "জাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ057",
+    "passage_id": "BRP057",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "মৌ",
+      "লিমা",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ058",
+    "passage_id": "BRP058",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ059",
+    "passage_id": "BRP059",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ060",
+    "passage_id": "BRP060",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ061",
+    "passage_id": "BRP061",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ062",
+    "passage_id": "BRP062",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ063",
+    "passage_id": "BRP063",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ064",
+    "passage_id": "BRP064",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "আকাশ",
+      "মিনা",
+      "রবি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ065",
+    "passage_id": "BRP065",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "রূপা",
+      "নাবিল",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ066",
+    "passage_id": "BRP066",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ067",
+    "passage_id": "BRP067",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ068",
+    "passage_id": "BRP068",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ069",
+    "passage_id": "BRP069",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ070",
+    "passage_id": "BRP070",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ071",
+    "passage_id": "BRP071",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ072",
+    "passage_id": "BRP072",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ073",
+    "passage_id": "BRP073",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ074",
+    "passage_id": "BRP074",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "মাহি",
+      "সাজিদ",
+      "তিশা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ075",
+    "passage_id": "BRP075",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "নওশিন",
+      "মায়া",
+      "জাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ076",
+    "passage_id": "BRP076",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "মৌ",
+      "লিমা",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ077",
+    "passage_id": "BRP077",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ078",
+    "passage_id": "BRP078",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ079",
+    "passage_id": "BRP079",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ080",
+    "passage_id": "BRP080",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ081",
+    "passage_id": "BRP081",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "নওশিন",
+      "আরিফ",
+      "মায়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ082",
+    "passage_id": "BRP082",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ083",
+    "passage_id": "BRP083",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "আকাশ",
+      "মিনা",
+      "রবি"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ084",
+    "passage_id": "BRP084",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "রূপা",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ085",
+    "passage_id": "BRP085",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ086",
+    "passage_id": "BRP086",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ087",
+    "passage_id": "BRP087",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ088",
+    "passage_id": "BRP088",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ089",
+    "passage_id": "BRP089",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ090",
+    "passage_id": "BRP090",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ091",
+    "passage_id": "BRP091",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ092",
+    "passage_id": "BRP092",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ093",
+    "passage_id": "BRP093",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "মাহি",
+      "সাজিদ",
+      "নওশিন"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ094",
+    "passage_id": "BRP094",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "আরিফ",
+      "মায়া",
+      "জাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ095",
+    "passage_id": "BRP095",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "মৌ",
+      "লিমা",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ096",
+    "passage_id": "BRP096",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ097",
+    "passage_id": "BRP097",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ098",
+    "passage_id": "BRP098",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ099",
+    "passage_id": "BRP099",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ100",
+    "passage_id": "BRP100",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ101",
+    "passage_id": "BRP101",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মিনা",
+      "জাহিদ",
+      "মৌ",
+      "লিমা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ102",
+    "passage_id": "BRP102",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রবি",
+      "আকাশ",
+      "মিনা",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ103",
+    "passage_id": "BRP103",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রূপা",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ104",
+    "passage_id": "BRP104",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাবিল",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ105",
+    "passage_id": "BRP105",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সুমি",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ106",
+    "passage_id": "BRP106",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "রাকিব",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ107",
+    "passage_id": "BRP107",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তানিয়া",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ108",
+    "passage_id": "BRP108",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ইমরান",
+      "লিমা",
+      "আকাশ",
+      "মিনা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ109",
+    "passage_id": "BRP109",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নাহিদ",
+      "রবি",
+      "রূপা",
+      "নাবিল"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ110",
+    "passage_id": "BRP110",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "ফারিহা",
+      "সুমি",
+      "রাকিব",
+      "তানিয়া"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ111",
+    "passage_id": "BRP111",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মাহি",
+      "ইমরান",
+      "নাহিদ",
+      "ফারিহা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ112",
+    "passage_id": "BRP112",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "সাজিদ",
+      "মাহি",
+      "তিশা",
+      "নওশিন"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ113",
+    "passage_id": "BRP113",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "তিশা",
+      "আরিফ",
+      "মায়া",
+      "জাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ114",
+    "passage_id": "BRP114",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "নওশিন",
+      "মৌ",
+      "লিমা",
+      "আকাশ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ115",
+    "passage_id": "BRP115",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আরিফ",
+      "মিনা",
+      "রবি",
+      "রূপা"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ116",
+    "passage_id": "BRP116",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মায়া",
+      "নাবিল",
+      "সুমি",
+      "রাকিব"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ117",
+    "passage_id": "BRP117",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "জাহিদ",
+      "তানিয়া",
+      "ইমরান",
+      "নাহিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ118",
+    "passage_id": "BRP118",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "মৌ",
+      "ফারিহা",
+      "মাহি",
+      "সাজিদ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ119",
+    "passage_id": "BRP119",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "লিমা",
+      "তিশা",
+      "নওশিন",
+      "আরিফ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  },
+  {
+    "question_id": "BRQ120",
+    "passage_id": "BRP120",
+    "question_bn": "পাঠে কার কথা বলা হয়েছে?",
+    "options_bn": [
+      "আকাশ",
+      "মায়া",
+      "জাহিদ",
+      "মৌ"
+    ],
+    "correct_option_index": 0,
+    "question_kind": "text_comprehension_basic",
+    "source": "original_authored_quiz",
+    "editor_review_status": "awaiting_review",
+    "auto_scoring_rule": "single_choice"
+  }
+]

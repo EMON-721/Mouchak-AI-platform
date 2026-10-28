@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+WASTEWISE_BD_001,প্লাস্টিক বোতল,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_002,কাচের বোতল,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_003,কাগজ,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_004,কার্ডবোর্ড,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_005,খাবারের উচ্ছিষ্ট,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_006,ব্যাটারি,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_007,ইলেকট্রনিক বর্জ্য,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_008,মেডিকেল শার্পস,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_009,রাসায়নিক পাত্র,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_010,ধাতব ক্যান,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_011,কাপড়,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_012,জৈব বর্জ্য,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_013,ভেজা প্যাকেট,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_014,ময়লাযুক্ত প্লাস্টিক,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_015,বর্জ্য সংগ্রহকারীর ঠিকানা,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_016,রিসাইক্লিং পয়েন্ট,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_017,সুরক্ষা নির্দেশনা,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+WASTEWISE_BD_018,অজানা উপাদান,বর্জ্য আলাদা করা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

@@ -1,0 +1,19 @@
+﻿term_id,label_bn,domain_bn,seed_type,verification,is_demo,source,category
+HOMEHAZARD_AI_001,দেয়ালের ফাটল,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_002,স্যাঁতসেঁতে দাগ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_003,রং খসে যাওয়া,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_004,ছাদের দাগ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_005,পানির লিক,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_006,সিলিংয়ের দাগ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_007,জানালার কোণ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_008,ফ্লোরের ফাটল,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_009,তারের দৃশ্যমান অবস্থা,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_010,বৃষ্টির পরে ছবি,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_011,পুরোনো ছবির তুলনা,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_012,মেরামতের প্রশ্ন,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_013,বিশেষজ্ঞ পরিদর্শন,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_014,রুমের অবস্থান,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_015,ঘটনার তারিখ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_016,ছত্রাকের সন্দেহ,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_017,নিরাপত্তা সীমা,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label
+HOMEHAZARD_AI_018,ফলোআপ নথি,বাসাবাড়ির দৃশ্যমান সমস্যা,ORIGINAL_CURATED_VOCABULARY,vocabulary/field label only; NOT a published/clinical datum,True,independently authored for this project,field_label

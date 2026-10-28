@@ -1,0 +1,32 @@
+{
+  "continuation_base": "36b485a4e72d267af1abc92519f7dbd3de726030",
+  "pose_feature_commit": "6c1d3841a8d0e2b01ed93d79f2c32b565f1813e4",
+  "tests_passed": 325,
+  "failed": 0,
+  "full_advanced_modules_validated": 0,
+  "experimental_pose_pipeline": true,
+  "pose_production_enabled": false,
+  "inference_telemetry_opt_out": "forced before runtime imports, with CI/container configuration and dedicated test",
+  "browser_pdf": "blocked by cloud browser URL/security policy",
+  "browser_pose_form": "observed",
+  "browser_pose_upload": "timed out; outcome unknown; processing not verified",
+  "github": {
+    "repository": "EMON-721/Mouchak-AI-platform",
+    "write": "403 Resource not accessible by integration",
+    "pushed": false
+  },
+  "supabase": {
+    "owner_selected_connected_organization": true,
+    "quoted_project_monthly_cost_usd": 0,
+    "creation": "rejected: maximum two active free projects reached",
+    "created": false,
+    "existing_projects_changed": false,
+    "paid_upgrade_authorized": false
+  },
+  "hosting": {
+    "model_init_configured": true,
+    "compose_references_validated": true,
+    "docker_images_executed": false,
+    "cloud_deployed": false
+  }
+}

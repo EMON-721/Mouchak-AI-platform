@@ -1,0 +1,93 @@
+{
+  "id": 49,
+  "slug": "schoolroute-bd",
+  "name": "SchoolRoute BD",
+  "name_bn": "শিশুদের স্কুলযাত্রার নিরাপত্তা ও বাধা পর্যবেক্ষণ",
+  "category": "education",
+  "route": "/tools/schoolroute-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "স্কুলের আশেপাশে পথের গর্ত, ভাঙা ফুটপাত, আলো কম বা ভিড়ের মতো সমস্যা অভিভাবকের পক্ষে নথিবদ্ধ করা কঠিন।",
+    "target_users": "অভিভাবক, স্কুল প্রশাসন ও স্থানীয় নিরাপত্তা স্বেচ্ছাসেবী",
+    "inputs": "স্কুলের সরকারি ডিরেক্টরি রেফারেন্স, রাস্তার সাধারণ পর্যবেক্ষণ, অভিভাবকের নিজস্ব নোট (শিশুর GPS ছাড়া)",
+    "outputs": "school-area hazard checklist, parent-approved route notes, anonymous aggregate issues, print-ready briefing",
+    "distinctive_workflow": "শিশুর যাত্রাপথের privacy-safe safety checklist; SafeRoute দুর্ঘটনা ইতিহাসের আলাদা কাজ।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "hazard taxonomy classifier + source directory matching + map-layer display; no unsafe live child tracking",
+    "candidate_models": [
+      {
+        "label": "sentence-transformers matching",
+        "link": "https://www.sbert.net/"
+      },
+      {
+        "label": "scikit-learn text classifier",
+        "link": "https://scikit-learn.org/stable/supervised_learning.html"
+      }
+    ],
+    "test_target": "school-name duplicates, wrong village, child GPS attempt rejected and unsafe street-report privacy case।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "IPEMIS School Directory",
+        "url": "https://ipemis.dpe.gov.bd/search-school",
+        "purpose": "public institution lookup; sensitive details not allowed",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "BANBEIS",
+        "url": "https://banbeis.gov.bd/",
+        "purpose": "school directory and statistics references",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "OpenStreetMap",
+        "url": "https://www.openstreetmap.org/",
+        "purpose": "map licensing and attribution check",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "শিশুর মুখ/নাম/নিয়মিত চলাচলের নিখুঁত রুট প্রকাশ নয়; route নিরাপদ guarantee নয়; anonymous moderation ও guardianship।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/49_schoolroute-bd.svg"
+}

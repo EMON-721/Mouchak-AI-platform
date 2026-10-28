@@ -1,0 +1,106 @@
+{
+  "project": "BanglaRead Coach",
+  "sources": [
+    {
+      "id": "BanglaRead_Coach-SRC01",
+      "name": "NCTB primary 2026 textbooks",
+      "url": "https://nctb.gov.bd/pages/static-pages/695b9b7cc4774958d7b70a12",
+      "source_type": "official_reference",
+      "description": "Primary-grade book listing; book text should NOT be copied into the product without rights review.",
+      "rights_or_license_note": "verify reuse permission for textbook text/PDF before ingest",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BanglaRead_Coach-SRC02",
+      "name": "NCTB grade 1 book metadata",
+      "url": "https://nctb.gov.bd/pages/static-pages/695b9adec4774958d7b708cd",
+      "source_type": "official_reference",
+      "description": "Grade 1 textbook titles and links, including Amar Bangla Boi.",
+      "rights_or_license_note": "metadata citations only by default",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BanglaRead_Coach-SRC03",
+      "name": "Mozilla Common Voice Bengali",
+      "url": "https://commonvoice.mozilla.org/bn/datasets",
+      "source_type": "downloadable_dataset",
+      "description": "Bengali volunteer recordings and transcripts; check current release at source.",
+      "rights_or_license_note": "source release license may be CC0; confirm exact downloaded release and terms",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": true,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BanglaRead_Coach-SRC04",
+      "name": "OpenSLR SLR53 Bengali ASR",
+      "url": "https://www.openslr.org/53",
+      "source_type": "downloadable_dataset",
+      "description": "Bengali ASR corpus; listed ~196K utterances.",
+      "rights_or_license_note": "CC BY-SA 4.0 on source; attribution and share-alike obligations",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": true,
+      "asserts_real_time_data": false
+    },
+    {
+      "id": "BanglaRead_Coach-SRC05",
+      "name": "Bangladesh official divisions",
+      "url": "https://bangladesh.gov.bd/site/view/division-list/division-list",
+      "source_type": "official_reference",
+      "description": "Eight administrative division names.",
+      "rights_or_license_note": "reference metadata only; no need for scraping",
+      "observed_on": "2026-10-25",
+      "availability": "landing_page_located_not_bulk_downloaded",
+      "ingestion": "manual_admin_review_required",
+      "rights_cleared": false,
+      "source_is_model_training_data": false,
+      "asserts_real_time_data": false
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data terms of use",
+      "url": "https://data.gov.bd/terms-of-use",
+      "intended_use": "Government portal terms; per-dataset reuse license must be inspected",
+      "data_license_review_state": "reference_only_automatic_reuse_not_assumed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh Open Data FAQ",
+      "url": "https://www.data.gov.bd/bn/faqs",
+      "intended_use": "States data generally OGL, but each dataset page determines applicable license",
+      "data_license_review_state": "check_individual_dataset_terms",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "Bangladesh National Corpus",
+      "url": "https://corpus.bangla.gov.bd/",
+      "intended_use": "Bangla language corpus portal, access/download & licensing vary",
+      "data_license_review_state": "link_only_until_corpus_license_confirmed",
+      "import_status": "not_imported_reference_only"
+    },
+    {
+      "publisher_or_title": "NCTB Bangladesh",
+      "url": "https://nctb.gov.bd/",
+      "intended_use": "2026 curriculum and textbook index; textbook content indexing/training needs explicit rights",
+      "data_license_review_state": "metadata_reference_not_automatic_full_text_ingest",
+      "import_status": "not_imported_reference_only"
+    }
+  ],
+  "government_site_links_not_full_datasets": true,
+  "reuse_review_required": true,
+  "project_specific_data_plan": "120 original passages and words already in V3, OpenSLR53 CC-BY-SA 4.0 terms; NCTB index as reference only"
+}

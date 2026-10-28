@@ -1,0 +1,87 @@
+{
+  "id": 37,
+  "slug": "agunpath-bd",
+  "name": "AgunPath BD",
+  "name_bn": "বাড়ি, স্কুল ও অফিসের অগ্নিনিরাপত্তা প্রস্তুতি",
+  "category": "safety",
+  "route": "/tools/agunpath-bd",
+  "badge": "proposed_not_verified",
+  "user": {
+    "problem": "সিঁড়ি, বাধা, অগ্নিনির্বাপক যন্ত্র ও জরুরি যোগাযোগের প্রস্তুতির নির্ভরযোগ্য তালিকা অনেকের কাছে নেই।",
+    "target_users": "বাড়ির মালিক, ভাড়াটিয়া, স্কুল কর্তৃপক্ষ ও ক্ষুদ্র প্রতিষ্ঠান",
+    "inputs": "ব্যবহারকারীর নিজের আঁকা ফ্লোর প্ল্যান/ছবি, তলা, সিঁড়ির সংখ্যা, বাধা ও সরঞ্জামের তথ্য",
+    "outputs": "পরিদর্শন চেকলিস্ট, অনির্ধারিত ঝুঁকির তালিকা, drill plan, জরুরি নম্বর ও বিশেষজ্ঞ যাচাইয়ের অনুরোধ",
+    "distinctive_workflow": "একটি প্রস্তুতি workflow এবং drill checklist; HomeHazard/WorkSafe-এর দৃশ্যমান সমস্যা বিশ্লেষণের পুনরাবৃত্তি নয়।",
+    "basic_screen_steps": [
+      "Choose a simple mode and read privacy note",
+      "Enter minimal text/numbers OR upload a permitted file; show preview/correction",
+      "Get result with source date, uncertainty, save/export/delete"
+    ]
+  },
+  "ml": {
+    "pipeline": "diagram OCR + object labeling + constraint-check rules + citation RAG",
+    "candidate_models": [
+      {
+        "label": "PaddleOCR",
+        "link": "https://github.com/PaddlePaddle/PaddleOCR"
+      },
+      {
+        "label": "sentence-transformers multilingual text embeddings",
+        "link": "https://www.sbert.net/"
+      }
+    ],
+    "test_target": "ফ্লোর প্ল্যান OCR ভুল ও সিঁড়ি বাধার দুইটি negative case; নিরাপদ exit route গণনাকে expert approval ছাড়া map/guarantee দেবে না।",
+    "inference_required": true,
+    "demo_spoofing_forbidden": true
+  },
+  "data": {
+    "sources": [
+      {
+        "publisher": "Fire Service and Civil Defence",
+        "url": "https://fireservice.gov.bd/",
+        "purpose": "official safety/training reference",
+        "rights": "not cleared; must verify asset-specific license"
+      },
+      {
+        "publisher": "Fire Safety Training page",
+        "url": "https://fireservice.gov.bd/pages/static-pages/6922dec4933eb65569e1d3a9",
+        "purpose": "guidelines not machine-learning labels",
+        "rights": "not cleared; must verify asset-specific license"
+      }
+    ],
+    "fallback": "Original authored reference glossary, user-consented data, and verified permitted manual records; mark as starter, not official dataset"
+  },
+  "safety": "বাস্তব অগ্নিকাণ্ডে এই সাইটের তৈরি পথনির্দেশনা অনুসরণ করাতে যাবে না; সরকারি জরুরি নির্দেশ/৯৯৯ ও Fire Service ১০২ অগ্রাধিকার; অনুমোদিত fire engineer ছাড়া building safety certificate নয়।",
+  "admin": {
+    "cms_editable": [
+      "title_bn/en",
+      "about_bn/en",
+      "hero text",
+      "module logo",
+      "theme",
+      "banner",
+      "help steps",
+      "FAQ",
+      "source citations",
+      "report labels",
+      "navigation order",
+      "empty states",
+      "translations"
+    ],
+    "operations": [
+      "feature flag",
+      "model version/canary",
+      "dataset review",
+      "staff permissions",
+      "source license ledger",
+      "moderated community submissions",
+      "audit log",
+      "retention settings",
+      "rollbacks",
+      "job health",
+      "export templates",
+      "QA status"
+    ]
+  },
+  "logo": "logos/37_agunpath-bd.svg"
+}
