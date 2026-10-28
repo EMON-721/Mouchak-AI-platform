@@ -182,6 +182,26 @@ def main():
                 completed_job = wait_for(completed)
                 assert probe.get("/api/runs/" + completed_job["run_id"]).status_code == 200
                 report["dedicated_worker_real_queued_run"] = True
+                # Execute actual downloaded OCR and embedding models in containers,
+                # not just a presence/health check or the arithmetic support flow.
+                extracted = probe.post("/api/assets/" + aid + "/ocr")
+                assert extracted.status_code == 200
+                assert any("123" in page["text"] for page in extracted.json()["pages"])
+                report["container_real_tesseract_inference"] = True
+                catalogue = json.loads((ROOT / "packages/module-registry/catalogue.json").read_text())
+                rag_slug = next(module["slug"] for module in catalogue["modules"] if module["engine"] == "rag")
+                answers = []
+                for question in ["বাষ্পীভবন কী?", "সালোকসংশ্লেষণ কী?"]:
+                    response = probe.post(f"/api/tools/{rag_slug}/jobs", json={"inputs": {"text": question}, "consent": True, "idempotency_key": uuid.uuid4().hex})
+                    assert response.status_code == 202
+                    jid = response.json()["id"]
+                    retrieved_job = wait_for(completed)
+                    answer = probe.get("/api/runs/" + retrieved_job["run_id"]).json()["output"]
+                    assert answer["references"] and answer["facts"]["supported"]
+                    assert answer["full_module_complete"] is False
+                    answers.append(answer["facts"]["answer"])
+                assert answers[0] != answers[1]
+                report["container_real_onnx_retrieval_two_distinct_answers"] = True
                 # Train/predict via actual production-mode network endpoints; fixtures
                 # are synthetic and never presented as Bangladesh performance data.
                 for index in range(25):
