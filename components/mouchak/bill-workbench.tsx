@@ -329,8 +329,8 @@ export default function BillWorkbench({
           <details>
             <summary>
               {t(
-                "পরিচয় লুকানো OCR লেখা",
-                "OCR text with identifier lines hidden",
+                "কিছু পরিচয়-লাইন শনাক্ত করে ঢাকা OCR লেখা",
+                "OCR text with detected identifier lines hidden",
               )}
             </summary>
             <p className="data-value">{draft.redacted_text}</p>

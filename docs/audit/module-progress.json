@@ -102,14 +102,16 @@
     "route_implemented": true,
     "support_implemented": true,
     "support_test_evidence": "tests/test_domain.py::test_all_module_support_contracts[billdetect-ai]",
-    "support_scope": "Reconcile household bill amounts and explain arithmetic.",
+    "support_scope": "Private confirmed monthly history, decimal bill arithmetic, real OCR drafts; exploratory owner-only ONNX model available only outside production",
     "full_original_module_complete": false,
-    "advanced_model_status": "not_production_validated",
-    "model_loaded": "shared OCR/embedding/CV only where invoked",
+    "advanced_model_status": "real_private_model_mechanics_tested_production_blocked",
+    "model_loaded": "Real Tesseract BN/EN and sklearn IsolationForest exported to ONNX Runtime CPU",
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
-    "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "blocker": "Bangladesh holdout/calibration, official tariff data, full original BillDetect workflows and release review remain incomplete",
+    "legacy_migration": "not_applicable",
+    "experimental_pipeline_implemented": true,
+    "experimental_test_evidence": "tests/test_bills.py"
   },
   {
     "id": 8,

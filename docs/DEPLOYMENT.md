@@ -6,10 +6,12 @@ One HTTPS domain serves Next.js public, session-work, tool and protected operato
 
 The Next.js container uses the verified `build:next` path. The Sites-compatible Vinext build is an additional target. Sites alone does not host Python inference, PostgreSQL or private S3. A frontend without its API is not a complete deployment.
 
+Latest additive role/migration setup and integration evidence: [BACKEND_OPERATIONS.md](BACKEND_OPERATIONS.md). Public login/signup/profile remain removed; operator MFA remains required.
+
 ## Provisioning sequence
 
 1. Provision PostgreSQL with TLS, a separate migration owner and a NOSUPERUSER/NOBYPASSRLS application role.
-2. Apply migrations 001–005 as the migration owner. Migration 003 checks stock owner/workspace/item links. Grant stock-item updates and movement insert/read only to the application role; no arbitrary movement UPDATE/DELETE privilege. Seed candidate sources before restricting runtime permissions. The backend sets `app.user_id` inside cookie-scoped owner transactions.
+2. Apply migrations 001–006 as the migration owner. Migration 003 checks stock owner/workspace/item links. Grant stock-item updates and movement insert/read only to the application role; no arbitrary movement UPDATE/DELETE privilege. Seed candidate sources before restricting runtime permissions. The backend sets `app.user_id` inside cookie-scoped owner transactions.
 3. Configure a persistent Fernet key, private S3, current malware signatures, SMTP verification/reset email, HTTPS `PUBLIC_ORIGIN` and the internal proxy token. Run actual provider integration tests.
 4. Install model assets with the checksum scripts. Keep weights out of the web image/Git. Inference stays private and CPU-based; GPU hosting is not assumed.
 5. Configure backups, key recovery and a restore drill. Configure shared rate limits, durable queues, monitoring and retention scheduling before multi-instance use. Production now has PostgreSQL-backed shared fixed-window counters and durable inference source; see NETLIFY.md for proxy ceilings and required hosted verification.

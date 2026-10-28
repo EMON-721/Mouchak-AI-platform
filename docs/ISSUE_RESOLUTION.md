@@ -1,6 +1,6 @@
 # Issue resolution and exact remaining actions
 
-Current continuation: local fetch succeeded and verified publication history is merged. The owner selected **Netlify website + separate Linux/Docker AI backend**, with optional Cloudflare DNS/CDN later. Added chunk uploads, leased durable inference, shared PostgreSQL counters, migration 005, website job controls and deployment templates. Current local suite: **343 passed**, plus types/lint/build, PostgreSQL WASM and transport checks. Browser queued actual retrieval and reopened its result. See [NETLIFY.md](NETLIFY.md) for precise setup and unresolved host/account/database/storage dependencies. No Netlify/Linux deployment or all-50 production certification is claimed. Earlier Vercel grants are no longer required.
+Current continuation: local fetch succeeded and verified publication history is merged. The owner selected **Netlify website + separate Linux/Docker AI backend**, with optional Cloudflare DNS/CDN later. Added chunk uploads, leased durable inference, shared PostgreSQL counters, private bill histories/experimental ONNX, migration 006 and secure four-role provisioning. Current GitHub platform suite: **359 passed**, plus types/lint/build, PostgreSQL WASM and transport checks. Browser queued actual retrieval/reopened its result and saved/reloaded an explicitly labelled DEMO bill. See [NETLIFY.md](NETLIFY.md) for precise setup and unresolved host/account/database/storage dependencies. No Netlify/Linux deployment or all-50 production certification is claimed. Earlier Vercel grants are no longer required.
 
 This is the continuation of the existing platform, not a new homepage build. Public login/signup/profile remain removed. Operators retain role and MFA protection. All original-kit files remain unchanged.
 
@@ -11,9 +11,15 @@ This is the continuation of the existing platform, not a new homepage build. Pub
 | Hosting | Inspected connected providers; corrected container state/model paths, acquisition tooling and Compose model-init dependency | Supabase project creation rejected at the two-active-free-project quota; live private compute/storage/scanning/SMTP/operations remain unconfigured |
 | Browser PDF | Actual API generation/readable PDF verified; identified `ERR_BLOCKED_BY_CLIENT` and explicit cloud browser URL/security denial | Browser download verification is blocked by this environment; no workaround/bypass or browser-pass claim |
 | Runtime telemetry | Disabled ONNX 1DS before import, disabled Hugging Face telemetry, added API opt-out, CI/container settings and initialization-order test | Earlier automatic-review-blocked telemetry attempt is historical; no prior absence-of-traffic claim |
-| Verification | 325 tests passed; TypeScript, lint and Next production build passed; exact registry/source checksums retained | Pose upload automation timed out; completed pose browser E2E, operator MFA browser flow and responsive/accessibility matrix are not verified |
+| Verification | 359 tests passed in the platform job; TypeScript, lint and Next production build passed; exact registry/source checksums retained | Pose upload automation timed out; completed pose browser E2E, operator MFA browser flow and responsive/accessibility matrix are not verified |
 
-## GitHub publication verified
+## Current S3 integration repair
+
+The latest platform job passed; the separate private-stack job has verified actual PostgreSQL TLS, all six migration replay and four safe dedicated roles, then failed at S3 readiness. Strict CA certificate key usage is fixed; allowlisted error diagnostics are running to identify the remaining problem. This CI run is not marked successful overall. Read [BACKEND_OPERATIONS.md](BACKEND_OPERATIONS.md) and [BILL_PIPELINE.md](BILL_PIPELINE.md); downstream S3/scanner/operator/retention checks remain unverified until evidence is obtained.
+
+The owner handles Netlify. Railway signup was reported paused by its official status; no signup restriction was bypassed. A live authorized Linux host, API hostname, private PostgreSQL and S3/SMTP credentials are still absent. Do not ask for Netlify login or the already supplied GitHub destination again.
+
+## Earlier GitHub publication verified
 
 Repository: https://github.com/EMON-721/Mouchak-AI-platform. The owner approved access; a real blob write succeeded. All 1,127 source paths were uploaded using the authorized GitHub Git Data API. Every separately uploaded blob SHA was checked. The complete remote tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches the tested local checkpoint `4c03fc0`.
 

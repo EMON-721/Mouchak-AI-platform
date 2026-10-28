@@ -2,6 +2,7 @@
   "schema_tables": 26,
   "additive_migration_reapplied": true,
   "owner_and_worker_rls": "passed",
+  "private_bill_rls_links_grants_and_cascades": "passed",
   "stale_lease_fence": "passed",
   "shared_rate_upsert": "passed",
   "expiry_and_session_cascades": "passed",

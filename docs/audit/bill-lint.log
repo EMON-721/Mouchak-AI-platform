@@ -1,0 +1,1 @@
+$ eslint app components/mouchak scripts/dev-platform.mjs scripts/test-postgres.mjs scripts/legacy-golden.mjs scripts/test-collaboration-postgres.mjs scripts/test-async-postgres.mjs scripts/check-netlify.mjs scripts/test-private-processing.mjs next.config.ts vite.config.ts eslint.config.mjs

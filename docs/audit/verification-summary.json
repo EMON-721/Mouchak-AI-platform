@@ -1,5 +1,5 @@
 {
-  "automated_tests": 325,
+  "automated_tests": 359,
   "test_failures": 0,
   "full_production_modules_validated": 0,
   "registered_tool_routes": 50,
@@ -11,11 +11,11 @@
   "sites_build_passed": true,
   "github_pushed": true,
   "production_deployed": false,
-  "test_artifact": "docs/audit/resolution-regression.xml",
+  "test_artifact": "GitHub run 40700792724 platform job (private-stack failed)",
   "resume_new_tests": 35,
   "legacy_static_source_files_preserved": 25,
   "selected_legacy_ports": 3,
-  "database_tables": 20,
+  "database_tables": 26,
   "next_build_artifact": "docs/audit/resolution-next-build.log",
   "sites_build_includes_resume_delta": false,
   "browser_hydration_verified": true,
@@ -34,7 +34,14 @@
   "pdf_browser_blocker": "Browser security policy",
   "github_verified_commit": "d93b4f36163a1e0c8ab24bba40ea96b078f8a4da",
   "github_tree_verified": "62570204e17e97886dd69fe82590d80d7c2575ef",
-  "github_ci_verified": true,
-  "github_ci_run_id": 40680371782,
-  "github_ci_conclusion": "success"
+  "github_ci_verified": false,
+  "github_ci_run_id": 40700792724,
+  "github_ci_conclusion": "failure: platform success; private-stack S3 readiness failed",
+  "latest_platform_job_conclusion": "success",
+  "latest_platform_job_id": 122859730929,
+  "private_bill_browser_demo_history_reload": true,
+  "private_bill_real_onnx_mechanics_tested": true,
+  "private_bill_ml_production_enabled": false,
+  "production_stack_s3_verified": false,
+  "network_postgres_tls_migrations_roles_tested": true
 }

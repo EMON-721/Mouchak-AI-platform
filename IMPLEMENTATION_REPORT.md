@@ -4,6 +4,16 @@
 
 The owner's latest instruction removes public login, signup and visitor profiles, superseding the ZIP's end-user account-screen requirements. The Super Admin/operator system retains passwords, roles and MFA. See `docs/PUBLIC_ACCESS.md` for the decision and security details.
 
+## Current backend/BillDetect continuation — 28 October 2026
+
+Resumed the previous source without regenerating the original kit. The owner handles Netlify. Added encrypted private monthly bill history, editable real OCR drafts, separate training consent, real private IsolationForest → ONNX export/inference and per-owner model cards. Experimental training/prediction remain blocked in production pending Bangladesh holdouts and release review; history and arithmetic work independently. See [Bill pipeline](docs/BILL_PIPELINE.md).
+
+Added secure, additive PostgreSQL provisioning on stdin with four isolated SCRAM roles, verified TLS, checksum migration ledger and all six migrations (26 application tables). Actual GitHub platform checks passed: **359 Python tests**, original source/registry verification, lint, TypeScript, PostgreSQL WASM, transport and Next production build. [Run 40700792724](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40700792724) has a successful **platform job**, but its separate private-stack job failed at S3 readiness; it is not an overall successful CI run. The fixture actually verified networked PostgreSQL TLS, migration replay and safe role attributes. Storage/container/operator/retention checks after that step remain unverified until the corrected integration completes.
+
+Browser confirmed a Bangla-digit **DEMO** bill, arithmetic difference 25 BDT and retained history after reload. DEMO remains excluded from model training. Browser PDF export remains blocked by the browser security policy; no bypass or completed PDF browser claim. No live host/bucket/database, production restore or all-50 release is certified. See [backend operations](docs/BACKEND_OPERATIONS.md) and [Netlify runbook](docs/NETLIFY.md).
+
+---
+
 ## Netlify/Linux continuation — 28 October 2026
 
 - Completed the previously interrupted local fetch and merged the verified publication head without source changes or history loss.
@@ -43,13 +53,13 @@ The sections below retain earlier checkpoint evidence. New counts and infrastruc
 | Requirements | All 778 original-kit files, checksums and 16,269 indexed requirement entries retained | Indexing is not implementation; the 430 original acceptance cases are not all passed |
 | Public tools | All 50 API routes exercised without registration; 47 current support flows process inputs; three cores return explicit errors | No full advanced module is certified complete |
 | Security/privacy | Visitor isolation, expiry rotation, CSRF, clearing, upload/export, legacy preservation, expired-owner support denial and fresh operator MFA tested | Live PostgreSQL/S3/TLS and browser operator MFA still need staging |
-| Tests | **343 passed, zero failed/error/skipped** (59 public-access cases, eight real pose cases and one new pre-import privacy case). Authoritative current suite: `docs/audit/async-regression.xml`; focused new cases: `public-sessions.xml` | Earlier artifacts remain historical; they do not replace current results |
+| Tests | **359 passed in the latest GitHub platform job** (earlier checkpoint: 343 passed) (59 public-access cases, eight real pose cases and one new pre-import privacy case). Authoritative current suite: `docs/audit/async-regression.xml`; focused new cases: `public-sessions.xml` | Earlier artifacts remain historical; they do not replace current results |
 | Frontend | TypeScript, lint and Next.js production build passed. Logs: `docs/audit/resolution-*.log` | Build success is not cloud operation proof |
 | Browser | No signup: synthetic bill line 125, stated 150, difference 25; result reopened under `/work`; Bengali/English switch; JSON downloaded/parsed; `/admin` guarded; `/register` not found | PDF navigation is blocked by the cloud browser URL/security policy; pose upload automation timed out. Completed browser pose inference, three-width accessibility/responsiveness and operator MFA remain unverified |
 | PDF | Exact browser JSON rendered a valid 473,753-byte PDF locally in 0.08 seconds; anonymous API test opens a readable PDF | This is not a successful browser PDF download claim |
 | Real inference | Existing Bengali/English Tesseract, ONNX multilingual MiniLM + BM25 extractive retrieval, OpenCV registration and optional experimental anomaly/Whisper retained | Bangladesh holdouts, advanced domain/generative pipelines and production speech validation incomplete |
 | Data/legacy | Three local V3 snapshots (25 files), selected original-JS parity tests, 12 CC-BY reading passages, 81-entry commodity dictionary without prices, encrypted stock ledger | Four full remote repos/live migrations unavailable; candidate sources are not approved datasets |
-| Database/operations | 24-table schema/migrations 001–005; previous tables preserved; PostgreSQL WASM RLS checks; CMS scheduler, dual rights review, triage, support/transfers and local encrypted recovery retained | External PostgreSQL, production backups, hosted distributed limits/queues and cloud operations unverified |
+| Database/operations | 26-table schema/migrations 001–006 and additive provisioning ledger; previous tables preserved; PostgreSQL WASM RLS checks; CMS scheduler, dual rights review, triage, support/transfers and local encrypted recovery retained | External PostgreSQL, production backups, hosted distributed limits/queues and cloud operations unverified |
 | GitHub | Complete source published to main at `d93b4f3`; fresh fetch/tree match verified; initial commit retained | GitHub Actions completed successfully; production deployment remains separate |
 
 ## All 50 modules

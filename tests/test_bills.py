@@ -49,7 +49,14 @@ def test_real_private_model_fits_persists_reloads_predicts_and_exports(user):
     assert fit(user, wid).json()["reused"] is True
     with DB() as db:
         stored = db.get(bills.BillModel, result["model_id"])
-        assert "onnx" not in stored.encrypted and "1000.00" not in stored.encrypted
+        # Ciphertext is random base64 and can coincidentally contain short words.
+        # Verify an authenticated envelope instead of a flaky substring claim.
+        from cryptography.fernet import Fernet, InvalidToken
+        with pytest.raises(json.JSONDecodeError):
+            json.loads(stored.encrypted)
+        with pytest.raises(InvalidToken):
+            Fernet(Fernet.generate_key()).decrypt(stored.encrypted.encode())
+        assert open_sealed(stored.encrypted)["card"] == card
         session, _ = bills.load_artifact(stored)
         assert session.get_providers() == ["CPUExecutionProvider"]
     baseline = user.request("POST", "/api/bills/predict", json=sample(wid, 12))

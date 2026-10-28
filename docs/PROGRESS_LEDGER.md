@@ -1,3 +1,15 @@
+# Resume current backend integration
+
+## Current backend/BillDetect continuation — 28 October 2026
+
+Resumed the previous source without regenerating the original kit. The owner handles Netlify. Added encrypted private monthly bill history, editable real OCR drafts, separate training consent, real private IsolationForest → ONNX export/inference and per-owner model cards. Experimental training/prediction remain blocked in production pending Bangladesh holdouts and release review; history and arithmetic work independently. See [Bill pipeline](BILL_PIPELINE.md).
+
+Added secure, additive PostgreSQL provisioning on stdin with four isolated SCRAM roles, verified TLS, checksum migration ledger and all six migrations (26 application tables). Actual GitHub platform checks passed: **359 Python tests**, original source/registry verification, lint, TypeScript, PostgreSQL WASM, transport and Next production build. [Run 40700792724](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40700792724) has a successful **platform job**, but its separate private-stack job failed at S3 readiness; it is not an overall successful CI run. The fixture actually verified networked PostgreSQL TLS, migration replay and safe role attributes. Storage/container/operator/retention checks after that step remain unverified until the corrected integration completes.
+
+Browser confirmed a Bangla-digit **DEMO** bill, arithmetic difference 25 BDT and retained history after reload. DEMO remains excluded from model training. Browser PDF export remains blocked by the browser security policy; no bypass or completed PDF browser claim. No live host/bucket/database, production restore or all-50 release is certified. See [backend operations](BACKEND_OPERATIONS.md) and [Netlify runbook](NETLIFY.md).
+
+---
+
 # Current continuation: Netlify website + Linux backend
 
 The owner chose this architecture on 28 October 2026. Continued from verified GitHub `ca2dc17`; the interrupted fetch completed and local history was preserved. Added migration 005, encrypted bounded chunk uploads, durable leased inference/corrections/cancellation, separate worker roles, shared PostgreSQL request counters, website polling/reopen and Netlify/backend deployment configuration. Original 778-file kit and all prior models/ports remain unchanged.

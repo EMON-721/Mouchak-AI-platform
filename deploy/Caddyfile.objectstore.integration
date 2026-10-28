@@ -1,0 +1,5 @@
+# Disposable fixture: verified client TLS; storage hop stays on the private Docker network.
+:9000 {
+    tls /test-tls/server.crt /test-tls/server.key
+    reverse_proxy objectdata:8333
+}

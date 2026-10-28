@@ -108,7 +108,7 @@ def main():
             return int(run("port", service, str(internal)).rsplit(":", 1)[1])
         try:
             run("build", "api", timeout=900)
-            run("up", "-d", "database", "objectstore")
+            run("up", "-d", "database", "objectdata", "objectstore")
             pg_port, object_port = port("database", 5432), port("objectstore", 9000)
             pg_dsn = f"postgresql://postgres:{pg_password}@127.0.0.1:{pg_port}/mouchak_integration?sslmode=verify-full&sslrootcert={folder}/tls/ca.crt"
             def database_ready():

@@ -57,7 +57,7 @@ Inference tests run actual OCR, multilingual embedding/retrieval, OpenCV and ano
 - `packages/module-registry/`: all 50 definitions, forms, model candidates and sources.
 - `data/authored/`: five original, nonofficial Bengali/English learning passages.
 - `data/legacy/`, `reference/legacy-snapshots/`: attributed additions and complete original local V3 static source.
-- `database/migrations/`: PostgreSQL schema, owner RLS and additive stock/sharing/operations migrations 003–004.
+- `database/migrations/`: PostgreSQL schema, owner RLS and additive stock/sharing/operations/queue/bill migrations 003–006.
 - `deploy/`, `.github/workflows/`: deployment templates and CI.
 - `docs/audit/`: source analysis, hashes, test evidence and readiness records.
 - `requirements/original-kit/`: the entire unchanged input kit.
@@ -66,7 +66,11 @@ Inference tests run actual OCR, multilingual embedding/retrieval, OpenCV and ano
 
 The owner selected **Netlify for the website and a separate Linux/Docker host for AI**, with optional Cloudflare DNS/CDN later. Follow [docs/NETLIFY.md](docs/NETLIFY.md). `netlify.toml` builds canonical Next.js and checks its real HTTPS backend before deployment. `deploy/compose.backend.yaml` provides backend/worker/TLS/scanner configuration; host credentials and operational services remain required. No cloud deployment has been performed.
 
-The new runtime preserves 10 MiB uploads through encrypted 1 MiB chunks, runs inference through durable leased jobs, supports cancellation/reopen and coordinates production request limits in PostgreSQL. Migration 005 brings the additive schema to 24 tables. Current regression: **343 passed**, plus typecheck/lint/Next build, PostgreSQL WASM and transport checks. A browser completed and reopened actual queued Bengali retrieval. These checks do not certify all 50 advanced models, production infrastructure or all original acceptance cases.
+The new runtime preserves 10 MiB uploads through encrypted 1 MiB chunks, runs inference through durable leased jobs, supports cancellation/reopen and coordinates production request limits in PostgreSQL. Migration 006 brings the additive schema to 26 application tables. Current GitHub platform regression: **359 passed**, plus typecheck/lint/Next build, PostgreSQL WASM and transport checks. A browser completed and reopened actual queued Bengali retrieval. These checks do not certify all 50 advanced models, production infrastructure or all original acceptance cases.
+
+## Private bills and backend provisioning
+
+[BillDetect](docs/BILL_PIPELINE.md) now has private monthly history, actual OCR drafts and experimental owner-specific ONNX model inference. Production ML remains disabled pending evaluation; arithmetic/history are available. A DEMO browser save/reload was verified. [Backend operations](docs/BACKEND_OPERATIONS.md) explains additive verified-TLS provisioning, separate roles and the current container integration result. The S3 integration check is still being repaired; do not treat platform test success as overall release success.
 
 ## Deployment and GitHub
 
@@ -84,10 +88,10 @@ Run the visitor retention worker alongside the API:
 
 Shared support/transfer/rights/scheduling setup: [docs/COLLABORATION_AND_OPERATIONS.md](docs/COLLABORATION_AND_OPERATIONS.md). Public access decision and security details: [docs/PUBLIC_ACCESS.md](docs/PUBLIC_ACCESS.md). Latest evidence is listed in [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md). The complete original 50-tool advanced scope remains incomplete.
 
-## Latest resolution checkpoint
+## Earlier pose checkpoint (historical)
 
 325 automated tests pass after adding eight actual pose-pipeline tests and a pre-import inference privacy test. TypeScript, lint and the current Next production build pass. [Experimental GoliCoach setup](docs/POSE_PIPELINE.md) includes private MP4 inference, 33 landmarks, timestamps, 2D angle comparison and skeleton replay. Enable only for local evaluation; production remains disabled until Bangladesh holdouts and coach review pass.
 
-ONNX/Hugging Face telemetry is disabled before model-runtime import. The API image and CI carry the same settings. Compose now includes a checksum-verified model-init service and blocks API startup until model acquisition succeeds. Its image/mount state paths agree. Docker image execution remains unverified because no daemon is available.
+ONNX/Hugging Face telemetry is disabled before model-runtime import. The API image and CI carry the same settings. Compose now includes a checksum-verified model-init service and blocks API startup until model acquisition succeeds. Its image/mount state paths agree. The real API image now builds on GitHub runners; the separate network integration result is tracked in [backend operations](docs/BACKEND_OPERATIONS.md). No live cloud deployment is implied.
 
 The owner-selected Supabase organization returned a $0 quote but refused project creation because its two-active-free-project quota is full. No project was created, paused, deleted or upgraded. GitHub publication is verified; the earlier integration 403 is resolved. Browser PDF navigation is blocked by the cloud browser security policy; pose upload automation timed out, so no completed browser inference/upload claim is made. Current hosting/model blockers and next actions are in [docs/ISSUE_RESOLUTION.md](docs/ISSUE_RESOLUTION.md).
