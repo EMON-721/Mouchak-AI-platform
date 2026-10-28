@@ -3,9 +3,8 @@
 No model/API responses are mocked. A tiny owned ClamAV test signature verifies
 the scanner rejection path; it is not a current threat-signature feed.
 """
-import base64, hashlib, io, json, os, re, secrets, ssl, subprocess, sys, tempfile, time, uuid
+import base64, hashlib, io, json, os, re, secrets, ssl, subprocess, sys, tempfile, time, traceback, uuid
 from pathlib import Path
-from contextlib import contextmanager
 import boto3, httpx, psycopg
 from botocore.config import Config
 from cryptography.fernet import Fernet
@@ -26,9 +25,18 @@ def wait_for(callback, seconds=90):
             if result:
                 return result
         except Exception as error:
-            last = type(error).__name__
+            last = {"class": type(error).__name__}
+            response = getattr(error, "response", None)
+            if isinstance(response, dict):
+                last["provider_code"] = response.get("Error", {}).get("Code")
+                last["http_status"] = response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+            # Only allowlisted diagnostics, never full exception/response bodies.
+            message = str(error).lower()
+            for label, pattern in [("certificate_verify_failed", "certificate verify failed"), ("wrong_tls_version", "wrong version number"), ("connection_refused", "connection refused"), ("connection_timeout", "timed out")]:
+                if pattern in message:
+                    last["reason"] = label
         time.sleep(0.5)
-    raise AssertionError("Timed out waiting for fixture operation: " + str(last))
+    raise AssertionError("Timed out waiting for fixture operation: " + json.dumps(last))
 
 
 def certificates(directory):
@@ -219,7 +227,7 @@ def main():
                 logs = logs.replace(secret, "[REDACTED]")
             logs = re.sub(r"SCRAM-SHA-256\$[^\s'\",]+|\$argon2(?:id|i|d)\$[^\s'\",]+", "[HASH REDACTED]", logs)
             print(json.dumps({"error_class": type(error).__name__, "sqlstate": getattr(error, "sqlstate", None)}), file=sys.stderr)
-            print(json.dumps({"completed_checks": report}), file=sys.stderr)
+            print(json.dumps({"completed_checks": report, "failure_location": [{"file": Path(frame.filename).name, "line": frame.lineno} for frame in traceback.extract_tb(error.__traceback__)][-3:], "wait_diagnostic": str(error) if isinstance(error, AssertionError) and str(error).startswith("Timed out waiting for fixture operation:") else None}), file=sys.stderr)
             print(logs[-16000:], file=sys.stderr)
             raise RuntimeError("Isolated production-stack integration failed; sanitized service logs above") from None
         finally:
