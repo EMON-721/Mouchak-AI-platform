@@ -82,7 +82,7 @@ def main():
                "MOUCHAK_TEST_PG_PASSWORD": pg_password, "MOUCHAK_TEST_API_TOKEN": api_token,
                "MOUCHAK_TEST_DATA_KEY": data_key, "MOUCHAK_TEST_S3_USER": s3_user,
                "MOUCHAK_TEST_S3_PASSWORD": s3_password,
-               "MOUCHAK_TEST_S3_KMS": "fixture:" + base64.b64encode(secrets.token_bytes(32)).decode()}
+               "MOUCHAK_TEST_S3_KEK": secrets.token_hex(32)}
         for role in ROLES:
             label = role.removeprefix("mouchak_").upper()
             env[f"MOUCHAK_TEST_{label}_DSN"] = f"postgresql+psycopg://{role}:{role_passwords[role]}@database:5432/mouchak_integration?sslmode=verify-full&sslrootcert=/test-ca/ca.crt"
@@ -212,7 +212,7 @@ def main():
             # Never dump request/response bodies, passwords, tokens or raw DB URLs.
             logs = subprocess.run([*compose, "logs", "--no-color", "--tail", "50"], cwd=ROOT, env=env, capture_output=True, text=True).stdout
             logs = "\n".join(failed_operation) + "\n" + logs
-            for secret in [*secret_values, env["MOUCHAK_TEST_S3_KMS"]]:
+            for secret in [*secret_values, env["MOUCHAK_TEST_S3_KEK"]]:
                 logs = logs.replace(secret, "[REDACTED]")
             logs = re.sub(r"SCRAM-SHA-256\$[^\s'\",]+|\$argon2(?:id|i|d)\$[^\s'\",]+", "[HASH REDACTED]", logs)
             print(json.dumps({"error_class": type(error).__name__, "sqlstate": getattr(error, "sqlstate", None)}), file=sys.stderr)

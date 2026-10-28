@@ -3196,6 +3196,180 @@ td a {
   padding: 5px 0;
   min-height: 32px;
 }
-.legacy-workbench>h2{margin-top:14px}.legacy-workbench>p{line-height:1.9}.reading-word-canvas{background:var(--soft);padding:22px;border-radius:6px;margin:20px 0;line-height:2.6}.reading-word-canvas button{background:transparent;color:var(--ink);border:1px solid transparent;border-radius:4px;padding:4px 6px;min-height:44px;font-size:1.1rem}.reading-word-canvas button[aria-pressed=true]{background:#f5dfaa;border-color:#ab8230;color:#4d3d1a}.legacy-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:17px;background:var(--paper);border:1px solid var(--border);border-radius:6px;margin:16px 0}.legacy-row label{display:flex;flex-direction:column;gap:6px;font-size:.72rem;min-width:0}.legacy-row input,.legacy-row select{width:100%;min-width:0;font-size:.78rem}.freshness-field{margin-top:24px;max-width:400px}.stock-create{padding-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.stock-create .form-field{margin-bottom:8px}.stock-create>.subtle,.stock-create>.button{grid-column:1/-1}.stock-table{margin-top:24px}.stock-sku{display:block;font-size:.66rem;color:var(--muted)}.legacy-workbench summary{cursor:pointer;min-height:44px;font-size:.82rem;color:var(--teal)}@media(max-width:640px){.legacy-row{grid-template-columns:1fr 1fr;padding:13px;gap:10px}.stock-create{grid-template-columns:1fr}.reading-word-canvas{padding:14px}.reading-word-canvas button{font-size:1rem;padding:3px 5px}}
-.collaboration-stack{display:grid;gap:1.5rem}.collaboration-stack fieldset{border:1px solid var(--border);border-radius:12px;padding:1rem;margin:1rem 0}.grant-card{border-top:1px solid var(--border);padding:1rem 0;overflow-wrap:anywhere}.grant-card select{margin:.5rem;max-width:100%}.operations-console form{display:grid;gap:1rem}.operations-console .button{margin:.5rem 0}
-.session-work{padding-top:44px;padding-bottom:60px}.session-work>.panel{margin-top:24px}.session-work .row-actions{display:flex;flex-wrap:wrap;gap:20px;margin-top:12px}.session-work .page-heading p{max-width:850px}.session-work .panel>.button{margin:12px 8px 12px 0}
+.legacy-workbench > h2 {
+  margin-top: 14px;
+}
+.legacy-workbench > p {
+  line-height: 1.9;
+}
+.reading-word-canvas {
+  background: var(--soft);
+  padding: 22px;
+  border-radius: 6px;
+  margin: 20px 0;
+  line-height: 2.6;
+}
+.reading-word-canvas button {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 4px 6px;
+  min-height: 44px;
+  font-size: 1.1rem;
+}
+.reading-word-canvas button[aria-pressed="true"] {
+  background: #f5dfaa;
+  border-color: #ab8230;
+  color: #4d3d1a;
+}
+.legacy-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 17px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 16px 0;
+}
+.legacy-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.72rem;
+  min-width: 0;
+}
+.legacy-row input,
+.legacy-row select {
+  width: 100%;
+  min-width: 0;
+  font-size: 0.78rem;
+}
+.freshness-field {
+  margin-top: 24px;
+  max-width: 400px;
+}
+.stock-create {
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.stock-create .form-field {
+  margin-bottom: 8px;
+}
+.stock-create > .subtle,
+.stock-create > .button {
+  grid-column: 1/-1;
+}
+.stock-table {
+  margin-top: 24px;
+}
+.stock-sku {
+  display: block;
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+.legacy-workbench summary {
+  cursor: pointer;
+  min-height: 44px;
+  font-size: 0.82rem;
+  color: var(--teal);
+}
+@media (max-width: 640px) {
+  .legacy-row {
+    grid-template-columns: 1fr 1fr;
+    padding: 13px;
+    gap: 10px;
+  }
+  .stock-create {
+    grid-template-columns: 1fr;
+  }
+  .reading-word-canvas {
+    padding: 14px;
+  }
+  .reading-word-canvas button {
+    font-size: 1rem;
+    padding: 3px 5px;
+  }
+}
+.collaboration-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+.collaboration-stack fieldset {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.grant-card {
+  border-top: 1px solid var(--border);
+  padding: 1rem 0;
+  overflow-wrap: anywhere;
+}
+.grant-card select {
+  margin: 0.5rem;
+  max-width: 100%;
+}
+.operations-console form {
+  display: grid;
+  gap: 1rem;
+}
+.operations-console .button {
+  margin: 0.5rem 0;
+}
+.session-work {
+  padding-top: 44px;
+  padding-bottom: 60px;
+}
+.session-work > .panel {
+  margin-top: 24px;
+}
+.session-work .row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+}
+.session-work .page-heading p {
+  max-width: 850px;
+}
+.session-work .panel > .button {
+  margin: 12px 8px 12px 0;
+}
+
+/* Private bill review keeps confirmation controls distinct and readable. */
+.bill-workbench > summary {
+  cursor: pointer;
+  padding-bottom: 12px;
+}
+.bill-workbench > p {
+  font-size: 0.82rem;
+}
+.bill-workbench form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 8px;
+}
+.bill-workbench form > .consent-check,
+.bill-workbench form > .row-actions,
+.bill-workbench form > p {
+  grid-column: 1 / -1;
+}
+.bill-workbench .consent-check {
+  margin: 10px 0;
+}
+.bill-workbench .row-actions {
+  flex-wrap: wrap;
+}
+.bill-workbench h3 {
+  margin-top: 28px;
+}
+@media (max-width: 640px) {
+  .bill-workbench form {
+    grid-template-columns: 1fr;
+  }
+}

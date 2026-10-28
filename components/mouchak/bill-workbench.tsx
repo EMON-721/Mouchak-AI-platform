@@ -152,10 +152,15 @@ export default function BillWorkbench({
       setConfirmed(false);
       setTrainingConsent(false);
       setNotice(
-        t(
-          "বিল রাখা হয়েছে। ইতিহাস বদলানোর কারণে আগের ব্যক্তিগত model মুছে দেওয়া হয়েছে।",
-          "Bill saved. Changing the baseline removes the previous private model.",
-        ),
+        model?.checksum
+          ? t(
+              "ইতিহাস বদলেছে; আগের ব্যক্তিগত model মুছে দেওয়া হয়েছে।",
+              "History changed; the previous private model was removed.",
+            )
+          : t(
+              "বিল রাখা হয়েছে। যোগফল ও পার্থক্য নিচে দেখুন।",
+              "Bill saved. See the arithmetic and difference below.",
+            ),
       );
     } catch (e) {
       setError((e as Error).message);
@@ -270,7 +275,7 @@ export default function BillWorkbench({
     ["stated_bdt", "বিলে লেখা মোট (৳)", "Stated total (BDT)"],
   ];
   return (
-    <details className="panel" open={Boolean(draft)}>
+    <details className="panel bill-workbench" open={Boolean(draft)}>
       <summary>
         <strong>
           {t(
@@ -423,7 +428,7 @@ export default function BillWorkbench({
             />
           </div>
         ))}
-        <label className="check-line">
+        <label className="consent-check">
           <input
             type="checkbox"
             checked={confirmed}
@@ -434,7 +439,7 @@ export default function BillWorkbench({
             "I checked every number against my bill.",
           )}
         </label>
-        <label className="check-line">
+        <label className="consent-check">
           <input
             type="checkbox"
             checked={trainingAllowed}
@@ -445,7 +450,7 @@ export default function BillWorkbench({
             "Allow this bill to train only my private model.",
           )}
         </label>
-        <label className="check-line">
+        <label className="consent-check">
           <input
             type="checkbox"
             checked={demo}
@@ -542,6 +547,7 @@ export default function BillWorkbench({
                         <button
                           type="button"
                           disabled={busy}
+                          className="text-link"
                           onClick={() => edit(row)}
                         >
                           {t("সংশোধন", "Edit")}
@@ -549,6 +555,7 @@ export default function BillWorkbench({
                         <button
                           type="button"
                           disabled={busy}
+                          className="text-link"
                           onClick={() => remove(row.id)}
                         >
                           {t("মুছুন", "Delete")}
@@ -582,7 +589,7 @@ export default function BillWorkbench({
         )}
         {model?.eligible_rows ?? 0}/25
       </p>
-      <label className="check-line">
+      <label className="consent-check">
         <input
           type="checkbox"
           checked={trainingConsent}

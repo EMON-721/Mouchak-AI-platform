@@ -41,15 +41,13 @@ services:
       timeout: 3s
       retries: 30
   objectstore:
-    # Archived Community image retained ONLY as a protocol test fixture, not
-    # recommended or deployed for production. No real user data is placed here.
-    image: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z
+    image: chrislusf/seaweedfs:4.51
     user: root
-    command: [server, /data, --address, ":9000", --console-address, ":9001", --certs-dir, /test-tls]
+    command: [mini, -dir=/data, -ip=objectstore, -s3.port=9000, -s3.cert.file=/test-tls/server.crt, -s3.key.file=/test-tls/server.key, -master.telemetry=false, -webdav=false, -admin.ui=false, -volume.max=4, -master.volumeSizeLimitMB=32, -s3.port.iceberg=0, -s3.port.lance=0]
     environment:
-      MINIO_ROOT_USER: ${MOUCHAK_TEST_S3_USER:?required}
-      MINIO_ROOT_PASSWORD: ${MOUCHAK_TEST_S3_PASSWORD:?required}
-      MINIO_KMS_SECRET_KEY: ${MOUCHAK_TEST_S3_KMS:?required}
+      AWS_ACCESS_KEY_ID: ${MOUCHAK_TEST_S3_USER:?required}
+      AWS_SECRET_ACCESS_KEY: ${MOUCHAK_TEST_S3_PASSWORD:?required}
+      WEED_S3_SSE_KEK: ${MOUCHAK_TEST_S3_KEK:?required}
     volumes: ["${MOUCHAK_TEST_DIR:?required}/tls:/test-tls:ro", "objects:/data"]
     ports: ["127.0.0.1::9000"]
   model-init:
