@@ -1,8 +1,8 @@
 {
   "date": "2026-10-29",
   "source_base": "bcf8a4fb44983a21bf623463769743330b874387",
-  "tested_runtime_commit": "df3fdeabd8441832d5b89e45f51012808b4f6a3e",
-  "tested_runtime_tree": "129ca6b31d30cb2ad91f306c7bbeb8c06a471bf0",
+  "tested_runtime_commit": "96754ff508d86b2cee7b23045594779a2a19b7b0",
+  "tested_runtime_tree": "4028f516cc2c45f404b3cdae0475ac9e8554c33d",
   "hosting": "paused_by_owner",
   "provider_required": false,
   "repository_visibility_changed": false,
@@ -10,16 +10,16 @@
   "all_non_hosting_requirements_complete": false,
   "verification_status": "implemented_checkpoint_checks_passed_with_scope_limits",
   "github_actions": {
-    "run_id": 40872855570,
-    "url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570",
-    "platform_job": 123444088847,
-    "private_stack_job": 123444089180,
+    "run_id": 40889808210,
+    "url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40889808210",
+    "platform_job": 123503206065,
+    "private_stack_job": 123503206922,
     "conclusion": "success"
   },
   "tests": {
-    "python_passed": 381,
+    "python_passed": 385,
     "python_subtests_passed": 17,
-    "python_seconds": 106.37,
+    "python_seconds": 103.33,
     "typescript": "passed",
     "eslint": "passed",
     "canonical_next_build": "passed",
@@ -29,11 +29,13 @@
     "real_disposable_postgres_s3_tls_scanner_queue_ocr_rag_mfa_expiry": "passed",
     "directory_dual_review_publication_real_queued_onnx_revocation": "passed",
     "all_three_portable_compose_syntax": "passed_no_provisioning",
-    "actual_nonroot_standalone_web_image_http_headers_missing_backend_503": "passed"
+    "actual_nonroot_standalone_web_image_http_headers_missing_backend_503": "passed",
+    "malformed_unicode_internal_token_and_csrf": "403_without_server_error",
+    "bengali_ascii_totp_and_cross_script_replay": "passed_unit_and_real_tls_operator_flow"
   },
   "public_source_scan": {
     "selected_pattern_findings": 0,
-    "historical_blobs_checked": 1185,
+    "historical_blobs_checked": 1193,
     "scope": "Selected current-source and Git-history patterns; not comprehensive secret/PII/redistribution certification"
   },
   "browser": {
@@ -72,5 +74,20 @@
       "status": "intentionally_paused",
       "detail": "No production service, database/bucket, SMTP, paid resource, provider backup/restore or hosted load certification was created."
     }
-  ]
+  ],
+  "previous_checkpoint": {
+    "runtime_commit": "df3fdeabd8441832d5b89e45f51012808b4f6a3e",
+    "github_actions": {
+      "run_id": 40872855570,
+      "url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570",
+      "platform_job": 123444088847,
+      "private_stack_job": 123444089180,
+      "conclusion": "success"
+    },
+    "python_passed": 381,
+    "main_publication_commit": "7f078207c50b5641a32dfca0278a18532b3cfeeb",
+    "main_ci_run": 40873829276,
+    "main_ci_conclusion": "success"
+  },
+  "authentication_continuation": "Three new regression cases first reproduced TypeError failures for malformed Unicode headers and Bengali TOTP. UTF-8 byte comparisons now refuse malformed transport/CSRF values; Bengali digits are canonicalized before verification and replay hashing. Four added tests plus a real TLS Bengali-MFA/cross-script replay assertion passed."
 }

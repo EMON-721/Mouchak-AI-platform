@@ -14,3 +14,7 @@ Report a vulnerability through the repository's private vulnerability reporting 
 - Keep Codespaces port 3000 Private. The development API on 8000 must not be forwarded. Do not make the development server a public production service.
 
 See docs/PUBLIC_ACCESS.md, docs/DATA_AND_MODEL_PROVENANCE.md and docs/DEPLOYMENT.md for the implemented boundaries and remaining controls.
+
+## Bilingual authentication input
+
+Operator TOTP accepts Bengali and ASCII decimal digits. The server canonicalizes digits before verification and replay hashing; switching scripts does not permit replay. Malformed non-ASCII internal-token or CSRF headers return 403 without a string-comparison server error. Passwords and opaque session/CSRF secrets are never language-normalized. These checks supplement the existing recent-MFA, role, origin, CSRF and owner boundaries; they do not certify the unfinished full production scope.

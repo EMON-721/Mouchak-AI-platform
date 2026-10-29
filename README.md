@@ -117,6 +117,8 @@
 | `guest` | Current anonymous owner scope |
 | `user`, `guardian`, `organization_staff` | Preserved/reserved role names; নতুন public account/organization tenancy চালু নেই |
 
+Operator MFA-তে বাংলা/ASCII অঙ্ক গ্রহণ করা হয়; অঙ্কের লিপি বদলে একই code পুনরায় ব্যবহার করা যায় না। Malformed Unicode transport/CSRF token 403 পায়।
+
 Privileged operation-এ recent MFA লাগে। Full website layout/logo/form/locales CMS, advanced moderation, guardian/organization tenancy এবং পূর্ণ model lifecycle এখনও অসম্পূর্ণ।
 
 ClinicCompass/OshudhKhoj-এর `/admin/directories` console ও [directory pipeline](docs/DIRECTORY_PIPELINE.md) দিয়ে অনুমোদিত public nonpersonal records যাচাই/প্রকাশ/প্রত্যাহার করা যায়। বাস্তব dataset ছাড়া কোনো demo record চালু হয় না।
@@ -223,7 +225,7 @@ pnpm build
 
 Model-dependent tests-এর আগে baseline models এবং pose test fixture acquisition দরকার। CI এই steps চালায় এবং actual isolated Docker PostgreSQL/S3/TLS/scanner/inference integration চালায়। বর্তমান checkpoint-এর ফল [implementation report](IMPLEMENTATION_REPORT.md)-এ আছে; পুরোনো সংখ্যা নতুন run-এর প্রমাণ নয়। Full original ৪৩০ acceptance scenario এখনও সব passed নয়।
 
-সর্বশেষ tested runtime: `df3fdea`; [CI 40872855570](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570)-এর platform ও private-stack দুটো job সফল। **৩৮১টি Python test ও ১৭টি subtest**, type/lint/build, SQL/RLS, বাস্তব disposable TLS/database/storage/model/directory integration এবং standalone web Docker check পাস করেছে। সম্পূর্ণ ৫০-tool advanced acceptance পাস দাবি করা হয়নি। বর্তমান managed browser attempt connection refused হওয়ায় নতুন browser verification দাবি করা হয়নি; [পূর্ণ ফলাফল](docs/audit/repository-release-20261029.json) দেখুন।
+সর্বশেষ tested runtime: `96754ff`; [CI 40889808210](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40889808210)-এর platform ও private-stack দুটো job সফল। **৩৮৫টি Python test ও ১৭টি subtest**, type/lint/build, SQL/RLS, বাস্তব disposable TLS/database/storage/model/directory integration এবং standalone web Docker check পাস করেছে। সম্পূর্ণ ৫০-tool advanced acceptance পাস দাবি করা হয়নি। বর্তমান managed browser attempt connection refused হওয়ায় নতুন browser verification দাবি করা হয়নি; [পূর্ণ ফলাফল](docs/audit/repository-release-20261029.json) দেখুন।
 
 ## Dataset, privacy ও public repository
 
