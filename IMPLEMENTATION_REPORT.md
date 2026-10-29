@@ -1,12 +1,33 @@
-# Active continuation: reviewed visual Site Builder
+# Reviewed Site Builder and transaction acknowledgement — verified source
 
-Resumed from GitHub main `6e845c8c9756c0318dc9253361f14e7a83875951`. The transient checkout containing earlier unpushed edits was no longer available; the verified committed source was recovered without changing the original 778-file requirements kit. The pending bounded Site Builder was reconstructed and implemented. Hosting remains paused; visitor login/signup/profile remain absent.
+Resumed from GitHub main `6e845c8c9756c0318dc9253361f14e7a83875951`. The transient checkout containing earlier unpushed edits was unavailable; the verified committed source was recovered and the pending bounded Site Builder reconstructed. The original 778-file requirements kit and all 50 identities remain unchanged. Hosting is paused; visitor login/signup/profile remain absent.
 
-Implemented: bilingual visual editor for brand/owned logo/favicon, safe contrast-checked themes/type, route-limited navigation/footer, ordered homepage/featured tools/FAQ, public pages, 50 tool presentation/field labels/help/placeholders, bounded locale/category labels and SEO. Typed server validation, immutable private drafts, independent editor review tied to body hash, revision conflicts, guarded publish/rollback, scheduler revalidation and private viewport preview routes are connected. Generic CMS publication cannot bypass review. No model readiness/security switch is editable. See `docs/SITE_BUILDER.md`.
+The tested runtime source is **`6c9a84df38e55a378f86450b09cc29f751912786`**, tree **`a68061660947df79d43a5caeed7358b1d4f560b4`**. [CI 40922696790](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790) passed both platform and private-stack jobs. Subsequent changes to this report/README/checklist are documentation only.
 
-Local evidence so far: 28 new backend cases passed; TypeScript/lint and canonical production build passed; existing SQL/RLS and transport checks passed. The full regression/real Docker CI outcome will be recorded after completion. Browser rendered Bengali/English public UI, all 50 tools and search filtering; a visitor-session origin mismatch was repaired locally, then a browser URL-policy denial prevented re-verification. Protected editor/MFA, full browser inference, three viewport widths and PDF acceptance are not claimed verified.
+Implemented:
 
-**Remaining non-hosting scope is still incomplete:** specialized original 50-tool model/workflow scope, approved Bangladesh data/holdouts/expert validation, remaining moderation/tenancy/model lifecycle administration and outstanding browser acceptance. No advanced module is relabelled fully complete. Historical checkpoints follow; their results apply to their recorded commits.
+- Bilingual visual editor for brand/owned logo/favicon, contrast-checked themes/type, route-limited navigation/footer, ordered homepage/featured tools/FAQ, public information pages, all 50 tool presentation/field labels/help/placeholders, bounded UI locale/category labels and SEO. Table-column descriptions/placeholders reach actual accessible inputs.
+- Typed server validation, immutable private drafts, independent current-editor MFA review tied to body hash, preserved editor base revision, guarded publish/rollback and schedule-time/due-time revalidation. Generic CMS cannot bypass this review. No model readiness, consent, security or data-access switch is editable.
+- Private actual homepage viewport-preview routes, safe owned static SVG ingestion and rights inspection, original presentation restoration when removing published overrides, narrow same-origin preview framing, and private-page noindex. See [Site Builder workflow and limits](docs/SITE_BUILDER.md).
+- An existing API acknowledgement race discovered by real integration is fixed across all 110 database-session bindings: transaction commit now finishes before a successful response/cookie. Two deterministic regressions first reproduced stale state at ASGI response start and false success after injected commit failure; both passed after the fix. The strict immediate rights-revocation test remains unchanged, without sleep/retry camouflage.
+
+Verified results:
+
+| Verification | Observed result |
+|---|---|
+| Full source CI | **415 Python tests + 17 subtests passed in 110.31 seconds**; no failures/skips |
+| Frontend | TypeScript, lint, actual presentation helper regressions and canonical optimized Next build passed |
+| Database | Additive migrations, 26-table SQL/RLS, owner/worker isolation and restricted scheduler grants passed |
+| Real disposable Docker/TLS | PostgreSQL/S3 TLS, four isolated roles, encrypted storage/scanning, durable worker, Tesseract OCR, distinct actual ONNX retrieval answers, directory review/publication/queued retrieval/immediate revocation, Site Builder independent MFA review/assets/schedule/rollback, operator private-record denial and expiry cleanup passed |
+| Actual standalone web image | Non-root HTTP service, security headers, preview-only same-origin framing, private noindex and absent-backend 503 passed |
+| Preservation/public source | All 50 identities and 778 original file hashes verified; selected-pattern source/history scan: 0 findings across 1,255 historical blobs (not a universal secret/rights certification) |
+| Local evidence | Earlier full 413 + 17 suite passed; latest transaction/security/session/Site Builder/operations set: 127 passed; new fixture-corrected pure presentation test passed |
+
+Browser continuation is **partial**: Bengali/English public UI, all 50 catalogue entries and search filtering were observed. A visitor-session origin mismatch was repaired in checkout-local preview configuration, then browser URL security policy denied re-navigation. No bypass, alternate browser transport, injected operator session or invented inference output was used. Protected editor/browser MFA, a complete browser inference run, all three viewport widths and browser PDF acceptance remain unverified. Earlier browser evidence is historical, not proof for these new changes.
+
+**Remaining non-hosting scope is still incomplete:** the original specialized 50-tool pipelines/workflows, approved Bangladesh datasets/holdouts/expert evaluation, broader arbitrary-layout/moderation/organization/guardian/model-lifecycle administration and outstanding browser/accessibility acceptance. Model gates remain honest; no advanced module is marked fully complete and no real provider/pharmacy records were fabricated. Provider hosting/recovery/load validation remains intentionally unperformed. Module-by-module gaps remain in `MODULE_PROGRESS.csv` and `docs/audit/module-progress.json`.
+
+Detailed evidence, resolved CI failures and limits: [site-builder-release-20261029.json](docs/audit/site-builder-release-20261029.json). Historical checkpoints follow and apply only to their recorded commits.
 
 ---
 

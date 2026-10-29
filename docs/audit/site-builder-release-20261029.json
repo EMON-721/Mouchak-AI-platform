@@ -1,0 +1,108 @@
+{
+  "source_commit": "6c9a84df38e55a378f86450b09cc29f751912786",
+  "source_tree": "a68061660947df79d43a5caeed7358b1d4f560b4",
+  "status": "verified_source_checkpoint",
+  "hosting_provisioned": false,
+  "public_login_signup_profile_added": false,
+  "full_50_advanced_scope_complete": false,
+  "original_requirements_changed": false,
+  "implemented": [
+    "typed bilingual visual presentation CMS",
+    "owned static SVG branding with private draft access",
+    "immutable drafts and independent current-role/MFA review",
+    "revision and base hash conflict protection",
+    "review-bound publication/scheduling/rollback",
+    "private actual viewport homepage preview",
+    "search metadata with private-page noindex"
+  ],
+  "local_verification": {
+    "full_regression": "413 tests and 17 subtests passed in 320.75 seconds on first source; latest additive base-revision assertion separately passed",
+    "new_site_builder_cases": 28,
+    "focused_regression": "66 passed in 62.83 seconds",
+    "typescript": "passed",
+    "lint": "passed",
+    "production_build": "passed on first source; final canonical build runs in CI",
+    "sql_rls_checks": "passed, 26 tables and additive migration ledger",
+    "pure_presentation_helpers": "passed: restoration, Bengali labels, unchanged model gates, safe CSS",
+    "original_kit": "50 identities and all 778 source hashes verified",
+    "newest_source_changes": "Stale editor base assertion, real table-column metadata and unchanged engine-schema tests passed; actual presentation helpers also passed for column help/placeholder and unchanged numeric field type.",
+    "transaction_scope_regression": "Both new tests failed before the fix (stale read at response.start; false 200 after commit failure), then 127 transaction/security/session/site-builder/operations cases passed in 66.62 seconds."
+  },
+  "earlier_source_ci": {
+    "commit": "6bc06b27c084a22b02718f8c5c8a0901c7c54719",
+    "run": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40919142253",
+    "platform": "success",
+    "private_stack": "success",
+    "tests": "413 + 17 subtests in 71.05 seconds",
+    "real_tls_site_builder_review_assets_scheduler_rollback": true
+  },
+  "browser": {
+    "public_bengali_english_ui": "observed",
+    "all_50_catalogue_entries_and_filtering": "observed",
+    "visitor_session_inference": "not completed; initial origin mismatch repaired, retry blocked by browser URL security policy",
+    "admin_mfa_visual_editor": "unverified; no credential entry/session injection workaround used",
+    "three_viewport_widths": "unverified",
+    "pdf_acceptance": "unverified"
+  },
+  "remaining": [
+    "original specialized 50-tool pipelines and workflows",
+    "approved Bangladesh datasets, holdouts and expert evaluation",
+    "remaining original moderation, tenancy and model lifecycle administration",
+    "protected browser/editor/MFA, inference, PDF and responsive acceptance"
+  ],
+  "notes": [
+    "Selected-pattern scanning does not certify all secrets or redistribution rights.",
+    "The interrupted initial local regression was replaced by the completed full regression, rather than relabelled passed.",
+    "The transient unpushed previous checkout was missing; committed source was restored and the pending CMS reconstructed."
+  ],
+  "resolved_ci_failure": {
+    "run": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40920919726",
+    "failed_step": "Actual frontend presentation helper regression",
+    "cause": "The newly extended table-column test fixture omitted its baseline table. The actual production input/schema changes were not the cause.",
+    "fix_commit": "209b1c912f3d79bed9eba8ec92bea178b2f26142",
+    "local_result": "Actual helper test, including table-column descriptions/placeholders and unchanged numeric type, now passes."
+  },
+  "intermediate_verified_source": {
+    "commit": "1a6c5ae82c1385a1e7b2fd79012e35dffbe6872a",
+    "ci": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40920240066",
+    "platform": "success",
+    "private_stack": "success",
+    "real_web_preview_framing_and_private_noindex": true
+  },
+  "transaction_fix": {
+    "scope": "All 110 API db_session dependency bindings use function scope; explicit worker transactions are unchanged. No response stream needs an open session.",
+    "regression_tests": "tests/test_transaction_response.py",
+    "triggering_ci": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40921287896",
+    "failure": "Strict immediate rights-revocation metadata assertion saw pre-commit state. The test was preserved without retries/sleeps.",
+    "fix_commit": "6c9a84df38e55a378f86450b09cc29f751912786"
+  },
+  "ci_run": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790",
+  "ci_result": {
+    "platform": "success",
+    "private_stack": "success",
+    "python_tests": 415,
+    "subtests": 17,
+    "duration_seconds": 110.31,
+    "failures": 0,
+    "skips": 0,
+    "source_history_findings": 0,
+    "historical_blobs_checked": 1255,
+    "platform_job_id": 123619894502,
+    "private_stack_job_id": 123619894026,
+    "actual_nonroot_web_framing_noindex_and_absent_backend_verified": true
+  },
+  "real_tls_verified": {
+    "postgres_tls": true,
+    "four_isolated_roles": true,
+    "s3_tls_and_encrypted_private_bytes": true,
+    "scanner_rejection": true,
+    "durable_inference_worker": true,
+    "actual_tesseract": true,
+    "two_distinct_onnx_retrieval_answers": true,
+    "directory_rights_review_publish_queued_retrieval_immediate_revoke": true,
+    "site_builder_independent_mfa_review_assets_scheduler_and_rollback": true,
+    "operator_private_record_denial": true,
+    "retention_db_s3_cleanup": true,
+    "deployment_smoke_cli_fixture": true
+  }
+}

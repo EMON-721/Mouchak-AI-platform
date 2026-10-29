@@ -1,6 +1,8 @@
 # Mouchak AI · মৌচাক এআই
 
 সর্বশেষ code continuation: `/admin/site-builder`-এ bilingual brand/logo/favicon, theme, menu/footer, homepage/FAQ, public pages, ৫০ tool-এর নাম/field help/placeholder, নির্বাচিত locale/category ও SEO সম্পাদনা যুক্ত হয়েছে। ব্যক্তিগত immutable draft → আলাদা MFA সম্পাদকের review → publish/schedule/rollback। [ব্যবহার, নিরাপত্তা ও সীমাবদ্ধতা](docs/SITE_BUILDER.md)। এটি পূর্ণ ৫০ advanced pipeline শেষ হওয়ার দাবি নয়; hosting বন্ধ আছে।
+API transaction-এর commit এখন successful response-এর আগে শেষ হয়; commit ব্যর্থ হলে success/session cookie পাঠানো হয় না। এতে তাৎক্ষণিক save ও rights-revocation check পুরোনো অবস্থা পড়ার race বন্ধ হয়।
+
 
 
 **বাংলাদেশের সাধারণ মানুষের জন্য একটি কেন্দ্রীয়, বাংলা–ইংরেজি AI সহায়ক প্ল্যাটফর্ম।** কৃষি, শিক্ষা, স্বাস্থ্যসংক্রান্ত নথি, বাসা, ব্যবসা ও নাগরিক সেবার জন্য একই website-এ ৫০টি tool workspace। Next.js frontend, private Python/FastAPI API, database, worker, বাস্তব local inference adapter, protected operator console এবং automated tests একই monorepo-তে রয়েছে।
@@ -32,7 +34,7 @@
 | Results | নির্দিষ্ট domain-এর হিসাব/notes, JSON/PDF generation; browser PDF verification-এর সীমা report-এ আছে |
 | Operator console | `/admin/login`, password ও TOTP MFA, role-based selected controls; কোনো default admin password নেই |
 | Background services | Durable inference queue, lease/retry/cancellation, scheduled publishing, expired-visitor cleanup |
-| ভাষা ও UI | বাংলা/English switch, responsive components, নিজস্ব ৫০ tool logo; পূর্ণ accessibility certification এখনও হয়নি |
+| ভাষা ও UI | বাংলা/English switch, responsive components, নিজস্ব ৫০ tool logo এবং reviewed Site Builder; পূর্ণ accessibility/browser certification এখনও হয়নি |
 
 ## ৫০টি tool ও বর্তমান সেবা
 
@@ -122,7 +124,7 @@
 
 Operator MFA-তে বাংলা/ASCII অঙ্ক গ্রহণ করা হয়; অঙ্কের লিপি বদলে একই code পুনরায় ব্যবহার করা যায় না। Malformed Unicode transport/CSRF token 403 পায়।
 
-Privileged operation-এ recent MFA লাগে। Full website layout/logo/form/locales CMS, advanced moderation, guardian/organization tenancy এবং পূর্ণ model lifecycle এখনও অসম্পূর্ণ।
+Privileged operation-এ recent MFA লাগে। [Typed Site Builder](docs/SITE_BUILDER.md)-এ logo/favicon, theme, section order, pages, field labels/help/placeholders, নির্বাচিত locale/category ও review/publish/schedule/rollback আছে। Arbitrary page/component layout, advanced moderation, guardian/organization tenancy এবং পূর্ণ model lifecycle এখনও অসম্পূর্ণ।
 
 ClinicCompass/OshudhKhoj-এর `/admin/directories` console ও [directory pipeline](docs/DIRECTORY_PIPELINE.md) দিয়ে অনুমোদিত public nonpersonal records যাচাই/প্রকাশ/প্রত্যাহার করা যায়। বাস্তব dataset ছাড়া কোনো demo record চালু হয় না।
 
@@ -215,6 +217,7 @@ Password prompt-এ দিন, তারপর `/admin/login` থেকে sign 
 pnpm typecheck
 pnpm lint
 pnpm test:portable
+node scripts/test-site-presentation.mjs
 python3 scripts/check-public-source.py --history
 python3 scripts/check-registry.py
 python3 scripts/generate-api-reference.py --check
@@ -228,7 +231,9 @@ pnpm build
 
 Model-dependent tests-এর আগে baseline models এবং pose test fixture acquisition দরকার। CI এই steps চালায় এবং actual isolated Docker PostgreSQL/S3/TLS/scanner/inference integration চালায়। বর্তমান checkpoint-এর ফল [implementation report](IMPLEMENTATION_REPORT.md)-এ আছে; পুরোনো সংখ্যা নতুন run-এর প্রমাণ নয়। Full original ৪৩০ acceptance scenario এখনও সব passed নয়।
 
-সর্বশেষ tested runtime: `96754ff`; [CI 40889808210](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40889808210)-এর platform ও private-stack দুটো job সফল। **৩৮৫টি Python test ও ১৭টি subtest**, type/lint/build, SQL/RLS, বাস্তব disposable TLS/database/storage/model/directory integration এবং standalone web Docker check পাস করেছে। সম্পূর্ণ ৫০-tool advanced acceptance পাস দাবি করা হয়নি। বর্তমান managed browser attempt connection refused হওয়ায় নতুন browser verification দাবি করা হয়নি; [পূর্ণ ফলাফল](docs/audit/repository-release-20261029.json) দেখুন।
+সর্বশেষ tested runtime: `6c9a84df38e55a378f86450b09cc29f751912786`; [CI 40922696790](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790)-এর platform ও private-stack দুটো job সফল। **৪১৫টি Python test ও ১৭টি subtest** (110.31 সেকেন্ড), actual presentation-helper tests, type/lint/build, SQL/RLS, ৭৭৮ original file-এর checksum, selected-pattern source/history scan (০ finding; ১,২৫৫ historical blob), বাস্তব TLS/database/storage/model/directory ও reviewed Site Builder publication/scheduler/rollback পাস করেছে। Actual standalone web image-এ narrow same-origin preview framing, private noindex ও absent-backend 503-ও পাস করেছে।
+
+সম্পূর্ণ ৫০-tool advanced acceptance পাস দাবি করা হয়নি। বর্তমান browser-এ বাংলা/English UI, ৫০ tool catalogue ও filtering দেখা হয়েছে। Visitor-session origin mismatch মেরামতের পর browser URL policy পুনরায় navigation আটকে দিয়েছে; পূর্ণ inference/admin/MFA, তিন viewport ও PDF acceptance এখনও unverified। [সর্বশেষ implementation report](IMPLEMENTATION_REPORT.md) ও [নির্দিষ্ট evidence/limitations](docs/audit/site-builder-release-20261029.json) দেখুন।
 
 ## Dataset, privacy ও public repository
 

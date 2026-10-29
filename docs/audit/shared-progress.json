@@ -1,13 +1,26 @@
 [
   {
     "requirement": "reviewed_visual_site_builder",
-    "status": "implemented_code_validation_in_progress",
+    "status": "implemented_source_real_model_database_tls_ci_verified_browser_partial",
     "implemented": "Typed bilingual visual presentation editor, owned SVG assets, immutable private drafts, independent current-editor approval, revision/base conflicts, guarded publication/rollback, schedule revalidation and protected viewport preview.",
     "remaining": "Protected browser editor/MFA and three-width visual acceptance unverified. Broader original model lifecycle/moderation/tenancy requirements remain incomplete.",
     "evidence": [
       "tests/test_site_builder.py",
       "scripts/test-production-stack.py",
-      "docs/SITE_BUILDER.md"
+      "docs/SITE_BUILDER.md",
+      "docs/audit/site-builder-release-20261029.json",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790"
+    ]
+  },
+  {
+    "requirement": "transaction_commit_before_api_acknowledgement",
+    "status": "implemented_red_green_regressions_and_real_tls_ci_verified",
+    "implemented": "All 110 API database dependencies are function-scoped. Fresh readers see committed writes before response.start; commit failures roll back without success or session cookies. Strict immediate rights-revocation assertion retained.",
+    "remaining": "No hosted provider load/failure/recovery certification.",
+    "evidence": [
+      "tests/test_transaction_response.py",
+      "services/model_worker/auth.py",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790"
     ]
   },
   {
@@ -52,16 +65,17 @@
   },
   {
     "requirement": "scheduled_cms",
-    "status": "implemented_local_worker_verified",
+    "status": "implemented_local_and_real_tls_restricted_scheduler_verified",
     "implemented": "Durable schedules, conflict/cancellation/author checks and real worker subprocess",
-    "remaining": "Production worker/database provisioning not verified",
+    "remaining": "No hosted production scheduler provisioned; fixture scheduler/database-role integration passed.",
     "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
       "docs/audit/continuation-regression.xml",
       "docs/audit/collaboration-postgres.json",
-      "docs/audit/preview-status.json"
+      "docs/audit/preview-status.json",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40922696790"
     ]
   },
   {
