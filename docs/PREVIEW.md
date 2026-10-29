@@ -46,14 +46,14 @@ Do not copy a production .env into a development checkout. The API automatically
 
 ## Native Windows PowerShell
 
-Use the project folder, not C:\\WINDOWS\\system32. Python 3.11 used for the previous connection probe is not the tested full application target; install/use Python 3.12 for this full stack, or use WSL/Docker.
+Use the project folder, not C:\WINDOWS\system32. Python 3.11 used for the previous connection probe is not the tested full application target; install/use Python 3.12 for this full stack, or use WSL/Docker.
 
 ```powershell
 Set-Location "YOUR-EXISTING-PROJECT-FOLDER"
 pnpm install --frozen-lockfile
 py -3.12 -m venv .venv
-.\\.venv\\Scripts\\python.exe -m pip install -r requirements-python.txt
-.\\.venv\\Scripts\\python.exe scripts/download-models.py
+.\.venv\Scripts\python.exe -m pip install -r requirements-python.txt
+.\.venv\Scripts\python.exe scripts/download-models.py
 pnpm dev
 ```
 

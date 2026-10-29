@@ -119,7 +119,9 @@ def check_directory_integration(operator, client, pg_dsn, secret_values, visitor
         assert output["source_kind"] == "rights_reviewed_directory"
         # Revoke real source rights and require immediate public unavailability.
         assert reviewer.post(f"/api/admin/sources/{sid}/reviews", json={**rights, "decision": "revoked"}).status_code == 201
-        assert visitor.get("/api/tools/cliniccompass-bd").json()["release_status"] == "blocked"
+        metadata = visitor.get("/api/modules/cliniccompass-bd")
+        assert metadata.status_code == 200
+        assert metadata.json()["release_status"] == "blocked"
         assert reviewer.post("/api/admin/directories/cliniccompass-bd/withdraw", json={"expected_revision": revision}).status_code == 200
 
 

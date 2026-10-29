@@ -80,6 +80,10 @@ def test_real_directory_search_isolation_and_withdrawal(directory_team, user):
     assert run(user).status_code == 422
     assert directory_team[0].request("POST", f"/api/admin/directories/{jid}/publish", json={}).status_code == 403
     publish(directory_team, jid)
+    metadata = user.request("GET", "/api/modules/cliniccompass-bd")
+    assert metadata.status_code == 200
+    assert metadata.json()["release_status"] == "limited_support"
+    assert any(f["key"] == "district" for f in metadata.json()["fields"])
     response = run(user)
     assert response.status_code == 201, response.text
     output = response.json()
@@ -117,6 +121,7 @@ def test_directory_revocation_and_stale_publication_fail_closed(directory_team, 
     first, _, sid = directory_team
     revoked = first.request("POST", f"/api/admin/sources/{sid}/reviews", json={**rights(), "decision": "revoked"})
     assert revoked.status_code == 201
+    assert user.request("GET", "/api/modules/cliniccompass-bd").json()["release_status"] == "blocked"
     assert run(user).status_code == 422
     assert first.request("POST", "/api/admin/directories/dry-run", json={"source_id": sid, "schema_name": "facility_v1", "records": [record()]}).status_code == 422
 
