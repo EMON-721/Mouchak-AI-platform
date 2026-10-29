@@ -74,6 +74,55 @@ def totp(secret):
     return f"{(struct.unpack('>I', mac[offset:offset+4])[0] & 0x7fffffff) % 1000000:06d}"
 
 
+
+def check_directory_integration(operator, client, pg_dsn, secret_values, visitor):
+    """Actual HTTPS + role-limited PostgreSQL + independent queue worker."""
+    from datetime import datetime, timedelta, timezone
+    second_id, password = str(uuid.uuid4()), secrets.token_urlsafe(24)
+    secret_values.append(password)
+    sid = "DEMO-DIR-" + uuid.uuid4().hex
+    with psycopg.connect(pg_dsn) as owner:
+        owner.execute("INSERT INTO users(id,email,password,name,role,verified,banned,language,mfa_enabled,created_at) VALUES(%s,%s,%s,'DEMO independent reviewer','dataset_reviewer',true,false,'bn',false,%s)",
+                      (second_id, "reviewer@integration.invalid", PasswordHasher(time_cost=3,memory_cost=65536,parallelism=2).hash(password), datetime.now(timezone.utc).isoformat()))
+        owner.execute("INSERT INTO workspaces(id,user_id,name) VALUES(%s,%s,'DEMO reviewer work')", (str(uuid.uuid4()), second_id))
+        owner.execute("INSERT INTO dataset_sources(id,module,metadata_json,state) VALUES(%s,'cliniccompass-bd','{}','candidate')", (sid,))
+    with client() as reviewer:
+        login = reviewer.post("/api/auth/login", json={"email": "reviewer@integration.invalid", "password": password})
+        assert login.status_code == 200
+        reviewer.headers["x-csrf-token"] = login.json()["csrf"]
+        enrollment = reviewer.post("/api/auth/mfa/enroll").json()
+        assert reviewer.post("/api/auth/mfa/verify", json={"value": {"code": totp(enrollment["secret"])}}).status_code == 200
+        rights = {"decision": "approved_train_and_reuse", "asset_url": "https://example.test/DEMO-fixture-directory.json",
+                  "terms_url": "https://example.test/DEMO-terms", "license_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+                  "scope": "Owned synthetic nonpersonal disposable fixture only", "coverage": "Bangladesh DEMO only", "source_date": "2026-01-01",
+                  "evidence": "Owned DEMO facility record only; never real provider or stock information", "sensitivity": "public_nonpersonal"}
+        assert operator.post(f"/api/admin/sources/{sid}/reviews", json=rights).json()["state"] == "rights_review"
+        assert reviewer.post(f"/api/admin/sources/{sid}/reviews", json=rights).json()["state"] == "approved_train_and_reuse"
+        row = {"id": "DEMO-TLS-FACILITY", "name_bn": "DEMO পরীক্ষার কেন্দ্র", "name_en": "DEMO test facility",
+               "district_bn": "ঢাকা", "district_en": "Dhaka", "address_bn": "DEMO বাস্তব ঠিকানা নয়", "address_en": "DEMO no real address",
+               "verified_at": (datetime.now(timezone.utc) - timedelta(minutes=1)).isoformat(), "services_bn": ["চোখ পরীক্ষা"], "services_en": ["eye examination"]}
+        staged = operator.post("/api/admin/directories/dry-run", json={"source_id": sid, "schema_name": "facility_v1", "records": [row]})
+        assert staged.status_code == 201, "TLS directory dry-run failed"
+        revision = staged.json()["id"]
+        assert operator.post(f"/api/admin/directories/{revision}/publish", json={}).status_code == 403
+        assert reviewer.post(f"/api/admin/directories/{revision}/publish", json={}).status_code == 200
+        queued = visitor.post("/api/tools/cliniccompass-bd/jobs", json={"inputs": {"text": "চোখ পরীক্ষা"}, "consent": True, "idempotency_key": uuid.uuid4().hex})
+        assert queued.status_code == 202
+        def completed_directory():
+            status = visitor.get("/api/jobs/" + queued.json()["id"]).json()
+            assert status["state"] != "failed", "Directory worker or database grant failed"
+            return status if status["state"] == "succeeded" else None
+        done = wait_for(completed_directory)
+        output = visitor.get("/api/runs/" + done["run_id"]).json()["output"]
+        assert output["facts"]["records"][0]["id"] == "DEMO-TLS-FACILITY"
+        assert output["references"][0]["independent_reviewers"] == 2
+        assert output["source_kind"] == "rights_reviewed_directory"
+        # Revoke real source rights and require immediate public unavailability.
+        assert reviewer.post(f"/api/admin/sources/{sid}/reviews", json={**rights, "decision": "revoked"}).status_code == 201
+        assert visitor.get("/api/tools/cliniccompass-bd").json()["release_status"] == "blocked"
+        assert reviewer.post("/api/admin/directories/cliniccompass-bd/withdraw", json={"expected_revision": revision}).status_code == 200
+
+
 def main():
     project = "mouchak-integration-" + uuid.uuid4().hex[:10]
     role_passwords = {role: secrets.token_urlsafe(32) for role in ROLES}
@@ -234,6 +283,8 @@ def main():
                     assert operator.post("/api/auth/mfa/verify", json={"value": {"code": totp(enrollment["secret"])}}).status_code == 200
                     assert operator.get("/api/admin/overview").status_code == 200
                     assert operator.get("/api/runs/" + completed_job["run_id"]).status_code == 404
+                    check_directory_integration(operator, client, pg_dsn, secret_values, probe)
+                    report["rights_reviewed_directory_real_tls_queue_and_revocation"] = True
                 report["real_operator_login_mfa_and_private_record_denial"] = True
                 # A real retention worker must erase expired guests + actual S3
                 # bytes + derived artifacts, without deleting the operator.

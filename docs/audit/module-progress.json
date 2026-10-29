@@ -13,7 +13,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 2,
@@ -29,7 +31,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 3,
@@ -45,7 +49,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 4,
@@ -61,7 +67,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 5,
@@ -77,7 +85,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 6,
@@ -93,7 +103,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "blocked: source repository inaccessible"
+    "legacy_migration": "blocked: source repository inaccessible",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 7,
@@ -111,7 +123,9 @@
     "blocker": "Bangladesh holdout/calibration, official tariff data, full original BillDetect workflows and release review remain incomplete",
     "legacy_migration": "not_applicable",
     "experimental_pipeline_implemented": true,
-    "experimental_test_evidence": "tests/test_bills.py"
+    "experimental_test_evidence": "tests/test_bills.py",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 8,
@@ -127,7 +141,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 9,
@@ -146,7 +162,9 @@
     "legacy_migration": "not_applicable",
     "experimental_pipeline_implemented": true,
     "experimental_pipeline_scope": "Actual pinned CPU person/pose inference, private short MP4, timestamps, 33 landmarks, 2D angles, optional reference comparison and skeleton replay. Default/production disabled.",
-    "experimental_test_evidence": "tests/test_pose_pipeline.py; docs/audit/resolution-regression.xml"
+    "experimental_test_evidence": "tests/test_pose_pipeline.py; docs/audit/resolution-regression.xml",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 10,
@@ -162,7 +180,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration"
+    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 11,
@@ -178,7 +198,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration"
+    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 12,
@@ -194,7 +216,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 13,
@@ -210,7 +234,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 14,
@@ -226,7 +252,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 15,
@@ -241,8 +269,10 @@
     "model_loaded": false,
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
-    "blocker": "Approved source records missing",
-    "legacy_migration": "not_applicable"
+    "blocker": "Schema-specific reviewed import/publication/retrieval implemented; no rights-approved current Bangladesh provider/pharmacy dataset imported; full original workflows and domain evaluation remain incomplete",
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": true,
+    "conditional_directory_test_evidence": "tests/test_directory_pipeline.py; scripts/test-production-stack.py; docs/DIRECTORY_PIPELINE.md"
   },
   {
     "id": 16,
@@ -258,7 +288,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 17,
@@ -274,7 +306,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 18,
@@ -290,7 +324,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 19,
@@ -306,7 +342,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 20,
@@ -322,7 +360,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 21,
@@ -338,7 +378,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 22,
@@ -354,7 +396,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 23,
@@ -370,7 +414,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 24,
@@ -386,7 +432,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 25,
@@ -402,7 +450,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 26,
@@ -418,7 +468,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 27,
@@ -434,7 +486,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 28,
@@ -450,7 +504,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 29,
@@ -466,7 +522,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 30,
@@ -482,7 +540,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 31,
@@ -498,7 +558,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 32,
@@ -514,7 +576,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration"
+    "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 33,
@@ -530,7 +594,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 34,
@@ -546,7 +612,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 35,
@@ -562,7 +630,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 36,
@@ -578,7 +648,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 37,
@@ -594,7 +666,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 38,
@@ -610,7 +684,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 39,
@@ -626,7 +702,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 40,
@@ -642,7 +720,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 41,
@@ -657,8 +737,10 @@
     "model_loaded": false,
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
-    "blocker": "Approved source records missing",
-    "legacy_migration": "not_applicable"
+    "blocker": "Schema-specific reviewed import/publication/retrieval implemented; no rights-approved current Bangladesh provider/pharmacy dataset imported; full original workflows and domain evaluation remain incomplete",
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": true,
+    "conditional_directory_test_evidence": "tests/test_directory_pipeline.py; scripts/test-production-stack.py; docs/DIRECTORY_PIPELINE.md"
   },
   {
     "id": 42,
@@ -674,7 +756,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 43,
@@ -690,7 +774,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 44,
@@ -706,7 +792,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 45,
@@ -722,7 +810,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 46,
@@ -738,7 +828,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 47,
@@ -754,7 +846,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 48,
@@ -770,7 +864,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 49,
@@ -786,7 +882,9 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   },
   {
     "id": 50,
@@ -802,6 +900,8 @@
     "eval_passed": false,
     "license_reviewed": "candidate sources pending; original starter only",
     "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
-    "legacy_migration": "not_applicable"
+    "legacy_migration": "not_applicable",
+    "conditional_directory_pipeline_implemented": false,
+    "conditional_directory_test_evidence": ""
   }
 ]

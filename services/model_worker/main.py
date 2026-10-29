@@ -22,7 +22,7 @@ from .auth import *
 from .domain import process, F, InputError
 from .inference import model_health, ocr, compare_images, audio_stats, retrieve
 from . import storage, rate_limit, uploads, inference_queue
-from . import retail, collaboration, operations, anonymous, bills
+from . import retail, collaboration, operations, anonymous, bills, directories
 from . import pose_runtime, pose_video
 from .legacy_workflows import READING, PRODUCTS, reading_reflection, basket_compare
 
@@ -50,6 +50,7 @@ app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
 app.include_router(bills.router)
+app.include_router(directories.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
 
@@ -180,6 +181,12 @@ def get_mod(slug, db):
         m.update(json.loads(conf.value))
     m["execution_mode"] = "queued" if inference_queue.enabled() else "synchronous"
     m["fields"] = F[m["engine"]]
+    if slug in directories.MODULES:
+        m["fields"] = directories.fields(m["engine"])
+        if directories.availability(db, slug):
+            m["release_status"] = "limited_support"
+            m["description_bn"] = "হালনাগাদ অনুমোদিত তালিকায় সেবা বা ওষুধের নাম খুঁজুন; সরাসরি নিশ্চিত করুন।"
+            m["description_en"] = "Search current rights-reviewed service or medicine records; confirm directly with the provider."
     if m["engine"] == "video" and pose_runtime.availability()["experimental_enabled"]:
         m["release_status"] = "experimental"
         m["fields"] = [{**f, "optional": True} for f in m["fields"]]
@@ -658,7 +665,9 @@ def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session))
             )
         context["pose"] = pose_video.analyze([asset_bytes(a) for a in assets])
     start = time.perf_counter()
-    if m["engine"] == "reading" and str(p.inputs.get("passage_id", "")).startswith(
+    if slug in directories.MODULES:
+        output = directories.search(db, slug, p.inputs)
+    elif m["engine"] == "reading" and str(p.inputs.get("passage_id", "")).startswith(
         "legacy:"
     ):
         output = reading_reflection(p.inputs)
@@ -671,12 +680,12 @@ def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session))
             "module": slug,
             "language": p.language,
             "created_at": now(),
-            "source_kind": "user_confirmed_input",
             "source_as_of": None,
             "full_module_complete": False,
             "advanced_pipeline_status": "not_production_validated",
         }
     )
+    output.setdefault("source_kind", "user_confirmed_input")
     output.setdefault("latency_ms", round((time.perf_counter() - start) * 1000, 2))
     payload = p.inputs
     if m["engine"] == "scam":
@@ -1309,6 +1318,8 @@ def rollback_import(jid: str, u=Depends(authorize("jobs")), db=Depends(db_sessio
     j = db.get(Job, jid)
     if not j:
         raise HTTPException(404)
+    if j.state.startswith("directory_"):
+        raise HTTPException(409, "Use directory withdrawal or publish a retired reviewed revision")
     j.state = "rolled_back"
     j.payload = seal({"removed": True})
     audit(db, u.id, "dataset_rollback", jid)

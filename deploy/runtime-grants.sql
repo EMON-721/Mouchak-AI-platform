@@ -12,6 +12,7 @@ GRANT SELECT,UPDATE ON inference_jobs TO mouchak_inference;
 GRANT SELECT(id,role,banned,verified) ON users TO mouchak_inference;
 GRANT SELECT(id,user_id,expires,last_seen) ON sessions TO mouchak_inference;
 GRANT SELECT ON workspaces,private_assets,tool_runs,configuration,tool_transfers,admin_audit_events TO mouchak_inference;
+GRANT SELECT ON dataset_sources TO mouchak_inference;
 GRANT INSERT ON tool_runs,user_consents,admin_audit_events TO mouchak_inference;
 GRANT UPDATE(parent_id) ON tool_runs TO mouchak_inference;
 GRANT UPDATE(state,consumed_run_id) ON tool_transfers TO mouchak_inference;

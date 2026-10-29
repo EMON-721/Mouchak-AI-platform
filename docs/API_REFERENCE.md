@@ -28,6 +28,11 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | POST | `/api/transfers` | `collaboration.create_transfer` |
 | GET | `/api/transfers` | `collaboration.transfers` |
 | GET | `/api/transfers/{tid}` | `collaboration.get_transfer` |
+| GET | `/api/admin/directories` | `directories.list_batches` |
+| POST | `/api/admin/directories/dry-run` | `directories.dry_run` |
+| GET | `/api/admin/directories/{jid}` | `directories.review_batch` |
+| POST | `/api/admin/directories/{jid}/publish` | `directories.publish` |
+| POST | `/api/admin/directories/{slug}/withdraw` | `directories.withdraw` |
 | GET | `/api/health` | `main.health` |
 | GET | `/api/modules` | `main.modules` |
 | GET | `/api/modules/{slug}` | `main.module` |

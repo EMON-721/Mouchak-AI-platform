@@ -51,7 +51,7 @@
 | 12 | [HomeHazard AI](packages/module-registry/catalogue.json) · `homehazard-ai` | বাড়ির দৃশ্যমান উদ্বেগ ও বিশেষজ্ঞকে দেখানোর নোট। | সীমিত |
 | 13 | [WasteWise BD](packages/module-registry/catalogue.json) · `wastewise-bd` | নিজে শনাক্ত করা বর্জ্যের disposal guidance। | সীমিত |
 | 14 | [WorkSafe Vision AI](packages/module-registry/catalogue.json) · `worksafe-vision-ai` | কর্মক্ষেত্রের hazard ও corrective-action নথি। | সীমিত |
-| 15 | [ClinicCompass BD](packages/module-registry/catalogue.json) · `cliniccompass-bd` | অনুমোদিত facility directory প্রয়োজন; বর্তমান core বন্ধ। | Core বন্ধ |
+| 15 | [ClinicCompass BD](packages/module-registry/catalogue.json) · `cliniccompass-bd` | Reviewed directory import/publication/search আছে; অনুমোদিত বাস্তব facility data না থাকায় core বন্ধ। | Core বন্ধ |
 | 16 | [LabTrend BD](packages/module-registry/catalogue.json) · `labtrend-bd` | আসল unit ও নিজের reference range-সহ laboratory value tracking। | সীমিত |
 | 17 | [DoseClear BD](packages/module-registry/catalogue.json) · `doseclear-bd` | নিশ্চিত prescription text পড়া; dose অনুমান করে না। | সীমিত |
 | 18 | [VaccinePath BD](packages/module-registry/catalogue.json) · `vaccinepath-bd` | নথিভুক্ত vaccine date সাজিয়ে clinician review। | সীমিত |
@@ -77,7 +77,7 @@
 | 38 | [MatiSense BD](packages/module-registry/catalogue.json) · `matisense-bd` | মাটির মাপ ও দেওয়া laboratory interval সাজানো। | সীমিত |
 | 39 | [BiddutPlan BD](packages/module-registry/catalogue.json) · `biddutplan-bd` | যন্ত্রের energy use ও সম্পাদনাযোগ্য বিদ্যুৎ খরচ। | সীমিত |
 | 40 | [ScamSignal BD](packages/module-registry/catalogue.json) · `scamsignal-bd` | সন্দেহজনক message/URL-এর লক্ষণ; লিঙ্ক খুলে না। | সীমিত |
-| 41 | [OshudhKhoj BD](packages/module-registry/catalogue.json) · `oshudhkhoj-bd` | অনুমোদিত ও হালনাগাদ pharmacy stock প্রয়োজন; core বন্ধ। | Core বন্ধ |
+| 41 | [OshudhKhoj BD](packages/module-registry/catalogue.json) · `oshudhkhoj-bd` | Reviewed pharmacy import/publication/search আছে; অনুমোদিত হালনাগাদ বাস্তব data না থাকায় core বন্ধ। | Core বন্ধ |
 | 42 | [ShebaQueue BD](packages/module-registry/catalogue.json) · `shebaqueue-bd` | সেবা নেওয়ার ধাপ ও document checklist। | সীমিত |
 | 43 | [JatraPulse BD](packages/module-registry/catalogue.json) · `jatrapulse-bd` | নিজের দেওয়া travel graph থেকে path খোঁজা। | সীমিত |
 | 44 | [SkillBridge BD](packages/module-registry/catalogue.json) · `skillbridge-bd` | দেওয়া skill-কে নিজের job/course checklist-এর সঙ্গে মিলানো। | সীমিত |
@@ -98,6 +98,7 @@
 | Private anomaly model | Opt-in confirmed non-DEMO bill history থেকে IsolationForest → ONNX, owner-specific encrypted model | অন্তত ২৫ eligible row; consent withdrawal invalidates derived model; production train/predict বন্ধ |
 | Speech | Optional local quantized Whisper adapter | Bengali holdout অসম্পূর্ণ; production speech বন্ধ |
 | Pose/video | Optional local BlazePose/MediaPipe ৩৩ landmark pipeline, 2D angles ও skeleton replay | Opt-in experimental evaluation; cricket alignment/coach review/BD holdout অসম্পূর্ণ; production বন্ধ |
+| Reviewed directories | ClinicCompass/OshudhKhoj-এর typed import, দুই reviewer, independent publication, rollback/revocation, real ONNX/BM25 search | বাস্তব approved data নেই; facility ৯০ দিন/pharmacy ২৪ ঘণ্টার freshness gate; [pipeline details](docs/DIRECTORY_PIPELINE.md) |
 | Other calculations | Decimal bill/cost/unit/stock/network/checklist engines | যেখানে deterministic হিসাব, সেটিকে trained ML prediction হিসেবে দেখানো হয় না |
 
 কোনো paid AI API key ছাড়াই documented local OCR/retrieval/support অংশ চালানো যায়। Missing model বা unavailable service-এর জন্য API fake result তৈরি করে না।
@@ -108,7 +109,7 @@
 |---|---|
 | `super_admin` | Implemented operator controls; private owner data পড়ার blanket bypass নেই |
 | `content_editor` | CMS draft/review/publish |
-| `dataset_reviewer` | Candidate source, asset rights review ও selected import-job controls |
+| `dataset_reviewer` | Candidate source, dual asset rights review, typed directory preview/publication/withdrawal ও selected import-job controls |
 | `model_operator` | Model availability/inspection; evaluation gate bypass নয় |
 | `module_manager` | Module availability/feature controls |
 | `support_agent` | Owner-authorized selected-facts support snapshot |
@@ -117,6 +118,8 @@
 | `user`, `guardian`, `organization_staff` | Preserved/reserved role names; নতুন public account/organization tenancy চালু নেই |
 
 Privileged operation-এ recent MFA লাগে। Full website layout/logo/form/locales CMS, advanced moderation, guardian/organization tenancy এবং পূর্ণ model lifecycle এখনও অসম্পূর্ণ।
+
+ClinicCompass/OshudhKhoj-এর `/admin/directories` console ও [directory pipeline](docs/DIRECTORY_PIPELINE.md) দিয়ে অনুমোদিত public nonpersonal records যাচাই/প্রকাশ/প্রত্যাহার করা যায়। বাস্তব dataset ছাড়া কোনো demo record চালু হয় না।
 
 ## Hosting ছাড়াই preview
 

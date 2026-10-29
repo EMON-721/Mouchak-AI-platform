@@ -9,6 +9,7 @@ Implemented source changes:
 - Complete future Docker topology includes inference, model initialization, scanning/signature updates and expiry services. API images now include the actual migration/grant files, and the API obeys PORT. Non-root web container gets correct file ownership and bind hostname.
 - Production private API now refuses missing/short transport tokens, including the previous fallback string; regression cases cover this boundary.
 - Public README documents every tool, audience, permissions, API/backend/database/model/data scope, setup, privacy/licensing and all major incomplete requirements. API decorator index is generated from current source.
+- ClinicCompass/OshudhKhoj now have a typed, rights-gated directory ingestion/publication/withdrawal/rollback pipeline and admin console. Two independent current asset reviews and a different publishing operator are required; real MiniLM/BM25 search rechecks rights and record expiry. No actual provider/pharmacy data was imported and the default blocked status is preserved. See `docs/DIRECTORY_PIPELINE.md`.
 - Selected-pattern publication scanner examines current source and Git history, excludes private runtime/secret-export artifacts, and never prints matched credentials. This is not comprehensive secret/PII or redistribution certification.
 
 Fresh verification and remaining limitations are recorded in docs/audit/repository-release-20261029.json. Until those checks finish, earlier evidence below must not be treated as evidence for the new source.

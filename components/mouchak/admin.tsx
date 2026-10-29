@@ -5,6 +5,7 @@ import { ShieldCheck, LockKeyhole } from "lucide-react";
 import { useApp } from "./context";
 import { DataView } from "./tool";
 import { OperationsConsole } from "./operations";
+import { DirectoryConsole } from "./directory-console";
 import { SignInPrompt } from "./account";
 type Obj = Record<string, unknown>;
 const tabs = [
@@ -15,6 +16,7 @@ const tabs = [
   ["sources", "উৎস ও অনুমতি", "Sources & rights"],
   ["models", "মডেল ও মূল্যায়ন", "Models & evaluation"],
   ["jobs", "ডেটা ইমপোর্ট", "Data imports"],
+  ["directories", "সেবার তালিকা", "Service directories"],
   ["audit", "অডিট", "Audit"],
   ["support", "সীমিত সহায়তা", "Support grants"],
   ["publishing", "প্রকাশের সময়সূচি", "Publishing"],
@@ -48,9 +50,14 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
   useEffect(() => {
     if (
       !user ||
-      ["support", "publishing", "rights", "feedback", "notifications"].includes(
-        tab,
-      )
+      [
+        "support",
+        "publishing",
+        "rights",
+        "feedback",
+        "notifications",
+        "directories",
+      ].includes(tab)
     )
       return;
     let live = true;
@@ -105,9 +112,14 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
       </div>
     );
   if (
-    ["support", "publishing", "rights", "feedback", "notifications"].includes(
-      tab,
-    )
+    [
+      "support",
+      "publishing",
+      "rights",
+      "feedback",
+      "notifications",
+      "directories",
+    ].includes(tab)
   ) {
     return (
       <div className="page-width admin-layout">
@@ -123,7 +135,11 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
           ))}
         </aside>
         <section className="admin-body">
-          <OperationsConsole key={`${user?.id}:${tab}`} tab={tab} />
+          {tab === "directories" ? (
+            <DirectoryConsole key={user?.id} />
+          ) : (
+            <OperationsConsole key={`${user?.id}:${tab}`} tab={tab} />
+          )}
           <Link href="/admin/security">
             {t("MFA যাচাই ও নিরাপত্তা", "MFA verification & security")}
           </Link>
@@ -425,8 +441,8 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
               </label>
               <p className="subtle">
                 {t(
-                  "উচ্চ সংবেদনশীল তথ্যের দ্বৈত-পর্যালোচনা এখনো নেই; সে ধরনের ডেটা আমদানি বন্ধ থাকবে।",
-                  "High-sensitivity dual review is not yet implemented; those imports stay blocked.",
+                  "উচ্চ সংবেদনশীল উৎস পুনর্ব্যবহারের জন্য Asset rights-এ দুই স্বাধীন পর্যালোচনা প্রয়োজন। এই ফর্ম থেকে অনুমোদন দেওয়া যায় না।",
+                  "High-sensitivity reuse needs two independent decisions under Asset rights. This form cannot grant that approval.",
                 )}
               </p>
               <button
