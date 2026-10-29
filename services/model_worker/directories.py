@@ -263,10 +263,13 @@ def fields(engine):
 def search_index(revision, encoded):
     from .inference import embed, tokens
     from rank_bm25 import BM25Okapi
+    from numpy import concatenate
     records = json.loads(encoded)
     documents = [" ".join(str(value) if not isinstance(value, list) else " ".join(value)
                           for name, value in r.items() if name not in {"verified_at", "latitude", "longitude", "id"}) for r in records]
-    return embed(documents), BM25Okapi([tokens(t) or ["_"] for t in documents]), documents
+    # Keep peak ONNX attention memory bounded even for the 200-record limit.
+    vectors = concatenate([embed(documents[i:i + 8]) for i in range(0, len(documents), 8)])
+    return vectors, BM25Okapi([tokens(t) or ["_"] for t in documents]), documents
 
 
 def search(db, slug, inputs):

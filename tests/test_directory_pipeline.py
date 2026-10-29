@@ -180,3 +180,21 @@ def test_directory_operator_permissions_and_csrf(user):
     assert user.request("GET", "/api/admin/directories").status_code == 403
     assert user.request("POST", "/api/admin/directories/dry-run", json={}).status_code == 403
     assert user.client.post("/api/admin/directories/cliniccompass-bd/withdraw", json={}).status_code == 403
+
+
+def test_directory_large_index_bounds_actual_inference_batches(monkeypatch):
+    import numpy as np
+    from services.model_worker import inference
+    actual = inference.embed
+    observed = []
+    def measured(values):
+        observed.append(len(values))
+        return actual(values)
+    monkeypatch.setattr(inference, "embed", measured)
+    records = [record(id=f"DEMO-BATCH-{index}") for index in range(17)]
+    vectors, _, documents = directories.search_index("DEMO-MEMORY-BOUND", json.dumps(records))
+    assert vectors.shape[0] == len(documents) == 17
+    assert np.isfinite(vectors).all()
+    assert np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5)
+    assert observed and max(observed) <= 8 and sum(observed) == 17
+    directories.search_index.cache_clear()
