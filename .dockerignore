@@ -21,3 +21,4 @@ dist
 backups
 upload
 outputs
+tests/generated
