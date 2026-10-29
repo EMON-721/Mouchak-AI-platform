@@ -91,7 +91,10 @@ def check_directory_integration(operator, client, pg_dsn, secret_values, visitor
         assert login.status_code == 200
         reviewer.headers["x-csrf-token"] = login.json()["csrf"]
         enrollment = reviewer.post("/api/auth/mfa/enroll").json()
-        assert reviewer.post("/api/auth/mfa/verify", json={"value": {"code": totp(enrollment["secret"])}}).status_code == 200
+        code = totp(enrollment["secret"])
+        bengali = code.translate(str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯"))
+        assert reviewer.post("/api/auth/mfa/verify", json={"value": {"code": bengali}}).status_code == 200
+        assert reviewer.post("/api/auth/mfa/verify", json={"value": {"code": code}}).status_code == 401
         rights = {"decision": "approved_train_and_reuse", "asset_url": "https://example.test/DEMO-fixture-directory.json",
                   "terms_url": "https://example.test/DEMO-terms", "license_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
                   "scope": "Owned synthetic nonpersonal disposable fixture only", "coverage": "Bangladesh DEMO only", "source_date": "2026-01-01",

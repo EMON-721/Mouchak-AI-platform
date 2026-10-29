@@ -70,7 +70,7 @@ def identify(request: Request, db=Depends(db_session)):
             401, "Operator session expired / প্রশাসনিক সেশনের মেয়াদ শেষ"
         )
     if request.method not in ["GET", "HEAD", "OPTIONS"] and not hmac.compare_digest(
-        request.headers.get("x-csrf-token", ""), s.csrf
+        request.headers.get("x-csrf-token", "").encode("utf-8"), s.csrf.encode("utf-8")
     ):
         raise HTTPException(403, "Invalid CSRF token / নিরাপত্তা টোকেন ভুল")
     s.last_seen = ts
@@ -135,8 +135,15 @@ def totp(secret, at=None):
     return f'{(struct.unpack(">I",mac[i:i+4])[0]&0x7fffffff)%1000000:06d}'
 
 
+def canonical_totp(code):
+    return code.translate(str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789"))
+
+
 def valid_totp(secret, code):
-    return len(code) == 6 and any(
+    # Bengali/ASCII digits represent the same six-digit authenticator code.
+    # All other input is refused before compare_digest's ASCII string boundary.
+    code = canonical_totp(code)
+    return len(code) == 6 and code.isascii() and code.isdigit() and any(
         hmac.compare_digest(totp(secret, time.time() + x * 30), code)
         for x in [-1, 0, 1]
     )

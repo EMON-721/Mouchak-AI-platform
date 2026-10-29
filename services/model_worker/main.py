@@ -61,7 +61,7 @@ async def protection(request, call_next):
     if PRODUCTION and (
         not 32 <= len(internal_token) <= 512
         or not internal_token.isascii()
-        or not hmac.compare_digest(request.headers.get("x-internal-api-token", ""), internal_token)
+        or not hmac.compare_digest(request.headers.get("x-internal-api-token", "").encode("utf-8"), internal_token.encode("ascii"))
     ):
         return JSONResponse({"detail": "Private service authorization required"}, 403)
     if request.method not in ["GET", "HEAD", "OPTIONS"]:
@@ -415,11 +415,11 @@ def mfa_enroll(u=Depends(identify), db=Depends(db_session)):
 
 @app.post("/api/auth/mfa/verify")
 def mfa_verify(p: Body, request: Request, u=Depends(identify), db=Depends(db_session)):
+    code = canonical_totp(str(p.value.get("code", "")))
     if not u.mfa_secret or not valid_totp(
-        open_sealed(u.mfa_secret), str(p.value.get("code", ""))
+        open_sealed(u.mfa_secret), code
     ):
         raise HTTPException(401, "Invalid MFA code / MFA কোড ভুল")
-    code = str(p.value.get("code"))
     confkey = "mfa-replay:" + u.id
     last = db.get(Config, confkey)
     if last and json.loads(last.value).get("code") == digest(code):
