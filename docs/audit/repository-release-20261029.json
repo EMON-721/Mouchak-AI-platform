@@ -1,13 +1,76 @@
 {
   "date": "2026-10-29",
   "source_base": "bcf8a4fb44983a21bf623463769743330b874387",
+  "tested_runtime_commit": "df3fdeabd8441832d5b89e45f51012808b4f6a3e",
+  "tested_runtime_tree": "129ca6b31d30cb2ad91f306c7bbeb8c06a471bf0",
   "hosting": "paused_by_owner",
   "provider_required": false,
   "repository_visibility_changed": false,
   "full_50_tool_production_certified": false,
-  "verification_status": "in_progress",
+  "all_non_hosting_requirements_complete": false,
+  "verification_status": "implemented_checkpoint_checks_passed_with_scope_limits",
+  "github_actions": {
+    "run_id": 40872855570,
+    "url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570",
+    "platform_job": 123444088847,
+    "private_stack_job": 123444089180,
+    "conclusion": "success"
+  },
+  "tests": {
+    "python_passed": 381,
+    "python_subtests_passed": 17,
+    "python_seconds": 106.37,
+    "typescript": "passed",
+    "eslint": "passed",
+    "canonical_next_build": "passed",
+    "portable_windows_linux_codespaces_config": "passed_configuration_tests_only",
+    "registry_original_778_hashes_and_50_identities": "passed",
+    "postgres_wasm_owner_worker_rls_and_additive_migrations": "passed",
+    "real_disposable_postgres_s3_tls_scanner_queue_ocr_rag_mfa_expiry": "passed",
+    "directory_dual_review_publication_real_queued_onnx_revocation": "passed",
+    "all_three_portable_compose_syntax": "passed_no_provisioning",
+    "actual_nonroot_standalone_web_image_http_headers_missing_backend_503": "passed"
+  },
+  "public_source_scan": {
+    "selected_pattern_findings": 0,
+    "historical_blobs_checked": 1185,
+    "scope": "Selected current-source and Git-history patterns; not comprehensive secret/PII/redistribution certification"
+  },
+  "browser": {
+    "prior_checkpoint": "Actual Bengali bill 125/150/25, session history, real cited MiniLM/BM25 learning retrieval and language switching verified in the earlier continuation.",
+    "current_attempt": "Managed preview reported running, then stopped; the browser received ERR_CONNECTION_REFUSED. No current browser/admin/PDF or multiple-width completion claim.",
+    "public_live_url_created": false
+  },
   "codespaces_provisioned": false,
   "local_docker_daemon_available": false,
+  "ci_disposable_docker_verified": true,
+  "real_provider_pharmacy_records_imported": 0,
   "credentials_published": false,
-  "secret_scan_scope": "Selected patterns in current source and Git history; not comprehensive secret/PII certification"
+  "remaining": [
+    {
+      "area": "Advanced 50-tool original scope",
+      "status": "partial_code_and_evaluation",
+      "detail": "The 47 support flows and conditional directory pipeline are not the full specialized classifiers, forecasting, generative/domain RAG or original clinical/legal/cricket workflows."
+    },
+    {
+      "area": "Bangladesh datasets and expert review",
+      "status": "blocked_pending_approved_data",
+      "detail": "No actual rights-approved provider/pharmacy dataset, labelled Bangladesh holdout, clinical/legal/child evaluation or validated live stock feed was supplied; none was invented."
+    },
+    {
+      "area": "Remaining shared/admin original scope",
+      "status": "partial_code",
+      "detail": "Full visual layout/logo/form/localization CMS, broader moderation/tenancy and model lifecycle/canary/drift/re-embedding controls remain incomplete."
+    },
+    {
+      "area": "Browser acceptance",
+      "status": "partial_or_environment_blocked",
+      "detail": "Current managed browser connection refused; prior PDF security block and operator/pose/responsive matrix remain unverified."
+    },
+    {
+      "area": "Hosting and live operations",
+      "status": "intentionally_paused",
+      "detail": "No production service, database/bucket, SMTP, paid resource, provider backup/restore or hosted load certification was created."
+    }
+  ]
 }

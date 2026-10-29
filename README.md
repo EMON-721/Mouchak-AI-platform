@@ -223,6 +223,8 @@ pnpm build
 
 Model-dependent tests-এর আগে baseline models এবং pose test fixture acquisition দরকার। CI এই steps চালায় এবং actual isolated Docker PostgreSQL/S3/TLS/scanner/inference integration চালায়। বর্তমান checkpoint-এর ফল [implementation report](IMPLEMENTATION_REPORT.md)-এ আছে; পুরোনো সংখ্যা নতুন run-এর প্রমাণ নয়। Full original ৪৩০ acceptance scenario এখনও সব passed নয়।
 
+সর্বশেষ tested runtime: `df3fdea`; [CI 40872855570](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570)-এর platform ও private-stack দুটো job সফল। **৩৮১টি Python test ও ১৭টি subtest**, type/lint/build, SQL/RLS, বাস্তব disposable TLS/database/storage/model/directory integration এবং standalone web Docker check পাস করেছে। সম্পূর্ণ ৫০-tool advanced acceptance পাস দাবি করা হয়নি। বর্তমান managed browser attempt connection refused হওয়ায় নতুন browser verification দাবি করা হয়নি; [পূর্ণ ফলাফল](docs/audit/repository-release-20261029.json) দেখুন।
+
 ## Dataset, privacy ও public repository
 
 - ২৪৪টি Bangladesh-focused candidate source registry entry আছে; এগুলো approved/downloaded dataset নয়। Restricted government data scrape বা fabricated real-world observation ব্যবহার করা হয়নি।

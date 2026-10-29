@@ -1,10 +1,22 @@
 [
   {
+    "requirement": "reviewed_provider_pharmacy_directory_pipeline",
+    "status": "implemented_code_real_model_and_tls_ci_verified_no_real_dataset",
+    "implemented": "Typed bounded nonpersonal schemas; two independent current asset reviews; second-operator publication; full batch review UI; optimistic revisions/PostgreSQL serialization; withdrawal/rollback; query-time expiry/rights; actual bounded ONNX/BM25 retrieval and literal pharmacy evidence.",
+    "remaining": "Approved current Bangladesh provider/pharmacy records and full original domain workflows/evaluation are not supplied; default availability remains blocked.",
+    "evidence": [
+      "tests/test_directory_pipeline.py",
+      "scripts/test-production-stack.py",
+      "docs/DIRECTORY_PIPELINE.md",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570"
+    ]
+  },
+  {
     "requirement": "support_grants",
     "status": "implemented_selected_facts",
     "implemented": "Owner consent, recipient-only encrypted snapshot, expiry/revocation, fresh MFA and audited views",
     "remaining": "Raw document support access is not implemented",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -18,7 +30,7 @@
     "status": "implemented_typed_drafts",
     "implemented": "Selected compatible inputs, preview, consent, private draft and separately consented processing lineage",
     "remaining": "No automatic raw-asset transfer or conversion; full domain pipelines remain incomplete",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -32,7 +44,7 @@
     "status": "implemented_local_worker_verified",
     "implemented": "Durable schedules, conflict/cancellation/author checks and real worker subprocess",
     "remaining": "Production worker/database provisioning not verified",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -46,7 +58,7 @@
     "status": "implemented_workflow_only",
     "implemented": "Independent matching reviews, revocation round and strict URLs/date validation",
     "remaining": "No actual dataset rights or production model validation supplied by test fixtures",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -60,7 +72,7 @@
     "status": "implemented_api_ui",
     "implemented": "Triage, bilingual per-account service notices and read receipts",
     "remaining": "Broader campaign/moderation workflows not implemented",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -74,7 +86,7 @@
     "status": "implemented_local_drill_only",
     "implemented": "Authenticated encrypted SQLite/assets archive, no overwrite, revoked access on restore",
     "remaining": "PostgreSQL/S3 provider recovery remains blocked/unverified",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -87,8 +99,8 @@
     "requirement": "browser_e2e",
     "status": "partial",
     "implemented": "Public live API, language/reading/basket interactions and logged-out guards",
-    "remaining": "Authenticated user/admin E2E and multiple viewport widths remain unverified",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "remaining": "Public visitor accounts intentionally removed. Current managed browser connection refused; operator browser MFA, pose, PDF/security-blocked download and multi-width acceptance remain unverified.",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
@@ -99,16 +111,17 @@
   },
   {
     "requirement": "deployment_github",
-    "status": "source_published_private_stack_ci_passed_live_host_blocked",
-    "implemented": "GitHub write and both CI jobs verified; real disposable PostgreSQL/S3/TLS/scanner/worker/MFA/expiry and OCR/ONNX inference pass",
-    "remaining": "Live backend host/API hostname, provider credentials, SMTP and backup/restore remain unconfigured",
-    "requirement_source": "requirements/original-kit/README.md sections 5\u20139",
+    "status": "provider_neutral_tested_source_hosting_intentionally_paused",
+    "implemented": "Provider-neutral Next/Python/Docker source, private preview instructions, two passing CI jobs, real TLS/DB/S3/scanner/queue/ONNX/directory/MFA/expiry and standalone web image verification.",
+    "remaining": "Owner paused hosting. No production host/bucket/SMTP/provider recovery or load validation. Full advanced model/data/admin scope remains separate and incomplete.",
+    "requirement_source": "requirements/original-kit/README.md sections 5–9",
     "evidence": [
       "tests/test_collaboration_operations.py",
       "tests/test_backup_recovery.py",
       "docs/audit/continuation-regression.xml",
       "docs/audit/collaboration-postgres.json",
-      "docs/audit/preview-status.json"
+      "docs/audit/preview-status.json",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40872855570"
     ]
   },
   {
