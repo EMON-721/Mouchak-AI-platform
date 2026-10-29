@@ -8,13 +8,18 @@ export type User = {
   mfa_enabled: boolean;
   language: string;
 };
-export type Column = { key: string; bn: string; en: string; type: string };
-export type FieldSpec = Column & {
-  optional?: boolean;
+export type Column = {
+  key: string;
+  bn: string;
+  en: string;
+  type: string;
   help_bn?: string;
   help_en?: string;
   placeholder_bn?: string;
   placeholder_en?: string;
+};
+export type FieldSpec = Column & {
+  optional?: boolean;
   options?: string[];
   columns?: Column[];
 };

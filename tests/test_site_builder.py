@@ -122,6 +122,9 @@ def test_owned_asset_publication_and_tool_fields_do_not_mutate_engine_schema(tea
         field=next(iter(sb.field_paths('pukursos-ai')))
         baseline=deepcopy(sb.FIELDS)
         value['tool_overrides']['pukursos-ai']={'name':{'bn':'ডেমো পুকুর','en':'DEMO pond'},'fields':{field:{'bn':'পরিমাপ','en':'DEMO measured field','help_en':'Verify your measurement','help_bn':'নিজের মাপ যাচাই করুন'}}}
+        table_slug=next(s for s,m in sb.MODULES.items() if any(f['type']=='table' for f in sb.FIELDS[m['engine']]))
+        column_path=next(k for k in sb.field_paths(table_slug) if '.' in k)
+        value['tool_overrides'][table_slug]={'fields':{column_path:{'bn':'ডেমো কলাম','en':'DEMO column','help_bn':'নিজের তথ্য যাচাই করুন','help_en':'Verify the entered value','placeholder_en':'DEMO value','placeholder_bn':'ডেমো মান'}}}
         vid=draft(a,value); assert review(b,vid).status_code==200; assert publish(a,vid).status_code==200
         response=public.get(asset['url']); assert response.status_code==200
         assert "default-src 'none'" in response.headers['Content-Security-Policy']
@@ -129,6 +132,10 @@ def test_owned_asset_publication_and_tool_fields_do_not_mutate_engine_schema(tea
         assert tool['name']=='DEMO pond' and tool['fields'][0]['en']=='DEMO measured field'
         for key in ['engine','release_status','model_ready','full_module_complete','safety']:
             assert tool[key]==original[key]
+        table=public.get('/api/modules/'+table_slug).json()
+        parent,col=column_path.split('.')
+        column=next(c for f in table['fields'] if f['key']==parent for c in f['columns'] if c['key']==col)
+        assert column['help_en']=='Verify the entered value' and column['placeholder_bn']=='ডেমো মান'
         assert tool['presentation_base']['name']==original['name']
         assert tool['presentation_base']['fields']==original['fields']
         assert sb.FIELDS==baseline

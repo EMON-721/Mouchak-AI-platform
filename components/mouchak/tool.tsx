@@ -394,12 +394,26 @@ function RecordTable({
   return (
     <div className="record-editor">
       <div className="table-scroll">
-        <table>
+        <table
+          aria-describedby={
+            spec.help_bn || spec.help_en ? "help-" + spec.key : undefined
+          }
+        >
           <caption className="sr-only">{t(spec.bn, spec.en)}</caption>
           <thead>
             <tr>
               {cols.map((c) => (
-                <th key={c.key}>{t(c.bn, c.en)}</th>
+                <th key={c.key} scope="col">
+                  {t(c.bn, c.en)}
+                  {c.help_bn || c.help_en ? (
+                    <small
+                      className="table-field-help"
+                      id={`help-${spec.key}-${c.key}`}
+                    >
+                      {t(c.help_bn || "", c.help_en || "")}
+                    </small>
+                  ) : null}
+                </th>
               ))}
               <th>
                 <span className="sr-only">{t("মুছুন", "Remove")}</span>
@@ -413,6 +427,15 @@ function RecordTable({
                   <td key={c.key}>
                     <input
                       aria-label={`${t(c.bn, c.en)} ${i + 1}`}
+                      aria-describedby={
+                        c.help_bn || c.help_en
+                          ? `help-${spec.key}-${c.key}`
+                          : undefined
+                      }
+                      placeholder={t(
+                        c.placeholder_bn || spec.placeholder_bn || "",
+                        c.placeholder_en || spec.placeholder_en || "",
+                      )}
                       type={c.type === "date" ? "date" : "text"}
                       inputMode={c.type === "number" ? "decimal" : undefined}
                       value={row[c.key] || ""}
@@ -908,12 +931,20 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                     ) : spec.type === "select" ? (
                       <select
                         id={"input-" + spec.key}
+                        aria-describedby={
+                          spec.help_bn || spec.help_en
+                            ? "help-" + spec.key
+                            : undefined
+                        }
                         required={!spec.optional}
                         value={String(inputs[spec.key] || "")}
                         onChange={(e) => change(spec.key, e.target.value)}
                       >
                         <option value="">
-                          {t("নির্বাচন করুন", "Choose an option")}
+                          {t(
+                            spec.placeholder_bn || "নির্বাচন করুন",
+                            spec.placeholder_en || "Choose an option",
+                          )}
                         </option>
                         {spec.options?.map((o) => (
                           <option value={o} key={o}>

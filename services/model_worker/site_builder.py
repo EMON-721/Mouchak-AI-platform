@@ -366,5 +366,5 @@ def customize_module(db,module):
         if patch: f.update(patch)
         for column in f.get('columns',[]):
             patch=override.get('fields',{}).get(f['key']+'.'+column['key'])
-            if patch: column.update({k:patch[k] for k in ['bn','en']})
+            if patch: column.update(patch)
     return module

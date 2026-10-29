@@ -3402,3 +3402,5 @@ td a {
 @media(max-width:800px){.site-copy{padding:12px}.site-tabs button{flex:1 0 40%}.site-save-bar .button{width:100%}}
 
 .hub-core strong {max-width:80%;overflow-wrap:anywhere;text-align:center;line-height:1.35}
+
+.table-field-help {display:block;font-weight:400;max-width:250px;white-space:normal}

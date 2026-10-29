@@ -59,11 +59,20 @@ preview.tool_overrides["pukursos-ai"] = {
       en: "DEMO new input",
       help_en: "Check your measurement",
     },
+    "rows.units": {
+      bn: "ডেমো পরিবর্তিত একক",
+      en: "DEMO changed units",
+      help_en: "Use a measured unit",
+      placeholder_bn: "ডেমো মান",
+    },
   },
 };
 const shown = customizeTool(published, preview, "bn");
 assert.equal(shown.name, "ডেমো নতুন পুকুর");
 assert.equal(shown.fields[0].bn, "ডেমো নতুন ঘর");
+assert.equal(shown.fields[1].columns[0].help_en, "Use a measured unit");
+assert.equal(shown.fields[1].columns[0].placeholder_bn, "ডেমো মান");
+assert.equal(shown.fields[1].columns[0].type, "number");
 assert.equal(shown.engine, published.engine);
 assert.equal(shown.model_ready, false);
 assert.equal(shown.fields[0].type, "textarea");
