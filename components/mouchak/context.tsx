@@ -217,12 +217,33 @@ export function Provider({ children }: { children: ReactNode }) {
       if (csrf && loadedMode === mode) h.set("X-CSRF-Token", csrf);
       const r = await fetch(path, { ...options, headers: h });
       const d = (await r.json()) as Record<string, unknown>;
-      if (!r.ok)
+      if (!r.ok) {
+        const errors = Array.isArray(d.detail)
+          ? d.detail
+              .slice(0, 4)
+              .map((value: unknown) => {
+                if (!value || typeof value !== "object") return "";
+                const error = value as { loc?: unknown; msg?: unknown };
+                const field = Array.isArray(error.loc)
+                  ? error.loc
+                      .filter(
+                        (x) => typeof x === "string" || typeof x === "number",
+                      )
+                      .join(".")
+                  : "";
+                return typeof error.msg === "string"
+                  ? `${field}: ${error.msg.slice(0, 400)}`
+                  : "";
+              })
+              .filter(Boolean)
+              .join(" · ")
+          : "";
         throw new Error(
           typeof d.detail === "string"
             ? d.detail
-            : "অনুরোধ ব্যর্থ / Request failed",
+            : errors || "অনুরোধ ব্যর্থ / Request failed",
         );
+      }
       return d as T;
     },
     [csrf, loadedMode, mode],

@@ -73,6 +73,7 @@ def test_stale_and_revoked_reviews_fail_closed(team):
     assert review(b,first).status_code==200
     assert review(b,stale).status_code==200
     assert publish(a,first).status_code==200
+    assert a.request('POST','/api/admin/site-builder',json={'config':config('DEMO outdated editor'),'expected_revision':None}).status_code==409
     assert publish(a,stale,first).status_code==409
     fresh=draft(a,config('DEMO revocation'),first)
     assert review(b,fresh).status_code==200

@@ -261,7 +261,7 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
 export function Home() {
   const catalogue = useCatalogue();
   const router = useRouter();
-  const { t, site } = useApp();
+  const { t, site, brand } = useApp();
   const copy = (key: string) =>
     t(site.home.text[key].bn, site.home.text[key].en);
   const [query, setQuery] = useState("");
@@ -336,8 +336,7 @@ export function Home() {
           <div className="hub-core">
             <div className="hub-symbol">⬡</div>
             <strong>
-              {t("মৌচাক", "Mouchak")}
-              <span>AI</span>
+              {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
             </strong>
           </div>
           <div className="orbit orbit-1">

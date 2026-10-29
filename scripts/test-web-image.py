@@ -17,16 +17,24 @@ try:
                 body = response.read()
                 assert response.status == 200 and b"Mouchak" in body
                 assert response.headers.get("X-Content-Type-Options") == "nosniff"
+                assert response.headers.get("X-Frame-Options") == "DENY"
             break
         except (urllib.error.URLError, ConnectionError):
             if attempt == 39:
                 raise RuntimeError("Disposable web container did not become ready") from None
             time.sleep(0.5)
+    for path, framing, ancestor in [('/admin/site-preview/DEMO-unpublished-version','SAMEORIGIN',"frame-ancestors 'self'"),('/admin/site-builder','DENY',"frame-ancestors 'none'"),('/work','DENY',"frame-ancestors 'none'")]:
+        with urllib.request.urlopen(base+path, timeout=10) as response:
+            html=response.read().decode()
+            assert response.status==200
+            assert response.headers.get('X-Frame-Options')==framing
+            assert ancestor in response.headers.get('Content-Security-Policy','')
+            assert 'noindex' in html
     try:
         urllib.request.urlopen(base + "/api/modules", timeout=10)
         raise AssertionError("An absent private backend must not appear successful")
     except urllib.error.HTTPError as error:
         assert error.code == 503
-    print("Actual non-root standalone web image: HTTP page, security header and absent-backend 503 passed.")
+    print("Actual non-root standalone web image: HTTP page, security headers, narrowly scoped preview framing, private noindex and absent-backend 503 passed.")
 finally:
     subprocess.run(["docker", "rm", "--force", name], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

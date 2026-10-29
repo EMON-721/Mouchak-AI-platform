@@ -21,6 +21,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck && pnpm lint
       - run: pnpm test:portable
+      - run: node scripts/test-site-presentation.mjs
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-ben ffmpeg fonts-dejavu-core

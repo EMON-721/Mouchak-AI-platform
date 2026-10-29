@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { siteAssetUrl } from "./site-config";
 import { useApp } from "./context";
 import { Home } from "./catalogue";
 import {
@@ -21,6 +23,8 @@ type Version = {
 type Blueprint = {
   slug: string;
   name: string;
+  description_bn: string;
+  description_en: string;
   fields: Record<string, { bn: string; en: string; type: string }>;
 };
 type EditorState = {
@@ -190,6 +194,7 @@ export function SiteBuilderEditor() {
   const { api, t, user, refreshSite } = useApp();
   const [state, setState] = useState<EditorState | null>(null),
     [draft, setDraft] = useState<SiteConfig | null>(null),
+    [draftBaseRevision, setDraftBaseRevision] = useState<string | null>(null),
     [pane, setPane] = useState<Pane>("brand"),
     [error, setError] = useState(""),
     [message, setMessage] = useState(""),
@@ -212,6 +217,7 @@ export function SiteBuilderEditor() {
         if (live) {
           setState(value);
           setDraft(structuredClone(value.active.config));
+          setDraftBaseRevision(value.active.revision);
         }
       })
       .catch((e) => {
@@ -224,7 +230,10 @@ export function SiteBuilderEditor() {
   async function reload(reset = false) {
     const value = await api<EditorState>("/api/admin/site-builder");
     setState(value);
-    if (reset) setDraft(structuredClone(value.active.config));
+    if (reset) {
+      setDraft(structuredClone(value.active.config));
+      setDraftBaseRevision(value.active.revision);
+    }
     return value;
   }
   async function action(work: () => Promise<unknown>, success: string) {
@@ -378,6 +387,44 @@ export function SiteBuilderEditor() {
                 </select>
               </label>
             ))}
+            <details>
+              <summary>
+                {t(
+                  "সংরক্ষিত চিহ্ন ও অনুমতির বিবরণ",
+                  "Saved artwork and rights declarations",
+                )}
+              </summary>
+              {state.assets.length ? (
+                state.assets.map((asset) => (
+                  <article className="panel" key={asset.id}>
+                    <Image
+                      unoptimized
+                      src={siteAssetUrl(asset.id)}
+                      width={64}
+                      height={64}
+                      alt={t("সংরক্ষিত ব্র্যান্ড চিহ্ন", "Saved brand artwork")}
+                    />
+                    <p>
+                      <code>{asset.id}</code>
+                    </p>
+                    <p>{asset.rights_note}</p>
+                    <a
+                      className="text-link"
+                      href={asset.license_uri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("ঘোষিত লাইসেন্স দেখুন", "Inspect declared licence")} ↗
+                    </a>
+                    <p>{asset.created_at}</p>
+                  </article>
+                ))
+              ) : (
+                <p>
+                  {t("কোনো চিহ্ন যোগ করা হয়নি।", "No artwork has been added.")}
+                </p>
+              )}
+            </details>
             <details>
               <summary>
                 {t("নিজস্ব SVG যোগ করুন", "Add owned SVG artwork")}
@@ -827,7 +874,12 @@ export function SiteBuilderEditor() {
             />
             <CopyEditor
               label={t("ছোট বিবরণ", "Short description")}
-              value={tool?.description || { bn: "", en: "" }}
+              value={
+                tool?.description || {
+                  bn: selected.description_bn,
+                  en: selected.description_en,
+                }
+              }
               area
               onChange={(v) =>
                 edit((c) => {
@@ -1140,6 +1192,7 @@ export function SiteBuilderEditor() {
                             `/api/admin/site-builder/${v.id}/preview`,
                           );
                           setDraft(structuredClone(value.config));
+                          setDraftBaseRevision(state.active.revision);
                           setPane("brand");
                         },
                         t(
@@ -1319,7 +1372,7 @@ export function SiteBuilderEditor() {
                     method: "POST",
                     body: JSON.stringify({
                       config: draft,
-                      expected_revision: state.active.revision,
+                      expected_revision: draftBaseRevision,
                     }),
                   },
                 );

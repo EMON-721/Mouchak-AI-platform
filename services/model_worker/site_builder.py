@@ -253,7 +253,7 @@ def editor(u=Depends(authorize('cms')),db=Depends(db_session)):
     assets=[]
     for c in db.scalars(select(Config).where(Config.key.like('site-asset:%')).limit(200)):
         value=json.loads(c.value); assets.append({k:v for k,v in value.items() if k!='svg'})
-    return {'active':public_site(db),'defaults':DEFAULT,'editable_locales':EDITABLE,'categories':CATEGORIES,'tools':[{'slug':s,'name':m['name'],'fields':field_paths(s)} for s,m in MODULES.items()],'assets':assets,'versions':[{'id':v.id,'status':v.status,'author':v.author,'created_at':v.created_at} for v in versions]}
+    return {'active':public_site(db),'defaults':DEFAULT,'editable_locales':EDITABLE,'categories':CATEGORIES,'tools':[{'slug':s,'name':m['name'],'description_bn':m['description_bn'],'description_en':m['description_en'],'fields':field_paths(s)} for s,m in MODULES.items()],'assets':assets,'versions':[{'id':v.id,'status':v.status,'author':v.author,'created_at':v.created_at} for v in versions]}
 
 @router.post('/admin/site-builder/validate')
 def check(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session)):

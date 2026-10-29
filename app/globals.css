@@ -3400,3 +3400,5 @@ td a {
 .site-builder .button.small {min-height:44px}
 .site-header .desktop-nav {flex-wrap:wrap}
 @media(max-width:800px){.site-copy{padding:12px}.site-tabs button{flex:1 0 40%}.site-save-bar .button{width:100%}}
+
+.hub-core strong {max-width:80%;overflow-wrap:anywhere;text-align:center;line-height:1.35}
