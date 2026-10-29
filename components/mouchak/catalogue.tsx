@@ -65,6 +65,9 @@ export const categories: Record<
   education: { bn: "শেখা ও শিক্ষা", en: "Learning", icon: BookOpen },
   learning: { bn: "শেখা ও শিক্ষা", en: "Learning", icon: BookOpen },
   accessibility: { bn: "সহজ যোগাযোগ", en: "Accessibility", icon: HandHeart },
+  safety: { bn: "নিরাপত্তা", en: "Safety", icon: ShieldCheck },
+  digital: { bn: "ডিজিটাল নিরাপত্তা", en: "Digital safety", icon: ShieldCheck },
+  transport: { bn: "যাতায়াত", en: "Transport", icon: Activity },
 };
 export function ToolCard({ tool }: { tool: Tool }) {
   const { t } = useApp();

@@ -1,11 +1,13 @@
 import { spawn } from "node:child_process";
-import { mkdirSync, openSync, existsSync } from "node:fs";
+import { mkdirSync, openSync, existsSync, writeFileSync } from "node:fs";
 import { readExecutionProfile } from "./execution-profile.mjs";
 import { developmentConfig } from "./platform-config.mjs";
 
 if (existsSync(".env")) process.loadEnvFile(".env");
-const config = developmentConfig(process.env, process.argv.slice(2), readExecutionProfile() === "managed-linux");
+const managed = process.env.SITES_MANAGED_LINUX_CONTAINER === "1" || readExecutionProfile() === "managed-linux";
+const config = developmentConfig(process.env, process.argv.slice(2), managed);
 mkdirSync(".state", { recursive: true });
+writeFileSync(".state/development-config.json", JSON.stringify({ origin: config.origin, web_port: config.port, api_port: config.apiPort, managed }), { mode: 0o600 });
 const log = openSync(".state/development-api.log", "a", 0o600);
 const env = {
   ...process.env, MOUCHAK_ENV: "development", PUBLIC_ORIGIN: config.origin,
