@@ -242,17 +242,17 @@ def health():
 
 
 @app.get("/api/modules")
-def modules(db=Depends(db_session)):
+def modules(db=Depends(db_session, scope="function")):
     return {"modules": [get_mod(x, db) for x in MODULES], "total": 50}
 
 
 @app.get("/api/modules/{slug}")
-def module(slug: str, db=Depends(db_session)):
+def module(slug: str, db=Depends(db_session, scope="function")):
     return get_mod(slug, db)
 
 
 @app.get("/api/sources")
-def sources(module: str | None = None, db=Depends(db_session)):
+def sources(module: str | None = None, db=Depends(db_session, scope="function")):
     q = select(Source)
     if module:
         q = q.where(Source.module == module)
@@ -286,14 +286,14 @@ def phrases():
 
 
 @app.get("/api/public/cms/{page:path}")
-def public_cms(page: str, db=Depends(db_session)):
+def public_cms(page: str, db=Depends(db_session, scope="function")):
     conf = db.get(Config, "cms:" + page)
     return json.loads(conf.value) if conf else {}
 
 
 @app.post("/api/auth/register", status_code=201)
 def register(
-    p: Credentials, request: Request, response: Response, db=Depends(db_session)
+    p: Credentials, request: Request, response: Response, db=Depends(db_session, scope="function")
 ):
     raise HTTPException(
         410,
@@ -302,7 +302,7 @@ def register(
 
 
 @app.post("/api/auth/login")
-def login(p: Credentials, request: Request, response: Response, db=Depends(db_session)):
+def login(p: Credentials, request: Request, response: Response, db=Depends(db_session, scope="function")):
     u = db.scalar(select(User).where(User.email == p.email.strip().casefold()))
     valid = False
     if u and u.role in PRIVILEGED:
@@ -332,7 +332,7 @@ def me(request: Request, u=Depends(identify)):
 
 @app.post("/api/auth/logout")
 def logout(
-    request: Request, response: Response, u=Depends(identify), db=Depends(db_session)
+    request: Request, response: Response, u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     db.delete(request.state.session)
     response.delete_cookie("mouchak_session", path="/")
@@ -340,7 +340,7 @@ def logout(
 
 
 @app.get("/api/auth/sessions")
-def sessions(request: Request, u=Depends(identify), db=Depends(db_session)):
+def sessions(request: Request, u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {
             "id": s.id,
@@ -354,7 +354,7 @@ def sessions(request: Request, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.delete("/api/auth/sessions/{sid}")
-def revoke(sid: str, u=Depends(identify), db=Depends(db_session)):
+def revoke(sid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     s = db.scalar(select(Session).where(Session.id == sid, Session.user_id == u.id))
     if not s:
         raise HTTPException(404)
@@ -363,7 +363,7 @@ def revoke(sid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/auth/request-reset", status_code=202)
-def request_reset(p: Body, db=Depends(db_session)):
+def request_reset(p: Body, db=Depends(db_session, scope="function")):
     email = str(p.value.get("email", "")).casefold()
     u = db.scalar(select(User).where(User.email == email))
     if u and u.role in PRIVILEGED:
@@ -374,7 +374,7 @@ def request_reset(p: Body, db=Depends(db_session)):
 
 
 @app.post("/api/auth/verify")
-def verify(p: Body, db=Depends(db_session)):
+def verify(p: Body, db=Depends(db_session, scope="function")):
     t = db.get(Token, digest(str(p.value.get("token", ""))))
     if not t or t.purpose != "verify" or t.expires < time.time():
         raise HTTPException(422, "Expired or invalid verification token")
@@ -385,7 +385,7 @@ def verify(p: Body, db=Depends(db_session)):
 
 
 @app.post("/api/auth/reset")
-def reset(p: Body, db=Depends(db_session)):
+def reset(p: Body, db=Depends(db_session, scope="function")):
     t = db.get(Token, digest(str(p.value.get("token", ""))))
     if not t or t.purpose != "reset" or t.expires < time.time():
         raise HTTPException(422, "Expired or invalid reset token")
@@ -399,7 +399,7 @@ def reset(p: Body, db=Depends(db_session)):
 
 
 @app.post("/api/auth/mfa/enroll")
-def mfa_enroll(u=Depends(identify), db=Depends(db_session)):
+def mfa_enroll(u=Depends(identify), db=Depends(db_session, scope="function")):
     if u.role not in PRIVILEGED:
         raise HTTPException(403, "Operator access only")
     if u.mfa_enabled:
@@ -416,7 +416,7 @@ def mfa_enroll(u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/auth/mfa/verify")
-def mfa_verify(p: Body, request: Request, u=Depends(identify), db=Depends(db_session)):
+def mfa_verify(p: Body, request: Request, u=Depends(identify), db=Depends(db_session, scope="function")):
     code = canonical_totp(str(p.value.get("code", "")))
     if not u.mfa_secret or not valid_totp(
         open_sealed(u.mfa_secret), code
@@ -446,7 +446,7 @@ def profile(p: Body, u=Depends(identify)):
 
 
 @app.get("/api/workspaces")
-def workspaces(u=Depends(identify), db=Depends(db_session)):
+def workspaces(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {"id": w.id, "name": w.name}
         for w in db.scalars(select(Workspace).where(Workspace.user_id == u.id))
@@ -454,7 +454,7 @@ def workspaces(u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/workspaces", status_code=201)
-def new_workspace(p: Body, u=Depends(identify), db=Depends(db_session)):
+def new_workspace(p: Body, u=Depends(identify), db=Depends(db_session, scope="function")):
     name = str(p.value.get("name", "")).strip()
     if not name or len(name) > 100:
         raise HTTPException(422, "Workspace name required")
@@ -473,7 +473,7 @@ def new_workspace(p: Body, u=Depends(identify), db=Depends(db_session)):
 
 @app.get("/api/workspaces/{wid}/history")
 def history(
-    wid: str, module: str | None = None, u=Depends(identify), db=Depends(db_session)
+    wid: str, module: str | None = None, u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     w = db.scalar(
         select(Workspace).where(Workspace.id == wid, Workspace.user_id == u.id)
@@ -496,7 +496,7 @@ def history(
 
 
 @app.post("/api/consent", status_code=201)
-def consent(p: Body, u=Depends(identify), db=Depends(db_session)):
+def consent(p: Body, u=Depends(identify), db=Depends(db_session, scope="function")):
     module = p.value.get("module")
     purpose = p.value.get("purpose")
     if module not in MODULES or purpose not in [
@@ -517,7 +517,7 @@ def consent(p: Body, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.get("/api/consent")
-def consents(u=Depends(identify), db=Depends(db_session)):
+def consents(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {
             "id": c.id,
@@ -531,7 +531,7 @@ def consents(u=Depends(identify), db=Depends(db_session)):
 
 
 @app.delete("/api/consent/{cid}")
-def withdraw(cid: str, u=Depends(identify), db=Depends(db_session)):
+def withdraw(cid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     c = db.scalar(select(Consent).where(Consent.id == cid, Consent.user_id == u.id))
     if not c:
         raise HTTPException(404)
@@ -545,7 +545,7 @@ def withdraw(cid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/tools/{slug}/jobs", status_code=202)
-def submit_job(slug: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session)):
+def submit_job(slug: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session, scope="function")):
     return enqueue_request(slug, p, request, u, db)
 
 
@@ -573,7 +573,7 @@ def enqueue_request(slug, p, request, u, db, parent=None):
 
 
 @app.get("/api/jobs")
-def pending_jobs(u=Depends(identify), db=Depends(db_session)):
+def pending_jobs(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [inference_queue.view(j) for j in db.scalars(select(inference_queue.InferenceJob).where(
         inference_queue.InferenceJob.user_id == u.id
     ).order_by(inference_queue.InferenceJob.created_at.desc()).limit(100))]
@@ -589,12 +589,12 @@ def owner_job(db, u, jid):
 
 
 @app.get("/api/jobs/{jid}")
-def get_job(jid: str, u=Depends(identify), db=Depends(db_session)):
+def get_job(jid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     return inference_queue.view(owner_job(db, u, jid))
 
 
 @app.post("/api/jobs/{jid}/cancel")
-def cancel_job(jid: str, u=Depends(identify), db=Depends(db_session)):
+def cancel_job(jid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     j = owner_job(db, u, jid)
     from sqlalchemy import update
     db.execute(update(inference_queue.InferenceJob).where(
@@ -606,13 +606,13 @@ def cancel_job(jid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/tools/{slug}/runs", status_code=201)
-def create_run(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session)):
+def create_run(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     if inference_queue.enabled():
         raise HTTPException(409, "Use the durable jobs endpoint / queue-তে কাজ জমা দিন")
     return execute(slug, p, u, db)
 
 
-def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session)):
+def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     m = get_mod(slug, db)
     if m.get("enabled") is False:
         raise HTTPException(503, "Tool disabled / টুলটি বন্ধ আছে")
@@ -712,7 +712,7 @@ def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session))
 
 
 @app.get("/api/runs/{rid}")
-def get_run(rid: str, u=Depends(identify), db=Depends(db_session)):
+def get_run(rid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     r = owner_run(db, u, rid)
     return {
         "id": r.id,
@@ -724,14 +724,14 @@ def get_run(rid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.patch("/api/runs/{rid}")
-def save_run(rid: str, p: Body, u=Depends(identify), db=Depends(db_session)):
+def save_run(rid: str, p: Body, u=Depends(identify), db=Depends(db_session, scope="function")):
     r = owner_run(db, u, rid)
     r.saved = p.value.get("saved") is True
     return {"saved": r.saved}
 
 
 @app.post("/api/runs/{rid}/correct", status_code=201)
-def correction(rid: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session)):
+def correction(rid: str, p: RunInput, request: Request, u=Depends(identify), db=Depends(db_session, scope="function")):
     old = owner_run(db, u, rid)
     p.workspace_id = old.workspace_id
     if inference_queue.enabled():
@@ -743,7 +743,7 @@ def correction(rid: str, p: RunInput, request: Request, u=Depends(identify), db=
 
 
 @app.delete("/api/runs/{rid}")
-def delete_run(rid: str, u=Depends(identify), db=Depends(db_session)):
+def delete_run(rid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     r = owner_run(db, u, rid)
     db.delete(r)
     return {"deleted": True}
@@ -751,7 +751,7 @@ def delete_run(rid: str, u=Depends(identify), db=Depends(db_session)):
 
 @app.get("/api/runs/{rid}/export")
 def export_run(
-    rid: str, format: str = "json", u=Depends(identify), db=Depends(db_session)
+    rid: str, format: str = "json", u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     r = owner_run(db, u, rid)
     data = {
@@ -803,7 +803,7 @@ async def upload(
     file: UploadFile = File(...),
     consent: bool = Form(...),
     u=Depends(identify),
-    db=Depends(db_session),
+    db=Depends(db_session, scope="function"),
 ):
     if not consent:
         raise HTTPException(422, "Processing consent required")
@@ -899,7 +899,7 @@ def persist_asset(data, u, db):
 
 
 @app.get("/api/assets")
-def assets(u=Depends(identify), db=Depends(db_session)):
+def assets(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {
             "id": a.id,
@@ -913,7 +913,7 @@ def assets(u=Depends(identify), db=Depends(db_session)):
 
 
 @app.get("/api/assets/{aid}")
-def download_asset(aid: str, u=Depends(identify), db=Depends(db_session)):
+def download_asset(aid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     a = owner_asset(db, u, aid)
     return Response(
         asset_bytes(a),
@@ -925,7 +925,7 @@ def download_asset(aid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.delete("/api/assets/{aid}")
-def delete_asset(aid: str, u=Depends(identify), db=Depends(db_session)):
+def delete_asset(aid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     a = owner_asset(db, u, aid)
     storage.remove(a.path)
     db.delete(a)
@@ -933,7 +933,7 @@ def delete_asset(aid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/assets/{aid}/ocr")
-def extract(aid: str, u=Depends(identify), db=Depends(db_session)):
+def extract(aid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     a = owner_asset(db, u, aid)
     if a.kind == "wav":
         raise HTTPException(422, "Use text or document input; ASR is unavailable")
@@ -943,7 +943,7 @@ def extract(aid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.get("/api/privacy/export")
-def account_export(u=Depends(identify), db=Depends(db_session)):
+def account_export(u=Depends(identify), db=Depends(db_session, scope="function")):
     data = {
         "scope": {
             "mode": "anonymous" if u.role == "guest" else "operator",
@@ -985,7 +985,7 @@ def account_export(u=Depends(identify), db=Depends(db_session)):
 
 @app.delete("/api/privacy/account")
 def delete_account(
-    p: Body, response: Response, u=Depends(identify), db=Depends(db_session)
+    p: Body, response: Response, u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     try:
         valid = PH.verify(u.password, str(p.value.get("password", "")))
@@ -1021,7 +1021,7 @@ def delete_account(
 
 
 @app.get("/api/notifications")
-def notifications(u=Depends(identify), db=Depends(db_session)):
+def notifications(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {"id": n.id, "body": n.body, "read": n.read, "created_at": n.created_at}
         for n in db.scalars(select(Notification).where(Notification.user_id == u.id))
@@ -1029,7 +1029,7 @@ def notifications(u=Depends(identify), db=Depends(db_session)):
 
 
 @app.post("/api/feedback", status_code=201)
-def feedback(p: Body, u=Depends(identify), db=Depends(db_session)):
+def feedback(p: Body, u=Depends(identify), db=Depends(db_session, scope="function")):
     body = str(p.value.get("text", "")).strip()
     if not body or len(body) > 2000:
         raise HTTPException(422)
@@ -1040,7 +1040,7 @@ def feedback(p: Body, u=Depends(identify), db=Depends(db_session)):
 
 
 @app.get("/api/admin/overview")
-def overview(u=Depends(authorize("overview")), db=Depends(db_session)):
+def overview(u=Depends(authorize("overview")), db=Depends(db_session, scope="function")):
     # Counts only, no private record content or individual behavioral analytics.
     return {
         "registered_tools": 50,
@@ -1055,13 +1055,13 @@ def overview(u=Depends(authorize("overview")), db=Depends(db_session)):
 
 
 @app.get("/api/admin/modules")
-def admin_modules(u=Depends(authorize("modules")), db=Depends(db_session)):
+def admin_modules(u=Depends(authorize("modules")), db=Depends(db_session, scope="function")):
     return [get_mod(x, db) for x in MODULES]
 
 
 @app.patch("/api/admin/modules/{slug}")
 def edit_module(
-    slug: str, p: Body, u=Depends(authorize("modules")), db=Depends(db_session)
+    slug: str, p: Body, u=Depends(authorize("modules")), db=Depends(db_session, scope="function")
 ):
     get_mod(slug, db)
     allowed = {
@@ -1091,7 +1091,7 @@ def edit_module(
 
 
 @app.get("/api/admin/users")
-def users(u=Depends(authorize("users")), db=Depends(db_session)):
+def users(u=Depends(authorize("users")), db=Depends(db_session, scope="function")):
     return [
         view_user(x)
         for x in db.scalars(select(User).where(User.role.in_(PRIVILEGED)).limit(200))
@@ -1100,7 +1100,7 @@ def users(u=Depends(authorize("users")), db=Depends(db_session)):
 
 @app.patch("/api/admin/users/{uid}")
 def user_admin(
-    uid: str, p: Body, u=Depends(authorize("users")), db=Depends(db_session)
+    uid: str, p: Body, u=Depends(authorize("users")), db=Depends(db_session, scope="function")
 ):
     other = db.get(User, uid)
     if not other:
@@ -1121,7 +1121,7 @@ def user_admin(
 
 
 @app.get("/api/admin/cms")
-def cms_list(u=Depends(authorize("cms")), db=Depends(db_session)):
+def cms_list(u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     return [
         {
             "id": v.id,
@@ -1138,7 +1138,7 @@ def cms_list(u=Depends(authorize("cms")), db=Depends(db_session)):
 
 
 @app.post("/api/admin/cms", status_code=201)
-def cms_draft(p: Body, u=Depends(authorize("cms")), db=Depends(db_session)):
+def cms_draft(p: Body, u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     page = str(p.value.get("page", ""))
     body = p.value.get("body")
     if page == site_builder.PAGE:
@@ -1162,7 +1162,7 @@ def cms_draft(p: Body, u=Depends(authorize("cms")), db=Depends(db_session)):
 
 
 @app.post("/api/admin/cms/{vid}/publish")
-def publish(vid: str, u=Depends(authorize("cms")), db=Depends(db_session)):
+def publish(vid: str, u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     v = db.get(CMSVersion, vid)
     if not v:
         raise HTTPException(404)
@@ -1181,7 +1181,7 @@ def publish(vid: str, u=Depends(authorize("cms")), db=Depends(db_session)):
 
 
 @app.get("/api/admin/sources")
-def admin_sources(u=Depends(authorize("sources")), db=Depends(db_session)):
+def admin_sources(u=Depends(authorize("sources")), db=Depends(db_session, scope="function")):
     return [
         {
             "id": s.id,
@@ -1197,7 +1197,7 @@ def admin_sources(u=Depends(authorize("sources")), db=Depends(db_session)):
 
 @app.patch("/api/admin/sources/{sid}")
 def review_source(
-    sid: str, p: Body, u=Depends(authorize("sources")), db=Depends(db_session)
+    sid: str, p: Body, u=Depends(authorize("sources")), db=Depends(db_session, scope="function")
 ):
     s = db.get(Source, sid)
     if not s:
@@ -1248,7 +1248,7 @@ def models(u=Depends(authorize("models"))):
 
 
 @app.post("/api/admin/datasets/import/dry-run", status_code=201)
-def import_dry_run(p: Body, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def import_dry_run(p: Body, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     sid = str(p.value.get("source_id", ""))
     s = db.get(Source, sid)
     if not s or s.state != "approved_train_and_reuse":
@@ -1303,7 +1303,7 @@ def import_dry_run(p: Body, u=Depends(authorize("jobs")), db=Depends(db_session)
 
 
 @app.post("/api/admin/datasets/import/{jid}/approve")
-def import_approve(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def import_approve(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     j = db.get(Job, jid)
     if not j or j.state != "dry_run":
         raise HTTPException(422)
@@ -1320,7 +1320,7 @@ def import_approve(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session
 
 
 @app.post("/api/admin/datasets/import/{jid}/rollback")
-def rollback_import(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def rollback_import(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     j = db.get(Job, jid)
     if not j:
         raise HTTPException(404)
@@ -1333,7 +1333,7 @@ def rollback_import(jid: str, u=Depends(authorize("jobs")), db=Depends(db_sessio
 
 
 @app.get("/api/admin/jobs")
-def jobs(u=Depends(authorize("jobs")), db=Depends(db_session)):
+def jobs(u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     return [
         {
             "id": j.id,
@@ -1347,7 +1347,7 @@ def jobs(u=Depends(authorize("jobs")), db=Depends(db_session)):
 
 
 @app.get("/api/admin/audit")
-def audit_list(u=Depends(authorize("audit")), db=Depends(db_session)):
+def audit_list(u=Depends(authorize("audit")), db=Depends(db_session, scope="function")):
     return [
         {
             "id": a.id,
@@ -1364,7 +1364,7 @@ def audit_list(u=Depends(authorize("audit")), db=Depends(db_session)):
 
 
 @app.post("/api/assets/{aid}/transcribe")
-def speech(aid: str, p: Body, u=Depends(identify), db=Depends(db_session)):
+def speech(aid: str, p: Body, u=Depends(identify), db=Depends(db_session, scope="function")):
     from .inference import transcribe
 
     a = owner_asset(db, u, aid)

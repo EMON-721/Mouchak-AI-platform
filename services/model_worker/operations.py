@@ -107,7 +107,7 @@ def schedule_view(s, db):
 
 
 @router.get("/admin/publishing")
-def schedules(u=Depends(authorize("cms")), db=Depends(db_session)):
+def schedules(u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     return [
         schedule_view(s, db)
         for s in db.scalars(
@@ -119,7 +119,7 @@ def schedules(u=Depends(authorize("cms")), db=Depends(db_session)):
 
 
 @router.post("/admin/publishing", status_code=201)
-def schedule(p: ScheduleInput, u=Depends(authorize("cms")), db=Depends(db_session)):
+def schedule(p: ScheduleInput, u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     current = int(time.time())
     if not current + 30 <= p.due_at <= current + 366 * 86400:
         raise HTTPException(422, "Choose a future date within one year")
@@ -152,7 +152,7 @@ def schedule(p: ScheduleInput, u=Depends(authorize("cms")), db=Depends(db_sessio
 
 
 @router.post("/admin/publishing/{sid}/cancel")
-def cancel(sid: str, u=Depends(authorize("cms")), db=Depends(db_session)):
+def cancel(sid: str, u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     s = db.scalar(
         select(PublishSchedule).where(PublishSchedule.id == sid).with_for_update()
     )
@@ -244,7 +244,7 @@ def run_due(db, at=None):
 
 
 @router.get("/admin/publishing/health")
-def scheduler_health(u=Depends(authorize("cms")), db=Depends(db_session)):
+def scheduler_health(u=Depends(authorize("cms")), db=Depends(db_session, scope="function")):
     c = db.get(Config, "scheduler:heartbeat")
     data = json.loads(c.value) if c else {"last_poll_at": None}
     return {
@@ -284,7 +284,7 @@ def rights_round(db, sid, advance=False):
 
 
 @router.get("/admin/sources/{sid}/reviews")
-def reviews(sid: str, u=Depends(authorize("sources")), db=Depends(db_session)):
+def reviews(sid: str, u=Depends(authorize("sources")), db=Depends(db_session, scope="function")):
     if not db.get(Source, sid):
         raise HTTPException(404)
     return [
@@ -306,7 +306,7 @@ def reviews(sid: str, u=Depends(authorize("sources")), db=Depends(db_session)):
 
 @router.post("/admin/sources/{sid}/reviews", status_code=201)
 def rights_review(
-    sid: str, p: RightsInput, u=Depends(authorize("sources")), db=Depends(db_session)
+    sid: str, p: RightsInput, u=Depends(authorize("sources")), db=Depends(db_session, scope="function")
 ):
     from datetime import date, datetime
     from zoneinfo import ZoneInfo
@@ -411,7 +411,7 @@ def rights_review(
 
 
 @router.get("/admin/feedback")
-def feedback_list(u=Depends(authorize("support")), db=Depends(db_session)):
+def feedback_list(u=Depends(authorize("support")), db=Depends(db_session, scope="function")):
     result = []
     for f in db.scalars(
         select(Feedback).order_by(Feedback.created_at.desc()).limit(300)
@@ -432,7 +432,7 @@ def feedback_list(u=Depends(authorize("support")), db=Depends(db_session)):
 
 @router.patch("/admin/feedback/{fid}")
 def classify_feedback(
-    fid: str, p: FeedbackInput, u=Depends(authorize("support")), db=Depends(db_session)
+    fid: str, p: FeedbackInput, u=Depends(authorize("support")), db=Depends(db_session, scope="function")
 ):
     if not db.get(Feedback, fid):
         raise HTTPException(404)
@@ -449,7 +449,7 @@ def classify_feedback(
 
 @router.post("/admin/notifications", status_code=201)
 def send_notice(
-    p: NoticeInput, u=Depends(authorize("operations")), db=Depends(db_session)
+    p: NoticeInput, u=Depends(authorize("operations")), db=Depends(db_session, scope="function")
 ):
     user = db.get(User, p.user_id)
     if not user or user.banned:
@@ -465,7 +465,7 @@ def send_notice(
 
 
 @router.patch("/notifications/{nid}")
-def read_notice(nid: str, p: ReadInput, u=Depends(identify), db=Depends(db_session)):
+def read_notice(nid: str, p: ReadInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     n = db.scalar(
         select(Notification).where(Notification.id == nid, Notification.user_id == u.id)
     )
@@ -476,7 +476,7 @@ def read_notice(nid: str, p: ReadInput, u=Depends(identify), db=Depends(db_sessi
 
 
 @router.get("/admin/notifications")
-def notice_dispatches(u=Depends(authorize("operations")), db=Depends(db_session)):
+def notice_dispatches(u=Depends(authorize("operations")), db=Depends(db_session, scope="function")):
     from .store import Audit
 
     return [

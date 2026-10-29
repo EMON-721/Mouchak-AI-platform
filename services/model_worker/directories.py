@@ -145,7 +145,7 @@ def current_revision(db, slug):
 
 
 @router.get("")
-def list_batches(u=Depends(authorize("jobs")), db=Depends(db_session)):
+def list_batches(u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     # Other dataset jobs can contain private previews; only return schema metadata.
     batches = []
     for job in db.scalars(select(Job).where(Job.state.like("directory_%")).order_by(Job.created_at.desc()).limit(200)):
@@ -158,7 +158,7 @@ def list_batches(u=Depends(authorize("jobs")), db=Depends(db_session)):
 
 
 @router.post("/dry-run", status_code=201)
-def dry_run(p: Batch, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def dry_run(p: Batch, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     if len(json.dumps(p.records, ensure_ascii=False)) > 200000:
         raise HTTPException(413, "Directory batch is too large")
     source, rights = approved_source(db, p.source_id, p.schema_name)
@@ -175,7 +175,7 @@ def dry_run(p: Batch, u=Depends(authorize("jobs")), db=Depends(db_session)):
 
 
 @router.get("/{jid}")
-def review_batch(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def review_batch(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     job = db.get(Job, jid)
     if not job or not job.state.startswith("directory_"):
         raise HTTPException(404)
@@ -184,7 +184,7 @@ def review_batch(jid: str, u=Depends(authorize("jobs")), db=Depends(db_session))
 
 
 @router.post("/{jid}/publish")
-def publish(jid: str, p: Publish, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def publish(jid: str, p: Publish, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     candidate = db.get(Job, jid)
     if not candidate or not candidate.state.startswith("directory_"):
         raise HTTPException(404)
@@ -220,7 +220,7 @@ def publish(jid: str, p: Publish, u=Depends(authorize("jobs")), db=Depends(db_se
 
 
 @router.post("/{slug}/withdraw")
-def withdraw(slug: str, p: Publish, u=Depends(authorize("jobs")), db=Depends(db_session)):
+def withdraw(slug: str, p: Publish, u=Depends(authorize("jobs")), db=Depends(db_session, scope="function")):
     if slug not in MODULES:
         raise HTTPException(404)
     publication_lock(db, slug)

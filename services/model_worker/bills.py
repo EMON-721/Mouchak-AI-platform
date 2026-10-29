@@ -133,13 +133,13 @@ def invalidate(db, u, workspace_id, bill_type):
 
 
 @router.get("/history")
-def history(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session)):
+def history(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session, scope="function")):
     scope(db, u, workspace_id)
     return [entry_view(e) for e in entries(db, u, workspace_id, bill_type)]
 
 
 @router.post("/history", status_code=201)
-def create(p: BillInput, u=Depends(identify), db=Depends(db_session)):
+def create(p: BillInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     scope(db, u, p.workspace_id, lock=True)
     data = clean(p)
     existing = entries(db, u, p.workspace_id, p.bill_type)
@@ -163,7 +163,7 @@ def owned(db, u, entry_id):
 
 
 @router.patch("/history/{entry_id}")
-def edit(entry_id: str, p: BillInput, u=Depends(identify), db=Depends(db_session)):
+def edit(entry_id: str, p: BillInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     scope(db, u, p.workspace_id, lock=True)
     item = owned(db, u, entry_id)
     if item.workspace_id != p.workspace_id or item.bill_type != p.bill_type:
@@ -179,7 +179,7 @@ def edit(entry_id: str, p: BillInput, u=Depends(identify), db=Depends(db_session
 
 
 @router.delete("/history/{entry_id}")
-def remove(entry_id: str, u=Depends(identify), db=Depends(db_session)):
+def remove(entry_id: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     db.scalar(select(User.id).where(User.id == u.id).with_for_update())
     item = owned(db, u, entry_id)
     invalidate(db, u, item.workspace_id, item.bill_type)
@@ -213,7 +213,7 @@ def load_artifact(model):
 
 
 @router.get("/model")
-def model_status(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session)):
+def model_status(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session, scope="function")):
     scope(db, u, workspace_id)
     rows = eligible(entries(db, u, workspace_id, bill_type))
     model = model_for(db, u, workspace_id, bill_type)
@@ -230,7 +230,7 @@ def model_status(workspace_id: str, bill_type: BillType, u=Depends(identify), db
 
 
 @router.post("/model/train")
-def train(p: TrainInput, u=Depends(identify), db=Depends(db_session)):
+def train(p: TrainInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     if PRODUCTION:
         raise HTTPException(503, "Private bill ML is not production-validated; Bangladesh holdout and release review pending")
     if not p.consent:
@@ -286,7 +286,7 @@ def train(p: TrainInput, u=Depends(identify), db=Depends(db_session)):
 
 
 @router.post("/predict", status_code=201)
-def predict(p: BillInput, u=Depends(identify), db=Depends(db_session)):
+def predict(p: BillInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     if PRODUCTION:
         raise HTTPException(503, "Private bill ML is not production-validated; Bangladesh holdout and release review pending")
     scope(db, u, p.workspace_id, lock=True)
@@ -320,7 +320,7 @@ def predict(p: BillInput, u=Depends(identify), db=Depends(db_session)):
 
 
 @router.get("/export")
-def export(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session)):
+def export(workspace_id: str, bill_type: BillType, u=Depends(identify), db=Depends(db_session, scope="function")):
     data = {"bills": history(workspace_id, bill_type, u, db), "model": model_status(workspace_id, bill_type, u, db)}
     return Response(json.dumps(data, ensure_ascii=False, indent=2), media_type="application/json",
                     headers={"Content-Disposition": 'attachment; filename="mouchak-private-bills.json"'})
@@ -369,7 +369,7 @@ def draft_fields(ocr_result):
 
 
 @router.post("/extract/{asset_id}")
-def extract(asset_id: str, page: int = 1, u=Depends(identify), db=Depends(db_session)):
+def extract(asset_id: str, page: int = 1, u=Depends(identify), db=Depends(db_session, scope="function")):
     from .main import owner_asset, asset_bytes, PRODUCTION
     from .inference import ocr
     asset = owner_asset(db, u, asset_id)

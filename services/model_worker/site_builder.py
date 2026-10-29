@@ -244,11 +244,11 @@ class PublishInput(Strict):
     rollback: bool = Field(default=False,strict=True)
 
 @router.get('/public/site')
-def public_site(db=Depends(db_session)):
+def public_site(db=Depends(db_session, scope="function")):
     return {'revision':active_revision(db),'config':active_config(db)}
 
 @router.get('/admin/site-builder')
-def editor(u=Depends(authorize('cms')),db=Depends(db_session)):
+def editor(u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     versions=list(db.scalars(select(CMSVersion).where(CMSVersion.page==PAGE).order_by(CMSVersion.created_at.desc(),CMSVersion.id.desc()).limit(100)))
     assets=[]
     for c in db.scalars(select(Config).where(Config.key.like('site-asset:%')).limit(200)):
@@ -256,12 +256,12 @@ def editor(u=Depends(authorize('cms')),db=Depends(db_session)):
     return {'active':public_site(db),'defaults':DEFAULT,'editable_locales':EDITABLE,'categories':CATEGORIES,'tools':[{'slug':s,'name':m['name'],'description_bn':m['description_bn'],'description_en':m['description_en'],'fields':field_paths(s)} for s,m in MODULES.items()],'assets':assets,'versions':[{'id':v.id,'status':v.status,'author':v.author,'created_at':v.created_at} for v in versions]}
 
 @router.post('/admin/site-builder/validate')
-def check(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session)):
+def check(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     value=p.config.model_dump(); assets_exist(db,value)
     return {'valid':True,'published':False,'config':value}
 
 @router.post('/admin/site-builder',status_code=201)
-def draft(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session)):
+def draft(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     publication_lock(db)
     if active_revision(db)!=p.expected_revision: raise HTTPException(409,'Published revision changed; reload before drafting')
     value=p.config.model_dump(); assets_exist(db,value)
@@ -271,12 +271,12 @@ def draft(p:DraftInput,u=Depends(authorize('cms')),db=Depends(db_session)):
     return {'id':v.id,'status':v.status}
 
 @router.get('/admin/site-builder/{vid}/preview')
-def preview(vid:str,u=Depends(authorize('cms')),db=Depends(db_session)):
+def preview(vid:str,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     v=version(db,vid)
     return {'id':v.id,'status':v.status,'author':v.author,'config':validate(json.loads(v.body))}
 
 @router.post('/admin/site-builder/{vid}/review')
-def review(vid:str,p:ReviewInput,u=Depends(authorize('cms')),db=Depends(db_session)):
+def review(vid:str,p:ReviewInput,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     publication_lock(db); v=version(db,vid,True)
     if v.author==u.id: raise HTTPException(403,'A different content editor must review')
     if v.status!='draft': raise HTTPException(409,'Only an unreviewed immutable draft can be reviewed')
@@ -286,7 +286,7 @@ def review(vid:str,p:ReviewInput,u=Depends(authorize('cms')),db=Depends(db_sessi
     return {'id':v.id,'status':v.status}
 
 @router.post('/admin/site-builder/{vid}/publish')
-def publish(vid:str,p:PublishInput,u=Depends(authorize('cms')),db=Depends(db_session)):
+def publish(vid:str,p:PublishInput,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     publication_lock(db); v=version(db,vid,True)
     if active_revision(db)!=p.expected_revision: raise HTTPException(409,'Published revision changed; reload')
     if p.rollback:
@@ -333,7 +333,7 @@ def safe_svg(value):
     return ET.tostring(root,encoding='unicode')
 
 @router.post('/admin/site-assets',status_code=201)
-def asset(p:AssetInput,u=Depends(authorize('cms')),db=Depends(db_session)):
+def asset(p:AssetInput,u=Depends(authorize('cms')),db=Depends(db_session, scope="function")):
     svg=safe_svg(p.svg); aid=fingerprint(svg)
     if not db.get(Config,'site-asset:'+aid):
         put(db,'site-asset:'+aid,json.dumps({'id':aid,'svg':svg,'license_uri':p.license_uri,'rights_note':p.rights_note,'author':u.id,'created_at':now()},ensure_ascii=False))
@@ -341,7 +341,7 @@ def asset(p:AssetInput,u=Depends(authorize('cms')),db=Depends(db_session)):
     return {'id':aid,'url':'/api/public/site-assets/'+aid+'.svg'}
 
 @router.get('/public/site-assets/{aid}.svg')
-def asset_bytes(aid:str,request:Request,db=Depends(db_session)):
+def asset_bytes(aid:str,request:Request,db=Depends(db_session, scope="function")):
     if not re.fullmatch(r'[a-f0-9]{64}',aid): raise HTTPException(404)
     c=db.get(Config,'site-asset:'+aid)
     if not c: raise HTTPException(404)

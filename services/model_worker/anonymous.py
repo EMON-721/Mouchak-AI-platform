@@ -50,7 +50,7 @@ def view(u, s):
 
 
 @router.post("")
-def visitor(request: Request, response: Response, db=Depends(db_session)):
+def visitor(request: Request, response: Response, db=Depends(db_session, scope="function")):
     existing = request.cookies.get("mouchak_session", "")
     s = db.get(Session, digest(existing)) if existing else None
     if s and s.expires > int(time.time()):
@@ -105,7 +105,7 @@ def remove_visitor(db, u):
 
 @router.post("/clear")
 def clear(
-    p: ClearInput, response: Response, u=Depends(identify), db=Depends(db_session)
+    p: ClearInput, response: Response, u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     if u.role != "guest":
         raise HTTPException(403, "Only an anonymous session can be cleared here")

@@ -53,7 +53,7 @@ def owner(db, u, upload_id):
 
 
 @router.post("", status_code=201)
-def start(p: StartInput, u=Depends(identify), db=Depends(db_session)):
+def start(p: StartInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     if not p.consent:
         raise HTTPException(422, "Processing consent required / সম্মতি প্রয়োজন")
     # Serialize reservations for the same owner, including requests on other replicas.
@@ -72,7 +72,7 @@ def start(p: StartInput, u=Depends(identify), db=Depends(db_session)):
 
 
 @router.put("/{upload_id}/parts/{part}")
-async def put_part(upload_id: str, part: int, request: Request, u=Depends(identify), db=Depends(db_session)):
+async def put_part(upload_id: str, part: int, request: Request, u=Depends(identify), db=Depends(db_session, scope="function")):
     item = owner(db, u, upload_id)
     if item.state != "uploading":
         raise HTTPException(409, "Upload already finalized")
@@ -99,7 +99,7 @@ async def put_part(upload_id: str, part: int, request: Request, u=Depends(identi
 
 
 @router.post("/{upload_id}/complete", status_code=201)
-def complete(upload_id: str, u=Depends(identify), db=Depends(db_session)):
+def complete(upload_id: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     from .main import persist_asset, owner_asset
 
     item = owner(db, u, upload_id)
@@ -122,7 +122,7 @@ def complete(upload_id: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @router.delete("/{upload_id}")
-def cancel(upload_id: str, u=Depends(identify), db=Depends(db_session)):
+def cancel(upload_id: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     item = owner(db, u, upload_id)
     db.delete(item)  # Never deletes a completed private asset.
     return {"cancelled": True}

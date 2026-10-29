@@ -40,6 +40,8 @@ def digest(s):
 
 
 def db_session():
+    # Every API binding uses Depends(..., scope="function"): commit/rollback
+    # must finish before response.start, including cookie and rights writes.
     with DB() as db:
         try:
             yield db
@@ -56,7 +58,7 @@ def password_valid(s):
         )
 
 
-def identify(request: Request, db=Depends(db_session)):
+def identify(request: Request, db=Depends(db_session, scope="function")):
     raw = request.cookies.get("mouchak_session", "")
     s = db.get(Session, digest(raw)) if raw else None
     ts = int(time.time())

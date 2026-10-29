@@ -126,7 +126,7 @@ def grant_view(g):
 
 @router.post("/support/grants", status_code=201)
 def create_grant(
-    p: GrantInput, request: Request, u=Depends(identify), db=Depends(db_session)
+    p: GrantInput, request: Request, u=Depends(identify), db=Depends(db_session, scope="function")
 ):
     if not p.consent:
         raise HTTPException(
@@ -206,7 +206,7 @@ def create_grant(
 
 
 @router.get("/support/grants")
-def owner_grants(u=Depends(identify), db=Depends(db_session)):
+def owner_grants(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         grant_view(g)
         for g in db.scalars(
@@ -218,7 +218,7 @@ def owner_grants(u=Depends(identify), db=Depends(db_session)):
 
 
 @router.post("/support/grants/{gid}/revoke")
-def revoke_grant(gid: str, u=Depends(identify), db=Depends(db_session)):
+def revoke_grant(gid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     g = db.scalar(
         select(SupportGrant).where(SupportGrant.id == gid, SupportGrant.user_id == u.id)
     )
@@ -231,7 +231,7 @@ def revoke_grant(gid: str, u=Depends(identify), db=Depends(db_session)):
 
 
 @router.get("/admin/support")
-def support_inbox(u=Depends(authorize("support")), db=Depends(db_session)):
+def support_inbox(u=Depends(authorize("support")), db=Depends(db_session, scope="function")):
     return [
         {"id": g.id, "expires_at": g.expires_at, "created_at": g.created_at}
         for g in db.scalars(
@@ -245,7 +245,7 @@ def support_inbox(u=Depends(authorize("support")), db=Depends(db_session)):
 
 
 @router.get("/admin/support/{gid}")
-def read_support(gid: str, u=Depends(authorize("support")), db=Depends(db_session)):
+def read_support(gid: str, u=Depends(authorize("support")), db=Depends(db_session, scope="function")):
     g = db.scalar(
         select(SupportGrant).where(
             SupportGrant.id == gid,
@@ -337,12 +337,12 @@ def transfer_preview(p, db, u):
 
 
 @router.post("/transfers/preview")
-def preview_transfer(p: TransferInput, u=Depends(identify), db=Depends(db_session)):
+def preview_transfer(p: TransferInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     return transfer_preview(p, db, u)
 
 
 @router.post("/transfers", status_code=201)
-def create_transfer(p: TransferInput, u=Depends(identify), db=Depends(db_session)):
+def create_transfer(p: TransferInput, u=Depends(identify), db=Depends(db_session, scope="function")):
     if not p.consent:
         raise HTTPException(422, "Explicit cross-tool consent required")
     preview = transfer_preview(p, db, u)
@@ -374,7 +374,7 @@ def create_transfer(p: TransferInput, u=Depends(identify), db=Depends(db_session
 
 
 @router.get("/transfers")
-def transfers(u=Depends(identify), db=Depends(db_session)):
+def transfers(u=Depends(identify), db=Depends(db_session, scope="function")):
     return [
         {
             "id": t.id,
@@ -393,7 +393,7 @@ def transfers(u=Depends(identify), db=Depends(db_session)):
 
 
 @router.get("/transfers/{tid}")
-def get_transfer(tid: str, u=Depends(identify), db=Depends(db_session)):
+def get_transfer(tid: str, u=Depends(identify), db=Depends(db_session, scope="function")):
     t = db.scalar(
         select(ToolTransfer).where(ToolTransfer.id == tid, ToolTransfer.user_id == u.id)
     )

@@ -139,7 +139,7 @@ def item_view(i):
 
 
 @router.get("/{wid}/items")
-def items(wid: str, user=Depends(identify), db=Depends(db_session)):
+def items(wid: str, user=Depends(identify), db=Depends(db_session, scope="function")):
     workspace(db, user, wid)
     return [
         item_view(i)
@@ -157,7 +157,7 @@ def items(wid: str, user=Depends(identify), db=Depends(db_session)):
 
 
 @router.post("/{wid}/items", status_code=201)
-def create_item(wid: str, p: ItemInput, user=Depends(identify), db=Depends(db_session)):
+def create_item(wid: str, p: ItemInput, user=Depends(identify), db=Depends(db_session, scope="function")):
     workspace(db, user, wid)
     if not p.consent:
         raise HTTPException(422, "Processing consent required")
@@ -217,7 +217,7 @@ def create_item(wid: str, p: ItemInput, user=Depends(identify), db=Depends(db_se
 
 @router.post("/{wid}/items/{iid}/movements", status_code=201)
 def movement(
-    wid: str, iid: str, p: MovementInput, user=Depends(identify), db=Depends(db_session)
+    wid: str, iid: str, p: MovementInput, user=Depends(identify), db=Depends(db_session, scope="function")
 ):
     i = owned_item(db, user, wid, iid)
     if not p.consent:
@@ -327,7 +327,7 @@ def movement(
 
 
 @router.get("/{wid}/items/{iid}/history")
-def history(wid: str, iid: str, user=Depends(identify), db=Depends(db_session)):
+def history(wid: str, iid: str, user=Depends(identify), db=Depends(db_session, scope="function")):
     i = owned_item(db, user, wid, iid)
     events = list(
         db.scalars(
