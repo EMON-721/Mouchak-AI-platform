@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+import { siteAssetUrl } from "./site-config";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
@@ -16,30 +18,47 @@ import {
 } from "lucide-react";
 import { useApp } from "./context";
 export function Brand() {
-  const { t, brand } = useApp();
+  const { t, brand, site } = useApp();
   return (
-    <Link href="/" className="brand" aria-label="Mouchak AI home">
-      <svg viewBox="0 0 62 62" aria-hidden="true">
-        <path
-          d="M20 4 33 11v15l-13 8-13-8V11ZM44 18l13 8v15l-13 8-13-8V26ZM20 32l13 8v15l-13 7-13-7V40Z"
-          fill="currentColor"
+    <Link
+      href="/"
+      className="brand"
+      aria-label={t(
+        brand.name_bn || "মৌচাক এআই",
+        brand.name_en || "Mouchak AI",
+      )}
+    >
+      {site.brand.logo_asset ? (
+        <Image
+          unoptimized
+          src={siteAssetUrl(site.brand.logo_asset)}
+          alt=""
+          width={62}
+          height={62}
         />
-        <path
-          d="m20 18 24 15-24 14"
-          fill="none"
-          stroke="#DBAA4D"
-          strokeWidth="4"
-        />
-      </svg>
+      ) : (
+        <svg viewBox="0 0 62 62" aria-hidden="true">
+          <path
+            d="M20 4 33 11v15l-13 8-13-8V11ZM44 18l13 8v15l-13 8-13-8V26ZM20 32l13 8v15l-13 7-13-7V40Z"
+            fill="currentColor"
+          />
+          <path
+            d="m20 18 24 15-24 14"
+            fill="none"
+            stroke="#DBAA4D"
+            strokeWidth="4"
+          />
+        </svg>
+      )}
       <span>
         {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
-        <small>{t("এক জায়গায়, অনেক সমাধান", "MANY TOOLS. ONE PLACE.")}</small>
+        <small>{t(site.brand.tagline_bn, site.brand.tagline_en)}</small>
       </span>
     </Link>
   );
 }
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { t, lang, setLang, brand } = useApp();
+  const { t, lang, setLang, brand, site, sitePublished } = useApp();
   const path = usePathname();
   const [menu, setMenu] = useState(false),
     [dark, setDark] = useState(false),
@@ -52,11 +71,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
     setLarge((v) => !v);
     document.documentElement.dataset.large = large ? "false" : "true";
   }
-  const nav = [
-    ["/explore", t("টুল খুঁজুন", "Explore tools")],
-    ["/work", t("এই সেশনের কাজ", "Session work")],
-    ["/sources", t("উৎস ও আস্থা", "Sources & trust")],
-  ];
+  const nav = site.navigation.map((x) => [x.href, t(x.bn, x.en)]);
   return (
     <>
       <a className="skip" href="#main">
@@ -109,7 +124,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <button
               className="icon-button mobile-menu"
               aria-expanded={menu}
-              aria-label="Menu"
+              aria-label={t("মেনু", "Menu")}
               onClick={() => setMenu(!menu)}
             >
               {menu ? <X /> : <Menu />}
@@ -133,8 +148,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <Brand />
             <p>
               {t(
-                brand.tagline_bn || "প্রতিদিনের কাজে, একসঙ্গে পঞ্চাশ AI।",
-                brand.tagline_en || "Practical AI for everyday Bangladesh.",
+                sitePublished
+                  ? site.footer.text.bn
+                  : brand.tagline_bn || site.footer.text.bn,
+                sitePublished
+                  ? site.footer.text.en
+                  : brand.tagline_en || site.footer.text.en,
               )}
               <br />
               {t(
@@ -145,13 +164,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
           <div className="footer-links">
             {[
-              ["/about", t("আমাদের কথা", "About")],
-              ["/methodology", t("পদ্ধতি", "Methodology")],
-              ["/help", t("সাহায্য", "Help")],
-              ["/privacy", t("গোপনীয়তা", "Privacy")],
-              ["/terms", t("শর্তাবলি", "Terms")],
-              ["/status", t("সেবার অবস্থা", "Status")],
-              ["/contact", t("যোগাযোগ", "Contact")],
+              ...site.footer.links.map((x) => [x.href, t(x.bn, x.en)]),
               ["/admin", t("প্রশাসন", "Administration")],
             ].map(([href, label]) => (
               <Link key={href} href={href}>
@@ -161,13 +174,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="footer-note">
-          <span>© {new Date().getFullYear()} Mouchak AI</span>
           <span>
-            {t(
-              "বাংলাদেশের বাস্তব কাজের জন্য তৈরি।",
-              "Built around everyday Bangladesh.",
-            )}
+            © {new Date().getFullYear()}{" "}
+            {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
           </span>
+          <span>{t(site.footer.note.bn, site.footer.note.en)}</span>
           <span className="dot-label">
             {t(
               "সীমিত কার্যক্রম · পরীক্ষাধীন",

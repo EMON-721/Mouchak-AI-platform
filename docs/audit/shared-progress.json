@@ -1,5 +1,16 @@
 [
   {
+    "requirement": "reviewed_visual_site_builder",
+    "status": "implemented_code_validation_in_progress",
+    "implemented": "Typed bilingual visual presentation editor, owned SVG assets, immutable private drafts, independent current-editor approval, revision/base conflicts, guarded publication/rollback, schedule revalidation and protected viewport preview.",
+    "remaining": "Protected browser editor/MFA and three-width visual acceptance unverified. Broader original model lifecycle/moderation/tenancy requirements remain incomplete.",
+    "evidence": [
+      "tests/test_site_builder.py",
+      "scripts/test-production-stack.py",
+      "docs/SITE_BUILDER.md"
+    ]
+  },
+  {
     "requirement": "reviewed_provider_pharmacy_directory_pipeline",
     "status": "implemented_code_real_model_and_tls_ci_verified_no_real_dataset",
     "implemented": "Typed bounded nonpersonal schemas; two independent current asset reviews; second-operator publication; full batch review UI; optimistic revisions/PostgreSQL serialization; withdrawal/rollback; query-time expiry/rights; actual bounded ONNX/BM25 retrieval and literal pharmacy evidence.",

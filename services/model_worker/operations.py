@@ -126,6 +126,12 @@ def schedule(p: ScheduleInput, u=Depends(authorize("cms")), db=Depends(db_sessio
     v = db.get(CMSVersion, p.version_id)
     if not v:
         raise HTTPException(404)
+    if v.page == "site-builder":
+        from . import site_builder
+        site_builder.publication_lock(db)
+        if v.status != "reviewed":
+            raise HTTPException(409, "Schedule requires an independently reviewed draft")
+        site_builder.validate_publication(db, v)
     if db.scalar(
         select(PublishSchedule).where(
             PublishSchedule.version_id == v.id, PublishSchedule.state == "scheduled"
@@ -192,6 +198,18 @@ def run_due(db, at=None):
             audit(db, "scheduler", "cms_schedule_denied", s.id)
             done.append({"id": s.id, "state": s.state})
             continue
+        if v.page == "site-builder":
+            from . import site_builder
+            site_builder.publication_lock(db)
+            try:
+                site_builder.validate_publication(db, v)
+                if v.status != "reviewed":
+                    raise HTTPException(409, "Version is no longer pending publication")
+            except HTTPException:
+                s.state = "review_unavailable"
+                audit(db, "scheduler", "site_schedule_denied", s.id)
+                done.append({"id": s.id, "state": s.state})
+                continue
         conf = db.scalar(
             select(Config).where(Config.key == "cms:" + v.page).with_for_update()
         )
@@ -200,7 +218,9 @@ def run_due(db, at=None):
             audit(db, "scheduler", "cms_schedule_conflict", s.id, {"page": v.page})
             done.append({"id": s.id, "state": s.state})
             continue
-        if conf:
+        if v.page == "site-builder":
+            site_builder.set_active(db, v)
+        elif conf:
             conf.value = v.body
         else:
             db.add(Config(key="cms:" + v.page, value=v.body))

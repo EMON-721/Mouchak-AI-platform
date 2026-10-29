@@ -50,6 +50,8 @@ app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
 app.include_router(bills.router)
+from . import site_builder
+app.include_router(site_builder.router)
 app.include_router(directories.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
@@ -205,7 +207,7 @@ def get_mod(slug, db):
             )
             for f in m["fields"]
         ]
-    return m
+    return site_builder.customize_module(db, m)
 
 
 def owner_run(db, u, rid):
@@ -1139,6 +1141,8 @@ def cms_list(u=Depends(authorize("cms")), db=Depends(db_session)):
 def cms_draft(p: Body, u=Depends(authorize("cms")), db=Depends(db_session)):
     page = str(p.value.get("page", ""))
     body = p.value.get("body")
+    if page == site_builder.PAGE:
+        raise HTTPException(409, "Use the reviewed Site Builder workflow")
     if (
         not re.fullmatch(r"[a-z0-9_/-]{1,120}", page)
         or not isinstance(body, dict)
@@ -1162,6 +1166,8 @@ def publish(vid: str, u=Depends(authorize("cms")), db=Depends(db_session)):
     v = db.get(CMSVersion, vid)
     if not v:
         raise HTTPException(404)
+    if v.page == site_builder.PAGE:
+        raise HTTPException(409, "Use the reviewed Site Builder workflow")
     conf = db.scalar(
         select(Config).where(Config.key == "cms:" + v.page).with_for_update()
     )

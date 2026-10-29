@@ -1,13 +1,11 @@
+import { siteMetadata } from "@/components/mouchak/site-metadata";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Provider } from "@/components/mouchak/context";
 import { Shell } from "@/components/mouchak/shell";
-export const metadata: Metadata = {
-  title: { default: "মৌচাক এআই · Mouchak AI", template: "%s · Mouchak AI" },
-  description:
-    "৫০টি বাংলাদেশভিত্তিক টুল, এক কেন্দ্রীয় কর্মক্ষেত্র। Verified capabilities and honest limitations.",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return siteMetadata();
+}
 export default function RootLayout({
   children,
 }: {

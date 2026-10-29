@@ -112,6 +112,15 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | POST | `/api/retail/{wid}/items` | `retail.create_item` |
 | POST | `/api/retail/{wid}/items/{iid}/movements` | `retail.movement` |
 | GET | `/api/retail/{wid}/items/{iid}/history` | `retail.history` |
+| GET | `/api/public/site` | `site_builder.public_site` |
+| GET | `/api/admin/site-builder` | `site_builder.editor` |
+| POST | `/api/admin/site-builder/validate` | `site_builder.check` |
+| POST | `/api/admin/site-builder` | `site_builder.draft` |
+| GET | `/api/admin/site-builder/{vid}/preview` | `site_builder.preview` |
+| POST | `/api/admin/site-builder/{vid}/review` | `site_builder.review` |
+| POST | `/api/admin/site-builder/{vid}/publish` | `site_builder.publish` |
+| POST | `/api/admin/site-assets` | `site_builder.asset` |
+| GET | `/api/public/site-assets/{aid}.svg` | `site_builder.asset_bytes` |
 | POST | `/api/uploads` | `uploads.start` |
 | PUT | `/api/uploads/{upload_id}/parts/{part}` | `uploads.put_part` |
 | POST | `/api/uploads/{upload_id}/complete` | `uploads.complete` |

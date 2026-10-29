@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { PageRouter } from "@/components/mouchak/router";
 import { notFound } from "next/navigation";
 const allowed = new Set([
@@ -13,6 +14,16 @@ const allowed = new Set([
   "contact",
   "status",
 ]);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ path: string[] }>;
+}): Promise<Metadata> {
+  const { path } = await params;
+  return ["admin", "work"].includes(path[0])
+    ? { robots: { index: false, follow: false } }
+    : {};
+}
 export default async function Page({
   params,
 }: {

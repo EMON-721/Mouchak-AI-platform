@@ -8,6 +8,13 @@ import {
   useSyncExternalStore,
   ReactNode,
 } from "react";
+import {
+  defaultSite,
+  siteAssetUrl,
+  siteTokenCSS,
+  type SiteConfig,
+  type SiteSnapshot,
+} from "./site-config";
 import type { Lang, User } from "./types";
 import { usePathname } from "next/navigation";
 type Ctx = {
@@ -20,6 +27,11 @@ type Ctx = {
   refresh: () => Promise<void>;
   api: <T = unknown>(path: string, options?: RequestInit) => Promise<T>;
   brand: Record<string, string>;
+  site: SiteConfig;
+  refreshSite: () => Promise<void>;
+  setPreviewSite: (site: SiteConfig | null) => void;
+  sitePreview: boolean;
+  sitePublished: boolean;
 };
 const Context = createContext<Ctx | null>(null);
 type Snapshot = { user: User | null; csrf: string };
@@ -95,7 +107,30 @@ export function Provider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null),
     [csrf, setCsrf] = useState(""),
     [loading, setLoading] = useState(true),
-    [brand, setBrand] = useState<Record<string, string>>({});
+    [legacyBrand, setBrand] = useState<Record<string, string>>({});
+  const [snapshot, setSnapshot] = useState<SiteSnapshot>({
+    revision: null,
+    config: defaultSite,
+  });
+  const [previewSite, setPreviewSite] = useState<SiteConfig | null>(null);
+  const site = previewSite || snapshot.config;
+  const sitePublished = !!previewSite || !!snapshot.revision;
+  const brand: Record<string, string> = sitePublished
+    ? {
+        name_bn: site.brand.name_bn,
+        name_en: site.brand.name_en,
+        tagline_bn: site.brand.tagline_bn,
+        tagline_en: site.brand.tagline_en,
+      }
+    : legacyBrand;
+  const refreshSite = useCallback(async () => {
+    const [response, legacy] = await Promise.all([
+      fetch("/api/public/site"),
+      fetch("/api/public/cms/brand"),
+    ]);
+    if (response.ok) setSnapshot(await response.json());
+    if (legacy.ok) setBrand(await legacy.json());
+  }, []);
   const refresh = useCallback(async () => {
     try {
       const d = await readIdentity(mode);
@@ -136,10 +171,16 @@ export function Provider({ children }: { children: ReactNode }) {
   }, [mode]);
   useEffect(() => {
     let live = true;
-    fetch("/api/public/cms/brand")
-      .then((r) => (r.ok ? r.json() : {}))
-      .then((d) => {
-        if (live) setBrand(d);
+    Promise.all([fetch("/api/public/site"), fetch("/api/public/cms/brand")])
+      .then(async ([response, legacy]) => {
+        const [next, brand] = await Promise.all([
+          response.ok ? response.json() : null,
+          legacy.ok ? legacy.json() : {},
+        ]);
+        if (live) {
+          if (next) setSnapshot(next as SiteSnapshot);
+          setBrand(brand);
+        }
       })
       .catch(() => {});
     return () => {
@@ -149,6 +190,17 @@ export function Provider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
+  useEffect(() => {
+    if (!site.brand.favicon_asset) return;
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/svg+xml";
+    link.href = siteAssetUrl(site.brand.favicon_asset);
+    document.querySelector("head")?.appendChild(link);
+    return () => {
+      link.remove();
+    };
+  }, [site.brand.favicon_asset]);
   const setLang = (l: Lang) => {
     localStorage.setItem("mouchak-language-v1", l);
     window.dispatchEvent(new Event("mouchak-language"));
@@ -179,7 +231,7 @@ export function Provider({ children }: { children: ReactNode }) {
     <Context.Provider
       value={{
         lang,
-        t: (bn, en) => (lang === "bn" ? bn : en),
+        t: (bn, en) => site.locales[en]?.[lang] || (lang === "bn" ? bn : en),
         setLang,
         user: loadedMode === mode ? user : null,
         csrf: loadedMode === mode ? csrf : "",
@@ -187,8 +239,14 @@ export function Provider({ children }: { children: ReactNode }) {
         refresh,
         api,
         brand,
+        site,
+        refreshSite,
+        setPreviewSite,
+        sitePreview: !!previewSite,
+        sitePublished,
       }}
     >
+      <style id="mouchak-site-tokens">{siteTokenCSS(site)}</style>
       {children}
     </Context.Provider>
   );

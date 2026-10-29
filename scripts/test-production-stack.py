@@ -128,6 +128,62 @@ def check_directory_integration(operator, client, pg_dsn, secret_values, visitor
         assert reviewer.post("/api/admin/directories/cliniccompass-bd/withdraw", json={"expected_revision": revision}).status_code == 200
 
 
+def check_site_builder_integration(operator, client, pg_dsn, secret_values, visitor):
+    """Real isolated HTTPS CMS + separate MFA editor + dedicated scheduler role."""
+    from copy import deepcopy
+    from datetime import datetime, timezone
+    editor_id,password=str(uuid.uuid4()),secrets.token_urlsafe(24)
+    secret_values.append(password)
+    with psycopg.connect(pg_dsn) as owner:
+        owner.execute("INSERT INTO users(id,email,password,name,role,verified,banned,language,mfa_enabled,created_at) VALUES(%s,%s,%s,'DEMO content reviewer','content_editor',true,false,'bn',false,%s)",
+                      (editor_id,"cms-reviewer@integration.invalid",PasswordHasher(time_cost=3,memory_cost=65536,parallelism=2).hash(password),datetime.now(timezone.utc).isoformat()))
+    with client() as reviewer:
+        login=reviewer.post('/api/auth/login',json={'email':'cms-reviewer@integration.invalid','password':password})
+        assert login.status_code==200
+        reviewer.headers['x-csrf-token']=login.json()['csrf']
+        enrollment=reviewer.post('/api/auth/mfa/enroll').json()
+        assert reviewer.post('/api/auth/mfa/verify',json={'value':{'code':totp(enrollment['secret'])}}).status_code==200
+        original=visitor.get('/api/public/site').json()
+        module=visitor.get('/api/modules/pukursos-ai').json()
+        svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#116f6e"/></svg>'
+        asset=operator.post('/api/admin/site-assets',json={'svg':svg,'license_uri':'https://example.test/DEMO-owned-artwork','rights_note':'DEMO owned geometric integration artwork; no real brand or personal image.','attest_rights':True})
+        assert asset.status_code==201
+        assert visitor.get(asset.json()['url']).status_code==404
+        config=deepcopy(original['config']);config['brand']['name_en']='DEMO reviewed integration brand';config['brand']['logo_asset']=asset.json()['id']
+        config['tool_overrides']['pukursos-ai']={'name':{'bn':'DEMO পুকুর','en':'DEMO Pond'},'fields':{}}
+        drafted=operator.post('/api/admin/site-builder',json={'config':config,'expected_revision':original['revision']})
+        assert drafted.status_code==201
+        vid=drafted.json()['id']
+        assert visitor.get(f'/api/admin/site-builder/{vid}/preview').status_code==403
+        assert visitor.get('/api/public/site').json()==original
+        assert operator.post(f'/api/admin/cms/{vid}/publish').status_code==409
+        approval={'decision':'approved','reason':'DEMO inspected typed fields, independent review and owned artwork.'}
+        assert operator.post(f'/api/admin/site-builder/{vid}/review',json=approval).status_code==403
+        assert reviewer.post(f'/api/admin/site-builder/{vid}/review',json=approval).status_code==200
+        assert operator.post(f'/api/admin/site-builder/{vid}/publish',json={'expected_revision':original['revision']}).status_code==200
+        assert visitor.get('/api/public/site').json()['revision']==vid
+        assert visitor.get(asset.json()['url']).status_code==200
+        updated=visitor.get('/api/modules/pukursos-ai').json()
+        assert updated['name']=='DEMO Pond'
+        assert all(updated[k]==module[k] for k in ['engine','model_ready','release_status','full_module_complete','safety'])
+        config['brand']['name_en']='DEMO scheduled integration brand'
+        scheduled_version=reviewer.post('/api/admin/site-builder',json={'config':config,'expected_revision':vid})
+        assert scheduled_version.status_code==201
+        second=scheduled_version.json()['id']
+        assert operator.post(f'/api/admin/site-builder/{second}/review',json=approval).status_code==200
+        scheduled=reviewer.post('/api/admin/publishing',json={'version_id':second,'due_at':int(time.time())+31})
+        assert scheduled.status_code==201
+        def published():
+            rows=operator.get('/api/admin/publishing').json()
+            state=next(x['state'] for x in rows if x['id']==scheduled.json()['id'])
+            assert state in ['scheduled','processing','published'], 'Site publication worker failed validation or database grants'
+            return state=='published'
+        wait_for(published,seconds=60)
+        assert visitor.get('/api/public/site').json()['revision']==second
+        assert operator.post(f'/api/admin/site-builder/{vid}/publish',json={'expected_revision':second,'rollback':True}).status_code==200
+        assert visitor.get('/api/public/site').json()['revision']==vid
+
+
 def main():
     project = "mouchak-integration-" + uuid.uuid4().hex[:10]
     role_passwords = {role: secrets.token_urlsafe(32) for role in ROLES}
@@ -290,6 +346,8 @@ def main():
                     assert operator.get("/api/runs/" + completed_job["run_id"]).status_code == 404
                     check_directory_integration(operator, client, pg_dsn, secret_values, probe)
                     report["rights_reviewed_directory_real_tls_queue_and_revocation"] = True
+                    check_site_builder_integration(operator, client, pg_dsn, secret_values, probe)
+                    report["reviewed_site_builder_tls_mfa_assets_scheduler_and_rollback"] = True
                 report["real_operator_login_mfa_and_private_record_denial"] = True
                 # A real retention worker must erase expired guests + actual S3
                 # bytes + derived artifacts, without deleting the operator.

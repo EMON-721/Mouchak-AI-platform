@@ -1,5 +1,8 @@
 # Mouchak AI · মৌচাক এআই
 
+সর্বশেষ code continuation: `/admin/site-builder`-এ bilingual brand/logo/favicon, theme, menu/footer, homepage/FAQ, public pages, ৫০ tool-এর নাম/field help/placeholder, নির্বাচিত locale/category ও SEO সম্পাদনা যুক্ত হয়েছে। ব্যক্তিগত immutable draft → আলাদা MFA সম্পাদকের review → publish/schedule/rollback। [ব্যবহার, নিরাপত্তা ও সীমাবদ্ধতা](docs/SITE_BUILDER.md)। এটি পূর্ণ ৫০ advanced pipeline শেষ হওয়ার দাবি নয়; hosting বন্ধ আছে।
+
+
 **বাংলাদেশের সাধারণ মানুষের জন্য একটি কেন্দ্রীয়, বাংলা–ইংরেজি AI সহায়ক প্ল্যাটফর্ম।** কৃষি, শিক্ষা, স্বাস্থ্যসংক্রান্ত নথি, বাসা, ব্যবসা ও নাগরিক সেবার জন্য একই website-এ ৫০টি tool workspace। Next.js frontend, private Python/FastAPI API, database, worker, বাস্তব local inference adapter, protected operator console এবং automated tests একই monorepo-তে রয়েছে।
 
 **Repository-first checkpoint — production hosting আপাতত স্থগিত।** কোনো Render, Netlify, Railway, Vercel, Cloudflare বা নির্দিষ্ট database account বাধ্যতামূলক নয়। কোড local machine, private developer container অথবা সামঞ্জস্যপূর্ণ Node/Python/Docker infrastructure-এ চালানোর জন্য প্রস্তুত করা হয়েছে। শুধু GitHub Pages-এর static hosting পূর্ণ Python/API website চালাতে পারবে না।

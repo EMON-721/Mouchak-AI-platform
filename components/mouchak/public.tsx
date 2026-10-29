@@ -65,7 +65,7 @@ const pages: Record<
   },
 };
 export function PublicPage({ page }: { page: string }) {
-  const { t, api, user } = useApp();
+  const { t, api, user, site } = useApp();
   const [override, setOverride] = useState<Record<string, string>>({}),
     [feedback, setFeedback] = useState(""),
     [message, setMessage] = useState("");
@@ -95,10 +95,18 @@ export function PublicPage({ page }: { page: string }) {
     <article className="page-width prose-page">
       <div className="page-heading">
         <span className="eyebrow">MOUCHAK AI / {page.toUpperCase()}</span>
-        <h1>{t(override.title_bn || p.bn, override.title_en || p.en)}</h1>
+        <h1>
+          {t(
+            site.pages[page]?.title.bn || override.title_bn || p.bn,
+            site.pages[page]?.title.en || override.title_en || p.en,
+          )}
+        </h1>
       </div>
       <div className="prose-content">
-        {t(override.body_bn || p.body_bn, override.body_en || p.body_en)
+        {t(
+          site.pages[page]?.body.bn || override.body_bn || p.body_bn,
+          site.pages[page]?.body.en || override.body_en || p.body_en,
+        )
           .split("\n\n")
           .map((s, i) => (
             <p key={i}>{s}</p>

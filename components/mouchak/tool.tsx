@@ -1,4 +1,5 @@
 "use client";
+import { customizeTool } from "./site-config";
 import { requestId } from "./request-id";
 import type { BillDraft } from "./bill-workbench";
 import {
@@ -480,9 +481,9 @@ const uploadEngines = new Set([
 const BillWorkbench = dynamic(() => import("./bill-workbench"));
 
 export function ToolWorkspace({ slug }: { slug: string }) {
-  const { t, lang, user, loading, api } = useApp();
+  const { t, lang, user, loading, api, site } = useApp();
   const initial = tools.find((m) => m.slug === slug);
-  const [tool, setTool] = useState<Tool | undefined>(initial),
+  const [rawTool, setTool] = useState<Tool | undefined>(initial),
     [inputs, setInputs] = useState<Record<string, unknown>>({}),
     [consent, setConsent] = useState(false),
     [busy, setBusy] = useState(false),
@@ -496,6 +497,7 @@ export function ToolWorkspace({ slug }: { slug: string }) {
     [passages, setPassages] = useState<Record<string, string>[]>([]),
     [phrases, setPhrases] = useState<Record<string, string>[]>([]),
     [big, setBig] = useState("");
+  const tool = rawTool ? customizeTool(rawTool, site, lang) : undefined;
   const [workspaces, setWorkspaces] = useState<Workspace[]>([]);
   const [workspaceId, setWorkspaceId] = useState("");
   const [transferId, setTransferId] = useState("");
@@ -580,7 +582,8 @@ export function ToolWorkspace({ slug }: { slug: string }) {
     tool.fields ||
     (fieldData as Record<string, FieldSpec[]>)[tool.engine] ||
     [];
-  const category = categories[tool.category];
+  const category =
+    site.category_labels[tool.category] || categories[tool.category];
   function change(k: string, v: unknown) {
     setInputs((x) => ({ ...x, [k]: v }));
   }
@@ -888,6 +891,15 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                     {spec.type === "textarea" ? (
                       <textarea
                         id={"input-" + spec.key}
+                        placeholder={t(
+                          spec.placeholder_bn || "",
+                          spec.placeholder_en || "",
+                        )}
+                        aria-describedby={
+                          spec.help_bn || spec.help_en
+                            ? "help-" + spec.key
+                            : undefined
+                        }
                         required={!spec.optional}
                         maxLength={20000}
                         value={String(inputs[spec.key] || "")}
@@ -912,6 +924,15 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                     ) : (
                       <input
                         id={"input-" + spec.key}
+                        placeholder={t(
+                          spec.placeholder_bn || "",
+                          spec.placeholder_en || "",
+                        )}
+                        aria-describedby={
+                          spec.help_bn || spec.help_en
+                            ? "help-" + spec.key
+                            : undefined
+                        }
                         type={spec.type === "date" ? "date" : "text"}
                         inputMode={
                           spec.type === "number" ? "decimal" : undefined
@@ -924,6 +945,11 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                     )}
                   </>
                 )}
+                {spec.help_bn || spec.help_en ? (
+                  <small id={"help-" + spec.key}>
+                    {t(spec.help_bn || "", spec.help_en || "")}
+                  </small>
+                ) : null}
               </div>
             ))}
             {uploadEngines.has(tool.engine) ? (

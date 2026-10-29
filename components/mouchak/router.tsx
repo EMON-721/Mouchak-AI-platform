@@ -5,6 +5,10 @@ import { Explore } from "./catalogue";
 import { OperatorSecurity } from "./operator-security";
 import { SessionWork } from "./session-work";
 import { OperatorAuth } from "./operator-auth";
+import dynamic from "next/dynamic";
+const SitePreview = dynamic(() =>
+  import("./site-builder").then((m) => m.SitePreview),
+);
 import { AdminPage } from "./admin";
 import { PublicPage, SourcesPage, StatusPage } from "./public";
 function ExploreQuery() {
@@ -30,6 +34,8 @@ export function PageRouter({ path }: { path: string[] }) {
         <OperatorAuth mode={second} />
       </Suspense>
     );
+  if (first === "admin" && second === "site-preview" && path[2])
+    return <SitePreview key={path[2]} version={path[2]} />;
   if (first === "admin" && second === "security") return <OperatorSecurity />;
   if (first === "admin")
     return (

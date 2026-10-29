@@ -11,6 +11,10 @@ export type User = {
 export type Column = { key: string; bn: string; en: string; type: string };
 export type FieldSpec = Column & {
   optional?: boolean;
+  help_bn?: string;
+  help_en?: string;
+  placeholder_bn?: string;
+  placeholder_en?: string;
   options?: string[];
   columns?: Column[];
 };
@@ -32,6 +36,13 @@ export type Tool = {
   enabled?: boolean;
   execution_mode?: "queued" | "synchronous";
   fields?: FieldSpec[];
+  presentation_base?: {
+    name: string;
+    logo: string;
+    description_bn: string;
+    description_en: string;
+    fields?: FieldSpec[];
+  };
 };
 export type RunResult = {
   id: string;

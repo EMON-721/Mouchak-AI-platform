@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState, useMemo, useEffect } from "react";
+import { Fragment, type ReactNode, useState, useMemo, useEffect } from "react";
 import {
   ArrowRight,
   Search,
@@ -24,6 +24,7 @@ import {
 import source from "@/packages/module-registry/catalogue.json";
 import type { Tool } from "./types";
 import { useApp } from "./context";
+import { customizeTool } from "./site-config";
 export const tools = source.modules as Tool[];
 function useCatalogue() {
   const [items, setItems] = useState(tools);
@@ -69,9 +70,10 @@ export const categories: Record<
   digital: { bn: "ডিজিটাল নিরাপত্তা", en: "Digital safety", icon: ShieldCheck },
   transport: { bn: "যাতায়াত", en: "Transport", icon: Activity },
 };
-export function ToolCard({ tool }: { tool: Tool }) {
-  const { t } = useApp();
-  const c = categories[tool.category];
+export function ToolCard({ tool: rawTool }: { tool: Tool }) {
+  const { t, site, lang } = useApp();
+  const tool = customizeTool(rawTool, site, lang);
+  const c = site.category_labels[tool.category] || categories[tool.category];
   return (
     <Link
       href={"/tools/" + tool.slug}
@@ -102,8 +104,12 @@ export function ToolCard({ tool }: { tool: Tool }) {
   );
 }
 export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
-  const { t } = useApp();
-  const catalogue = useCatalogue();
+  const { t, site, lang } = useApp();
+  const rawCatalogue = useCatalogue();
+  const catalogue = useMemo(
+    () => rawCatalogue.map((x) => customizeTool(x, site, lang)),
+    [rawCatalogue, site, lang],
+  );
   const [query, setQuery] = useState(initialQuery),
     [category, setCategory] = useState("all");
   const cats = Array.from(new Set(catalogue.map((x) => x.category)));
@@ -112,7 +118,15 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
       catalogue.filter(
         (m) =>
           (category === "all" || m.category === category) &&
-          [m.name, m.inputs, m.outputs, m.slug, m.description_en, m.category]
+          [
+            m.name,
+            m.inputs,
+            m.outputs,
+            m.slug,
+            m.description_en,
+            m.description_bn,
+            m.category,
+          ]
             .join(" ")
             .toLocaleLowerCase()
             .includes(query.toLocaleLowerCase()),
@@ -173,7 +187,14 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
                 onClick={() => setCategory(key)}
               >
                 <Icon size={17} />
-                {c ? t(c.bn, c.en) : key}
+                {site.category_labels[key]
+                  ? t(
+                      site.category_labels[key].bn,
+                      site.category_labels[key].en,
+                    )
+                  : c
+                    ? t(c.bn, c.en)
+                    : key}
                 <span>
                   {catalogue.filter((m) => m.category === key).length}
                 </span>
@@ -240,38 +261,27 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
 export function Home() {
   const catalogue = useCatalogue();
   const router = useRouter();
-  const { t } = useApp();
+  const { t, site } = useApp();
+  const copy = (key: string) =>
+    t(site.home.text[key].bn, site.home.text[key].en);
   const [query, setQuery] = useState("");
-  const highlights = [
-    "biddutplan-bd",
-    "shikkharag-bd",
-    "bazarcompare-ai",
-    "landledger-bd",
-  ]
+  const highlights = site.home.featured_slugs
     .map((s) => catalogue.find((x) => x.slug === s))
     .filter(Boolean) as Tool[];
-  return (
-    <>
+  const sections: Record<string, ReactNode> = {
+    hero: (
       <section className="hero page-width">
         <div className="hero-content">
           <div className="hero-kicker">
             <span />
-            {t(
-              "বাংলাদেশের মানুষের দৈনন্দিন কাজের পাশে",
-              "EVERYDAY TOOLS, ROOTED IN BANGLADESH",
-            )}
+            {copy("hero_kicker")}
           </div>
           <h1>
-            {t("দৈনন্দিন সমস্যায়,", "Everyday problems.")}
+            {copy("hero_title")}
             <br />
-            <em>{t("একটা কাজের মৌচাক।", "A hive of possibilities.")}</em>
+            <em>{copy("hero_accent")}</em>
           </h1>
-          <p className="hero-intro">
-            {t(
-              "একটা কাগজ বুঝতে, খরচের হিসাব মেলাতে, কিংবা নতুন কিছু শিখতে—আপনার প্রয়োজনের টুল, এক জায়গায়।",
-              "Understand a document, make sense of your expenses, or learn something new. A practical tool for your task, all in one place.",
-            )}
-          </p>
+          <p className="hero-intro">{copy("hero_intro")}</p>
           <form
             className="search-box hero-search"
             onSubmit={(e) => {
@@ -284,10 +294,7 @@ export function Home() {
               aria-label={t("কী করতে চান?", "What would you like to do?")}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder={t(
-                "আজ কী করতে চান?",
-                "What would you like to do today?",
-              )}
+              placeholder={copy("hero_search")}
             />
             <button className="icon-button" aria-label={t("খুঁজুন", "Search")}>
               <ArrowRight size={22} />
@@ -361,6 +368,8 @@ export function Home() {
           </div>
         </div>
       </section>
+    ),
+    statement: (
       <section className="statement-strip">
         <div className="page-width">
           <p>
@@ -381,13 +390,15 @@ export function Home() {
           </Link>
         </div>
       </section>
+    ),
+    featured: (
       <section className="page-width section-space">
         <div className="section-heading">
           <div>
             <span className="eyebrow">
               {t("শুরু করার কয়েকটি পথ", "A FEW PLACES TO START")}
             </span>
-            <h2>{t("ছোট কাজ, কাজে লাগে।", "Small tasks. Useful outcomes.")}</h2>
+            <h2>{copy("featured_title")}</h2>
           </div>
           <Link className="text-link" href="/explore">
             {t("সব ৫০টি টুল দেখুন", "Explore all 50 tools")}
@@ -400,6 +411,8 @@ export function Home() {
           ))}
         </div>
       </section>
+    ),
+    principles: (
       <section className="page-width principles">
         <div>
           <span className="eyebrow">{t("আস্থার ভিত", "BUILT ON TRUST")}</span>
@@ -459,14 +472,14 @@ export function Home() {
           })}
         </div>
       </section>
+    ),
+    closing: (
       <section className="page-width closing">
         <div>
           <span className="eyebrow">
             {t("নিজের কাজের নিজস্ব জায়গা", "YOUR OWN SPACE")}
           </span>
-          <h2>
-            {t("শুরু করুন একটা কাজ দিয়ে।", "Start with one useful task.")}
-          </h2>
+          <h2>{copy("closing_title")}</h2>
           <p>
             {t(
               "কোনো login, signup বা profile নয়। সরাসরি কাজ করুন, ফলাফল ডাউনলোড করুন এবং session-এর তথ্য মুছুন।",
@@ -479,6 +492,24 @@ export function Home() {
           <ArrowRight size={18} />
         </Link>
       </section>
+    ),
+    faq: (
+      <section id="faq" className="page-width section-space">
+        <h2>{t("সাধারণ প্রশ্ন", "Frequently asked questions")}</h2>
+        {site.home.faqs.map((faq, i) => (
+          <details className="panel" key={i}>
+            <summary>{t(faq.question.bn, faq.question.en)}</summary>
+            <p>{t(faq.answer.bn, faq.answer.en)}</p>
+          </details>
+        ))}
+      </section>
+    ),
+  };
+  return (
+    <>
+      {site.home.sections.map((key) => (
+        <Fragment key={key}>{sections[key]}</Fragment>
+      ))}
     </>
   );
 }

@@ -1,3 +1,15 @@
+# Active continuation: reviewed visual Site Builder
+
+Resumed from GitHub main `6e845c8c9756c0318dc9253361f14e7a83875951`. The transient checkout containing earlier unpushed edits was no longer available; the verified committed source was recovered without changing the original 778-file requirements kit. The pending bounded Site Builder was reconstructed and implemented. Hosting remains paused; visitor login/signup/profile remain absent.
+
+Implemented: bilingual visual editor for brand/owned logo/favicon, safe contrast-checked themes/type, route-limited navigation/footer, ordered homepage/featured tools/FAQ, public pages, 50 tool presentation/field labels/help/placeholders, bounded locale/category labels and SEO. Typed server validation, immutable private drafts, independent editor review tied to body hash, revision conflicts, guarded publish/rollback, scheduler revalidation and private viewport preview routes are connected. Generic CMS publication cannot bypass review. No model readiness/security switch is editable. See `docs/SITE_BUILDER.md`.
+
+Local evidence so far: 28 new backend cases passed; TypeScript/lint and canonical production build passed; existing SQL/RLS and transport checks passed. The full regression/real Docker CI outcome will be recorded after completion. Browser rendered Bengali/English public UI, all 50 tools and search filtering; a visitor-session origin mismatch was repaired locally, then a browser URL-policy denial prevented re-verification. Protected editor/MFA, full browser inference, three viewport widths and PDF acceptance are not claimed verified.
+
+**Remaining non-hosting scope is still incomplete:** specialized original 50-tool model/workflow scope, approved Bangladesh data/holdouts/expert validation, remaining moderation/tenancy/model lifecycle administration and outstanding browser acceptance. No advanced module is relabelled fully complete. Historical checkpoints follow; their results apply to their recorded commits.
+
+---
+
 # Repository-first continuation — 29 October 2026
 
 The owner paused production hosting. No cloud service, paid plan, credential change, resource deletion or repository visibility change is performed in this continuation. Existing owner-created provider resources remain under the owner's control. Source publication is authorized; the owner will choose public visibility.

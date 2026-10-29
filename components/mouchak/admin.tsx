@@ -5,12 +5,17 @@ import { ShieldCheck, LockKeyhole } from "lucide-react";
 import { useApp } from "./context";
 import { DataView } from "./tool";
 import { OperationsConsole } from "./operations";
+import dynamic from "next/dynamic";
+const SiteBuilderEditor = dynamic(() =>
+  import("./site-builder").then((m) => m.SiteBuilderEditor),
+);
 import { DirectoryConsole } from "./directory-console";
 import { SignInPrompt } from "./account";
 type Obj = Record<string, unknown>;
 const tabs = [
   ["overview", "সারসংক্ষেপ", "Overview"],
   ["modules", "টুল পরিচালনা", "Tools"],
+  ["site-builder", "সাইট সাজান", "Site Builder"],
   ["cms", "কনটেন্ট ও ব্র্যান্ড", "Content & brand"],
   ["users", "প্রশাসনিক দল", "Operator team"],
   ["sources", "উৎস ও অনুমতি", "Sources & rights"],
@@ -57,6 +62,7 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
         "feedback",
         "notifications",
         "directories",
+        "site-builder",
       ].includes(tab)
     )
       return;
@@ -119,6 +125,7 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
       "feedback",
       "notifications",
       "directories",
+      "site-builder",
     ].includes(tab)
   ) {
     return (
@@ -135,7 +142,9 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
           ))}
         </aside>
         <section className="admin-body">
-          {tab === "directories" ? (
+          {tab === "site-builder" ? (
+            <SiteBuilderEditor key={user?.id} />
+          ) : tab === "directories" ? (
             <DirectoryConsole key={user?.id} />
           ) : (
             <OperationsConsole key={`${user?.id}:${tab}`} tab={tab} />

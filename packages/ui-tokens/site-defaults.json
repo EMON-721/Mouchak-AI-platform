@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "brand": {
+    "name_bn": "মৌচাক এআই",
+    "name_en": "Mouchak AI",
+    "tagline_bn": "এক জায়গায়, অনেক সমাধান",
+    "tagline_en": "MANY TOOLS. ONE PLACE.",
+    "logo_asset": null,
+    "favicon_asset": null
+  },
+  "theme": {
+    "light": {
+      "ink": "#142c32",
+      "teal": "#116f6e",
+      "paper": "#f6f4ed",
+      "white": "#fffefa",
+      "muted": "#5b6c6d",
+      "border": "#dcded6",
+      "amber": "#dbaa4d",
+      "sky": "#d7edf0",
+      "terra": "#c57053",
+      "soft": "#e9ede5",
+      "danger": "#a33232"
+    },
+    "dark": {
+      "ink": "#e6edeb",
+      "teal": "#80ccc4",
+      "paper": "#101c21",
+      "white": "#18272c",
+      "muted": "#b2c4c4",
+      "border": "#38484c",
+      "amber": "#dbaa4d",
+      "sky": "#243f44",
+      "terra": "#c57053",
+      "soft": "#26383a",
+      "danger": "#ffadad"
+    },
+    "font": "bengali_sans",
+    "text_scale": 1
+  },
+  "navigation": [
+    {
+      "bn": "টুল খুঁজুন",
+      "en": "Explore tools",
+      "href": "/explore"
+    },
+    {
+      "bn": "এই সেশনের কাজ",
+      "en": "Session work",
+      "href": "/work"
+    },
+    {
+      "bn": "উৎস ও আস্থা",
+      "en": "Sources & trust",
+      "href": "/sources"
+    }
+  ],
+  "footer": {
+    "text": {
+      "bn": "প্রতিদিনের কাজে, একসঙ্গে পঞ্চাশ AI।",
+      "en": "Practical AI for everyday Bangladesh."
+    },
+    "note": {
+      "bn": "বাংলাদেশের বাস্তব কাজের জন্য তৈরি।",
+      "en": "Built around everyday Bangladesh."
+    },
+    "links": [
+      {
+        "bn": "আমাদের কথা",
+        "en": "About",
+        "href": "/about"
+      },
+      {
+        "bn": "পদ্ধতি",
+        "en": "Methodology",
+        "href": "/methodology"
+      },
+      {
+        "bn": "সাহায্য",
+        "en": "Help",
+        "href": "/help"
+      },
+      {
+        "bn": "গোপনীয়তা",
+        "en": "Privacy",
+        "href": "/privacy"
+      },
+      {
+        "bn": "শর্তাবলি",
+        "en": "Terms",
+        "href": "/terms"
+      },
+      {
+        "bn": "সেবার অবস্থা",
+        "en": "Status",
+        "href": "/status"
+      },
+      {
+        "bn": "যোগাযোগ",
+        "en": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "home": {
+    "sections": [
+      "hero",
+      "statement",
+      "featured",
+      "principles",
+      "closing"
+    ],
+    "featured_slugs": [
+      "biddutplan-bd",
+      "shikkharag-bd",
+      "bazarcompare-ai",
+      "landledger-bd"
+    ],
+    "text": {
+      "hero_kicker": {
+        "bn": "বাংলাদেশের মানুষের দৈনন্দিন কাজের পাশে",
+        "en": "EVERYDAY TOOLS, ROOTED IN BANGLADESH"
+      },
+      "hero_title": {
+        "bn": "দৈনন্দিন সমস্যায়,",
+        "en": "Everyday problems."
+      },
+      "hero_accent": {
+        "bn": "একটা কাজের মৌচাক।",
+        "en": "A hive of possibilities."
+      },
+      "hero_intro": {
+        "bn": "একটা কাগজ বুঝতে, খরচের হিসাব মেলাতে, কিংবা নতুন কিছু শিখতে—আপনার প্রয়োজনের টুল, এক জায়গায়।",
+        "en": "Understand a document, make sense of your expenses, or learn something new. A practical tool for your task, all in one place."
+      },
+      "hero_search": {
+        "bn": "আজ কী করতে চান?",
+        "en": "What would you like to do today?"
+      },
+      "featured_title": {
+        "bn": "ছোট কাজ, কাজে লাগে।",
+        "en": "Small tasks. Useful outcomes."
+      },
+      "closing_title": {
+        "bn": "শুরু করুন একটা কাজ দিয়ে।",
+        "en": "Start with one useful task."
+      }
+    },
+    "faqs": []
+  },
+  "category_labels": {},
+  "tool_overrides": {},
+  "pages": {},
+  "locales": {},
+  "seo": {
+    "title_bn": "মৌচাক এআই · Mouchak AI",
+    "title_en": "Mouchak AI · মৌচাক এআই",
+    "description_bn": "৫০টি বাংলাদেশভিত্তিক টুল, এক কেন্দ্রীয় কর্মক্ষেত্র। বর্তমান সক্ষমতা ও সীমাবদ্ধতা দেখুন।",
+    "description_en": "50 Bangladesh-focused tool workspaces with verified capabilities and honest limitations.",
+    "index": false
+  }
+}

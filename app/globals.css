@@ -3373,3 +3373,30 @@ td a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Typed site editor: fixed form labels, visible focus and actual viewport previews. */
+.brand img {width:46px;height:46px;object-fit:contain;flex-shrink:0}
+.site-builder {min-width:0}
+.site-tabs {display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.site-tabs button {background:var(--white);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:10px 14px;min-height:44px}
+.site-tabs button.selected {background:var(--teal);color:var(--paper)}
+.site-copy {border:1px solid var(--border);border-radius:10px;margin:20px 0;padding:18px;min-width:0}
+.site-copy legend {font-weight:700;padding:0 8px}
+.site-copy .form-field {margin:10px 0}
+.site-edit-panel details {border-bottom:1px solid var(--border);padding:16px 0}
+.site-edit-panel summary {cursor:pointer;min-height:44px;font-weight:600}
+.site-edit-panel input,.site-edit-panel textarea,.site-edit-panel select {max-width:100%}
+.site-palette {border:1px solid var(--border);display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:14px;margin:20px 0;padding:18px}
+.site-palette input[type=color] {width:100%;min-height:44px;padding:3px}
+.site-check {display:inline-flex;gap:8px;align-items:center;min-height:44px;margin:5px 15px 5px 0}
+.site-check input {min-width:20px;min-height:20px}
+.site-save-bar {display:flex;flex-wrap:wrap;gap:12px;padding:20px 0;margin:20px 0;border-block:1px solid var(--border)}
+.site-json {font-family:monospace;font-size:.9rem}
+.site-preview-panel {min-width:0;max-width:100%}
+.site-preview-scroll {overflow:auto;max-width:100%;padding:12px;background:var(--soft);border:1px solid var(--border);margin-top:14px}
+.site-preview-scroll iframe {display:block;max-width:none;border:1px solid var(--border);background:var(--paper)}
+.site-draft-banner {padding:12px 20px;background:var(--ink);color:var(--paper);overflow-wrap:anywhere;font-weight:700}
+.site-builder code {overflow-wrap:anywhere}
+.site-builder .button.small {min-height:44px}
+.site-header .desktop-nav {flex-wrap:wrap}
+@media(max-width:800px){.site-copy{padding:12px}.site-tabs button{flex:1 0 40%}.site-save-bar .button{width:100%}}
