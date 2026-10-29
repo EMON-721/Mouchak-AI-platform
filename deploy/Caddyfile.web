@@ -1,0 +1,7 @@
+{
+    email {$TLS_EMAIL}
+}
+{$SITE_HOSTNAME} {
+    encode zstd gzip
+    reverse_proxy web:3000
+}

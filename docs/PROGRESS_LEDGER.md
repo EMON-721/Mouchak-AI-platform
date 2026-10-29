@@ -1,3 +1,5 @@
+> 29 October 2026 — Repository-first continuation: provider-neutral Next.js build/start, Windows/POSIX development launcher, real-API startup readiness, exact private preview origins, Codespaces/local Docker templates, complete portable service topology, configurable API PORT, deployable migration files, fail-closed internal token, selected-pattern Git-history scan, generated API index and a new public-facing 50-tool README. Production deployment is intentionally paused. Full advanced model/data/admin/browser acceptance remains incomplete; see IMPLEMENTATION_REPORT.md for actual verification.
+
 # Current live backend verification
 
 ## Live backend verification continuation — 28 October 2026

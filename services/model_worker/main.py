@@ -56,9 +56,11 @@ RATE_LOCK = threading.Lock()
 
 @app.middleware("http")
 async def protection(request, call_next):
-    if PRODUCTION and not hmac.compare_digest(
-        request.headers.get("x-internal-api-token", ""),
-        os.getenv("PRIVATE_API_TOKEN", "INVALID"),
+    internal_token = os.getenv("PRIVATE_API_TOKEN", "")
+    if PRODUCTION and (
+        not 32 <= len(internal_token) <= 512
+        or not internal_token.isascii()
+        or not hmac.compare_digest(request.headers.get("x-internal-api-token", ""), internal_token)
     ):
         return JSONResponse({"detail": "Private service authorization required"}, 403)
     if request.method not in ["GET", "HEAD", "OPTIONS"]:

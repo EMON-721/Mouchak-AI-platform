@@ -4,11 +4,12 @@ from pathlib import Path
 import urllib.request, hashlib, json, shutil, os
 
 root = Path(__file__).resolve().parents[1]
+target_dir = Path(os.getenv("MODEL_DIR", root / "models"))
 manifest = json.loads((root / "docs/audit/model-downloads.json").read_text())
 for asset in manifest:
     if asset["status"] != "downloaded":
         continue
-    path = root / "models" / asset["asset"]
+    path = target_dir / asset["asset"]
     path.parent.mkdir(exist_ok=True, parents=True)
     if (
         path.exists()
@@ -35,6 +36,7 @@ for name in ["eng", "osd"]:
     ]:
         source = Path(directory) / (name + ".traineddata")
         if source.exists():
-            shutil.copy2(source, root / "models" / source.name)
+            target_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target_dir / source.name)
             break
 print("Model acquisition complete. Production evaluation is a separate gate.")

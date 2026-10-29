@@ -62,3 +62,6 @@ yarn-error.log*
 # Encrypted recovery archives are still private operator data.
 *.mouchak
 /backups/
+*.clixml
+*.dpapi
+/upload/

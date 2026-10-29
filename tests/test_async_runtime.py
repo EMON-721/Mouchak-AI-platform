@@ -278,11 +278,12 @@ def test_shared_rate_guard_survives_threads_processes_and_restart():
 def test_production_guard_storage_failure_is_not_silently_allowed(client, monkeypatch):
     from services.model_worker import main
     monkeypatch.setattr(main, "PRODUCTION", True)
-    monkeypatch.setenv("PRIVATE_API_TOKEN", "test-internal-guard-token")
+    token = "test-internal-guard-token-" + "X" * 32
+    monkeypatch.setenv("PRIVATE_API_TOKEN", token)
     def unavailable(*args, **kwargs):
         raise RuntimeError("sensitive database details")
     monkeypatch.setattr(rate_limit, "consume", unavailable)
-    r = client.request("POST", "/api/session", headers={"x-internal-api-token": "test-internal-guard-token"})
+    r = client.request("POST", "/api/session", headers={"x-internal-api-token": token})
     assert r.status_code == 503 and "sensitive" not in r.text
 
 

@@ -1,19 +1,33 @@
-# Implemented architecture and boundary decisions
+# Current architecture and implementation boundaries
 
-One Next.js 16 App Router application owns the public catalogue, 50 `/tools/[slug]` workspaces, account pages and admin console. It proxies `/api/*` server-side to one private FastAPI service. Cookies and CSRF tokens use this single website origin. Python model workers are not a second public application.
+One Next.js 16 application owns the bilingual catalogue, 50 /tools/[slug] workspaces, anonymous /work and protected /admin pages. There are no public login/signup/profile pages. Server-side /api/* proxying connects to private FastAPI; browser cookies and CSRF share the website origin. No Python process runs inside a Cloudflare Worker.
 
-The implementation uses **SQLAlchemy**, rather than the Drizzle/Prisma reference choice in the kit, for the Python-owned relational boundary. The generated PostgreSQL schema contains 20 implemented tables. Additional organization, support-grant, vector-index, model-evaluation and advanced-domain tables from the specification remain unimplemented; the original requirements are preserved and are not claimed as completed.
+## Services and data flow
 
-Development explicitly uses SQLite, with exact-decimal domain operations and encrypted record bodies/files. Production refuses a SQLite database. PostgreSQL DDL and owner RLS were executed against PostgreSQL 18.6 through PGlite, with no-identity read denial, owner A/B isolation and cross-owner write denial. An external managed PostgreSQL instance and psycopg connection have **not** been validated. Apply migrations with a separate owner role; run the API as a NOSUPERUSER, NOBYPASSRLS application role.
+1. The website creates an opaque temporary visitor scope; the browser receives an HttpOnly cookie and uses the issued CSRF token for writes.
+2. FastAPI validates transport/origin/session/owner/permissions, stages encrypted uploaded chunks and records the private request.
+3. Durable inference workers lease encrypted jobs, run real available local adapters and commit results with lease fencing. Unavailable model/data gates fail explicitly.
+4. /work reopens the current owner's result/export; support sharing uses selected snapshots and typed transfers, not a global private-data bypass.
+5. Separate scheduler and retention processes publish due authorized CMS work and delete expired visitor records/assets. Scanner feed updates/model initialization are separate operational services.
 
-Private file storage supports encrypted local development files and an encrypted private S3 adapter. S3 integration is not tested against a live provider. Production uploads fail closed without a functioning malware scanner; development uploads explicitly expose their unscanned status. The scanner signature-update service, Redis/queue workers, durable async jobs, scheduled source refresh and backup/restore operations remain deployment work.
+## Persistence and authorization
 
-Implemented role names match the required hierarchy, but permission enforcement currently covers CMS, source review, model inspection, module flags, users, jobs and audit. Organization memberships and tenant sharing are not enabled. Admins cannot read another owner's private result or file through general endpoints, even when the role is Super Admin. Privileged endpoints require a recently verified TOTP. The current TOTP implementation does not provide passkeys, recovery codes or automated lost-device recovery.
+Python SQLAlchemy owns relational data. PostgreSQL migrations 001–006 currently define 26 application tables; secure provisioning adds a checksum migration ledger as a separate table. Dedicated API/inference/scheduler/retention roles must not own tables, bypass RLS or inherit unrelated permissions. Migration-owner credentials must not enter normal runtime containers.
 
-Numeric tools run labelled deterministic support calculations. OCR uses actual Tesseract Bengali/English weights; retrieval uses a real ONNX multilingual MiniLM checkpoint with BM25 and exact source-passage output. It is an extractive retrieval pipeline, not a deployed generative LLM. The corpus is five original CC0 learning passages, not an official NCTB corpus. Speech runs a local quantized Whisper tiny checkpoint behind an experimental adapter, with an English runtime smoke test and no claim of Bengali accuracy. Domain vision classifiers, PPE detection, crop segmentation, validated forecasts and most advanced RAG collections are not deployed.
+Development uses explicitly local SQLite and encrypted local files. Production requires PostgreSQL and stable encryption, private S3, verified transport, scanning and operator SMTP. Actual disposable Docker TLS PostgreSQL/S3/scanner/inference/MFA/retention checks passed in the historical integration evidence. They are not a live provider deployment or restore test.
 
-No production release is asserted. See `IMPLEMENTATION_REPORT.md`, `MODULE_PROGRESS.csv`, `docs/audit/requirements-checklist.json` and the preserved original acceptance matrix for the exact gap.
+Operator roles cover selected CMS/source/module/model-inspection/support/audit/operations controls and require recent MFA. They do not implement every original Super Admin feature, organization tenancy or guardian workflow. General Super Admin endpoints do not bypass owner-private result/file checks.
 
-Selected legacy workflows share central authentication, consent and encrypted storage. Stock items/movements are additive tables; writes require an expected revision and owner-scoped retry key. Item metadata and movement payloads are encrypted. SQL RLS also checks workspace/item links. Reading and basket outputs reuse private tool runs. Full static source snapshots are references, not separate hosted apps.
+## AI scope
 
-Migration 004 adds selected-facts support snapshots, typed cross-tool drafts, CMS schedules and independent source rights reviews. Recipient snapshots avoid bypassing private-run RLS. SQL policy checks include transaction-local recent MFA. The scheduler uses a dedicated database role and no public listener; see COLLABORATION_AND_OPERATIONS.md.
+Tesseract BN/EN, MiniLM ONNX/BM25 cited extractive retrieval, OpenCV registration/difference statistics and private IsolationForest-to-ONNX mechanics run real code. Optional Whisper/pose are experimental; required Bangladesh holdouts and domain approvals have not passed. Deterministic support calculators are labelled calculations, not trained predictions.
+
+The retrieval starter has five project-authored CC0 passages; the attributed legacy reading collection is separate. 244 source candidates are metadata, not approved imported datasets. Full advanced classifiers, generative/domain RAG, real-time directories and most original release/evaluation workflows remain incomplete.
+
+## Portability and preview
+
+Canonical pnpm build/start now use Next.js Node. Both web/API have non-root Docker runtime images, configurable ports and explicit environment contracts. The full Compose topology includes workers/model/scanner initialization and Caddy; backend-only and local-preview variants remain distinct.
+
+Native development selects Windows or POSIX virtualenv paths, waits for the real API and propagates the exact browser origin to both servers. The optional private Codespaces configuration prepares the same real backend and forwards only website port 3000. It does not create a provider account or a public production service.
+
+See README.md, API_REFERENCE.md, DEPLOYMENT.md, PREVIEW.md, MODULE_PROGRESS.csv and IMPLEMENTATION_REPORT.md for current scope, commands and verification.

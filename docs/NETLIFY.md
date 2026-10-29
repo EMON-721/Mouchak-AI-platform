@@ -1,3 +1,5 @@
+> Current decision — 29 October 2026: production hosting is paused. This is an optional provider adapter, not a required platform. Start with DEPLOYMENT.md and PREVIEW.md for portable source/local/private previews.
+
 # Netlify website + private Linux AI backend
 
 The owner selected this architecture on 28 October 2026. Vercel is not the deployment target. Cloudflare DNS/CDN can be added later; it is not required for this release configuration. Existing Sites/Vinext sources remain preserved.

@@ -1,105 +1,235 @@
 # Mouchak AI · মৌচাক এআই
 
-**Implementation checkpoint, not a fully production-ready release.** One bilingual Next.js website, 50 tool routes, a private FastAPI backend, account-free visitor sessions, a protected operator console and real local inference adapters. All original requirements remain under `requirements/original-kit/`; no legacy website was overwritten.
+**বাংলাদেশের সাধারণ মানুষের জন্য একটি কেন্দ্রীয়, বাংলা–ইংরেজি AI সহায়ক প্ল্যাটফর্ম।** কৃষি, শিক্ষা, স্বাস্থ্যসংক্রান্ত নথি, বাসা, ব্যবসা ও নাগরিক সেবার জন্য একই website-এ ৫০টি tool workspace। Next.js frontend, private Python/FastAPI API, database, worker, বাস্তব local inference adapter, protected operator console এবং automated tests একই monorepo-তে রয়েছে।
 
-Read **[IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md)** first for tested scope, partial features and blockers. `MODULE_PROGRESS.csv` tracks every tool separately. The original 430 acceptance scenarios have not all passed; a successful support-flow test does not certify an advanced AI module.
+**Repository-first checkpoint — production hosting আপাতত স্থগিত।** কোনো Render, Netlify, Railway, Vercel, Cloudflare বা নির্দিষ্ট database account বাধ্যতামূলক নয়। কোড local machine, private developer container অথবা সামঞ্জস্যপূর্ণ Node/Python/Docker infrastructure-এ চালানোর জন্য প্রস্তুত করা হয়েছে। শুধু GitHub Pages-এর static hosting পূর্ণ Python/API website চালাতে পারবে না।
 
-## Run locally
+> **সত্যিকারের বর্তমান অবস্থা:** ৫০টি route/workspace আছে; ৪৭টি সীমিত support flow আছে; GoliCoach, ClinicCompass ও OshudhKhoj-এর production core বন্ধ। কোনো tool-এর সম্পূর্ণ original advanced production scope certified নয়। বাস্তব OCR/retrieval/model mechanics-কে Bangladesh accuracy, চিকিৎসা সিদ্ধান্ত বা সম্পূর্ণ ৫০-tool release হিসেবে দাবি করা হয় না। [Implementation report](IMPLEMENTATION_REPORT.md) ও [per-tool checklist](MODULE_PROGRESS.csv) দেখুন।
 
-Requirements: Node 24, Python 3.12 with venv support, pnpm 11.25, Tesseract Bengali/English and FFmpeg. Use WSL or the deployment containers on Windows.
+[![CI](https://github.com/EMON-721/Mouchak-AI-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/EMON-721/Mouchak-AI-platform/actions/workflows/ci.yml)
+[Open a private developer preview in Codespaces](https://codespaces.new/EMON-721/Mouchak-AI-platform) · [Preview guide](docs/PREVIEW.md) · [API reference](docs/API_REFERENCE.md) · [Deployment guide](docs/DEPLOYMENT.md)
+
+## কারা ব্যবহার করবেন
+
+- সাধারণ বাংলা/ইংরেজিভাষী মানুষ: নিজের নথি, হিসাব, পর্যবেক্ষণ ও প্রয়োজনীয় checklist প্রস্তুত করতে।
+- শিক্ষার্থী ও অভিভাবক: মূল বাংলা passage, comprehension, cited learning retrieval ও parent-reviewed notes।
+- ছোট ব্যবসায়ী, ক্রেতা ও কৃষক: নিজের দেওয়া stock, price, bill, cashbook ও farming cost হিসাব করতে।
+- পরিচর্যাকারী ও নাগরিক: নিজের confirmed record ও প্রশ্ন গুছিয়ে সংশ্লিষ্ট পেশাজীবী/অফিসের সঙ্গে কথা বলতে।
+- অনুমোদিত operator: content/source review, module control, selected operations এবং audit পরিচালনা করতে।
+
+## কেন্দ্রীয় website-এ কী আছে
+
+| অংশ | বর্তমান সুবিধা |
+|---|---|
+| Home ও Explore | ৫০ tool-এর catalogue, category/search, আলাদা tool identity/logo এবং release status |
+| Tool workspace | Tool-specific form, consent, বাস্তব processing বা স্পষ্ট unavailable response |
+| `/work` | এই browser-এর temporary history, result reopen, export, selected-facts support ও confirmed clearing |
+| Public access | **Visitor login, signup ও profile নেই**; opaque HttpOnly cookie দিয়ে সর্বোচ্চ ২৪ ঘণ্টার owner-isolated session |
+| Upload | সর্বোচ্চ ১০ MiB; encrypted ১ MiB chunks, checksum, quota, cancellation/cleanup; production scanner ও private S3 প্রয়োজন |
+| Results | নির্দিষ্ট domain-এর হিসাব/notes, JSON/PDF generation; browser PDF verification-এর সীমা report-এ আছে |
+| Operator console | `/admin/login`, password ও TOTP MFA, role-based selected controls; কোনো default admin password নেই |
+| Background services | Durable inference queue, lease/retry/cancellation, scheduled publishing, expired-visitor cleanup |
+| ভাষা ও UI | বাংলা/English switch, responsive components, নিজস্ব ৫০ tool logo; পূর্ণ accessibility certification এখনও হয়নি |
+
+## ৫০টি tool ও বর্তমান সেবা
+
+**সীমিত** মানে নিচের বাস্তব support অংশটি আছে; original advanced ML/data/workflow scope সম্পূর্ণ নয়। **Core বন্ধ** মানে প্রয়োজনীয় verified model/dataset ছাড়া production result বানিয়ে দেখানো হয় না। প্রতিটি tool-এর URL হলো `/tools/<slug>`। বিস্তারিত machine-readable অগ্রগতি: [MODULE_PROGRESS.csv](MODULE_PROGRESS.csv)।
+
+| # | Tool ও slug | এখন কী করে / সীমা | অবস্থা |
+|---|---|---|---|
+| 1 | [PukurSOS AI](packages/module-registry/catalogue.json) · `pukursos-ai` | নিজের মাপা পুকুরের পানি ও মাছের আচরণের লগ। | সীমিত |
+| 2 | [NodiWatch AI](packages/module-registry/catalogue.json) · `nodiwatch-ai` | তারিখসহ দুই ছবি মিলিয়ে দৃশ্যমান পরিবর্তনের পরিসংখ্যান। | সীমিত |
+| 3 | [FasalLoss AI](packages/module-registry/catalogue.json) · `fasalloss-ai` | নিজের তথ্য দিয়ে ফসলের ক্ষতির ডায়েরি। | সীমিত |
+| 4 | [RoofWise AI](packages/module-registry/catalogue.json) · `roofwise-ai` | ছাদ সংস্কার, খরচ ও বৃষ্টির পানি ব্যবহারের হিসাব। | সীমিত |
+| 5 | [NoiseTrace AI](packages/module-registry/catalogue.json) · `noisetrace-ai` | অডিও সিগন্যালের পরিসংখ্যান ও ব্যক্তিগত শব্দের ডায়েরি। | সীমিত |
+| 6 | [ChuktiShield AI](packages/module-registry/catalogue.json) · `chuktishield-ai` | চুক্তির লেখা ও দুই খসড়ার পার্থক্য পর্যালোচনা। | সীমিত |
+| 7 | [BillDetect AI](packages/module-registry/catalogue.json) · `billdetect-ai` | বিলের হিসাব, ব্যক্তিগত মাসিক ইতিহাস ও বাস্তব OCR draft। | সীমিত |
+| 8 | [CareJourney AI](packages/module-registry/catalogue.json) · `carejourney-ai` | নিজের লিখিত চিকিৎসা নির্দেশনার review checklist। | সীমিত |
+| 9 | [GoliCoach AI](packages/module-registry/catalogue.json) · `golicoach-ai` | ভিডিও/pose-এর পরীক্ষামূলক স্থানীয় pipeline; production core বন্ধ। | Core বন্ধ |
+| 10 | [DokanLens AI](packages/module-registry/catalogue.json) · `dokanlens-ai` | নিশ্চিত stock, expiry, movement history ও reorder হিসাব। | সীমিত |
+| 11 | [BazarCompare AI](packages/module-registry/catalogue.json) · `bazarcompare-ai` | নিজের তারিখসহ দেওয়া বাজারদর একই unit-এ তুলনা। | সীমিত |
+| 12 | [HomeHazard AI](packages/module-registry/catalogue.json) · `homehazard-ai` | বাড়ির দৃশ্যমান উদ্বেগ ও বিশেষজ্ঞকে দেখানোর নোট। | সীমিত |
+| 13 | [WasteWise BD](packages/module-registry/catalogue.json) · `wastewise-bd` | নিজে শনাক্ত করা বর্জ্যের disposal guidance। | সীমিত |
+| 14 | [WorkSafe Vision AI](packages/module-registry/catalogue.json) · `worksafe-vision-ai` | কর্মক্ষেত্রের hazard ও corrective-action নথি। | সীমিত |
+| 15 | [ClinicCompass BD](packages/module-registry/catalogue.json) · `cliniccompass-bd` | অনুমোদিত facility directory প্রয়োজন; বর্তমান core বন্ধ। | Core বন্ধ |
+| 16 | [LabTrend BD](packages/module-registry/catalogue.json) · `labtrend-bd` | আসল unit ও নিজের reference range-সহ laboratory value tracking। | সীমিত |
+| 17 | [DoseClear BD](packages/module-registry/catalogue.json) · `doseclear-bd` | নিশ্চিত prescription text পড়া; dose অনুমান করে না। | সীমিত |
+| 18 | [VaccinePath BD](packages/module-registry/catalogue.json) · `vaccinepath-bd` | নথিভুক্ত vaccine date সাজিয়ে clinician review। | সীমিত |
+| 19 | [MaternalRoute BD](packages/module-registry/catalogue.json) · `maternalroute-bd` | নিজের তথ্য দিয়ে মাতৃসেবা visit checklist। | সীমিত |
+| 20 | [DengueSignal BD](packages/module-registry/catalogue.json) · `denguesignal-bd` | দেওয়া তারিখভিত্তিক dengue count-এর বর্ণনা; forecast নয়। | সীমিত |
+| 21 | [RentalFair BD](packages/module-registry/catalogue.json) · `rentalfair-bd` | ভাড়া ও নিয়মিত বাসার খরচের তুলনা। | সীমিত |
+| 22 | [RoadFix BD](packages/module-registry/catalogue.json) · `roadfix-bd` | সড়ক মেরামতের evidence packet ও redaction workflow। | সীমিত |
+| 23 | [SafeRoute BD](packages/module-registry/catalogue.json) · `saferoute-bd` | নিজের দেওয়া route network ও ঐতিহাসিক নোটের তুলনা। | সীমিত |
+| 24 | [WaterGuard BD](packages/module-registry/catalogue.json) · `waterguard-bd` | পানির মাপের সঙ্গে নিজের laboratory reference range তুলনা। | সীমিত |
+| 25 | [AgroPrice Planner](packages/module-registry/catalogue.json) · `agroprice-planner` | কৃষি খরচ, break-even ও বিক্রয়মূল্যের scenario হিসাব। | সীমিত |
+| 26 | [LivestockCare Log](packages/module-registry/catalogue.json) · `livestockcare-log` | পশুর পরিচর্যা ও মাপা ওজনের পরিবর্তনের লগ। | সীমিত |
+| 27 | [CivicForm AI](packages/module-registry/catalogue.json) · `civicform-ai` | নিজের প্রয়োজনীয় কাগজের তালিকা অনুযায়ী form checklist। | সীমিত |
+| 28 | [HeatSafe BD](packages/module-registry/catalogue.json) · `heatsafe-bd` | মাপা temperature/humidity থেকে heat-index estimate। | সীমিত |
+| 29 | [HospitalBillGuard BD](packages/module-registry/catalogue.json) · `hospitalbillguard-bd` | হাসপাতালের bill যোগফল ও হুবহু duplicate line শনাক্ত। | সীমিত |
+| 30 | [SafeBlood Connect BD](packages/module-registry/catalogue.json) · `safeblood-connect-bd` | মেয়াদযুক্ত private blood-request record; live donor matching নয়। | সীমিত |
+| 31 | [ShikkhaRAG BD](packages/module-registry/catalogue.json) · `shikkharag-bd` | পাঁচটি original passage থেকে বাস্তব ONNX/BM25 cited retrieval। | সীমিত |
+| 32 | [BanglaRead Coach](packages/module-registry/catalogue.json) · `banglaread-coach` | মূল বাংলা passage, comprehension ও reading reflection। | সীমিত |
+| 33 | [LandLedger BD](packages/module-registry/catalogue.json) · `landledger-bd` | স্পষ্ট land unit conversion ও দেওয়া document field তুলনা। | সীমিত |
+| 34 | [WageGuard BD](packages/module-registry/catalogue.json) · `wageguard-bd` | নিজের নিশ্চিত rate দিয়ে wage scenario হিসাব। | সীমিত |
+| 35 | [ShobdoSetu BD](packages/module-registry/catalogue.json) · `shobdosetu-bd` | বড় লেখার Bengali/English phraseboard। | সীমিত |
+| 36 | [DrainPulse BD](packages/module-registry/catalogue.json) · `drainpulse-bd` | তারিখভিত্তিক drainage/waterlogging observations তুলনা। | সীমিত |
+| 37 | [AgunPath BD](packages/module-registry/catalogue.json) · `agunpath-bd` | দেওয়া exit constraints থেকে fire-drill checklist। | সীমিত |
+| 38 | [MatiSense BD](packages/module-registry/catalogue.json) · `matisense-bd` | মাটির মাপ ও দেওয়া laboratory interval সাজানো। | সীমিত |
+| 39 | [BiddutPlan BD](packages/module-registry/catalogue.json) · `biddutplan-bd` | যন্ত্রের energy use ও সম্পাদনাযোগ্য বিদ্যুৎ খরচ। | সীমিত |
+| 40 | [ScamSignal BD](packages/module-registry/catalogue.json) · `scamsignal-bd` | সন্দেহজনক message/URL-এর লক্ষণ; লিঙ্ক খুলে না। | সীমিত |
+| 41 | [OshudhKhoj BD](packages/module-registry/catalogue.json) · `oshudhkhoj-bd` | অনুমোদিত ও হালনাগাদ pharmacy stock প্রয়োজন; core বন্ধ। | Core বন্ধ |
+| 42 | [ShebaQueue BD](packages/module-registry/catalogue.json) · `shebaqueue-bd` | সেবা নেওয়ার ধাপ ও document checklist। | সীমিত |
+| 43 | [JatraPulse BD](packages/module-registry/catalogue.json) · `jatrapulse-bd` | নিজের দেওয়া travel graph থেকে path খোঁজা। | সীমিত |
+| 44 | [SkillBridge BD](packages/module-registry/catalogue.json) · `skillbridge-bd` | দেওয়া skill-কে নিজের job/course checklist-এর সঙ্গে মিলানো। | সীমিত |
+| 45 | [FoodLabel Lens BD](packages/module-registry/catalogue.json) · `foodlabel-lens-bd` | লেবেলের লেখা ও সরাসরি নাম থাকা allergen চিহ্নিত করা। | সীমিত |
+| 46 | [OdhikarSetu BD](packages/module-registry/catalogue.json) · `odhikarsetu-bd` | নির্বাচিত support programme-এর প্রশ্ন ও কাগজ প্রস্তুতি। | সীমিত |
+| 47 | [RepairRight BD](packages/module-registry/catalogue.json) · `repairright-bd` | মেরামত বনাম replacement খরচের scenario। | সীমিত |
+| 48 | [JhorAlert BD](packages/module-registry/catalogue.json) · `jhoralert-bd` | নিজের দেওয়া weather bulletin ও source-time সংরক্ষণ/তুলনা। | সীমিত |
+| 49 | [SchoolRoute BD](packages/module-registry/catalogue.json) · `schoolroute-bd` | অভিভাবক-পর্যালোচিত school-area hazard notes; child GPS নয়। | সীমিত |
+| 50 | [HishabBondhu BD](packages/module-registry/catalogue.json) · `hishabbondhu-bd` | Cash in/out, receivable ও জানা business cost reconciliation। | সীমিত |
+
+## বাস্তব AI/API processing
+
+| Runtime | বাস্তব implementation | সীমা |
+|---|---|---|
+| OCR | Tesseract Bengali/English; বিলের editable text/box/confidence draft | OCR ভুল হতে পারে; user confirmation দরকার; identifier hiding সম্পূর্ণ PII redaction নয় |
+| NLP/RAG | Quantized multilingual MiniLM ONNX embeddings + BM25 + source passage citation | পাঁচটি project-authored CC0 starter passage; extractive retrieval, generative LLM বা official NCTB corpus নয় |
+| Computer vision | OpenCV registration ও image-difference statistics | Validated erosion/crop/water/PPE classifier নয় |
+| Private anomaly model | Opt-in confirmed non-DEMO bill history থেকে IsolationForest → ONNX, owner-specific encrypted model | অন্তত ২৫ eligible row; consent withdrawal invalidates derived model; production train/predict বন্ধ |
+| Speech | Optional local quantized Whisper adapter | Bengali holdout অসম্পূর্ণ; production speech বন্ধ |
+| Pose/video | Optional local BlazePose/MediaPipe ৩৩ landmark pipeline, 2D angles ও skeleton replay | Opt-in experimental evaluation; cricket alignment/coach review/BD holdout অসম্পূর্ণ; production বন্ধ |
+| Other calculations | Decimal bill/cost/unit/stock/network/checklist engines | যেখানে deterministic হিসাব, সেটিকে trained ML prediction হিসেবে দেখানো হয় না |
+
+কোনো paid AI API key ছাড়াই documented local OCR/retrieval/support অংশ চালানো যায়। Missing model বা unavailable service-এর জন্য API fake result তৈরি করে না।
+
+## Super Admin / operator permissions
+
+| Role | বাস্তব permission boundary |
+|---|---|
+| `super_admin` | Implemented operator controls; private owner data পড়ার blanket bypass নেই |
+| `content_editor` | CMS draft/review/publish |
+| `dataset_reviewer` | Candidate source, asset rights review ও selected import-job controls |
+| `model_operator` | Model availability/inspection; evaluation gate bypass নয় |
+| `module_manager` | Module availability/feature controls |
+| `support_agent` | Owner-authorized selected-facts support snapshot |
+| `auditor` | Implemented audit views |
+| `guest` | Current anonymous owner scope |
+| `user`, `guardian`, `organization_staff` | Preserved/reserved role names; নতুন public account/organization tenancy চালু নেই |
+
+Privileged operation-এ recent MFA লাগে। Full website layout/logo/form/locales CMS, advanced moderation, guardian/organization tenancy এবং পূর্ণ model lifecycle এখনও অসম্পূর্ণ।
+
+## Hosting ছাড়াই preview
+
+### Option A — GitHub Codespaces, browser-এ private preview
+
+[Open in Codespaces](https://codespaces.new/EMON-721/Mouchak-AI-platform) → create/open a codespace → setup শেষ হলে terminal-এ:
+
+```bash
+pnpm dev --host 0.0.0.0
+```
+
+**Ports → 3000 → Open in Browser**। Visibility **Private** রাখুন; private API port 8000 forward করবেন না। `.devcontainer/` Python 3.12, Node 24, OCR/FFmpeg এবং checksum-controlled baseline models প্রস্তুত করে। Website ও API একই codespace-এ চলে; origin স্বয়ংক্রিয়ভাবে forwarded HTTPS URL-এর সঙ্গে মেলে।
+
+এটি public production deployment নয়। GitHub account entitlement/usage quota বা billing প্রযোজ্য হতে পারে; এই repository কোনো codespace বা paid resource নিজে তৈরি করে না। Codespaces provisioning এই checkpoint-এর CI-তে চালানো হয়নি। Browser-friendly code editor `github.dev` একা server চালায় না।
+
+### Option B — local Docker preview
+
+Docker Engine/Desktop ও Compose plugin প্রস্তুত থাকলে:
+
+```bash
+docker compose -f deploy/compose.local.yaml up --build
+```
+
+Open `http://localhost:3000`। PostgreSQL/Render/SMTP account/API key লাগে না। Actual API, OCR/model-init, inference, scheduler ও retention service ব্যবহৃত হয়। SQLite ও encrypted files শুধু local preview volume-এ থাকে। Development scanner status unscanned হলে সেটি production-scanned হিসেবে দেখানো হয় না। শুধু নিজের test inputs ব্যবহার করুন।
+
+বন্ধ করতে `docker compose -f deploy/compose.local.yaml down`। `down -v` volume/data মুছে দেয়; প্রয়োজন ছাড়া ব্যবহার করবেন না।
+
+### Option C — native development
+
+পূর্ণ runtime-এর tested target: **Node 24, pnpm 11.25.0, Python 3.12, Tesseract Bengali/English এবং FFmpeg**। Windows-এ [preview guide](docs/PREVIEW.md)-এর PowerShell পথ বা WSL/Docker ব্যবহার করুন।
 
 ```bash
 pnpm install --frozen-lockfile
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-python.txt
 .venv/bin/python scripts/download-models.py
-.venv/bin/python scripts/download-speech.py
-.venv/bin/python -m services.model_worker.manage migrate
 pnpm dev
 ```
 
-The development wrapper starts the private API first and then the website. `PUBLIC_ORIGIN` must match the browser origin exactly for CSRF protection. For ordinary local Next.js development, run these in two terminals instead:
+Open `http://localhost:3000`। Development wrapper API ready হওয়া পর্যন্ত অপেক্ষা করে, এরপর website, scheduler/retention এবং opt-in queue worker চালায়। Preview settings ও real processing verification: [docs/PREVIEW.md](docs/PREVIEW.md)।
+
+## পরে যেকোনো সামঞ্জস্যপূর্ণ platform-এ deployment
 
 ```bash
-.venv/bin/python -m uvicorn services.model_worker.main:app --host 127.0.0.1 --port 8000
-pnpm exec next dev
+pnpm build
+pnpm start
 ```
 
-Browse `http://localhost:3000` and open any tool directly. There is no visitor login, signup or profile. A private HttpOnly cookie isolates temporary results for up to 24 hours; download anything you need to keep. `/work` shows the current session. Historical accounts are preserved but end-user password login and registration are disabled.
+এই সাধারণ commands এখন canonical **Next.js Node server** চালায়। `deploy/Dockerfile.web` standalone web image; `deploy/Dockerfile.api` private Python image। API `PORT` environment variable মেনে চলে। Provider-specific Cloudflare build ঐচ্ছিক `build:sites`/`start:sites` নামে preserved; কোনো Cloudflare account দরকার নেই।
 
-Only authorized operators sign in at `/admin/login` and manage MFA at `/admin/security`. Production operator verification/reset uses SMTP; production also requires PostgreSQL and a stable encryption key. There is **no default admin password**.
+পূর্ণ future production topology: [deploy/compose.yaml](deploy/compose.yaml)। আলাদা frontend থাকলে backend-only [deploy/compose.backend.yaml](deploy/compose.backend.yaml)। Private database/S3/SMTP/secrets, model/scanner initialization, worker, TLS ও verified migrations configure করতে হবে। Static-only hosts বা small edge isolates-এ এই Python/ONNX stack চলবে না; “যেকোনো platform” মানে এই runtimes ও resources সমর্থন করা platform।
 
-Create an operator through a password prompt, then enroll and verify MFA in the same website:
+**বর্তমানে কোনো production deploy চালানো হচ্ছে না।** Netlify configuration একটি optional adapter মাত্র। [Portable deployment runbook](docs/DEPLOYMENT.md) দেখুন।
+
+## Environment ও operator setup
+
+`.env.example`-এ documented keys আছে; **নিজের real `.env` Git-এ যাবে না**। Development-এ private local key তৈরি হয়। Existing encrypted data থাকলে key বদলালে data recovery ভেঙে যেতে পারে।
+
+Production-এ প্রয়োজন: stable `DATA_ENCRYPTION_KEY`, matching server-only `PRIVATE_API_TOKEN` (৩২–৫১২ ASCII characters), verified-TLS PostgreSQL URLs with separate API/inference/scheduler/retention roles, private S3 credentials/region, current malware signatures, SMTP, exact HTTPS `PUBLIC_ORIGIN`, domain ও backup/key recovery। এগুলো frontend-এর `NEXT_PUBLIC_*` variable-এ রাখবেন না।
+
+Local operator তৈরি করতে:
 
 ```bash
 .venv/bin/python -m services.model_worker.manage create-admin --email YOUR-EMAIL
 ```
 
-Do not commit `.env`, `.state`, private records, model binaries or generated test fixtures. Never replace a persistent encryption key without a migration and recovery plan.
+Password prompt-এ দিন, তারপর `/admin/login` থেকে sign in করে MFA enroll/verify করুন। কোনো default credential বা anonymous admin bypass নেই। Production database-এ additive SQL provisioning-এর জন্য [backend operations](docs/BACKEND_OPERATIONS.md) অনুসরণ করুন; SQLite development migration production provisioning-এর বিকল্প নয়।
 
-## Verify
+## API ও source map
+
+[সম্পূর্ণ implemented route index](docs/API_REFERENCE.md)। Main families: `/api/session`, `/api/modules`, `/api/tools/{slug}/jobs`, `/api/jobs`, `/api/runs`, `/api/uploads`, `/api/assets`, `/api/bills`, `/api/workspaces`, `/api/privacy/export`, `/api/admin/*`। Website proxy private token server-side যোগ করে; owner/MFA/CSRF checks backend-এ enforce হয়।
+
+| Directory | দায়িত্ব |
+|---|---|
+| `app/`, `components/mouchak/` | Central Next.js UI ও same-origin API proxy |
+| `services/model_worker/` | FastAPI, domain/inference, encryption/authorization, queue/operations CLI |
+| `packages/module-registry/` | ৫০ module, form, model candidate ও source registry |
+| `database/migrations/` | ০০১–০০৬ additive PostgreSQL migration, RLS ও role grants |
+| `data/authored/`, `data/legacy/` | ছোট original/attributed starter content; private production dataset নয় |
+| `requirements/original-kit/` | সম্পূর্ণ অপরিবর্তিত original ৭৭৮-file kit |
+| `deploy/`, `.devcontainer/` | Portable production/local templates ও private developer preview |
+| `tests/`, `scripts/`, `.github/workflows/` | Regression, SQL/inference/integration, publication checks ও CI |
+| `docs/audit/` | Historical test evidence; date/source/result মিলিয়ে পড়তে হবে |
+
+## যাচাই
 
 ```bash
 pnpm typecheck
 pnpm lint
-.venv/bin/python scripts/check-registry.py
-.venv/bin/python -m pytest tests -q
+pnpm test:portable
+python3 scripts/check-public-source.py --history
+python3 scripts/check-registry.py
+python3 scripts/generate-api-reference.py --check
+.venv/bin/python -m pytest tests --ignore=tests/verify_postgres.py -q
 node scripts/test-postgres.mjs
-pnpm build:next
+node scripts/test-collaboration-postgres.mjs
+node scripts/test-async-postgres.mjs
+pnpm test:transport
+pnpm build
 ```
 
-Inference tests run actual OCR, multilingual embedding/retrieval, OpenCV and anomaly operations. Download models first. Test fixtures are synthetic/original, not a Bangladesh performance benchmark. Speech runtime evidence is separate from Bengali validation. PostgreSQL SQL/RLS tests use PGlite; an external PostgreSQL deployment still needs connection, migration and restore tests.
+Model-dependent tests-এর আগে baseline models এবং pose test fixture acquisition দরকার। CI এই steps চালায় এবং actual isolated Docker PostgreSQL/S3/TLS/scanner/inference integration চালায়। বর্তমান checkpoint-এর ফল [implementation report](IMPLEMENTATION_REPORT.md)-এ আছে; পুরোনো সংখ্যা নতুন run-এর প্রমাণ নয়। Full original ৪৩০ acceptance scenario এখনও সব passed নয়।
 
-## Structure
+## Dataset, privacy ও public repository
 
-- `app/`, `components/mouchak/`: one Next.js public/user/admin app and API proxy.
-- `services/model_worker/`: FastAPI, authorization, encryption, domain engines, inference and operational CLI.
-- `packages/module-registry/`: all 50 definitions, forms, model candidates and sources.
-- `data/authored/`: five original, nonofficial Bengali/English learning passages.
-- `data/legacy/`, `reference/legacy-snapshots/`: attributed additions and complete original local V3 static source.
-- `database/migrations/`: PostgreSQL schema, owner RLS and additive stock/sharing/operations/queue/bill migrations 003–006.
-- `deploy/`, `.github/workflows/`: deployment templates and CI.
-- `docs/audit/`: source analysis, hashes, test evidence and readiness records.
-- `requirements/original-kit/`: the entire unchanged input kit.
+- ২৪৪টি Bangladesh-focused candidate source registry entry আছে; এগুলো approved/downloaded dataset নয়। Restricted government data scrape বা fabricated real-world observation ব্যবহার করা হয়নি।
+- User input private; processing consent ও training/reuse consent এক নয়। Models/exports/visitor records owner-isolated।
+- Credentials, uploads, runtime database, trained weights, recovery archive, CLIXML/DPAPI secret export বা password-সহ screenshot source-এ রাখা যাবে না। Current source ও Git history-তে selected-pattern publication scan আছে; সেটি সব ধরনের secret/PII বা rights-এর certification নয়।
+- Exposed credential provider-এ rotate/revoke করতে হবে; file মুছলে secret revoke হয় না। [SECURITY.md](SECURITY.md)।
+- Third-party/source/model licence আলাদা। Public visibility নিজে blanket open-source licence দেয় না। [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) ও [provenance](docs/DATA_AND_MODEL_PROVENANCE.md) দেখুন।
 
-## Selected hosting: Netlify + Linux AI backend
+## কী বাকি
 
-The owner selected **Netlify for the website and a separate Linux/Docker host for AI**, with optional Cloudflare DNS/CDN later. Follow [docs/NETLIFY.md](docs/NETLIFY.md). `netlify.toml` builds canonical Next.js and checks its real HTTPS backend before deployment. `deploy/compose.backend.yaml` provides backend/worker/TLS/scanner configuration; host credentials and operational services remain required. No cloud deployment has been performed.
+Bangladesh-labelled/evaluated advanced classifiers, full generative/domain RAG, approved facility/pharmacy/live directories, forecasting, full original clinical/legal/cricket workflows, remaining admin/model-lifecycle controls, accessibility/browser matrix ও provider-level backup/restore/load validation বাকি। Infrastructure থাকলেও dataset/model/expert review ছাড়া এগুলোকে ready বলা যাবে না। Original requirements ও acceptance traceability অক্ষত আছে।
 
-The new runtime preserves 10 MiB uploads through encrypted 1 MiB chunks, runs inference through durable leased jobs, supports cancellation/reopen and coordinates production request limits in PostgreSQL. Migration 006 brings the additive schema to 26 application tables. Current GitHub platform regression: **359 passed**, plus typecheck/lint/Next build, PostgreSQL WASM and transport checks. A browser completed and reopened actual queued Bengali retrieval. These checks do not certify all 50 advanced models, production infrastructure or all original acceptance cases.
-
-## Private bills and backend provisioning
-
-[BillDetect](docs/BILL_PIPELINE.md) now has private monthly history, actual OCR drafts and experimental owner-specific ONNX model inference. Production ML remains disabled pending evaluation; arithmetic/history are available. A DEMO browser save/reload was verified. [Backend operations](docs/BACKEND_OPERATIONS.md) explains additive verified-TLS provisioning, separate roles and the current container integration result. Both jobs in [run 40704048635](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635) passed, including actual PostgreSQL/S3/scanner/worker/MFA/deletion and real OCR/ONNX container inference. This does not certify a live cloud deployment.
-
-## Live backend verification
-
-The credential-safe [live check](docs/LIVE_BACKEND_CHECK.md) now passes against real disposable TLS database/storage/model services in [CI run 40731666580](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40731666580); **363 Python tests** pass. This command is ready to run against an authorized host once connected. No owner cloud deployment or full 50-tool certification is implied.
-
-## Earlier verified source
-
-The backend/BillDetect continuation is published to this repository's `main` while preserving the initial history. [CI run 40704048635](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40704048635) passed both jobs on runtime commit `736fc3d`; subsequent report-only updates retain that tested runtime. Exact checks and remaining host/data/model gates: [backend operations](docs/BACKEND_OPERATIONS.md) and [bill acceptance progress](docs/audit/bill-acceptance-progress.json).
-
-## Earlier deployment and GitHub checkpoint
-
-Source repository: [EMON-721/Mouchak-AI-platform](https://github.com/EMON-721/Mouchak-AI-platform). GitHub write authorization is now verified, and the complete 1,127-file checkpoint was published to `main` in [commit `d93b4f3`](https://github.com/EMON-721/Mouchak-AI-platform/commit/d93b4f36163a1e0c8ab24bba40ea96b078f8a4da). A fresh fetch verified its tree `62570204e17e97886dd69fe82590d80d7c2575ef` exactly matches tested local source checkpoint `4c03fc0`. The original remote initial commit remains an ancestor. GitHub Actions [run 40680371782](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/40680371782) completed successfully, including tests, PostgreSQL checks and the Next build. Production hosting remains unconfigured. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
-
-Run the visitor retention worker alongside the API:
-
-```bash
-.venv/bin/python -m services.model_worker.visitor_retention
-# One-shot equivalent:
-.venv/bin/python -m services.model_worker.manage purge-visitors
-```
-
-`ANONYMOUS_SESSION_TTL_SECONDS` is capped at 86,400 seconds. The worker removes expired visitor scopes and their files/records, while preserving active visitors and historical accounts. Production S3 deletion/retention, PostgreSQL service roles and backup expiry must be verified on staging. Losing the cookie does not recover a session; it does not immediately erase server data before expiry/cleanup.
-
-Shared support/transfer/rights/scheduling setup: [docs/COLLABORATION_AND_OPERATIONS.md](docs/COLLABORATION_AND_OPERATIONS.md). Public access decision and security details: [docs/PUBLIC_ACCESS.md](docs/PUBLIC_ACCESS.md). Latest evidence is listed in [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md). The complete original 50-tool advanced scope remains incomplete.
-
-## Earlier pose checkpoint (historical)
-
-325 automated tests pass after adding eight actual pose-pipeline tests and a pre-import inference privacy test. TypeScript, lint and the current Next production build pass. [Experimental GoliCoach setup](docs/POSE_PIPELINE.md) includes private MP4 inference, 33 landmarks, timestamps, 2D angle comparison and skeleton replay. Enable only for local evaluation; production remains disabled until Bangladesh holdouts and coach review pass.
-
-ONNX/Hugging Face telemetry is disabled before model-runtime import. The API image and CI carry the same settings. Compose now includes a checksum-verified model-init service and blocks API startup until model acquisition succeeds. Its image/mount state paths agree. The real API image now builds on GitHub runners; the separate network integration result is tracked in [backend operations](docs/BACKEND_OPERATIONS.md). No live cloud deployment is implied.
-
-The owner-selected Supabase organization returned a $0 quote but refused project creation because its two-active-free-project quota is full. No project was created, paused, deleted or upgraded. GitHub publication is verified; the earlier integration 403 is resolved. Browser PDF navigation is blocked by the cloud browser security policy; pose upload automation timed out, so no completed browser inference/upload claim is made. Current hosting/model blockers and next actions are in [docs/ISSUE_RESOLUTION.md](docs/ISSUE_RESOLUTION.md).
+**এই repository-তে বর্তমান implemented frontend, backend, API, database migrations, real inference adapters, worker, tests ও runbooks সংরক্ষিত আছে। সম্পূর্ণ advanced ৫০-tool production release দাবি করা হচ্ছে না।**

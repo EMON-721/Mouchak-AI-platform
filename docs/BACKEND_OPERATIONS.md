@@ -1,3 +1,5 @@
+> Current decision — 29 October 2026: production hosting is paused. Node/Python/Docker source is provider-neutral; no Netlify/Render/Supabase account is required for local preview. Earlier provider attempts below are historical, not active provisioning instructions. The owner created a temporary Render PostgreSQL instance through their own UI; no successful owner connection/migration or live backend is certified.
+
 # Backend provisioning and integration evidence
 
 Target: the owner handles Netlify; this repository supplies the separate Linux/Docker API, inference, scheduler and expiry services. No Linux cloud host, PostgreSQL service or private bucket has been provisioned in the owner's account. No paid capacity is authorized by these templates. Existing data and unrelated cloud projects must be preserved.

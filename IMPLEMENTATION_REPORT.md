@@ -1,6 +1,25 @@
+# Repository-first continuation — 29 October 2026
+
+The owner paused production hosting. No cloud service, paid plan, credential change, resource deletion or repository visibility change is performed in this continuation. Existing owner-created provider resources remain under the owner's control. Source publication is authorized; the owner will choose public visibility.
+
+Implemented source changes:
+- Canonical provider-neutral Next.js build/start, with framework telemetry disabled before CLI import. Optional Sites/Cloudflare scripts remain explicitly optional.
+- Windows/POSIX virtualenv selection, validated configurable ports, automatic exact Codespaces origin, real API readiness before frontend startup, and development worker/retention/scheduler lifecycle.
+- Optional private Codespaces/devcontainer and local Docker preview with actual API/models, not mocked responses. Codespaces itself has not been provisioned in the owner account.
+- Complete future Docker topology includes inference, model initialization, scanning/signature updates and expiry services. API images now include the actual migration/grant files, and the API obeys PORT. Non-root web container gets correct file ownership and bind hostname.
+- Production private API now refuses missing/short transport tokens, including the previous fallback string; regression cases cover this boundary.
+- Public README documents every tool, audience, permissions, API/backend/database/model/data scope, setup, privacy/licensing and all major incomplete requirements. API decorator index is generated from current source.
+- Selected-pattern publication scanner examines current source and Git history, excludes private runtime/secret-export artifacts, and never prints matched credentials. This is not comprehensive secret/PII or redistribution certification.
+
+Fresh verification and remaining limitations are recorded in docs/audit/repository-release-20261029.json. Until those checks finish, earlier evidence below must not be treated as evidence for the new source.
+
+The full 50-tool advanced production release remains incomplete. No missing Bangladesh holdout, reviewed dataset, specialist model or full admin/browser acceptance gate was relabelled complete. Hosting remains intentionally paused.
+
+---
+
 # Mouchak AI implementation report — 28 October 2026
 
-**Tested account-free platform checkpoint; the full 50-tool production release is not finished.** Continued from the verified GitHub publication head, preserving all original requirements and prior implementation. The owner now selected Netlify for the website and a separate Linux/Docker host for the AI backend; Cloudflare may be added later for DNS/CDN.
+**Tested account-free platform checkpoint; the full 50-tool production release is not finished.** Continued from the verified GitHub publication head, preserving all original requirements and prior implementation. The latest owner instruction pauses production hosting and requests a provider-neutral GitHub source release and detailed public README. Older provider-specific sections below are historical.
 
 The owner's latest instruction removes public login, signup and visitor profiles, superseding the ZIP's end-user account-screen requirements. The Super Admin/operator system retains passwords, roles and MFA. See `docs/PUBLIC_ACCESS.md` for the decision and security details.
 

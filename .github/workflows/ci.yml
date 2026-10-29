@@ -4,18 +4,23 @@ permissions:
 env:
   ORT_DISABLE_TELEMETRY: '1'
   HF_HUB_DISABLE_TELEMETRY: '1'
+  NEXT_TELEMETRY_DISABLED: '1'
 on: [push, pull_request]
 jobs:
   platform:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python3 scripts/check-public-source.py --history
+      - run: python3 scripts/generate-api-reference.py --check
       - uses: actions/setup-node@v4
         with: {node-version: '24'}
       - uses: pnpm/action-setup@v4
         with: {version: '11.25.0'}
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck && pnpm lint
+      - run: pnpm test:portable
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-ben ffmpeg fonts-dejavu-core
@@ -28,7 +33,7 @@ jobs:
       - run: node scripts/test-collaboration-postgres.mjs
       - run: node scripts/test-async-postgres.mjs
       - run: node scripts/test-private-processing.mjs
-      - run: pnpm build:next
+      - run: pnpm build
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: test-evidence, path: ci-results.xml}
@@ -44,6 +49,8 @@ jobs:
         run: pip install psycopg[binary]==3.3.6 cryptography==50.0.2 boto3==1.43.119 httpx==0.28.1 Pillow==12.3.0 argon2-cffi==25.1.0
       - name: Verify isolated TLS database, storage, scanner, roles and model containers
         run: python scripts/test-production-stack.py
+      - name: Validate portable local Compose configuration
+        run: docker compose -f deploy/compose.local.yaml config --quiet
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: private-stack-evidence, path: docs/audit/production-stack.json}

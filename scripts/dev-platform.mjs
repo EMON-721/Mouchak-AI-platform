@@ -1,119 +1,55 @@
 import { spawn } from "node:child_process";
-import { mkdirSync, openSync, appendFileSync, existsSync } from "node:fs";
+import { mkdirSync, openSync, existsSync } from "node:fs";
 import { readExecutionProfile } from "./execution-profile.mjs";
+import { developmentConfig } from "./platform-config.mjs";
+
 if (existsSync(".env")) process.loadEnvFile(".env");
+const config = developmentConfig(process.env, process.argv.slice(2), readExecutionProfile() === "managed-linux");
 mkdirSync(".state", { recursive: true });
-const log = openSync(".state/development-api.log", "a");
-const python =
-  process.env.MOUCHAK_PYTHON ||
-  (existsSync(".venv/bin/python") ? ".venv/bin/python" : "python3");
-const raw = process.argv.slice(2);
-const managed = readExecutionProfile() === "managed-linux";
-const suppliedPort = raw[raw.indexOf("--port") + 1];
-const port = raw.includes("--port") ? suppliedPort : "3000";
-const origin =
-  process.env.PUBLIC_ORIGIN ||
-  (managed ? `http://terminal.local:${port}` : `http://localhost:${port}`);
-const backend = spawn(
-  python,
-  [
-    "-m",
-    "uvicorn",
-    "services.model_worker.main:app",
-    "--host",
-    "127.0.0.1",
-    "--port",
-    "8000",
-    "--no-access-log",
-  ],
-  {
-    stdio: ["ignore", log, log],
-    env: {
-      ...process.env,
-      PUBLIC_ORIGIN: origin,
-      OPENBLAS_NUM_THREADS: "2",
-      OMP_NUM_THREADS: "2",
-    },
-  },
-);
-// Use the app's canonical Next.js runtime for its private API proxy. The optional
-// Sites/Vinext build remains available separately; the Python worker is not
-// hosted inside a Cloudflare Worker during full-stack development.
-const args = raw
-  .filter((a) => a !== "--strictPort")
-  .map((a) => (a === "--host" ? "--hostname" : a));
-const frontend = spawn(
-  process.execPath,
-  ["node_modules/next/dist/bin/next", "dev", ...args],
-  { stdio: "inherit", env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" } },
-);
+const log = openSync(".state/development-api.log", "a", 0o600);
+const env = {
+  ...process.env, MOUCHAK_ENV: "development", PUBLIC_ORIGIN: config.origin,
+  PRIVATE_API_URL: `http://127.0.0.1:${config.apiPort}`,
+  NEXT_TELEMETRY_DISABLED: "1", OPENBLAS_NUM_THREADS: "2", OMP_NUM_THREADS: "2",
+};
+const children = [];
 let stopping = false;
-let inference;
-async function startInference() {
-  if (process.env.ENABLE_DURABLE_INFERENCE !== "1") return;
-  for (let attempt = 0; attempt < 60 && !stopping; attempt++) {
-    try {
-      const ready = await fetch("http://127.0.0.1:8000/api/health", {
-        signal: AbortSignal.timeout(1000),
-      });
-      if (ready.ok && !stopping) {
-        inference = spawn(
-          python,
-          ["-m", "services.model_worker.inference_worker"],
-          {
-            stdio: ["ignore", log, log],
-            env: {
-              ...process.env,
-              OPENBLAS_NUM_THREADS: "2",
-              OMP_NUM_THREADS: "2",
-            },
-          },
-        );
-        inference.on("error", () => {
-          stop();
-          process.exitCode = 1;
-        });
-        inference.on("exit", (code) => {
-          if (!stopping) {
-            stop();
-            process.exitCode = code || 1;
-          }
-        });
-        return;
-      }
-    } catch {
-      /* API is still starting; no alternate listener is launched. */
-    }
-    await new Promise((resolve) => setTimeout(resolve, 500));
-  }
-  if (!stopping) {
-    stop();
-    process.exitCode = 1;
-  }
-}
-void startInference();
-function stop() {
+function stop(code = 0) {
   if (stopping) return;
   stopping = true;
-  inference?.kill("SIGTERM");
-  backend.kill("SIGTERM");
-  frontend.kill("SIGTERM");
+  process.exitCode = code;
+  for (const child of children) child.kill("SIGTERM");
 }
-backend.on("error", (err) => {
-  appendFileSync(".state/development-api.log", err.message + "\n");
-  stop();
-  process.exitCode = 1;
-});
-backend.on("exit", (code, signal) => {
-  if (!stopping) {
-    process.stderr.write("Private API exited: " + code + " " + signal + "\n");
-    stop();
-    process.exitCode = code || 1;
-  }
-});
-process.on("SIGINT", stop);
-process.on("SIGTERM", stop);
-frontend.on("exit", (code) => {
-  stop();
-  process.exitCode = code || 0;
-});
+function launch(command, args, stdio) {
+  const child = spawn(command, args, { stdio, env });
+  children.push(child);
+  child.on("error", () => {
+    console.error("A development service could not start. Check Python/dependencies and .state/development-api.log.");
+    stop(1);
+  });
+  child.on("exit", (code) => { if (!stopping) stop(code || 1); });
+  return child;
+}
+process.on("SIGINT", () => stop());
+process.on("SIGTERM", () => stop());
+launch(config.python, ["-m", "uvicorn", "services.model_worker.main:app", "--host", "127.0.0.1", "--port", config.apiPort, "--no-access-log"], ["ignore", log, log]);
+let ready = false;
+for (let attempt = 0; attempt < 60 && !stopping; attempt++) {
+  try {
+    const response = await fetch(`${env.PRIVATE_API_URL}/api/health`, { signal: AbortSignal.timeout(1000) });
+    const health = await response.json();
+    if (response.ok && health.api === "ok" && health.tools === 50) { ready = true; break; }
+  } catch { /* Bounded startup wait; never substitute fake API responses. */ }
+  await new Promise((resolve) => setTimeout(resolve, 500));
+}
+if (!ready || stopping) {
+  if (!stopping) console.error("Private API startup failed. See .state/development-api.log; no frontend was started.");
+  stop(1);
+} else {
+  if (env.ENABLE_DURABLE_INFERENCE === "1")
+    launch(config.python, ["-m", "services.model_worker.inference_worker"], ["ignore", log, log]);
+  launch(config.python, ["-m", "services.model_worker.visitor_retention"], ["ignore", log, log]);
+  launch(config.python, ["-m", "services.model_worker.scheduler"], ["ignore", log, log]);
+  launch(process.execPath, ["node_modules/next/dist/bin/next", "dev", ...config.args], "inherit");
+  console.log(`Mouchak development origin: ${config.origin}`);
+}

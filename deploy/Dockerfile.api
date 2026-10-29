@@ -8,10 +8,12 @@ COPY services ./services
 COPY packages ./packages
 COPY data ./data
 COPY requirements ./requirements
+COPY database ./database
+COPY deploy/*.sql ./deploy/
 COPY public/fonts ./public/fonts
 COPY scripts/download-models.py scripts/download-pose.py ./scripts/
 COPY docs/audit/model-downloads.json docs/audit/pose-assets.json ./docs/audit/
 RUN useradd --uid 10001 --create-home mouchak && mkdir -p state models && chown -R mouchak:mouchak state models
 USER mouchak
 EXPOSE 8000
-CMD ["python","-m","uvicorn","services.model_worker.main:app","--host","0.0.0.0","--port","8000","--no-access-log"]
+CMD ["python","-m","services.model_worker.serve"]

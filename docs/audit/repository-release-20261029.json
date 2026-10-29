@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-29",
+  "source_base": "bcf8a4fb44983a21bf623463769743330b874387",
+  "hosting": "paused_by_owner",
+  "provider_required": false,
+  "repository_visibility_changed": false,
+  "full_50_tool_production_certified": false,
+  "verification_status": "in_progress",
+  "codespaces_provisioned": false,
+  "local_docker_daemon_available": false,
+  "credentials_published": false,
+  "secret_scan_scope": "Selected patterns in current source and Git history; not comprehensive secret/PII certification"
+}

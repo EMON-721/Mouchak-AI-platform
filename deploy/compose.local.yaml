@@ -1,0 +1,60 @@
+# Local/developer preview only. No cloud database, paid service, SMTP or API key.
+# docker compose -f deploy/compose.local.yaml up --build
+x-preview: &preview
+  MOUCHAK_ENV: development
+  PUBLIC_ORIGIN: http://localhost:${MOUCHAK_WEB_PORT:-3000}
+  MOUCHAK_STATE_DIR: /app/state
+  MODEL_DIR: /app/models
+  ENABLE_DURABLE_INFERENCE: "1"
+  ENABLE_EXPERIMENTAL_POSE: "0"
+  ORT_DISABLE_TELEMETRY: "1"
+  HF_HUB_DISABLE_TELEMETRY: "1"
+services:
+  model-init:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: [python, scripts/download-models.py]
+    volumes: [preview-models:/app/models]
+    restart: "no"
+  api:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    environment: *preview
+    volumes: [preview-state:/app/state, preview-models:/app/models:ro]
+    depends_on:
+      model-init: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"]
+      interval: 5s
+      timeout: 6s
+      retries: 30
+      start_period: 10s
+  web:
+    build: {context: .., dockerfile: deploy/Dockerfile.web}
+    ports: ["127.0.0.1:${MOUCHAK_WEB_PORT:-3000}:3000"]
+    environment:
+      PRIVATE_API_URL: http://api:8000
+    depends_on:
+      api: {condition: service_healthy}
+  inference:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: [python, -m, services.model_worker.inference_worker]
+    environment: *preview
+    volumes: [preview-state:/app/state, preview-models:/app/models:ro]
+    depends_on:
+      api: {condition: service_healthy}
+  scheduler:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: [python, -m, services.model_worker.scheduler]
+    environment: *preview
+    volumes: [preview-state:/app/state]
+    depends_on:
+      api: {condition: service_healthy}
+  retention:
+    build: {context: .., dockerfile: deploy/Dockerfile.api}
+    command: [python, -m, services.model_worker.visitor_retention]
+    environment: *preview
+    volumes: [preview-state:/app/state]
+    depends_on:
+      api: {condition: service_healthy}
+volumes:
+  preview-state:
+  preview-models:

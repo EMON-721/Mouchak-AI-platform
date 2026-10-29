@@ -1,50 +1,46 @@
-# Deployment template. Do not expose the private API or database publicly.
-# Bring your own reviewed PostgreSQL TLS, SMTP, malware signatures and secrets.
+# Provider-neutral complete service topology; intentionally not deployed.
+# Provision dedicated PostgreSQL roles first; provide private S3/SMTP and secrets.
+# docker compose --env-file .env -f deploy/compose.yaml up -d --build
 services:
   model-init:
-    build: {context: .., dockerfile: deploy/Dockerfile.api}
-    command: ["python", "scripts/download-models.py"]
-    volumes: ["model-weights:/app/models"]
-    restart: "no"
+    extends: {file: compose.backend.yaml, service: model-init}
+  signatures-init:
+    extends: {file: compose.backend.yaml, service: signatures-init}
+  signatures:
+    extends: {file: compose.backend.yaml, service: signatures}
+  api:
+    extends: {file: compose.backend.yaml, service: api}
+    environment:
+      PORT: "8000"
+  inference:
+    extends: {file: compose.backend.yaml, service: inference}
+  scheduler:
+    extends: {file: compose.backend.yaml, service: scheduler}
+  retention:
+    extends: {file: compose.backend.yaml, service: retention}
   web:
     build: {context: .., dockerfile: deploy/Dockerfile.web}
-    ports: ["3000:3000"]
     environment:
+      NODE_ENV: production
       PRIVATE_API_URL: http://api:8000
       PRIVATE_API_TOKEN: ${PRIVATE_API_TOKEN:?required}
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+    restart: unless-stopped
+    init: true
     depends_on: [api]
-  api:
-    build: {context: .., dockerfile: deploy/Dockerfile.api}
-    env_file: ../.env
+  tls:
+    image: caddy:2-alpine
     environment:
-      MOUCHAK_ENV: production
-      PRIVATE_API_TOKEN: ${PRIVATE_API_TOKEN:?required}
-      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
-      DATABASE_URL: ${DATABASE_URL:?required}
-    volumes: ["private-state:/app/state", "model-weights:/app/models"]
-    depends_on:
-      model-init:
-        condition: service_completed_successfully
-  scheduler:
-    build: {context: .., dockerfile: deploy/Dockerfile.api}
-    env_file: ../.env
-    command: ["python", "-m", "services.model_worker.scheduler"]
-    environment:
-      MOUCHAK_ENV: production
-      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
-      DATABASE_URL: ${SCHEDULER_DATABASE_URL:?required}
-      SCHEDULER_POLL_SECONDS: 15
+      SITE_HOSTNAME: ${SITE_HOSTNAME:?required}
+      TLS_EMAIL: ${TLS_EMAIL:?required}
+    ports: ["80:80", "443:443"]
+    volumes: ["./Caddyfile.web:/etc/caddy/Caddyfile:ro", "tls-data:/data", "tls-config:/config"]
     restart: unless-stopped
-  visitor-retention:
-    build: {context: .., dockerfile: deploy/Dockerfile.api}
-    env_file: ../.env
-    command: ["python", "-m", "services.model_worker.visitor_retention"]
-    environment:
-      MOUCHAK_ENV: production
-      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?required}
-      DATABASE_URL: ${RETENTION_DATABASE_URL:?required}
-      VISITOR_RETENTION_POLL_SECONDS: 60
-    restart: unless-stopped
+    depends_on: [web]
 volumes:
   private-state:
   model-weights:
+  malware-signatures:
+  tls-data:
+  tls-config:

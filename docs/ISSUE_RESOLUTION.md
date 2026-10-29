@@ -1,3 +1,5 @@
+> Current decision — 29 October 2026: hosting/provisioning is paused at the owner’s request. Preserve existing resources and code. Use DEPLOYMENT.md/PREVIEW.md; provider-specific attempts below are historical and do not require a new login, project, paid plan or deployment.
+
 # Issue resolution and exact remaining actions
 
 Current continuation: local fetch succeeded and verified publication history is merged. The owner selected **Netlify website + separate Linux/Docker AI backend**, with optional Cloudflare DNS/CDN later. Added chunk uploads, leased durable inference, shared PostgreSQL counters, private bill histories/experimental ONNX, migration 006 and secure four-role provisioning. Current GitHub platform suite: **359 passed**, plus types/lint/build, PostgreSQL WASM and transport checks. Browser queued actual retrieval/reopened its result and saved/reloaded an explicitly labelled DEMO bill. See [NETLIFY.md](NETLIFY.md) for precise setup and unresolved host/account/database/storage dependencies. No Netlify/Linux deployment or all-50 production certification is claimed. Earlier Vercel grants are no longer required.
