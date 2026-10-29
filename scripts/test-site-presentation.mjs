@@ -32,6 +32,15 @@ const baseline = {
   description_en: "DEMO original description",
   fields: [
     { key: "text", bn: "ডেমো তথ্য", en: "DEMO input", type: "textarea" },
+    {
+      key: "rows",
+      bn: "ডেমো সারি",
+      en: "DEMO rows",
+      type: "table",
+      columns: [
+        { key: "units", bn: "ডেমো একক", en: "DEMO units", type: "number" },
+      ],
+    },
   ],
 };
 const published = {
