@@ -12,7 +12,10 @@ const compiled = ts.transpileModule(source, {
     module: ts.ModuleKind.ESNext,
     target: ts.ScriptTarget.ES2022,
   },
-}).outputText;
+}).outputText.replaceAll(
+  '"@noble/hashes/sha2.js"',
+  JSON.stringify(import.meta.resolve("@noble/hashes/sha2.js")),
+);
 const { uploadPrivateFile, runQueued } = await import(
   "data:text/javascript;base64," + Buffer.from(compiled).toString("base64")
 );
@@ -52,6 +55,31 @@ assert.equal(
   Buffer.from(await crypto.subtle.digest("SHA-256", bytes)).toString("hex"),
 );
 assert.equal(progress.length, 8);
+// A real browser HTTP preview has crypto without SubtleCrypto. Validate the
+// fallback bytes against Node's independent native SHA-256, not another JS hash.
+const { createHash } = await import("node:crypto");
+const nativeCrypto = Object.getOwnPropertyDescriptor(globalThis, "crypto");
+try {
+  for (const unavailable of [undefined, {}]) {
+    Object.defineProperty(globalThis, "crypto", { configurable: true, value: unavailable });
+    for (const length of [1, 55, 56, 64, 65, 1024 * 1024 + 3]) {
+      const input = new Uint8Array(length).map((_, i) => (i * 31 + 7) % 256);
+      let actual;
+      await uploadPrivateFile(async (path, options) => {
+        if (path === "/api/uploads") {
+          actual = JSON.parse(options.body).checksum;
+          return { id: "fallback", chunk_bytes: 1024 * 1024 };
+        }
+        if (path.endsWith("/complete")) return { id: "done", scan_state: "test-only" };
+        return {};
+      }, new File([input], "owned-mechanics.wav"), () => {});
+      assert.equal(actual, createHash("sha256").update(input).digest("hex"));
+    }
+  }
+} finally {
+  Object.defineProperty(globalThis, "crypto", nativeCrypto);
+}
+
 let deleted = false;
 await assert.rejects(
   uploadPrivateFile(

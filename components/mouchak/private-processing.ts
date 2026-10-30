@@ -16,11 +16,13 @@ export async function uploadPrivateFile(
 ) {
   if (file.size <= 0 || file.size > 10 * 1024 * 1024)
     throw Error("ফাইলের আকার ১ byte–১০ MB হতে হবে / File must be 1 byte–10 MB");
-  const digest = await crypto.subtle.digest(
-    "SHA-256",
-    await file.arrayBuffer(),
-  );
-  const checksum = Array.from(new Uint8Array(digest), (b) =>
+  const bytes = await file.arrayBuffer();
+  // HTTP-only local previews lack SubtleCrypto. Keep the exact SHA-256 protocol;
+  // lazily load the audited JS implementation instead of skipping integrity.
+  const digest = globalThis.crypto?.subtle
+    ? new Uint8Array(await globalThis.crypto.subtle.digest("SHA-256", bytes))
+    : (await import("@noble/hashes/sha2.js")).sha256(new Uint8Array(bytes));
+  const checksum = Array.from(digest, (b) =>
     b.toString(16).padStart(2, "0"),
   ).join("");
   const upload = await api<{ id: string; chunk_bytes: number }>(
