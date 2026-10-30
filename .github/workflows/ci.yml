@@ -28,6 +28,7 @@ jobs:
       - run: pip install -r requirements-python.txt
       - run: python scripts/check-registry.py
       - run: python scripts/download-models.py
+      - run: python scripts/download-noise.py
       - run: python scripts/download-pose.py --test-fixture
       - run: python -m pytest tests --ignore=tests/verify_postgres.py -q --junitxml=ci-results.xml
       - run: node scripts/test-postgres.mjs
@@ -47,7 +48,13 @@ jobs:
         with: {python-version: '3.12'}
       - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
       - name: Install integration-controller dependencies
-        run: pip install psycopg[binary]==3.3.6 cryptography==50.0.2 boto3==1.43.119 httpx==0.28.1 Pillow==12.3.0 argon2-cffi==25.1.0
+        run: pip install psycopg[binary]==3.3.6 cryptography==50.0.2 boto3==1.43.119 httpx==0.28.1 Pillow==12.3.0 argon2-cffi==25.1.0 osmium==4.3.0
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .state/datasets/osm
+            .state/public-datasets
+          key: bd-public-roads-20261028-osmium430-v1
       - name: Verify isolated TLS database, storage, scanner, roles and model containers
         run: python scripts/test-production-stack.py
       - name: Validate all portable Compose topologies without provisioning services

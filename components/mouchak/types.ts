@@ -40,6 +40,11 @@ export type Tool = {
   release_status: string;
   enabled?: boolean;
   execution_mode?: "queued" | "synchronous";
+  noise_runtime?: {
+    experimental_enabled: boolean;
+    weights_verified: boolean;
+    production_enabled: boolean;
+  };
   fields?: FieldSpec[];
   presentation_base?: {
     name: string;

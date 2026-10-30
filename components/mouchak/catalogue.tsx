@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import source from "@/packages/module-registry/catalogue.json";
 import type { Tool } from "./types";
+import { SemanticLauncher } from "./semantic-launcher";
 import { useApp } from "./context";
 import { customizeTool } from "./site-config";
 export const tools = source.modules as Tool[];
@@ -104,13 +105,13 @@ export function ToolCard({ tool: rawTool }: { tool: Tool }) {
   );
 }
 export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
-  const { t, site, lang } = useApp();
+  const { t, site, lang, searchDraft } = useApp();
   const rawCatalogue = useCatalogue();
   const catalogue = useMemo(
     () => rawCatalogue.map((x) => customizeTool(x, site, lang)),
     [rawCatalogue, site, lang],
   );
-  const [query, setQuery] = useState(initialQuery),
+  const [query, setQuery] = useState(initialQuery || searchDraft),
     [category, setCategory] = useState("all");
   const cats = Array.from(new Set(catalogue.map((x) => x.category)));
   const filtered = useMemo(
@@ -162,6 +163,7 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
         />
         <span>{filtered.length} / 50</span>
       </div>
+      <SemanticLauncher query={query} catalogue={catalogue} />
       <div className="catalogue-layout">
         <aside className="category-list">
           <p className="eyebrow">
@@ -261,7 +263,7 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
 export function Home() {
   const catalogue = useCatalogue();
   const router = useRouter();
-  const { t, site, brand } = useApp();
+  const { t, site, brand, setSearchDraft } = useApp();
   const copy = (key: string) =>
     t(site.home.text[key].bn, site.home.text[key].en);
   const [query, setQuery] = useState("");
@@ -286,7 +288,8 @@ export function Home() {
             className="search-box hero-search"
             onSubmit={(e) => {
               e.preventDefault();
-              router.push("/explore?q=" + encodeURIComponent(query));
+              setSearchDraft(query);
+              router.push("/explore");
             }}
           >
             <Search size={22} />

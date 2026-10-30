@@ -23,7 +23,7 @@ from .domain import process, F, InputError
 from .inference import model_health, ocr, compare_images, audio_stats, retrieve
 from . import storage, rate_limit, uploads, inference_queue
 from . import retail, collaboration, operations, anonymous, bills, directories
-from . import pose_runtime, pose_video
+from . import pose_runtime, pose_video, noise_runtime
 from .legacy_workflows import READING, PRODUCTS, reading_reflection, basket_compare
 
 CAT = json.loads((ROOT / "packages/module-registry/catalogue.json").read_text())
@@ -50,8 +50,11 @@ app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
 app.include_router(bills.router)
-from . import site_builder
+from . import site_builder, launcher, model_operations, road_context
 app.include_router(site_builder.router)
+app.include_router(launcher.router)
+app.include_router(model_operations.router)
+app.include_router(road_context.router)
 app.include_router(directories.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
@@ -198,6 +201,14 @@ def get_mod(slug, db):
         m["description_en"] = (
             "Experimental: body pose and 2D angles from short MP4 clips; no skill or injury assessment."
         )
+    if m["engine"] == "audio":
+        m["fields"] = [*[{**f,"optional":True} for f in m["fields"]], {"key":"analysis_mode","bn":"বিশ্লেষণের ধরন","en":"Analysis mode","type":"select","optional":True,"options":["signal","events"]}]
+        m["noise_runtime"] = noise_runtime.availability()
+        policy=db.get(Config,"noise-model-policy")
+        if policy and json.loads(policy.value).get("state")=="disabled":
+            m["noise_runtime"]["experimental_enabled"]=False
+            m["noise_runtime"]["operator_disabled"]=True
+        m["fields"][-1].update(help_bn="signal = মাপা signal; events = opt-in পরীক্ষামূলক YAMNet। production-এ events বন্ধ।",help_en="signal = measured signal; events = opt-in experimental YAMNet. Events remain disabled in production.")
     if m["engine"] == "reading":
         m["fields"] = [
             (
@@ -657,8 +668,17 @@ def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session, 
         )
     if m["engine"] in ["image_compare", "drain"] and len(assets) == 2:
         context["image_comparison"] = compare_images(*[asset_bytes(a) for a in assets])
-    if m["engine"] == "audio" and assets:
-        context["audio"] = audio_stats(asset_bytes(assets[0]))
+    if m["engine"] == "audio":
+        mode=p.inputs.get("analysis_mode","signal")
+        if mode in (None, ""):mode="signal"
+        if mode not in ["signal","events"]: raise HTTPException(422,"Invalid audio analysis mode")
+        if mode=="events":
+            if not noise_runtime.availability()["experimental_enabled"]: raise HTTPException(503,"Experimental noise inference is disabled; Bangladesh validation remains incomplete / পরীক্ষামূলক শব্দ মডেল বন্ধ")
+            policy=db.get(Config,"noise-model-policy")
+            if policy and json.loads(policy.value).get("state")=="disabled": raise HTTPException(503,"Noise model disabled by operator / মডেলটি বন্ধ করা হয়েছে")
+            if len(assets)!=1 or assets[0].kind!="wav": raise HTTPException(422,"Choose one owned PCM WAV / নিজের একটি WAV দিন")
+            context["noise_events"]=noise_runtime.classify(asset_bytes(assets[0]))
+        elif assets: context["audio"] = audio_stats(asset_bytes(assets[0]))
     if m["engine"] == "video" and pose_runtime.availability()["experimental_enabled"]:
         if not 1 <= len(assets) <= 2 or any(a.kind != "mp4" for a in assets):
             raise HTTPException(

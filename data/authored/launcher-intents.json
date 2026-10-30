@@ -1,0 +1,358 @@
+{
+  "schema": "launcher_intents_v1",
+  "license": "CC0-1.0",
+  "license_scope": "Only these newly authored query examples; not the original master kit, code, logos, trademarks, third-party texts or model weights.",
+  "coverage": "50 Bangladesh-focused platform tasks; curated development prompts, not a representative user dataset or independent evaluation holdout.",
+  "records": [
+    {
+      "slug": "pukursos-ai",
+      "query_bn": "পুকুরের পানি ও মাছের আচরণের মাপ লিখে রাখব",
+      "query_en": "Record my pond water measurements and fish observations",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "nodiwatch-ai",
+      "query_bn": "নদীর পাড়ের আগের ও পরের ছবি তুলনা করতে চাই",
+      "query_en": "Compare before and after riverbank photographs",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "fasalloss-ai",
+      "query_bn": "আমার ফসলের ক্ষতির ছবি ও পর্যবেক্ষণ নথি চাই",
+      "query_en": "Document observed crop damage without guessing compensation",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "roofwise-ai",
+      "query_bn": "বাড়ির ছাদ ঠান্ডা করা আর বৃষ্টির পানি ধরার খরচ",
+      "query_en": "Compare cool roof improvements and rainwater collection costs",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "noisetrace-ai",
+      "query_bn": "রাস্তার শব্দের অডিওর ধরন বুঝে ডায়েরি রাখব",
+      "query_en": "Inspect a noise recording and keep a sound diary",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "chuktishield-ai",
+      "query_bn": "বাসা ভাড়ার চুক্তির দুই খসড়া মিলিয়ে ধারা দেখব",
+      "query_en": "Compare contract drafts and review their clauses",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "billdetect-ai",
+      "query_bn": "বিদ্যুৎ বিলের টাকার যোগফল মেলে কিনা দেখব",
+      "query_en": "Check whether my household bill amounts add up",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "carejourney-ai",
+      "query_bn": "ডাক্তারের লিখে দেওয়া পরিচর্যার নির্দেশনা সাজাব",
+      "query_en": "Organize my written care instructions into a checklist",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "golicoach-ai",
+      "query_bn": "ক্রিকেট অনুশীলনের ভিডিওতে শরীরের pose দেখতে চাই",
+      "query_en": "Review cricket practice video poses without injury diagnosis",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "dokanlens-ai",
+      "query_bn": "দোকানের পণ্যের স্টক ও মেয়াদ শেষ হওয়ার হিসাব",
+      "query_en": "Track shop stock, expiry dates and stock movements",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "bazarcompare-ai",
+      "query_bn": "দুই বাজারের চাল ডালের একই এককে দাম তুলনা",
+      "query_en": "Compare dated grocery prices in the same unit",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "homehazard-ai",
+      "query_bn": "বাড়ির দৃশ্যমান ফাটল বা ঝুঁকি বিশেষজ্ঞকে দেখাতে নোট",
+      "query_en": "Document visible household hazards for expert review",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "wastewise-bd",
+      "query_bn": "কোন বর্জ্য কীভাবে আলাদা করে ফেলব জানতে চাই",
+      "query_en": "Look up disposal guidance for an identified waste material",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "worksafe-vision-ai",
+      "query_bn": "কারখানার কর্মক্ষেত্রে দেখা বিপদ ও সংশোধনের তালিকা",
+      "query_en": "Record workplace hazards and corrective actions",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "cliniccompass-bd",
+      "query_bn": "যাচাইকৃত তথ্য থেকে স্বাস্থ্যকেন্দ্রের সেবা খুঁজব",
+      "query_en": "Search a reviewed facility directory for a healthcare service",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "labtrend-bd",
+      "query_bn": "আমার রক্ত পরীক্ষার মানগুলো তারিখ ও এককসহ সাজাব",
+      "query_en": "Track laboratory results over time using their original units",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "doseclear-bd",
+      "query_bn": "প্রেসক্রিপশনে যে ওষুধ লেখা আছে সেটাই পড়ে দেখতে চাই",
+      "query_en": "Read back confirmed prescription text without changing doses",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "vaccinepath-bd",
+      "query_bn": "টিকা দেওয়ার আগের তারিখগুলো চিকিৎসককে দেখাতে সাজাব",
+      "query_en": "Organize recorded vaccination dates for a clinician",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "maternalroute-bd",
+      "query_bn": "গর্ভাবস্থায় পরের সাক্ষাতের জন্য প্রশ্ন ও প্রস্তুতির তালিকা",
+      "query_en": "Prepare a maternal care visit checklist from my notes",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "denguesignal-bd",
+      "query_bn": "আমার দেওয়া ডেঙ্গুর দৈনিক সংখ্যার পরিবর্তন দেখব",
+      "query_en": "Describe changes in supplied dated dengue counts",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "rentalfair-bd",
+      "query_bn": "বাসাভাড়া ও মাসিক অতিরিক্ত খরচ তুলনা করে বাজেট",
+      "query_en": "Compare rent and recurring household housing expenses",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "roadfix-bd",
+      "query_bn": "রাস্তার গর্তের ছবি দিয়ে ব্যক্তিগত তথ্য বাদ দেওয়া অভিযোগ",
+      "query_en": "Prepare a redacted road repair evidence report",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "saferoute-bd",
+      "query_bn": "নিজের দেওয়া রাস্তার নেটওয়ার্ক ও পুরোনো পর্যবেক্ষণ তুলনা",
+      "query_en": "Compare user supplied route networks and historical observations",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "waterguard-bd",
+      "query_bn": "পানির ল্যাব পরীক্ষার মাপ নিজের দেওয়া মানদণ্ডে তুলনা",
+      "query_en": "Compare water measurements with supplied laboratory reference ranges",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "agroprice-planner",
+      "query_bn": "ধান চাষের খরচ লাভ আর কত দামে বিক্রি করলে খরচ উঠবে",
+      "query_en": "Calculate farm production costs and break even sale scenarios",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "livestockcare-log",
+      "query_bn": "গরু ছাগলের পরিচর্যা ও মাপা ওজনের ডায়েরি",
+      "query_en": "Keep livestock care notes and measured animal weights",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "civicform-ai",
+      "query_bn": "সরকারি ফর্মের জন্য আমার কাগজপত্রের চেকলিস্ট মিলাব",
+      "query_en": "Check my form against a supplied required document list",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "heatsafe-bd",
+      "query_bn": "তাপমাত্রা ও আর্দ্রতা দিয়ে গরমের সূচক হিসাব",
+      "query_en": "Estimate heat index using measured temperature and humidity",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "hospitalbillguard-bd",
+      "query_bn": "হাসপাতালের বিলে একই খরচ দুইবার আছে কিনা মিলাব",
+      "query_en": "Reconcile a hospital bill and flag exact duplicate line items",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "safeblood-connect-bd",
+      "query_bn": "সম্মতিসহ অল্প সময়ের জন্য রক্তের ব্যক্তিগত অনুরোধ তৈরি",
+      "query_en": "Prepare a time limited private blood request with consent",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "shikkharag-bd",
+      "query_bn": "বাষ্পীভবন বা সালোকসংশ্লেষণ উৎসসহ বুঝতে চাই",
+      "query_en": "Find a cited explanation in an original Bengali science lesson",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "banglaread-coach",
+      "query_bn": "বাংলা পড়া অনুশীলন ও অনুচ্ছেদ বোঝার প্রশ্ন",
+      "query_en": "Practice Bengali reading passages and comprehension",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "landledger-bd",
+      "query_bn": "জমির শতক কাঠা ডেসিমাল একক রূপান্তর করতে চাই",
+      "query_en": "Convert land area units and compare entered land document fields",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "wageguard-bd",
+      "query_bn": "আমার নিশ্চিত মজুরি হারে অতিরিক্ত কাজের বেতন হিসাব",
+      "query_en": "Calculate overtime pay from my own confirmed wage rates",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "shobdosetu-bd",
+      "query_bn": "কথা না বলে বড় অক্ষরের বাংলা বাক্য দেখিয়ে যোগাযোগ",
+      "query_en": "Communicate using a large text Bengali English phraseboard",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "drainpulse-bd",
+      "query_bn": "ড্রেনের জলাবদ্ধতার দুই দিনের ছবি ও তারিখ তুলনা",
+      "query_en": "Compare dated drainage photos and document waterlogging",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "agunpath-bd",
+      "query_bn": "বাড়ি থেকে আগুন লাগলে বের হওয়ার পথের মহড়ার তালিকা",
+      "query_en": "Review entered fire exit constraints and prepare a drill checklist",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "matisense-bd",
+      "query_bn": "মাটির পরীক্ষার মান ও ল্যাবের reference range সাজাব",
+      "query_en": "Organize soil measurements and supplied reference intervals",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "biddutplan-bd",
+      "query_bn": "ফ্যান ফ্রিজ দিনে কত ইউনিট বিদ্যুৎ খরচ করে হিসাব",
+      "query_en": "Calculate appliance energy consumption and editable electricity costs",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "scamsignal-bd",
+      "query_bn": "সন্দেহজনক মেসেজের লিংক না খুলে প্রতারণার লক্ষণ দেখব",
+      "query_en": "Inspect a suspicious message for scam indicators without opening links",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "oshudhkhoj-bd",
+      "query_bn": "হালনাগাদ অনুমোদিত ফার্মেসির ওষুধের stock খুঁজব",
+      "query_en": "Search reviewed time stamped pharmacy stock leads",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "shebaqueue-bd",
+      "query_bn": "দপ্তরে সেবা নিতে কী কী কাগজ সঙ্গে যাব সাজাব",
+      "query_en": "Prepare my service journey and document checklist",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "jatrapulse-bd",
+      "query_bn": "আমার দেওয়া যাত্রার নেটওয়ার্কে গন্তব্যে যাওয়ার পথ",
+      "query_en": "Find a path through my supplied travel network",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "skillbridge-bd",
+      "query_bn": "চাকরি বা কোর্সের চাহিদার সঙ্গে নিজের দক্ষতা মিলাব",
+      "query_en": "Match my skills against a supplied job or course checklist",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "foodlabel-lens-bd",
+      "query_bn": "খাবারের প্যাকেটে লেখা অ্যালার্জির উপাদান পড়ব",
+      "query_en": "Read food labels and identify explicitly named allergens",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "odhikarsetu-bd",
+      "query_bn": "সহায়তা কর্মসূচিতে কী কী প্রশ্ন ও দলিল দরকার সাজাব",
+      "query_en": "Prepare documents and questions for a selected benefits programme",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "repairright-bd",
+      "query_bn": "পুরোনো যন্ত্র মেরামত করব নাকি নতুন কিনব খরচ তুলনা",
+      "query_en": "Compare repair and replacement cost scenarios",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "jhoralert-bd",
+      "query_bn": "নিজের দেওয়া ঘূর্ণিঝড়ের আবহাওয়ার বুলেটিন ও সময় তুলনা",
+      "query_en": "Compare a supplied storm bulletin while preserving its source time",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "schoolroute-bd",
+      "query_bn": "শিশুর GPS ছাড়া অভিভাবক দেখবেন এমন স্কুল এলাকার নোট",
+      "query_en": "Prepare parent reviewed school area hazard notes without child GPS",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    },
+    {
+      "slug": "hishabbondhu-bd",
+      "query_bn": "ব্যবসার নগদ আয় ব্যয় পাওনা ও খরচ মিলাব",
+      "query_en": "Reconcile small business cash in, cash out, receivables and costs",
+      "origin": "original_project_authored_not_real_user_data",
+      "license": "CC0-1.0"
+    }
+  ]
+}

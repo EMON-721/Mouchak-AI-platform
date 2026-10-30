@@ -11,3 +11,10 @@ Retain these existing notices when redistributing permitted source:
 - Full original kit: requirements/original-kit/ retains its own source instructions and notices.
 
 Downloaded models, government datasets and remote source references have separate terms. They are not relicensed by this repository. Model weights and restricted/private datasets are excluded from Git. See docs/DATA_AND_MODEL_PROVENANCE.md and the acquisition manifests for sources, model licences and release gates.
+
+
+## Advanced continuation assets
+
+- Official Google YAMNet classification TFLite v1 and TensorFlow class map: Apache-2.0; exact primary-source URLs, pinned revision, byte lengths and SHA-256 are in `docs/audit/noise-assets.json`. No original AudioSet recordings are redistributed. LiteRT runtime is installed from the pinned public package.
+- Bangladesh OpenStreetMap extract and derived road-name records: © OpenStreetMap contributors, **ODbL-1.0**, <https://opendatacommons.org/licenses/odbl/1-0/>. Source/producer: <https://download.geofabrik.de/asia/bangladesh-261028.osm.pbf>, <https://www.geofabrik.de/data/download.html>. The derived database and public development slice retain ODbL; attribution/coverage/hash records accompany them. This licence does not cover the application's code or master prompts.
+- `data/authored/launcher-intents.json`: newly authored development query examples only, CC0-1.0. Not real-user data or an independent holdout. No blanket relicense of the original requirements, brands or third-party content is implied.

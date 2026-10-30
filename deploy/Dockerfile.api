@@ -11,8 +11,8 @@ COPY requirements ./requirements
 COPY database ./database
 COPY deploy/*.sql ./deploy/
 COPY public/fonts ./public/fonts
-COPY scripts/download-models.py scripts/download-pose.py ./scripts/
-COPY docs/audit/model-downloads.json docs/audit/pose-assets.json ./docs/audit/
+COPY scripts/download-models.py scripts/download-pose.py scripts/download-noise.py ./scripts/
+COPY docs/audit/model-downloads.json docs/audit/pose-assets.json docs/audit/noise-assets.json ./docs/audit/
 RUN useradd --uid 10001 --create-home mouchak && mkdir -p state models && chown -R mouchak:mouchak state models
 USER mouchak
 EXPOSE 8000

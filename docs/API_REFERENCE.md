@@ -33,6 +33,7 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | GET | `/api/admin/directories/{jid}` | `directories.review_batch` |
 | POST | `/api/admin/directories/{jid}/publish` | `directories.publish` |
 | POST | `/api/admin/directories/{slug}/withdraw` | `directories.withdraw` |
+| POST | `/api/launcher` | `launcher.launch` |
 | GET | `/api/health` | `main.health` |
 | GET | `/api/modules` | `main.modules` |
 | GET | `/api/modules/{slug}` | `main.module` |
@@ -97,6 +98,8 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | GET | `/api/admin/audit` | `main.audit_list` |
 | POST | `/api/assets/{aid}/transcribe` | `main.speech` |
 | POST | `/api/personal/anomalies` | `main.anomalies` |
+| GET | `/api/admin/model-operations` | `model_operations.overview` |
+| POST | `/api/admin/model-operations/noise-policy` | `model_operations.policy` |
 | GET | `/api/admin/publishing` | `operations.schedules` |
 | POST | `/api/admin/publishing` | `operations.schedule` |
 | POST | `/api/admin/publishing/{sid}/cancel` | `operations.cancel` |
@@ -112,6 +115,11 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | POST | `/api/retail/{wid}/items` | `retail.create_item` |
 | POST | `/api/retail/{wid}/items/{iid}/movements` | `retail.movement` |
 | GET | `/api/retail/{wid}/items/{iid}/history` | `retail.history` |
+| GET | `/api/admin/road-data` | `road_context.status` |
+| POST | `/api/admin/road-data/register` | `road_context.register` |
+| POST | `/api/admin/road-data/publish` | `road_context.publish` |
+| POST | `/api/admin/road-data/withdraw` | `road_context.withdraw` |
+| POST | `/api/tools/roadfix-bd/road-context` | `road_context.search` |
 | GET | `/api/public/site` | `site_builder.public_site` |
 | GET | `/api/admin/site-builder` | `site_builder.editor` |
 | POST | `/api/admin/site-builder/validate` | `site_builder.check` |

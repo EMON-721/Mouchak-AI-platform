@@ -1025,6 +1025,8 @@ def process(engine, p, context=None):
             ],
         )
     if engine == "audio":
+        if context.get("noise_events"):
+            return context["noise_events"]
         if context.get("audio"):
             return result(
                 "Measured PCM signal statistics; not sound classification",

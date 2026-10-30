@@ -1,0 +1,193 @@
+{
+  "schema": "osm_public_road_reference_v1",
+  "source_url": "https://download.geofabrik.de/asia/bangladesh-261028.osm.pbf",
+  "source_as_of": "2026-10-28",
+  "source_sha256": "59b394608adbffe28185091d637806954ddd65fd48d39ddbdf29ad90cfb1bf27",
+  "publisher_checksum_url": "https://download.geofabrik.de/asia/bangladesh-261028.osm.pbf.md5",
+  "publisher_md5": "0e9db373accaa20f98f1c344ee6543ee",
+  "source_bytes": 355896654,
+  "rows_sha256": "d44f93332ec305a89be79606b3d513bd7e5b7cc1bced0c39d54060d7c76f3c52",
+  "sqlite_sha256": "ac5d5da2bc2103ad8990bd4395fe149b403b02a2433da4adf911e7bb9f32e67a",
+  "counts": {
+    "ways_seen": 12811257,
+    "eligible_public_road_ways": 476738,
+    "prepared_rows": 32285,
+    "missing_name_and_ref": 444453
+  },
+  "highway_counts": {
+    "residential": 9685,
+    "trunk": 4351,
+    "tertiary": 3662,
+    "secondary": 5108,
+    "unclassified": 3605,
+    "primary": 3510,
+    "trunk_link": 75,
+    "living_street": 1839,
+    "motorway": 401,
+    "primary_link": 23,
+    "motorway_link": 4,
+    "secondary_link": 17,
+    "tertiary_link": 5
+  },
+  "license": "ODbL-1.0",
+  "license_uri": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "terms_url": "https://www.geofabrik.de/data/download.html",
+  "attribution": "© OpenStreetMap contributors",
+  "metadata_removed": [
+    "user_name",
+    "user_id",
+    "changeset_id",
+    "coordinates"
+  ],
+  "coverage": "Named non-private road ways from the Bangladesh extract; border-crossing ways and OSM omissions are possible. Not a complete official road register.",
+  "not_labels": [
+    "road defects",
+    "current traffic",
+    "crash probability",
+    "road safety",
+    "government verification"
+  ],
+  "publication_state": "prepared_requires_independent_application_rights_review",
+  "samples": [
+    {
+      "osm_way_id": "8656088",
+      "name_bn": "Park Road",
+      "name_en": "Park Road",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656089",
+      "name_bn": "দূতাবাস সড়ক",
+      "name_en": "Embassy Road",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656151",
+      "name_bn": "Dutabash Road",
+      "name_en": "Dutabash Road",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656152",
+      "name_bn": "Road 1",
+      "name_en": "Road 1",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656154",
+      "name_bn": "Road 2",
+      "name_en": "Road 2",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656155",
+      "name_bn": "Road 3",
+      "name_en": "Road 3",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656156",
+      "name_bn": "Road 4",
+      "name_en": "Road 4",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656157",
+      "name_bn": "Road 5",
+      "name_en": "Road 5",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656158",
+      "name_bn": "Road 6",
+      "name_en": "Road 6",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656159",
+      "name_bn": "সড়ক ৭",
+      "name_en": "Road 7",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656160",
+      "name_bn": "Road 8",
+      "name_en": "Road 8",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656189",
+      "name_bn": "Road 9",
+      "name_en": "Road 9",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656191",
+      "name_bn": "Road 10",
+      "name_en": "Road 10",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656196",
+      "name_bn": "সড়ক ১১",
+      "name_en": "Road 11",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656198",
+      "name_bn": "Road 12",
+      "name_en": "Road 12",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656199",
+      "name_bn": "Road 74",
+      "name_en": "Road 74",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "8656202",
+      "name_bn": "Road 14",
+      "name_en": "Road 14",
+      "highway": "residential",
+      "ref": ""
+    },
+    {
+      "osm_way_id": "10101955",
+      "name_bn": "নবীনগর - চন্দ্রা মহাসড়ক",
+      "name_en": "Nabinagar - Chandra Highway",
+      "highway": "trunk",
+      "ref": "N540"
+    },
+    {
+      "osm_way_id": "10101959",
+      "name_bn": "আশুলিয়া মহাসড়ক",
+      "name_en": "Ashulia Highway",
+      "highway": "trunk",
+      "ref": "N302"
+    },
+    {
+      "osm_way_id": "10101976",
+      "name_bn": "ঢাকা-ময়মনসিংহ মহাসড়ক",
+      "name_en": "Dhaka-Mymensigh Highway",
+      "highway": "trunk",
+      "ref": "N3"
+    }
+  ]
+}

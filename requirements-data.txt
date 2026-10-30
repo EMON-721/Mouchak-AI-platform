@@ -1,0 +1,2 @@
+# Optional, operator-run public dataset preparation; core/API inference does not import osmium.
+osmium==4.3.0

@@ -3,7 +3,7 @@
 No model/API responses are mocked. A tiny owned ClamAV test signature verifies
 the scanner rejection path; it is not a current threat-signature feed.
 """
-import base64, hashlib, io, json, os, re, secrets, socket, ssl, subprocess, sys, tempfile, time, traceback, uuid
+import base64, hashlib, io, json, os, re, secrets, shutil, socket, ssl, subprocess, sys, tempfile, time, traceback, uuid
 from pathlib import Path
 import boto3, httpx, psycopg
 from botocore.config import Config
@@ -126,6 +126,22 @@ def check_directory_integration(operator, client, pg_dsn, secret_values, visitor
         assert metadata.status_code == 200
         assert metadata.json()["release_status"] == "blocked"
         assert reviewer.post("/api/admin/directories/cliniccompass-bd/withdraw", json={"expected_revision": revision}).status_code == 200
+        # Real full Bangladesh OSM index, distinct fixture reviewers and strict revocation.
+        status=operator.get('/api/admin/road-data');assert status.status_code==200 and status.json()['prepared']
+        manifest=status.json()['manifest'];assert manifest['counts']['prepared_rows']==32285
+        registered=operator.post('/api/admin/road-data/register');assert registered.status_code==201
+        road_sid=registered.json()['source_id']
+        assert operator.post('/api/admin/road-data/publish',json={'source_id':road_sid}).status_code==403
+        road_rights={**rights,'asset_url':manifest['source_url'],'terms_url':manifest['terms_url'],'license_uri':manifest['license_uri'],'source_date':manifest['source_as_of'],'scope':'Actual ODbL public-road reference only; no defect labels or safety claims','evidence':'Disposable workflow review of real licensed OSM data; not an independent production human review.'}
+        assert operator.post(f'/api/admin/sources/{road_sid}/reviews',json=road_rights).json()['state']=='rights_review'
+        assert reviewer.post(f'/api/admin/sources/{road_sid}/reviews',json=road_rights).json()['state']=='approved_train_and_reuse'
+        published=reviewer.post('/api/admin/road-data/publish',json={'source_id':road_sid});assert published.status_code==200
+        lookup=visitor.post('/api/tools/roadfix-bd/road-context',json={'query':'N2','processing_consent':True})
+        assert lookup.status_code==200 and lookup.json()['matches'] and lookup.json()['license']=='ODbL-1.0'
+        assert lookup.json()['road_defect_inferred'] is False
+        assert reviewer.post(f'/api/admin/sources/{road_sid}/reviews',json={**road_rights,'decision':'revoked'}).status_code==201
+        assert visitor.post('/api/tools/roadfix-bd/road-context',json={'query':'N2','processing_consent':True}).status_code==503
+        assert reviewer.post('/api/admin/road-data/withdraw',json={'expected_revision':published.json()['revision']}).status_code==200
 
 
 def check_site_builder_integration(operator, client, pg_dsn, secret_values, visitor):
@@ -198,6 +214,12 @@ def main():
     evidence.write_text(json.dumps({**report, "result": "running"}, indent=2) + "\n")
     with tempfile.TemporaryDirectory(prefix="mouchak-stack-") as temporary:
         folder = Path(temporary); folder.chmod(0o755)
+        prepared_roads=ROOT/'.state/public-datasets/bd-roads-20261028'
+        if not (prepared_roads/'manifest.json').is_file():
+            subprocess.run([sys.executable,'scripts/prepare-bd-roads.py','--download'],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
+        shutil.copytree(prepared_roads,folder/'public-datasets/bd-roads-20261028')
+        for item in (folder/'public-datasets').rglob('*'):item.chmod(0o755 if item.is_dir() else 0o644)
+        (folder/'public-datasets').chmod(0o755)
         certificates(folder / "tls")
         signatures = folder / "signatures"; signatures.mkdir(mode=0o755)
         marker = b"MOUCHAK_OWNED_SCANNER_TEST_ONLY_7bfc62"
@@ -346,6 +368,7 @@ def main():
                     assert operator.get("/api/runs/" + completed_job["run_id"]).status_code == 404
                     check_directory_integration(operator, client, pg_dsn, secret_values, probe)
                     report["rights_reviewed_directory_real_tls_queue_and_revocation"] = True
+                    report["real_bangladesh_osm_reference_review_lookup_revocation"] = True
                     check_site_builder_integration(operator, client, pg_dsn, secret_values, probe)
                     report["reviewed_site_builder_tls_mfa_assets_scheduler_and_rollback"] = True
                 report["real_operator_login_mfa_and_private_record_denial"] = True
@@ -361,6 +384,10 @@ def main():
                 with psycopg.connect(pg_dsn) as owner:
                     assert owner.execute("SELECT 1 FROM users WHERE id=%s", (operator_id,)).fetchone()
                 report["real_expiry_worker_history_db_and_s3_deletion"] = True
+            # Actual pinned model inside the production Python image; no production event gate bypass.
+            noise_check=run('run','--rm','--no-deps','api','python','-c',"import io,wave,numpy as np; from services.model_worker.noise_runtime import classify,availability; o=io.BytesIO(); w=wave.open(o,'wb'); w.setparams((1,2,16000,0,'NONE','')); w.writeframes((np.sin(2*np.pi*440*np.arange(24000)/16000)*5000).astype('<i2').tobytes()); w.close(); r=classify(o.getvalue()); assert r['facts']['event_tags'][0]['label_en']=='Sine wave'; assert availability()['production_enabled'] is False; print('actual_yamnet_cpu_gate_verified')")
+            assert 'actual_yamnet_cpu_gate_verified' in noise_check
+            report['container_real_yamnet_cpu_and_production_gate']=True
             # Run the exact operator-facing CLI against this real TLS/container
             # stack; it creates/clears only its own additional visitor scopes.
             smoke = subprocess.run([sys.executable, "-m", "services.model_worker.deployment_smoke"],

@@ -6,6 +6,9 @@ import { useApp } from "./context";
 import { DataView } from "./tool";
 import { OperationsConsole } from "./operations";
 import dynamic from "next/dynamic";
+const PipelineOperations = dynamic(() =>
+  import("./pipeline-operations").then((m) => m.PipelineOperations),
+);
 const SiteBuilderEditor = dynamic(() =>
   import("./site-builder").then((m) => m.SiteBuilderEditor),
 );
@@ -20,6 +23,8 @@ const tabs = [
   ["users", "প্রশাসনিক দল", "Operator team"],
   ["sources", "উৎস ও অনুমতি", "Sources & rights"],
   ["models", "মডেল ও মূল্যায়ন", "Models & evaluation"],
+  ["model-operations", "মডেল নিয়ন্ত্রণ", "Model controls"],
+  ["road-data", "সড়ক data review", "Road data review"],
   ["jobs", "ডেটা ইমপোর্ট", "Data imports"],
   ["directories", "সেবার তালিকা", "Service directories"],
   ["audit", "অডিট", "Audit"],
@@ -62,6 +67,8 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
         "feedback",
         "notifications",
         "directories",
+        "model-operations",
+        "road-data",
         "site-builder",
       ].includes(tab)
     )
@@ -125,6 +132,8 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
       "feedback",
       "notifications",
       "directories",
+      "model-operations",
+      "road-data",
       "site-builder",
     ].includes(tab)
   ) {
@@ -142,7 +151,9 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
           ))}
         </aside>
         <section className="admin-body">
-          {tab === "site-builder" ? (
+          {tab === "model-operations" || tab === "road-data" ? (
+            <PipelineOperations key={user?.id + tab} tab={tab} />
+          ) : tab === "site-builder" ? (
             <SiteBuilderEditor key={user?.id} />
           ) : tab === "directories" ? (
             <DirectoryConsole key={user?.id} />

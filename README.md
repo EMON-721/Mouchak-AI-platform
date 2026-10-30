@@ -1,5 +1,8 @@
 # Mouchak AI · মৌচাক এআই
 
+নতুন advanced continuation: বাস্তব YAMNet CPU sound-event inference (local experimental, production gate বন্ধ), ৫০ tool-এর MiniLM/BM25 semantic launcher এবং বাস্তবে downloaded/processed ৩২,২৮৫ ODbL Bangladesh road-reference row-এর review/publication/search workflow যুক্ত হয়েছে। Full specialized ৫০-tool scope এখনও certified নয়। [ব্যবহার, source, licence ও সীমাবদ্ধতা](docs/ADVANCED_PIPELINES.md)। এই পরিবর্তনের final CI/browser ফল যাচাই চলছে।
+
+
 সর্বশেষ code continuation: `/admin/site-builder`-এ bilingual brand/logo/favicon, theme, menu/footer, homepage/FAQ, public pages, ৫০ tool-এর নাম/field help/placeholder, নির্বাচিত locale/category ও SEO সম্পাদনা যুক্ত হয়েছে। ব্যক্তিগত immutable draft → আলাদা MFA সম্পাদকের review → publish/schedule/rollback। [ব্যবহার, নিরাপত্তা ও সীমাবদ্ধতা](docs/SITE_BUILDER.md)। এটি পূর্ণ ৫০ advanced pipeline শেষ হওয়ার দাবি নয়; hosting বন্ধ আছে।
 API transaction-এর commit এখন successful response-এর আগে শেষ হয়; commit ব্যর্থ হলে success/session cookie পাঠানো হয় না। এতে তাৎক্ষণিক save ও rights-revocation check পুরোনো অবস্থা পড়ার race বন্ধ হয়।
 

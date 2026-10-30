@@ -1,0 +1,18 @@
+{
+  "model_id": "google/yamnet/classification-tflite/1",
+  "model_license": "Apache-2.0",
+  "model_card_url": "https://www.kaggle.com/models/google/yamnet/tfLite/classification-tflite/1",
+  "license_evidence_url": "https://github.com/tensorflow/models/blob/master/LICENSE",
+  "archive_url": "https://www.kaggle.com/api/v1/models/google/yamnet/tfLite/classification-tflite/1/download",
+  "archive_member": "1.tflite",
+  "assets": {
+    "classification.tflite": {"sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de", "bytes": 4126810},
+    "class_map.csv": {"sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2", "bytes": 14096, "url": "https://raw.githubusercontent.com/tensorflow/models/dfffd623b6be8d1d9744b8e261fbac370d17c46d/research/audioset/yamnet/yamnet_class_map.csv"}
+  },
+  "runtime": "ai-edge-litert==2.1.0; bounded two-thread CPU interpreter",
+  "input": "15600 mono float32 PCM samples at 16000 Hz",
+  "output": "521 uncalibrated audio-event scores",
+  "bangladesh_holdout_rows": 0,
+  "production_validated": false,
+  "training_data_claim": "Pretrained AudioSet model; no claim that all original AudioSet audio is licensed for redistribution. No AudioSet recordings are downloaded or redistributed by this project."
+}

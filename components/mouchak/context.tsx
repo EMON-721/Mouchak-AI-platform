@@ -27,6 +27,8 @@ type Ctx = {
   refresh: () => Promise<void>;
   api: <T = unknown>(path: string, options?: RequestInit) => Promise<T>;
   brand: Record<string, string>;
+  searchDraft: string;
+  setSearchDraft: (query: string) => void;
   site: SiteConfig;
   refreshSite: () => Promise<void>;
   setPreviewSite: (site: SiteConfig | null) => void;
@@ -104,6 +106,7 @@ export function Provider({ children }: { children: ReactNode }) {
     languageSnapshot,
     () => "bn" as Lang,
   );
+  const [searchDraft, setSearchDraft] = useState("");
   const [user, setUser] = useState<User | null>(null),
     [csrf, setCsrf] = useState(""),
     [loading, setLoading] = useState(true),
@@ -132,6 +135,7 @@ export function Provider({ children }: { children: ReactNode }) {
     if (legacy.ok) setBrand(await legacy.json());
   }, []);
   const refresh = useCallback(async () => {
+    setSearchDraft("");
     try {
       const d = await readIdentity(mode);
       setUser(d.user);
@@ -260,6 +264,8 @@ export function Provider({ children }: { children: ReactNode }) {
         refresh,
         api,
         brand,
+        searchDraft,
+        setSearchDraft,
         site,
         refreshSite,
         setPreviewSite,

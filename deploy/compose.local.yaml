@@ -12,7 +12,7 @@ x-preview: &preview
 services:
   model-init:
     build: {context: .., dockerfile: deploy/Dockerfile.api}
-    command: [python, scripts/download-models.py]
+    command: [python, -c, "import runpy; runpy.run_path('scripts/download-models.py', run_name='__main__'); runpy.run_path('scripts/download-noise.py', run_name='__main__')"]
     volumes: [preview-models:/app/models]
     restart: "no"
   api:

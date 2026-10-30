@@ -3404,3 +3404,6 @@ td a {
 .hub-core strong {max-width:80%;overflow-wrap:anywhere;text-align:center;line-height:1.35}
 
 .table-field-help {display:block;font-weight:400;max-width:250px;white-space:normal}
+
+.semantic-launcher {margin:20px 0}.semantic-launcher h2{font-size:1.15rem}.semantic-launcher .section-heading{align-items:center;margin-bottom:12px}.semantic-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}.semantic-option{border:1px solid var(--border);border-radius:10px;padding:18px;background:var(--paper)}.semantic-option p{font-size:.92rem}.semantic-option span{font-weight:600;color:var(--teal)}.noise-studio svg{display:block;width:100%;max-height:180px;color:var(--teal);background:var(--paper);border:1px solid var(--border);border-radius:10px}.noise-studio th small{display:block;font-weight:400}.pipeline-operations code{overflow-wrap:anywhere}.pipeline-operations .form-field{margin-block:20px}.road-reference summary{cursor:pointer;font-weight:700;min-height:44px}.road-reference{margin:20px 0}
+@media(max-width:650px){.semantic-launcher .section-heading{display:block}.semantic-launcher button{width:100%}.semantic-options{grid-template-columns:1fr}}

@@ -171,6 +171,8 @@ def field_paths(slug):
     for f in FIELDS[MODULES[slug]['engine']]:
         result[f['key']]={k:f[k] for k in ['bn','en','type']}
         for c in f.get('columns',[]): result[f['key']+'.'+c['key']]={k:c[k] for k in ['bn','en','type']}
+    if MODULES[slug]['engine']=='audio':
+        result['analysis_mode']={'bn':'বিশ্লেষণের ধরন','en':'Analysis mode','type':'select'}
     if MODULES[slug]['engine'] in ['directory','pharmacy']:
         result['district']={'bn':'জেলা','en':'District','type':'text'}
     return result

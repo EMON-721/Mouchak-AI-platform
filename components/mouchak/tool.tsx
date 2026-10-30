@@ -11,6 +11,12 @@ import { PoseReview, poseDetailSummary } from "./pose-review";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+const NoiseReview = dynamic(() =>
+  import("./noise-review").then((m) => m.NoiseReview),
+);
+const RoadReferenceLookup = dynamic(() =>
+  import("./pipeline-operations").then((m) => m.RoadReferenceLookup),
+);
 import { useEffect, useState, useRef } from "react";
 import {
   ArrowLeft,
@@ -289,7 +295,12 @@ export function ResultView({
         </div>
       </div>
       <p className="result-method">{bi(result.method, lang)}</p>
-      <DataView value={result.facts} />
+      {result.module === "noisetrace-ai" &&
+      result.model_version.startsWith("google/yamnet/") ? (
+        <NoiseReview result={result} />
+      ) : (
+        <DataView value={result.facts} />
+      )}
       {result.module === "golicoach-ai" ? (
         <PoseReview key={result.id} details={result.details} />
       ) : null}
@@ -744,6 +755,7 @@ export function ToolWorkspace({ slug }: { slug: string }) {
               : t("সীমিত সহায়ক কাজ", "Limited support")}
         </span>
       </header>
+      {slug === "roadfix-bd" ? <RoadReferenceLookup /> : null}
       <div className="tool-layout">
         <div className="tool-main">
           <div className="step-strip">
@@ -947,8 +959,26 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                           )}
                         </option>
                         {spec.options?.map((o) => (
-                          <option value={o} key={o}>
-                            {o}
+                          <option
+                            value={o}
+                            key={o}
+                            disabled={
+                              spec.key === "analysis_mode" &&
+                              o === "events" &&
+                              !tool.noise_runtime?.experimental_enabled
+                            }
+                          >
+                            {spec.key === "analysis_mode"
+                              ? o === "events"
+                                ? t(
+                                    "পরীক্ষামূলক শব্দের ধরন",
+                                    "Experimental sound events",
+                                  )
+                                : t(
+                                    "মাপা signal statistics",
+                                    "Measured signal statistics",
+                                  )
+                              : o}
                           </option>
                         ))}
                       </select>

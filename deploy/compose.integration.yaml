@@ -18,6 +18,7 @@ x-environment: &environment
   AWS_CA_BUNDLE: /test-ca/ca.crt
   ENABLE_DURABLE_INFERENCE: "1"
   ENABLE_EXPERIMENTAL_POSE: "0"
+  PUBLIC_DATASET_DIR: /test-public-datasets
   ORT_DISABLE_TELEMETRY: "1"
   HF_HUB_DISABLE_TELEMETRY: "1"
 
@@ -56,13 +57,14 @@ services:
     depends_on: [objectdata]
   model-init:
     <<: *image
-    command: [python, scripts/download-models.py]
+    command: [python, -c, "import runpy; runpy.run_path('scripts/download-models.py', run_name='__main__'); runpy.run_path('scripts/download-noise.py', run_name='__main__')"]
     volumes: [models:/app/models]
   api:
     <<: *image
     environment: *environment
     volumes:
       - models:/app/models:ro
+      - "${MOUCHAK_TEST_DIR:?required}/public-datasets:/test-public-datasets:ro"
       - "${MOUCHAK_TEST_DIR:?required}/tls/ca.crt:/test-ca/ca.crt:ro"
       - "${MOUCHAK_TEST_DIR:?required}/signatures:/var/lib/clamav:ro"
     depends_on:
