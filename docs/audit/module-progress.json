@@ -575,14 +575,16 @@
     "support_test_evidence": "tests/test_domain.py::test_all_module_support_contracts[banglaread-coach]; tests/test_resume_workflows.py; scripts/legacy-golden.mjs",
     "support_scope": "Practice original Bengali reading passages and comprehension. Preserved 12 attributed CC-BY-4.0 original passages; tap-mark difficult words and saved comprehension reflection; no pronunciation scoring.",
     "full_original_module_complete": false,
-    "advanced_model_status": "not_production_validated",
-    "model_loaded": "shared OCR/embedding/CV only where invoked",
+    "advanced_model_status": "local_experimental_small_bn_asr_not_production_validated",
+    "model_loaded": "Pinned arijitx/whisper-small-bn CTranslate2 CPU int8; shared existing OCR/embedding retained",
     "eval_passed": false,
-    "license_reviewed": "candidate sources pending; original starter only",
-    "blocker": "Original advanced pipeline, Bangladesh holdout and domain-specific release requirements remain incomplete",
+    "license_reviewed": "OpenSLR37 public evaluation CC-BY-SA-4.0; model author Apache-2.0; separate production training-rights review pending",
+    "blocker": "Verified guardian/child workflow, representative Bangladesh child field holdout and independent human feedback agreement, original content review and remaining specialized workflows incomplete",
     "legacy_migration": "selected_logic_ported_from_local_v3_snapshot; full_source_preserved; no_live_identity_or_record_migration",
     "conditional_directory_pipeline_implemented": false,
-    "conditional_directory_test_evidence": ""
+    "conditional_directory_test_evidence": "",
+    "reading_speech_implemented": true,
+    "reading_speech_test_evidence": "tests/test_reading_speech.py; docs/audit/reading-speech-evaluation.json"
   },
   {
     "id": 33,

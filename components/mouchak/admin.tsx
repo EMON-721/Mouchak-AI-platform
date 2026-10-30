@@ -6,6 +6,9 @@ import { useApp } from "./context";
 import { DataView } from "./tool";
 import { OperationsConsole } from "./operations";
 import dynamic from "next/dynamic";
+const ReadingSpeechLab = dynamic(() =>
+  import("./reading-speech").then((m) => m.ReadingSpeechLab),
+);
 const PipelineOperations = dynamic(() =>
   import("./pipeline-operations").then((m) => m.PipelineOperations),
 );
@@ -23,6 +26,7 @@ const tabs = [
   ["users", "প্রশাসনিক দল", "Operator team"],
   ["sources", "উৎস ও অনুমতি", "Sources & rights"],
   ["models", "মডেল ও মূল্যায়ন", "Models & evaluation"],
+  ["reading-speech", "বাংলা speech lab", "Bengali speech lab"],
   ["model-operations", "মডেল নিয়ন্ত্রণ", "Model controls"],
   ["road-data", "সড়ক data review", "Road data review"],
   ["jobs", "ডেটা ইমপোর্ট", "Data imports"],
@@ -70,6 +74,7 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
         "model-operations",
         "road-data",
         "site-builder",
+        "reading-speech",
       ].includes(tab)
     )
       return;
@@ -135,6 +140,7 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
       "model-operations",
       "road-data",
       "site-builder",
+      "reading-speech",
     ].includes(tab)
   ) {
     return (
@@ -151,7 +157,9 @@ export function AdminPage({ tab = "overview" }: { tab?: string }) {
           ))}
         </aside>
         <section className="admin-body">
-          {tab === "model-operations" || tab === "road-data" ? (
+          {tab === "reading-speech" ? (
+            <ReadingSpeechLab key={user?.id} />
+          ) : tab === "model-operations" || tab === "road-data" ? (
             <PipelineOperations key={user?.id + tab} tab={tab} />
           ) : tab === "site-builder" ? (
             <SiteBuilderEditor key={user?.id} />

@@ -1,5 +1,36 @@
 # Mouchak AI — implementation and verification report
 
+## BanglaRead continuation — 30 October 2026
+
+Resumed the published `074159be2e0f642b5f9e102d863016b5fba92e32` checkpoint. A workspace reset had removed the previous unpushed speech edits, so the committed repository was restored and that pending integration recovered. The first recovered source is safely checkpointed on `work/bangla-reading-20261030` at `1bb7a69bb7a807f2ec24b336e75bddffa3445b05`; its two CI jobs succeeded. This intermediate checkpoint is not proof of the subsequent speech UI/tests or a complete 50-tool release. Hosting remains paused.
+
+Implemented in this continuation:
+
+- Actual Bengali Whisper Small safetensors-only pinned conversion and CPU int8 transcription, bounded PCM validation/resampling, VAD, silence/clipping/uncertainty/script abstention, actual word timestamps and uncertain passage alignment. Reproducible canonical tokenizer serialization and compatible PyAV/CTranslate2 pins; API environment stays free of Torch/Transformers.
+- Ephemeral local adult self-recording endpoint with existing cookie/CSRF/private transport protections, pre-parser actual-byte limit including chunked requests, per-process busy refusal, no retained raw voice/transcript/Asset/Run. New bilingual panel requires explicit consent and transcript review before copying into the separately consented typed practice field. Existing manual/tap flows remain.
+- Real OpenSLR37 bn-BD source acquisition: **586,288,792 bytes / 1,891 rows**, publisher MD5 and exact SHA-256/licence/index verification; **1,520** eligible short recordings and a fixed twelve-clip/six-speaker selection before inference. Full source/attribution/licence follow the data. No raw audio/weights/private data are committed.
+- Actual twelve-clip result: **WER 36.89%, CER 25.20%, Unicode grapheme error 18.75%**, accepted 12/12, 212.38 seconds locally. Per-clip references/hypotheses/errors are retained. This small public read-speech benchmark does not establish independent child/guardian/age/region/gender field performance, pretraining separation or human agreement. No child pronunciation score is fabricated.
+- `/admin/reading-speech`: model-role/current MFA, actual selected manifest and benchmark, disable/restore with reason/revision/history/advisory lock/audit. Production and child gates cannot be enabled from the console. No private voice list is exposed.
+
+Observed checks before final publication:
+
+| Check | Actual result |
+|---|---|
+| Speech tests | **28 passed in 58.13 seconds**; actual two distinct Bangladesh transcripts, actual multipart inference/no Asset or Run retention, consent/subject/CSRF/local/prod gates, chunked-size bound, busy worker, module disable, operator role/MFA/stale revision |
+| Full local regression | **481 tests + 17 subtests passed in 148.67 seconds**, zero failures/skips |
+| Frontend | TypeScript, lint and canonical optimized Next production build passed |
+| Database/transport | PostgreSQL WASM migration/RLS/role/queue checks, portable launcher/presentation and upload integrity/polling tests passed |
+| Model preparation | Two local conversions matched all five selected asset pins; source safetensors verified; existing OCR/ONNX/YAMNet/pose fixtures reacquired and used by regression |
+| Original requirements | All **778** original-kit hashes and **50** exact identities verified unchanged |
+| Browser attempt | Supported managed preview failed at Python service startup after workspace reset; direct interpreter import checks succeeded but preview child-process startup remained unavailable. No new browser, PDF, viewport or protected-admin acceptance is claimed. No alternate browser server/tunnel/security bypass used. |
+
+A subsequent bounded-memory edit-distance optimization passed focused checks and preserved all twelve measured per-clip metrics; the final fresh CI result is recorded separately when observed. The new optional speech converter Docker image is a portable template, not a claimed successfully run container. Ordinary API/private-stack CI does not prove optional Small inference inside that image.
+
+[Exact speech setup, API, data/model provenance and limitations](docs/READING_SPEECH.md). Full BanglaRead still needs verified guardian/child consent workflow and field evaluation, teacher agreement, original-content review and the remaining specialized parent/offline/adaptive/embedding/phoneme-review workflows. Original 120 passages/questions awaiting human review remain preserved and unapproved. OpenSLR37 does not erase the original SLR53/Common Voice/NCTB requirements. The other advanced-module gaps and browser acceptance remain on the checklist; **no full module is falsely marked complete**.
+
+---
+
+
 ## Advanced continuation — 30 October 2026
 
 Continued from `606f9759cf60e6e0c90abaf72721e323e8fa4162`. All 778 original-kit hashes and 50 module identities remain unchanged. Hosting is paused; public visitors still have no signup/login/profile. Current runtime source: `ee3ac5f3f1fed4a2574169d3a88dba9559582f14`, tree `738c6cd5588a8c580f9506e180d49f133d462d2e`. This includes the browser-discovered HTTP upload fix after the separately verified model/data source `f4c793d`.

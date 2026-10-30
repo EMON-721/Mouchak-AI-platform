@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "checkpoint": "arijitx/whisper-small-bn@061641b318fca06b46bff83dd9500037b2aac764",
+  "model_assets": {
+    "config.json": {
+      "bytes": 1512,
+      "sha256": "a009751ea519c21514a766f08b33784c0ce0aef4f3fafdc3687f56e33ef35b1a"
+    },
+    "model.bin": {
+      "bytes": 483546977,
+      "sha256": "da966b8f82e3d30c0d0ef04fcf13f56fe56a24d282ffec260a151a935bd774db"
+    },
+    "preprocessor_config.json": {
+      "bytes": 339,
+      "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d"
+    },
+    "tokenizer.json": {
+      "bytes": 1643195,
+      "sha256": "6b964b0b480b3c40e44f35395c7e600b62c7cb8a2272acc0439fc14c124ba1d0"
+    },
+    "vocabulary.json": {
+      "bytes": 1068103,
+      "sha256": "5ad28279db5e546349708b9a74736e2c018737ac5a600f1048f1f26c99b85b47"
+    }
+  },
+  "evaluation_manifest_sha256": "b2d2a21205fe27fa20150e09283831a542cc8aba0d73b46168f6b0319142993b",
+  "source": {
+    "url": "https://www.openslr.org/resources/37/bn_bd.zip",
+    "bytes": 586288792,
+    "sha256": "ea2e57ee593ac91e40cd72f91100aa6e1bffbaec465ba1678923ecf1f4efade8",
+    "md5": "5f7b0a1de746d2ac3541c12883b3117f"
+  },
+  "license_id": "CC-BY-SA-4.0",
+  "attribution": "Google 2015–2018; Sodimana et al., SLTU 2018, DOI 10.21437/SLTU.2018-14",
+  "selection": "Before inference: two eligible 3–8 second clips per source speaker prefix, ordered by SHA256(source_clip_id). No reference conditioning.",
+  "source_rows": 1891,
+  "speaker_groups": 6,
+  "clips": 12,
+  "accepted_clips": 12,
+  "decode": {
+    "language": "bn",
+    "task": "transcribe",
+    "beam_size": 3,
+    "temperature": 0.0,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "word_timestamps": true,
+    "vad_filter": true,
+    "max_new_tokens": 440
+  },
+  "runtime_versions": {
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.4",
+    "av": "18.1.0",
+    "regex": "2026.9.29"
+  },
+  "elapsed_seconds": 212.38,
+  "aggregate": {
+    "word_errors": 38,
+    "reference_words": 103,
+    "character_errors": 157,
+    "reference_characters": 623,
+    "grapheme_errors": 75,
+    "reference_graphemes": 400,
+    "wer": 0.36893203883495146,
+    "cer": 0.2520064205457464,
+    "grapheme_error_rate": 0.1875
+  },
+  "production_release_approved": false,
+  "child_field_validation_approved": false,
+  "limitations": [
+    "Only twelve short public bn-BD read-speech recordings from six source speaker groups; not representative child/guardian field validation.",
+    "Age, gender, region and verified guardian labels are unknown.",
+    "Pretraining overlap has not been independently excluded; no independent holdout or child pronunciation accuracy claim.",
+    "The model can hallucinate, repeat or substitute words; no clinical or pronunciation score.",
+    "WER/CER are not child ability measures. Standard uncertainty gates are applied without reference conditioning."
+  ],
+  "rows": [
+    {
+      "source_clip_id": "ban_00737_00615625943",
+      "speaker_group": "ban_00737",
+      "reference": "নভেম্বরের সাত তারিখে বেলা চারটায় ধানমণ্ডি ক্লাব ও মোহামেডান মুখোমুখি হবে",
+      "seconds": 6.656,
+      "sha256": "39374c43ef852c55beb4265686a403dad27f0687c9d90609d0dbd450a7f1f7f9",
+      "bytes": 639020,
+      "hypothesis": "নভেম্বরের সাত তারিখে বেলা চারটায়, ধারমণ্ডি ক্লাব ও মোহামেদন মুখোমুখি হবে। স্ত্রেপাস্থ",
+      "candidate_before_script_gate": "নভেম্বরের সাত তারিখে বেলা চারটায়, ধারমণ্ডি ক্লাব ও মোহামেদন মুখোমুখি হবে। স্ত্রেপাস্থ",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 3,
+        "reference_words": 11,
+        "wer": 0.2727272727272727,
+        "character_errors": 15,
+        "reference_characters": 73,
+        "cer": 0.2054794520547945,
+        "grapheme_errors": 6,
+        "reference_graphemes": 44,
+        "grapheme_error_rate": 0.13636363636363635
+      },
+      "latency_ms": 22471.05
+    },
+    {
+      "source_clip_id": "ban_00737_01387395808",
+      "speaker_group": "ban_00737",
+      "reference": "ধানমন্ডি ক্লাব নভেম্বরের সাত তারিখে বেলা চারটায় আবাহনী এর সাথে খেলবে",
+      "seconds": 5.717333333333333,
+      "sha256": "8d644c16a84974e53ef856dcbac2ecda4b75ef4b7f59b9883ba19303862476ff",
+      "bytes": 548908,
+      "hypothesis": "ধানমন্ডি ক্লাব নভেম্বরের সাত তারিখে বেলা চারটায় আবাহনির সাথে খেলবে। স্ত্রে",
+      "candidate_before_script_gate": "ধানমন্ডি ক্লাব নভেম্বরের সাত তারিখে বেলা চারটায় আবাহনির সাথে খেলবে। স্ত্রে",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 3,
+        "reference_words": 11,
+        "wer": 0.2727272727272727,
+        "character_errors": 10,
+        "reference_characters": 69,
+        "cer": 0.14492753623188406,
+        "grapheme_errors": 5,
+        "reference_graphemes": 43,
+        "grapheme_error_rate": 0.11627906976744186
+      },
+      "latency_ms": 11308.52
+    },
+    {
+      "source_clip_id": "ban_00779_00680033809",
+      "speaker_group": "ban_00779",
+      "reference": "অনূর্ধ্ব বিশ প্রথম ইনিংসে ব্যাট করছে",
+      "seconds": 3.925333333333333,
+      "sha256": "62d91b0ebfadd58d4debf1f37203e947137e84f8ac668bbe9330b7950c78d31c",
+      "bytes": 376876,
+      "hypothesis": "অনুর্ধ্ব বিশ প্রথম ইনিংসে ব্যাট করছে।",
+      "candidate_before_script_gate": "অনুর্ধ্ব বিশ প্রথম ইনিংসে ব্যাট করছে।",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 1,
+        "reference_words": 6,
+        "wer": 0.16666666666666666,
+        "character_errors": 1,
+        "reference_characters": 36,
+        "cer": 0.027777777777777776,
+        "grapheme_errors": 1,
+        "reference_graphemes": 21,
+        "grapheme_error_rate": 0.047619047619047616
+      },
+      "latency_ms": 14737.99
+    },
+    {
+      "source_clip_id": "ban_00779_00685634196",
+      "speaker_group": "ban_00779",
+      "reference": "বাংলাদেশ কানাডার খেলা নভেম্বরের সাত তারিখ বিকাল চারটায় অনুষ্ঠিত হবে",
+      "seconds": 6.058666666666666,
+      "sha256": "93e2b00c25595081883a6dc9e1669d4465d345fb185c97251bddb096cb9018e8",
+      "bytes": 581676,
+      "hypothesis": "বাংলাদেশ কানাডার খেলা নভেম্বরের ৭তারিক বিকাল ৪টায় অনুষ্ঠিত হবে। স্ত্রে",
+      "candidate_before_script_gate": "বাংলাদেশ কানাডার খেলা নভেম্বরের ৭তারিক বিকাল ৪টায় অনুষ্ঠিত হবে। স্ত্রে",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 4,
+        "reference_words": 10,
+        "wer": 0.4,
+        "character_errors": 15,
+        "reference_characters": 68,
+        "cer": 0.22058823529411764,
+        "grapheme_errors": 8,
+        "reference_graphemes": 42,
+        "grapheme_error_rate": 0.19047619047619047
+      },
+      "latency_ms": 15245.55
+    },
+    {
+      "source_clip_id": "ban_01232_00844522036",
+      "speaker_group": "ban_01232",
+      "reference": "কোন ফোন নম্বরটা যেমন আপনি বলতে পারেন প্রথমটি অথবা বাতিল বলুন",
+      "seconds": 6.912,
+      "sha256": "a9afba0645d26242905f4124569241cd31a69c12ecef593513e8b937287d1b1f",
+      "bytes": 663596,
+      "hypothesis": "কোন ফোন নম্বারটা যেমন আপনি বলতে পারেন প্রথমটি অথবা বাতিল বলুন। স্বাপ্যান্ত্রণপ্রাপ্তান্ত্র",
+      "candidate_before_script_gate": "কোন ফোন নম্বারটা যেমন আপনি বলতে পারেন প্রথমটি অথবা বাতিল বলুন। স্বাপ্যান্ত্রণপ্রাপ্তান্ত্র",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 2,
+        "reference_words": 11,
+        "wer": 0.18181818181818182,
+        "character_errors": 29,
+        "reference_characters": 60,
+        "cer": 0.48333333333333334,
+        "grapheme_errors": 9,
+        "reference_graphemes": 43,
+        "grapheme_error_rate": 0.20930232558139536
+      },
+      "latency_ms": 17208.85
+    },
+    {
+      "source_clip_id": "ban_01232_00015332616",
+      "speaker_group": "ban_01232",
+      "reference": "ঢাকা সিলেট মহাসড়ক ধরে চলার জন্য মোড়ে এসে বাঁয়ে চলুন",
+      "seconds": 5.802666666666667,
+      "sha256": "6d98cf666438fc6f2797a8a47b2d7af3b43c4ecf9930f964aee08b08e7ffe5a0",
+      "bytes": 557100,
+      "hypothesis": "ঢাকা সিলেট মহাসড়ক ধরে চলার জন্য মোড়ে এসে বায়ে চলুন। স্বাপ্যান্ত্র ক্ষার্থ্যার্থ",
+      "candidate_before_script_gate": "ঢাকা সিলেট মহাসড়ক ধরে চলার জন্য মোড়ে এসে বায়ে চলুন। স্বাপ্যান্ত্র ক্ষার্থ্যার্থ",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 3,
+        "reference_words": 10,
+        "wer": 0.3,
+        "character_errors": 29,
+        "reference_characters": 54,
+        "cer": 0.5370370370370371,
+        "grapheme_errors": 9,
+        "reference_graphemes": 35,
+        "grapheme_error_rate": 0.2571428571428571
+      },
+      "latency_ms": 13111.63
+    },
+    {
+      "source_clip_id": "ban_01701_01245901257",
+      "speaker_group": "ban_01701",
+      "reference": "রাজশাহী কুষ্টিয়া মহাসড়ক এর সাথে চলতে থাকুন",
+      "seconds": 6.058666666666666,
+      "sha256": "350da8371a4324e42c2fdca8e19b1648cbce9142cf90476677e2047bf2274c7b",
+      "bytes": 581676,
+      "hypothesis": "রাজশাহী কুষ্টি আমহাসড়কের সাথে চলতে থাকুন।",
+      "candidate_before_script_gate": "রাজশাহী কুষ্টি আমহাসড়কের সাথে চলতে থাকুন।",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 3,
+        "reference_words": 7,
+        "wer": 0.42857142857142855,
+        "character_errors": 6,
+        "reference_characters": 44,
+        "cer": 0.13636363636363635,
+        "grapheme_errors": 5,
+        "reference_graphemes": 28,
+        "grapheme_error_rate": 0.17857142857142858
+      },
+      "latency_ms": 22179.99
+    },
+    {
+      "source_clip_id": "ban_01701_00400351235",
+      "speaker_group": "ban_01701",
+      "reference": "জন কে মোবাইল এ ভিডিও কল করা হচ্ছে।",
+      "seconds": 5.290666666666667,
+      "sha256": "3e364969729fc692096f7fee90fcb0f5f5c19cc920216fc2cb3c22eee9adce33",
+      "bytes": 507948,
+      "hypothesis": "জনকে মোবাইলে ভিডিওকল করা হচ্ছে।",
+      "candidate_before_script_gate": "জনকে মোবাইলে ভিডিওকল করা হচ্ছে।",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 6,
+        "reference_words": 8,
+        "wer": 0.75,
+        "character_errors": 4,
+        "reference_characters": 33,
+        "cer": 0.12121212121212122,
+        "grapheme_errors": 5,
+        "reference_graphemes": 24,
+        "grapheme_error_rate": 0.20833333333333334
+      },
+      "latency_ms": 21241.78
+    },
+    {
+      "source_clip_id": "ban_02194_01573659722",
+      "speaker_group": "ban_02194",
+      "reference": "এটিএন্ডটি আমেরিকান বহুজাতিক টেলিযোগাযোগ কর্পোরেশন",
+      "seconds": 5.290666666666667,
+      "sha256": "03830b90ce307d935bcfbb4d2fead6c33eb7f7216cb92ac404eee43d1bc58d4d",
+      "bytes": 507948,
+      "hypothesis": "এটিএনটি আমেরিকান বহুজাতিক টেলিযোগাযোগ করপোরেশন। স্ত্রে",
+      "candidate_before_script_gate": "এটিএনটি আমেরিকান বহুজাতিক টেলিযোগাযোগ করপোরেশন। স্ত্রে",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 3,
+        "reference_words": 5,
+        "wer": 0.6,
+        "character_errors": 10,
+        "reference_characters": 49,
+        "cer": 0.20408163265306123,
+        "grapheme_errors": 5,
+        "reference_graphemes": 30,
+        "grapheme_error_rate": 0.16666666666666666
+      },
+      "latency_ms": 11962.34
+    },
+    {
+      "source_clip_id": "ban_02194_00064760492",
+      "speaker_group": "ban_02194",
+      "reference": "মোগাদিশু সোমালিয়ার রাজধানী",
+      "seconds": 4.096,
+      "sha256": "fa661936c3335829fbae0d5f4722dfe398d0ecf06ce66bf6dfa82779b49fe0c9",
+      "bytes": 393260,
+      "hypothesis": "মগাদিসুর সুমালিয়ার রাজধানী।",
+      "candidate_before_script_gate": "মগাদিসুর সুমালিয়ার রাজধানী।",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 2,
+        "reference_words": 3,
+        "wer": 0.6666666666666666,
+        "character_errors": 4,
+        "reference_characters": 27,
+        "cer": 0.14814814814814814,
+        "grapheme_errors": 4,
+        "reference_graphemes": 15,
+        "grapheme_error_rate": 0.26666666666666666
+      },
+      "latency_ms": 20454.7
+    },
+    {
+      "source_clip_id": "ban_03042_01540836421",
+      "speaker_group": "ban_03042",
+      "reference": "ঠিক আছে মঙ্গলবার সন্ধ্যা সাতটা। আপনার অ্যালার্ম ঠিক করতে হবে",
+      "seconds": 6.144,
+      "sha256": "7916089f088089295e8399fb9d6d541cda8ed59c400d3976520a06b1e42df8d9",
+      "bytes": 589868,
+      "hypothesis": "ঠিক আছে, মঙ্গলবার সন্ধ্যা সাতটা, আপনার অ্যালার্ম ঠিক করতে হবে।",
+      "candidate_before_script_gate": "ঠিক আছে, মঙ্গলবার সন্ধ্যা সাতটা, আপনার অ্যালার্ম ঠিক করতে হবে।",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 0,
+        "reference_words": 10,
+        "wer": 0.0,
+        "character_errors": 0,
+        "reference_characters": 59,
+        "cer": 0.0,
+        "grapheme_errors": 0,
+        "reference_graphemes": 38,
+        "grapheme_error_rate": 0.0
+      },
+      "latency_ms": 26767.22
+    },
+    {
+      "source_clip_id": "ban_03042_01878065486",
+      "speaker_group": "ban_03042",
+      "reference": "নেক্সাস ষোল এর রেজল্যুশন নয় শত ষাট গুণন সাত শত বিশ",
+      "seconds": 7.082666666666666,
+      "sha256": "484403fe8d9754193c28aeeec58dee3a9a67cb1255c646a8438f8183993b68f5",
+      "bytes": 679980,
+      "hypothesis": "নেক্সাস শোলোয়ের রেজলিশন ৯ শত ৭ গুণন ৭ শত ২০। স্বাপ্যান্ত্রণ্ড",
+      "candidate_before_script_gate": "নেক্সাস শোলোয়ের রেজলিশন ৯ শত ৭ গুণন ৭ শত ২০। স্বাপ্যান্ত্রণ্ড",
+      "supported": true,
+      "inference_performed": true,
+      "metrics": {
+        "word_errors": 8,
+        "reference_words": 11,
+        "wer": 0.7272727272727273,
+        "character_errors": 34,
+        "reference_characters": 51,
+        "cer": 0.6666666666666666,
+        "grapheme_errors": 18,
+        "reference_graphemes": 37,
+        "grapheme_error_rate": 0.4864864864864865
+      },
+      "latency_ms": 15636.27
+    }
+  ]
+}

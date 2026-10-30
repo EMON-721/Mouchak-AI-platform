@@ -1,5 +1,7 @@
 # Mouchak AI · মৌচাক এআই
 
+বাংলা speech continuation: BanglaRead-এ বাস্তব pinned Bengali Whisper Small, অস্থায়ী adult self-recording processing, word-time/alignment এবং MFA-নিয়ন্ত্রিত speech lab যুক্ত হয়েছে। ১,৮৯১টি বৈধ OpenSLR37 Bangladesh source row থেকে নির্দিষ্ট ১২ clip-এ measured WER **৩৬.৮৯%**; এটি child/guardian field validation নয়। Production ও শিশু-কণ্ঠ বন্ধ। Raw voice/transcript default-এ রাখা হয় না; manual practice চালু আছে। [ব্যবহার, API, model/dataset licence, setup ও বাকি scope](docs/READING_SPEECH.md)। আগের CI ফল নিচে ঐতিহাসিক; নতুন source-এর যাচাই [implementation report](IMPLEMENTATION_REPORT.md)-এ আলাদা থাকবে।
+
 নতুন advanced continuation: বাস্তব YAMNet CPU sound-event inference (local experimental, production gate বন্ধ), ৫০ tool-এর MiniLM/BM25 semantic launcher এবং বাস্তবে downloaded/processed ৩২,২৮৫ ODbL Bangladesh road-reference row-এর review/publication/search workflow যুক্ত হয়েছে। Full specialized ৫০-tool scope এখনও certified নয়। [ব্যবহার, source, licence ও সীমাবদ্ধতা](docs/ADVANCED_PIPELINES.md)। সংশোধিত model/data source-এর [CI 41002816619](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002816619)-এ দুই job সফল: ৪৫৩ test + ১৭ subtest। Browser-এ actual Bengali RAG, semantic ranking ও WAV→YAMNet result দেখা গেছে। HTTP preview checksum bug-ও ঠিক হয়েছে; সর্বশেষ runtime source `ee3ac5f`-এর [CI 41005839012](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41005839012)-তে দুই job সফল (৪৫৩ test + ১৭ subtest, ৭৪.৩৮ সেকেন্ড)। Protected admin/MFA, তিনটি viewport ও browser PDF download এখনও পুরো যাচাই হয়নি।
 
 

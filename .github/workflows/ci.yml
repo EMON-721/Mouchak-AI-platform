@@ -30,6 +30,20 @@ jobs:
       - run: python scripts/download-models.py
       - run: python scripts/download-noise.py
       - run: python scripts/download-pose.py --test-fixture
+      - uses: actions/cache@v4
+        with:
+          path: |
+            models/whisper-small-bn
+            .state/model-sources/arijitx-whisper-small-bn
+            .state/datasets/openslr37
+            .state/evaluation/reading-speech
+          key: bn-speech-slr37-small-061641-ct2484-canonical-v1
+      - name: Prepare pinned Bengali Small and fixed licensed Bangladesh speech clips
+        run: |
+          python -m venv .state/conversion-venv
+          .state/conversion-venv/bin/pip install -r requirements-reading-conversion.txt
+          .state/conversion-venv/bin/python scripts/download-reading-speech.py
+          python scripts/prepare-bn-speech.py
       - run: python -m pytest tests --ignore=tests/verify_postgres.py -q --junitxml=ci-results.xml
       - run: node scripts/test-postgres.mjs
       - run: node scripts/test-collaboration-postgres.mjs

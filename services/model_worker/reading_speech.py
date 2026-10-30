@@ -60,12 +60,19 @@ def normalize(value):
     return regex.sub(r'\s+',' ',regex.sub(r'[\p{P}\p{S}]',' ',value)).strip().casefold()
 
 def edits(a,b,alignment=False):
+    if not alignment:
+        if len(a)<len(b):a,b=b,a
+        previous=list(range(len(b)+1))
+        for i,x in enumerate(a,1):
+            current=[i]
+            for j,y in enumerate(b,1):current.append(min(previous[j]+1,current[-1]+1,previous[j-1]+(x!=y)))
+            previous=current
+        return previous[-1]
     d=[[0]*(len(b)+1) for _ in range(len(a)+1)]
     for i in range(len(a)+1):d[i][0]=i
     for j in range(len(b)+1):d[0][j]=j
     for i,x in enumerate(a,1):
         for j,y in enumerate(b,1):d[i][j]=min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(x!=y))
-    if not alignment:return d[-1][-1]
     rows=[];i=len(a);j=len(b)
     while i or j:
         if i and j and d[i][j]==d[i-1][j-1]+(a[i-1]!=b[j-1]):
@@ -80,7 +87,8 @@ def metrics(reference,hypothesis):
     r,h=normalize(reference),normalize(hypothesis)
     if len(r)>4000 or len(h)>4000 or len(r.split())>250 or len(h.split())>300:raise InputError('Speech comparison exceeds bounded length')
     rw,hw=r.split(),h.split();rg,hg=regex.findall(r'\X',r),regex.findall(r'\X',h)
-    return {'word_errors':edits(rw,hw),'reference_words':len(rw),'wer':edits(rw,hw)/max(1,len(rw)),'character_errors':edits(r,h),'reference_characters':len(r),'cer':edits(r,h)/max(1,len(r)),'grapheme_errors':edits(rg,hg),'reference_graphemes':len(rg),'grapheme_error_rate':edits(rg,hg)/max(1,len(rg))}
+    we,ce,ge=edits(rw,hw),edits(r,h),edits(rg,hg)
+    return {'word_errors':we,'reference_words':len(rw),'wer':we/max(1,len(rw)),'character_errors':ce,'reference_characters':len(r),'cer':ce/max(1,len(r)),'grapheme_errors':ge,'reference_graphemes':len(rg),'grapheme_error_rate':ge/max(1,len(rg))}
 
 def word_alignment(reference,hypothesis):
     metrics(reference,hypothesis) # Enforce bounds before matrix allocation.

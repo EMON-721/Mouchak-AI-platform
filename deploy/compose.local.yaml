@@ -7,9 +7,15 @@ x-preview: &preview
   MODEL_DIR: /app/models
   ENABLE_DURABLE_INFERENCE: "1"
   ENABLE_EXPERIMENTAL_POSE: "0"
+  ENABLE_EXPERIMENTAL_READING_ASR: ${ENABLE_EXPERIMENTAL_READING_ASR:-0}
   ORT_DISABLE_TELEMETRY: "1"
   HF_HUB_DISABLE_TELEMETRY: "1"
 services:
+  speech-model-init:
+    profiles: [experimental-speech]
+    build: {context: .., dockerfile: deploy/Dockerfile.speech-models}
+    volumes: [preview-models:/app/models, speech-model-source:/app/.state/model-sources]
+    restart: "no"
   model-init:
     build: {context: .., dockerfile: deploy/Dockerfile.api}
     command: [python, -c, "import runpy; runpy.run_path('scripts/download-models.py', run_name='__main__'); runpy.run_path('scripts/download-noise.py', run_name='__main__')"]
@@ -58,3 +64,4 @@ services:
 volumes:
   preview-state:
   preview-models:
+  speech-model-source:

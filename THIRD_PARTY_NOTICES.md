@@ -20,3 +20,7 @@ Downloaded models, government datasets and remote source references have separat
 - `data/authored/launcher-intents.json`: newly authored development query examples only, CC0-1.0. Not real-user data or an independent holdout. No blanket relicense of the original requirements, brands or third-party content is implied.
 
 Client SHA-256 fallback uses `@noble/hashes@2.4.0` (MIT, Paul Miller), loaded only when browser SubtleCrypto is unavailable in an HTTP development preview. The checksum protocol and server verification remain unchanged. Source/licence: <https://github.com/paulmillr/noble-hashes>.
+
+## Bengali reading speech continuation
+
+The optional pinned `arijitx/whisper-small-bn` checkpoint has an Apache-2.0 author card; its training-source rights require separate review. Source/derived OpenSLR37 bn-BD benchmark references/audio are CC-BY-SA-4.0, Google 2015–2018, Sodimana et al., SLTU 2018, DOI 10.21437/SLTU.2018-14. The prepared directory includes the original licence. Weights/audio are not distributed in this repository. Public references reproduced in `docs/audit/reading-speech-evaluation.json` retain CC-BY-SA-4.0; this statement does not relicense application code. Exact pins, attribution and limitations: [READING_SPEECH.md](docs/READING_SPEECH.md).

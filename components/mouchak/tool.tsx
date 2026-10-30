@@ -11,6 +11,9 @@ import { PoseReview, poseDetailSummary } from "./pose-review";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+const ReadingSpeech = dynamic(() =>
+  import("./reading-speech").then((m) => m.ReadingSpeech),
+);
 const NoiseReview = dynamic(() =>
   import("./noise-review").then((m) => m.NoiseReview),
 );
@@ -860,6 +863,13 @@ export function ToolWorkspace({ slug }: { slug: string }) {
                 "Transfer draft loaded. Review the fields and units below, then separately consent to processing.",
               )}
             </div>
+          ) : null}
+          {tool.engine === "reading" ? (
+            <ReadingSpeech
+              key={`${user?.id}:${inputs.passage_id || "AUTH-READ-01"}`}
+              passageId={String(inputs.passage_id || "AUTH-READ-01")}
+              onReviewedText={(text) => change("text", text)}
+            />
           ) : null}
           <form className="panel tool-form" onSubmit={submit}>
             {workspaces.length > 1 ? (

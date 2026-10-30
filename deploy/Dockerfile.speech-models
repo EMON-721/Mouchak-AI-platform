@@ -1,0 +1,11 @@
+# Optional local CPU converter; Torch/Transformers never enter the API image.
+FROM python:3.12-slim
+ENV HF_HUB_DISABLE_TELEMETRY=1 TOKENIZERS_PARALLELISM=false MODEL_DIR=/app/models
+WORKDIR /app
+COPY requirements-reading-conversion.txt ./
+RUN pip install --no-cache-dir -r requirements-reading-conversion.txt
+COPY scripts/download-reading-speech.py ./scripts/
+COPY docs/audit/reading-speech-assets.json docs/audit/reading-speech-source.json ./docs/audit/
+RUN useradd --uid 10001 --create-home mouchak && mkdir -p models .state/model-sources && chown -R mouchak:mouchak models .state
+USER mouchak
+CMD ["python","scripts/download-reading-speech.py"]

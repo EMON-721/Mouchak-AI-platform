@@ -3,7 +3,9 @@ from pathlib import Path
 import hashlib, importlib.metadata, json, os, shutil, urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 manifest=json.loads((ROOT/'docs/audit/reading-speech-assets.json').read_text())
-source=json.loads((ROOT/'docs/audit/reading-speech-source.json').read_text())
+source_bytes=(ROOT/'docs/audit/reading-speech-source.json').read_bytes()
+if hashlib.sha256(source_bytes).hexdigest()!=manifest['source_manifest_sha256']:raise RuntimeError('Source manifest checksum mismatch')
+source=json.loads(source_bytes)
 target=Path(os.getenv('MODEL_DIR',ROOT/'models'))/manifest['directory']
 cache=ROOT/'.state/model-sources/arijitx-whisper-small-bn'
 

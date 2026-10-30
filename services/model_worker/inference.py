@@ -13,11 +13,12 @@ MODEL_DIR = Path(os.getenv("MODEL_DIR", ROOT / "models"))
 
 def model_health():
     from .pose_runtime import availability
-    from . import noise_runtime
+    from . import noise_runtime, reading_speech
 
     return {
         "pose": availability(),
         "noise_events": noise_runtime.availability(),
+        "reading_asr": reading_speech.availability(),
         "ocr": {
             "runtime": "Tesseract",
             "ben_loaded": (MODEL_DIR / "ben.traineddata").is_file(),
