@@ -42,13 +42,25 @@
     "pdf_download_completion_verified": false,
     "pdf_download_event_timeout_seconds": 15,
     "chrome_downloads_inspection": "rejected_by_browser_url_policy_no_bypass",
-    "css_viewports_verified": [],
+    "css_viewports_verified": [
+      1348
+    ],
     "remaining_css_viewports": [
       390,
       768,
       1440
     ],
-    "workspace_maintenance_removed_uncommitted_harness": true
+    "workspace_maintenance_removed_uncommitted_harness": true,
+    "desktop_no_horizontal_overflow_languages": [
+      "bn",
+      "en"
+    ],
+    "requested_css_viewports_verified": false,
+    "viewport_limitation": "Public routes intentionally deny framing; no frame headers relaxed. Supported browser controls did not expose exact viewport resizing. No mobile-device acceptance claimed.",
+    "bilingual_reading_panel_observed": true,
+    "screenshot": "docs/audit/reading-browser-20261030.jpg",
+    "screenshot_scope": "1348px English local reading panel; no model assets downloaded in the restored preview, so genuine unavailable/manual fallback is displayed.",
+    "copy_correction": "Removed inaccurate below direction because tap practice is above the speech panel."
   },
   "original_requirements": {
     "files_verified": 778,
@@ -60,5 +72,12 @@
     "BanglaRead child/guardian workflow, independent representative Bangladesh child field validation, teacher agreement and remaining original advanced features/content review.",
     "Browser speech submission, protected admin/MFA, PDF completion, 390/768/1440 widths and complete accessibility acceptance.",
     "Optional speech converter image execution and deployed performance/recovery checks remain unverified; hosting is intentionally paused."
-  ]
+  ],
+  "published_main_ci": {
+    "commit": "f106baf6d4531847fe392b8ea437e2a65ac143f3",
+    "run_id": 41061370350,
+    "conclusion": "success",
+    "platform_job_id": 124081662191,
+    "private_stack_job_id": 124081662228
+  }
 }

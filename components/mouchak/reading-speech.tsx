@@ -119,8 +119,8 @@ export function ReadingSpeech({
       {!status?.experimental_enabled ? (
         <p role="status">
           {t(
-            "কণ্ঠ পরীক্ষা এখন চালু নেই। নিচের হাতে লেখা ও শব্দে ট্যাপ করার অনুশীলন চালু আছে।",
-            "Speech processing is unavailable. Typed and tap-word practice below remains available.",
+            "কণ্ঠ পরীক্ষা এখন চালু নেই। হাতে লেখা ও শব্দে ট্যাপ করার অনুশীলন চালু আছে।",
+            "Speech processing is unavailable. Typed and tap-word practice remains available.",
           )}
         </p>
       ) : (
