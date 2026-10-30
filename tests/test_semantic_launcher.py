@@ -12,6 +12,13 @@ from sqlalchemy import select,func
  ('compare my rent expenses','rentalfair-bd'),
  ('চুক্তির দুটি কাগজে কী বদলেছে','chuktishield-ai'),
  ('Calculate appliance energy consumption','biddutplan-bd'),
+ ('বাসার বিদ্যুৎ খরচ কমানোর হিসাব করতে চাই','biddutplan-bd'),
+ ('ফ্যান ফ্রিজ কত বিদ্যুৎ ব্যবহার করে','biddutplan-bd'),
+ ('বিদ্যুৎ বিলের যোগফল ঠিক আছে কিনা দেখব','billdetect-ai'),
+ ('ডেঙ্গুর তারিখসহ দেওয়া সংখ্যা তুলনা করব','denguesignal-bd'),
+ ('পণ্যের মজুদ আর মেয়াদ লিখে রাখব','dokanlens-ai'),
+ ('বাড়ি ভাড়া আর মাসের খরচ তুলনা','rentalfair-bd'),
+ ('দুইটা চুক্তির ধারা তুলনা করতে চাই','chuktishield-ai'),
 ])
 def test_real_model_ranks_relevant_tool(query,slug):
     r=recommend(query);assert r['supported'];assert slug in [x['slug'] for x in r['suggestions']]
@@ -46,3 +53,9 @@ def test_endpoint_csrf_owner_session_and_disabled_tools(client):
         with DB.begin() as db:db.delete(db.get(Config,'module:biddutplan-bd'))
     with DB() as db:assert db.scalar(select(func.count()).select_from(Run))==before
     assert client.request('POST','/api/launcher',json={'query':'x'*801}).status_code==422
+
+def test_bangla_electricity_task_excludes_unrelated_medical_and_forms():
+    r=recommend('বাসার বিদ্যুৎ খরচ কমানোর হিসাব করতে চাই')
+    slugs={x['slug'] for x in r['suggestions']}
+    assert r['suggestions'][0]['slug']=='biddutplan-bd'
+    assert not slugs & {'labtrend-bd','civicform-ai','repairright-bd'}

@@ -367,9 +367,15 @@ export function ResultView({
           <Download size={16} />
           CSV
         </a>
-        <button className="button outline small" onClick={() => window.print()}>
+        <a
+          className="button outline small"
+          href={"/api/runs/" + result.id + "/export?format=pdf"}
+        >
           <FileText size={16} />
-          {t("প্রিন্ট / PDF", "Print / PDF")}
+          {t("PDF ডাউনলোড", "Download PDF")}
+        </a>
+        <button className="button outline small" onClick={() => window.print()}>
+          {t("প্রিন্ট", "Print")}
         </button>
         <button
           className="button outline small danger"

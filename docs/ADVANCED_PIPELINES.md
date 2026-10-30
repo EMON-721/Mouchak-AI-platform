@@ -24,9 +24,9 @@ Tests use owned synthetic sine/noise/silence/clipped recordings to prove **mecha
 
 ## All 50 tools: semantic intent launcher
 
-`services/model_worker/launcher.py` uses the actual checksum-pinned multilingual MiniLM ONNX encoder plus bounded BM25 over all 50 public tool purposes and original query examples. Only public prototype vectors are cached. The service neither saves raw queries nor forwards them to tools, trains on them, opens external links or executes an inferred action. The user reviews suggestions and chooses a destination; blocked tool cores retain their honest readiness labels.
+`services/model_worker/launcher.py` uses the actual checksum-pinned multilingual MiniLM ONNX encoder plus bounded BM25 over all 50 public tool purposes and original query examples and bilingual task keywords. Bengali Unicode is normalized; lexical task evidence is weighted alongside the encoder so broad cosine similarity cannot alone admit an unrelated tool. Only public prototype vectors are cached. The service neither saves raw queries nor forwards them to tools, trains on them, opens external links or executes an inferred action. The user reviews suggestions and chooses a destination; blocked tool cores retain their honest readiness labels.
 
-`data/authored/launcher-intents.json` contains 50 original bilingual task pairs (100 query examples), dedicated to CC0 **only for those newly authored examples**. This does not relicense the master kit, code, logos or third-party models. The examples are development data, not real users, a representative population or independent Bangladesh holdout. Exact-name coverage is a routing/indexing sanity check. Similarity is not a calibrated probability. Low-evidence/gibberish queries abstain; urgent medical/safety language stops tool routing and directs people to appropriate help without diagnosis or invented helpline details.
+`data/authored/launcher-intents.json` contains 50 original bilingual task pairs (100 query examples), plus 50 original bilingual topic-keyword rows, dedicated to CC0 **only for those newly authored examples**. This does not relicense the master kit, code, logos or third-party models. The examples are development data, not real users, a representative population or independent Bangladesh holdout. Exact-name coverage is a routing/indexing sanity check. Browser QA found an actual Bengali electricity query ranking unrelated tools; regression cases now cover that failure, Bengali rent compounds, and other distinct topics. This correction is development evidence, not independent field accuracy. Similarity is not a calibrated probability. Low-evidence/gibberish queries abstain; urgent medical/safety language stops tool routing and directs people to appropriate help without diagnosis or invented helpline details.
 
 `POST /api/launcher` requires the existing private browser session and write CSRF. It honors disabled tools. Ordinary lexical catalogue search remains available when the model is absent. The search UI runs semantic inference only after an explicit click. Homepage task descriptions travel to Explore through in-memory context rather than being put into query-string URLs; old explicit public catalogue `?q=` links still work. Session refresh clears the pending in-memory description.
 
@@ -63,6 +63,8 @@ Derived references deliberately exclude coordinates and contributor metadata. Th
 5. Source revocation takes effect on the next request, without a warm-query cache. Withdrawal is audited and revision guarded. Rebuilding/replacing the published bytes requires re-review/publication; no private history is rewritten.
 
 The source was legally acquired and the full derived index prepared. **Production application approval has not been impersonated**; the default public lookup remains unavailable until actual independent operators publish it. This is a genuine review gate, not a missing search implementation.
+
+The result actions now expose the existing owner-authorized PDF endpoint as a real download link separately from browser Print. A print dialog alone is not treated as PDF download proof.
 
 ## Verification boundaries
 
