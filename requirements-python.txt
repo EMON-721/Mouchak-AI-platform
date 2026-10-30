@@ -23,3 +23,6 @@ rapidfuzz==3.14.6
 onnx==1.23.2
 skl2onnx==1.20.0
 ai-edge-litert==2.1.0
+regex==2026.9.29
+av==18.1.0
+ctranslate2==4.8.4

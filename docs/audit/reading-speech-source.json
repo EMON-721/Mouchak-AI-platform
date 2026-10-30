@@ -1,0 +1,63 @@
+{
+  "model_id": "arijitx/whisper-small-bn",
+  "revision": "061641b318fca06b46bff83dd9500037b2aac764",
+  "license_observed": "Apache-2.0",
+  "model_card_url": "https://huggingface.co/arijitx/whisper-small-bn/blob/061641b318fca06b46bff83dd9500037b2aac764/README.md",
+  "training_data_author_reported": [
+    "Common Voice 11 Bengali",
+    "OpenSLR53"
+  ],
+  "production_rights_review_approved": false,
+  "assets": {
+    "README.md": {
+      "bytes": 3454,
+      "sha256": "b03c0fb9ce3e263d52692d35c5cff0b34e4becbb3b61297ece9deb9634043748",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/README.md"
+    },
+    "config.json": {
+      "bytes": 1224,
+      "sha256": "97f3ff0a94f209ffe63b88d48dae72c3d071d5698716661cf202e46fa8488bc0",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/config.json"
+    },
+    "generation_config.json": {
+      "bytes": 3005,
+      "sha256": "6a30b7c4cfb107ec2d3c0ad6e371a685987bb7220e7f08fc4e6028b4a96e5aa0",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/generation_config.json"
+    },
+    "merges.txt": {
+      "bytes": 493864,
+      "sha256": "78f27f801feb4283ae969d4cadacb28fc051b655647402b1a252c7079ea11c46",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/merges.txt"
+    },
+    "model.safetensors": {
+      "bytes": 966995080,
+      "sha256": "93a91b02485891b74985c1d879e7df6662f123cc96174c2257a23ded0b418f61",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/model.safetensors"
+    },
+    "normalizer.json": {
+      "bytes": 52666,
+      "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/normalizer.json"
+    },
+    "preprocessor_config.json": {
+      "bytes": 339,
+      "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/preprocessor_config.json"
+    },
+    "special_tokens_map.json": {
+      "bytes": 2077,
+      "sha256": "b0aac6950381c4ae2f60b3f0fab04bcfe399a6a320cb3e4c7aee2d52924d733e",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/special_tokens_map.json"
+    },
+    "tokenizer_config.json": {
+      "bytes": 800,
+      "sha256": "f2d5213b4fb80ef36aeb2e9083a9cf83d94db8dab4bb710114aefb71daea18ef",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/tokenizer_config.json"
+    },
+    "vocab.json": {
+      "bytes": 1036584,
+      "sha256": "50d6a919f0a0601d56a04eb583c780d18553aa388254ba3158eb6a00f13e2c1a",
+      "url": "https://huggingface.co/arijitx/whisper-small-bn/resolve/061641b318fca06b46bff83dd9500037b2aac764/vocab.json"
+    }
+  }
+}

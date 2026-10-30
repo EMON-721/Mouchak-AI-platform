@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "model_id": "arijitx/whisper-small-bn@061641b318fca06b46bff83dd9500037b2aac764",
+  "directory": "whisper-small-bn",
+  "architecture": "Whisper Small Bengali fine-tune, CPU int8 inference",
+  "license_observed": "Apache-2.0 model card; training-source terms require separate production review",
+  "production_rights_review_approved": false,
+  "assets": {
+    "config.json": {
+      "bytes": 1512,
+      "sha256": "a009751ea519c21514a766f08b33784c0ce0aef4f3fafdc3687f56e33ef35b1a"
+    },
+    "model.bin": {
+      "bytes": 483546977,
+      "sha256": "da966b8f82e3d30c0d0ef04fcf13f56fe56a24d282ffec260a151a935bd774db"
+    },
+    "preprocessor_config.json": {
+      "bytes": 339,
+      "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d"
+    },
+    "tokenizer.json": {
+      "bytes": 1643195,
+      "sha256": "6b964b0b480b3c40e44f35395c7e600b62c7cb8a2272acc0439fc14c124ba1d0"
+    },
+    "vocabulary.json": {
+      "bytes": 1068103,
+      "sha256": "5ad28279db5e546349708b9a74736e2c018737ac5a600f1048f1f26c99b85b47"
+    }
+  },
+  "conversion": {
+    "ctranslate2": "4.8.4",
+    "transformers": "4.56.2",
+    "torch": "2.9.0+cpu",
+    "quantization": "float16",
+    "load_as": "int8",
+    "remote_code": false,
+    "pickle": false,
+    "tokenizer_serialization": "canonical JSON: sorted keys, compact separators, UTF-8, final newline"
+  },
+  "source_manifest_sha256": "3640ef3e0cee9687cba47726495e8653e9b4827d7d38b8feeabecf2089315db7"
+}

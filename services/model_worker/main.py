@@ -50,11 +50,13 @@ app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
 app.include_router(bills.router)
-from . import site_builder, launcher, model_operations, road_context
+from . import site_builder, launcher, model_operations, road_context, reading_speech
 app.include_router(site_builder.router)
 app.include_router(launcher.router)
 app.include_router(model_operations.router)
 app.include_router(road_context.router)
+app.include_router(reading_speech.router)
+app.add_middleware(reading_speech.SpeechBodyLimit)
 app.include_router(directories.router)
 RATE = {}
 RATE_LOCK = threading.Lock()
