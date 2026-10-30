@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "repository": "EMON-721/Mouchak-AI-platform",
+  "runtime_source_commit": "eabe93784dc11f0a47dc900d40388b593be28e3d",
+  "runtime_source_tree": "f3495b85b62f6257fea2e670923d62b689fa0f05",
+  "hosting_deployed": false,
+  "all_50_advanced_modules_complete": false,
+  "ci": {
+    "run_id": 41031736096,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41031736096",
+    "platform_job_id": 123982826356,
+    "private_stack_job_id": 123982826658,
+    "python_tests": 481,
+    "python_subtests": 17,
+    "python_seconds": 174.02,
+    "selected_model_conversion_checksums_verified": true,
+    "corpus_prepared": true,
+    "typescript_lint_build": true,
+    "database_transport_checks": true,
+    "disposable_tls_private_stack": true,
+    "optional_small_converter_container_executed": false
+  },
+  "local": {
+    "speech_tests": 28,
+    "speech_seconds": 58.13,
+    "full_tests": 481,
+    "full_subtests": 17,
+    "full_seconds": 148.67,
+    "post_optimization_focused_tests": 26,
+    "post_optimization_metrics_unchanged_clips": 12
+  },
+  "browser": {
+    "preview_startup_repaired": true,
+    "bengali_speech_panel_observed": true,
+    "typed_reading_real_result_observed": true,
+    "typed_matched_words": 11,
+    "reference_words": 28,
+    "voice_file_submission_verified": false,
+    "operator_mfa_workflow_verified": false,
+    "pdf_download_completion_verified": false,
+    "pdf_download_event_timeout_seconds": 15,
+    "chrome_downloads_inspection": "rejected_by_browser_url_policy_no_bypass",
+    "css_viewports_verified": [],
+    "remaining_css_viewports": [
+      390,
+      768,
+      1440
+    ],
+    "workspace_maintenance_removed_uncommitted_harness": true
+  },
+  "original_requirements": {
+    "files_verified": 778,
+    "module_identities_verified": 50,
+    "changed": false
+  },
+  "remaining": [
+    "Original specialized model/data/admin scope across all 50 modules remains incomplete.",
+    "BanglaRead child/guardian workflow, independent representative Bangladesh child field validation, teacher agreement and remaining original advanced features/content review.",
+    "Browser speech submission, protected admin/MFA, PDF completion, 390/768/1440 widths and complete accessibility acceptance.",
+    "Optional speech converter image execution and deployed performance/recovery checks remain unverified; hosting is intentionally paused."
+  ]
+}
