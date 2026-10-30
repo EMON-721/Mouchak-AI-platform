@@ -66,6 +66,8 @@ The source was legally acquired and the full derived index prepared. **Productio
 
 The result actions now expose the existing owner-authorized PDF endpoint as a real download link separately from browser Print. A print dialog alone is not treated as PDF download proof.
 
+Browser QA also found the existing chunk uploader assuming WebCrypto even in the managed HTTP preview. A lazy `@noble/hashes@2.4.0` SHA-256 fallback now preserves the identical checksum protocol when SubtleCrypto is absent; native independent hash comparisons cover missing `crypto` and missing `subtle` over boundary-sized inputs. Server verification, scanning, encryption and production HTTPS are retained. The browser then uploaded the original tone and showed an actual YAMNet Sine wave score of 0.988; this is mechanics, not field accuracy.
+
 ## Verification boundaries
 
 The new tests execute real model inference, durable processing, ordinary/adversarial routing, actual FTS queries over a licensed road-name fixture, source/reviewer revocation, tampering, consent, role/CSRF checks and private-owner isolation. Disposable Docker/TLS integration is extended to prepare/use the full real OSM index and actual YAMNet CPU weights while preserving the production refusal gate. Exact observed CI/browser outcomes belong in the current implementation report; adding a test is not proof that it passed.

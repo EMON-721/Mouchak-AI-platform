@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-30",
+  "runtime_source_sha": "ee3ac5f3f1fed4a2574169d3a88dba9559582f14",
+  "runtime_tree_sha": "738c6cd5588a8c580f9506e180d49f133d462d2e",
+  "hosting_paused": true,
+  "full_50_tool_scope_certified": false,
+  "original_kit_files_verified": 778,
+  "module_identities_verified": 50,
+  "local_python": {
+    "passed": 453,
+    "subtests": 17,
+    "failed": 0,
+    "seconds": 209.06
+  },
+  "corrected_model_data_ci": {
+    "run_id": 41002816619,
+    "source_sha": "f4c793dbdfb00897939a8449c26ce5f00bc8d851",
+    "platform_job": 123890891624,
+    "private_stack_job": 123890889318,
+    "both_conclusions": "success",
+    "passed": 453,
+    "subtests": 17,
+    "seconds": 76.97,
+    "history_blobs_checked": 1302,
+    "selected_pattern_findings": 0
+  },
+  "latest_http_upload_ci": {
+    "run_id": 41005839012,
+    "source_sha": "ee3ac5f3f1fed4a2574169d3a88dba9559582f14",
+    "platform_job": 123900420483,
+    "private_stack_job": 123900420366,
+    "status": "completed",
+    "both_conclusions": "success",
+    "passed": 453,
+    "subtests": 17,
+    "seconds": 74.38,
+    "history_blobs_checked": 1307,
+    "selected_pattern_findings": 0,
+    "native_sha256_fallback_transport_verified": true
+  },
+  "real_disposable_tls_stack": {
+    "production_hosting": false,
+    "postgres_s3_tls": true,
+    "four_isolated_roles": true,
+    "owner_worker_boundaries": true,
+    "reviewed_full_osm_index_lookup_and_immediate_revocation": true,
+    "yamnet_actual_cpu_and_production_refusal": true,
+    "site_builder_independent_mfa_review_scheduler_rollback": true,
+    "nonroot_standalone_web_image": true
+  },
+  "browser": {
+    "managed_internal_qa_only": true,
+    "no_public_visitor_signup_login_profile": true,
+    "home_task_handoff_without_query_url": true,
+    "actual_bengali_grounded_rag": true,
+    "private_session_history_after_reload": true,
+    "wrong_bengali_ranking_found_and_corrected": true,
+    "corrected_query_top_tool": "biddutplan-bd",
+    "owned_wav_uploaded_with_preserved_checksum_after_http_fix": true,
+    "actual_yamnet_label": "Sine wave",
+    "actual_uncalibrated_score_display": 0.988,
+    "bangladesh_accuracy_evaluation": false,
+    "public_admin_guard_observed": true,
+    "authenticated_admin_mfa_workflows_verified": false,
+    "three_requested_widths_verified": false,
+    "pdf_download_verified": false,
+    "pdf_limitation": "Supported browser download-event and link-media methods timed out; API PDF generation tests pass but are not browser download proof.",
+    "screenshot_attachment_available": false,
+    "screenshot_limitation": "Captured result for inspection; supported file synchronization did not produce a main-container file within five seconds."
+  },
+  "dataset": {
+    "source_url": "https://download.geofabrik.de/asia/bangladesh-261028.osm.pbf",
+    "license": "ODbL-1.0",
+    "prepared_rows": 32285,
+    "omitted_eligible_without_name_or_ref": 444453,
+    "source_bytes": 355896654,
+    "human_production_application_publication": false,
+    "vision_defect_or_safety_labels": false,
+    "actual_full_index_bengali_lookup_observed": {
+      "query": "দূতাবাস সড়ক",
+      "first_way_id": "8656089",
+      "name_en": "Embassy Road",
+      "method": "actual readonly SQLite FTS query over prepared full index; not a new human approval"
+    }
+  },
+  "remaining": [
+    "Original specialized 50-tool models/workflows and Bangladesh labelled field holdouts/expert acceptance",
+    "NoiseTrace temporal anomaly/redaction/privacy evaluation and production release",
+    "Actual independent human application source reviews/publication; no reviewer impersonation",
+    "Current approved provider/pharmacy datasets and original domain validation",
+    "Broader model lifecycle/moderation/organization/guardian administration",
+    "Protected browser operator/MFA/three-width/accessibility/PDF acceptance"
+  ]
+}

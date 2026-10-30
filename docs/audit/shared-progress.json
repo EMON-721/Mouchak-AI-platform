@@ -1,5 +1,44 @@
 [
   {
+    "requirement": "real_noise_event_inference",
+    "status": "actual_cpu_durable_pipeline_local_and_real_tls_ci_verified_browser_verified_production_blocked",
+    "implemented": "Pinned official YAMNet/LiteRT CPU tags, windows/waveform, malformed/silent/clipped abstention, private consented durable processing and audited disable/restore.",
+    "remaining": "Bangladesh labelled holdout/accuracy, temporal/privacy calibration, consented anomaly/redaction workflow and production release.",
+    "evidence": [
+      "tests/test_noise_pipeline.py",
+      "docs/ADVANCED_PIPELINES.md",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002331602",
+      "docs/audit/advanced-pipelines-release-20261030.json",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41005839012"
+    ]
+  },
+  {
+    "requirement": "all_50_semantic_task_launcher",
+    "status": "actual_model_local_453_and_latest_source_ci_verified_browser_ranking_verified",
+    "implemented": "Pinned MiniLM/BM25 over all 50 purposes and original bilingual keywords/examples; explicit click, abstention, urgent stop, disabled-tool filtering, private in-memory handoff/no raw-query storage or forwarding. Observed Bengali ranking failure corrected.",
+    "remaining": "Independent Bangladesh task-routing/abstention evaluation; no full domain module certification.",
+    "evidence": [
+      "tests/test_semantic_launcher.py",
+      "components/mouchak/semantic-launcher.tsx",
+      "docs/ADVANCED_PIPELINES.md",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002816619",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41005839012"
+    ]
+  },
+  {
+    "requirement": "lawful_bangladesh_osm_reference_pipeline",
+    "status": "actual_full_extract_prepared_review_publish_search_revocation_latest_tls_ci_verified_human_publication_pending",
+    "implemented": "Actual pinned 355896654-byte extract, 32285 named/ref roads, checksummed JSONL/SQLite, two independent current-MFA reviews and separate publisher, readonly FTS/attribution, immediate revocation/withdrawal/tamper checks.",
+    "remaining": "Actual human publication is not impersonated by fixtures. No defect/traffic/safety labels or specialized-model validation.",
+    "evidence": [
+      "scripts/prepare-bd-roads.py",
+      "docs/audit/bd-roads-preparation-20261030.json",
+      "tests/test_road_context.py",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002331602",
+      "https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41005839012"
+    ]
+  },
+  {
     "requirement": "reviewed_visual_site_builder",
     "status": "implemented_source_real_model_database_tls_ci_verified_browser_partial",
     "implemented": "Typed bilingual visual presentation editor, owned SVG assets, immutable private drafts, independent current-editor approval, revision/base conflicts, guarded publication/rollback, schedule revalidation and protected viewport preview.",

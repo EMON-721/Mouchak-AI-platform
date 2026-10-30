@@ -129,3 +129,33 @@ Implemented selected-facts support grants, typed consented transfer drafts, dura
 Final suite: 257 passed, zero failed/error/skipped. Current lint, TypeScript and Next production build pass. PostgreSQL WASM executed all four migrations (20 tables); live PostgreSQL/S3/SMTP/cloud deployment remains unverified. A real scheduler subprocess and local encrypted recovery drill pass. Browser live health, language, reading word toggles, dictionary/price rows and logged-out guards work; authenticated browser E2E and 390/768/1440 checks remain incomplete.
 
 Next code work: complete remaining full CMS/layout/locales, organization/guardian tenancy, broader model lifecycle/RAG/data pipelines and the original domain acceptance requirements. Next external prerequisites: exact authorized GitHub destination, staging private model service/PostgreSQL/S3/SMTP/scanner, secure browser signup/login and approved Bangladesh holdouts/expert review. No production certification, deployment, repository push or all-430 acceptance claim is made.
+
+
+## Advanced continuation — 30 October 2026
+
+Continued from `606f9759cf60e6e0c90abaf72721e323e8fa4162`. All 778 original-kit hashes and 50 module identities remain unchanged. Hosting is paused; public visitors still have no signup/login/profile. Current runtime source: `ee3ac5f3f1fed4a2574169d3a88dba9559582f14`, tree `738c6cd5588a8c580f9506e180d49f133d462d2e`. This includes the browser-discovered HTTP upload fix after the separately verified model/data source `f4c793d`.
+
+Implemented and locally verified:
+
+- Actual official checksum-pinned YAMNet/LiteRT CPU sound-event tags, private owned-WAV validation/resampling, temporal windows/RMS waveform, signal-quality abstention, encrypted results/durable worker, bilingual studio and audited operator disable/restore. Production release remains disabled for missing Bangladesh field/accuracy/privacy acceptance.
+- Actual MiniLM/BM25 launcher for all 50 public purposes, 100 original query examples and 50 topic-keyword rows. Explicit inference, disabled-module filtering, urgent stop, abstention, no raw-query storage/automatic forwarding. Homepage descriptions remain in memory rather than URLs. Browser QA found an unrelated electricity-cost recommendation; normalized task evidence and eight new regressions fix that observed failure, without claiming independent field accuracy.
+- Real Geofabrik Bangladesh extract downloaded/prepared: **32,285** named/ref-bearing public-road ways; **444,453** eligible unnamed ways explicitly omitted. Exact pinned bytes/hashes, reproducible preparation, actual ODbL sample/attribution, two matching independent current-MFA rights reviews, separate publisher, real readonly FTS lookup, immediate revocation/tamper/withdraw safeguards. No defect/safety labels or government records fabricated. Actual human application publication remains pending; disposable test actors are not production approval.
+- Workspace result actions expose the existing owner-authorized PDF download endpoint separately from browser Print. Browser download events timed out; this is not marked browser PDF success. The HTTP-upload fallback is lazy and leaves production HTTPS/auth/encryption/scanning/server integrity checks unchanged.
+
+Verification observed so far:
+
+| Check | Actual result |
+|---|---|
+| Corrected local regression | **453 tests + 17 subtests passed in 209.06 seconds**; zero failures |
+| Corrected frontend | TypeScript, lint and optimized Next build passed |
+| Initial source GitHub CI | `501e903`: [41002331602](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002331602), both jobs successful; 445 tests + 17 subtests |
+| Actual disposable Docker/TLS CI | Full real OSM index review/publication/FTS/immediate revocation; actual YAMNet CPU and production refusal gate; PostgreSQL/S3 TLS, role/worker/private-record boundaries and real OCR/ONNX remain passed |
+| Preservation/source scan | Original kit/50 identities verified; selected-pattern source/history scan zero findings across 1,259 pre-publication historical blobs; not universal secret/rights certification |
+| Corrected model/data source CI | [41002816619](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41002816619), **both jobs successful**, 453 tests + 17 subtests in 76.97 seconds; selected-pattern scan zero findings across 1,302 historical blobs |
+| Latest runtime source CI | [41005839012](https://github.com/EMON-721/Mouchak-AI-platform/actions/runs/41005839012), **both jobs successful**; 453 tests + 17 subtests in 74.38 seconds, native-vs-JS SHA-256 fallback/transport checks, optimized build and full real Docker/TLS stack; selected-pattern scan zero findings across 1,307 historical blobs |
+
+Browser QA observed real Bengali source-grounded RAG output, reload-persistent owner session/history and no-account UI. The corrected electricity-cost query now visibly ranks BiddutPlan first (BillDetect second). The exact private WAV upload initially failed because SubtleCrypto is absent in HTTP preview; the pinned MIT noble-hashes fallback preserves SHA-256, with native independent hash comparisons over multiple lengths/missing-crypto states. After the fix, the browser actually uploaded the owned 440 Hz fixture and displayed YAMNet Sine wave 0.988 plus waveform. The public session was refused entry to admin and shown the operator/MFA gate. PDF download event/media operations timed out; no file path/download acceptance is claimed. A result screenshot was captured for inspection but did not synchronize within the supported five-second file handoff, so no downloadable screenshot is claimed. Protected operator/MFA/Site Builder browser workflows, all 390/768/1440 widths and complete accessibility acceptance remain unverified. Secure operator auth is not bypassed.
+
+[Exact setup, licences, source statistics and reviewer workflow](docs/ADVANCED_PIPELINES.md). Raw model/PBF/SQLite caches and private recordings are excluded from Git; the scripts rebuild the full public index without a hosting-provider dependency.
+
+**Remaining non-hosting scope:** the original specialized 50-tool models/workflows, independent Bangladesh labelled datasets/holdouts/expert acceptance, NoiseTrace anomaly/redaction/field validation, broader model lifecycle/moderation/organization/guardian administration and the unobserved browser acceptance. None of the full advanced modules is marked complete. The 47 bounded support flows and three production-blocked cores remain distinct.
