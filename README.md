@@ -112,3 +112,11 @@ Super Admin ও অনুমোদিত operator-রা দায়িত্ব �
 - [Deployment নির্দেশিকা](docs/DEPLOYMENT.md)
 - [Data ও model provenance](docs/DATA_AND_MODEL_PROVENANCE.md)
 - [উৎস ও third-party licence](THIRD_PARTY_NOTICES.md)
+
+<!-- DEPLOYMENT LINKS: maintained for GitHub repository navigation -->
+## Website & repository links
+
+- **Source repository:** https://github.com/EMON-721/Mouchak-AI-platform
+- **Website:** No independently confirmed public deployment URL available. A link will be added only after its address is established.
+
+<!-- END DEPLOYMENT LINKS -->
