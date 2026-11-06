@@ -6,13 +6,24 @@
   "archive_url": "https://www.kaggle.com/api/v1/models/google/yamnet/tfLite/classification-tflite/1/download",
   "archive_member": "1.tflite",
   "assets": {
-    "classification.tflite": {"sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de", "bytes": 4126810},
-    "class_map.csv": {"sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2", "bytes": 14096, "url": "https://raw.githubusercontent.com/tensorflow/models/dfffd623b6be8d1d9744b8e261fbac370d17c46d/research/audioset/yamnet/yamnet_class_map.csv"}
+    "classification.tflite": {
+      "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+      "bytes": 4126810,
+      "url": "https://raw.githubusercontent.com/googlecodelabs/odml-pathways/9c8a8ec8623ec254c22c61e97a55b5d7a22cb9ec/audio_classification/codelab1/android/final/app/src/main/assets/lite-model_yamnet_classification_tflite_1.tflite",
+      "source_repository": "https://github.com/googlecodelabs/odml-pathways",
+      "source_revision": "9c8a8ec8623ec254c22c61e97a55b5d7a22cb9ec"
+    },
+    "class_map.csv": {
+      "sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+      "bytes": 14096,
+      "url": "https://raw.githubusercontent.com/tensorflow/models/dfffd623b6be8d1d9744b8e261fbac370d17c46d/research/audioset/yamnet/yamnet_class_map.csv"
+    }
   },
   "runtime": "ai-edge-litert==2.1.0; bounded two-thread CPU interpreter",
   "input": "15600 mono float32 PCM samples at 16000 Hz",
   "output": "521 uncalibrated audio-event scores",
   "bangladesh_holdout_rows": 0,
   "production_validated": false,
-  "training_data_claim": "Pretrained AudioSet model; no claim that all original AudioSet audio is licensed for redistribution. No AudioSet recordings are downloaded or redistributed by this project."
+  "training_data_claim": "Pretrained AudioSet model; no claim that all original AudioSet audio is licensed for redistribution. No AudioSet recordings are downloaded or redistributed by this project.",
+  "acquisition_note": "The historical official Kaggle archive returned HTTP 403 in CI on 2026-11-06. The first-party Google Codelabs public repository carries the byte-identical model: 4126810 bytes and unchanged SHA-256 10c95e…17de. Acquisition now uses that immutable source revision; no model substitution, credentials or gate bypass."
 }
