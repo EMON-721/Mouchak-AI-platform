@@ -584,7 +584,9 @@
     "conditional_directory_pipeline_implemented": false,
     "conditional_directory_test_evidence": "",
     "reading_speech_implemented": true,
-    "reading_speech_test_evidence": "tests/test_reading_speech.py; docs/audit/reading-speech-evaluation.json"
+    "reading_speech_test_evidence": "tests/test_reading_speech.py; docs/audit/reading-speech-evaluation.json",
+    "experimental_pipeline_implemented": true,
+    "experimental_test_evidence": "tests/test_reading_speech.py; docs/audit/reading-speech-evaluation.json; docs/READING_SPEECH.md"
   },
   {
     "id": 33,

@@ -1,6 +1,6 @@
 # BanglaRead original lesson library
 
-The reading library adds reviewed original lessons to the existing 12 attributed reading passages. It preserves all 120 original-kit passages and 120 comprehension questions in their original files. Seed text, seed answers and the source files' SHA-256 hashes are available only to authorized content editors. Importing a seed into the editor does **not** approve it, establish redistribution rights or publish it.
+The reading library adds reviewed original lessons to the existing 12 attributed reading passages. It preserves all 120 original-kit passages and 120 comprehension questions in their original files. Within the application API, seed text, seed answers and the source files' SHA-256 hashes are available only to authorized content editors. The preserved original kit also remains part of the public source repository; those illustrative seed questions are not secret exam material. Importing a seed into the editor does **not** approve it, establish redistribution rights or publish it.
 
 ## Editorial workflow
 

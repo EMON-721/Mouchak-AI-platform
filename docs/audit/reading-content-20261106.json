@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-06",
+  "timezone": "Asia/Dhaka",
+  "source_commit": "e0515749caecd99331b51f84363f78eb1b785384",
+  "acquisition_fix_commit": "e0515749caecd99331b51f84363f78eb1b785384",
+  "full_50_tool_scope_certified": false,
+  "cloud_deployment": false,
+  "public_user_accounts_added": false,
+  "preserved_seed_passages": 120,
+  "preserved_seed_questions": 120,
+  "seed_production_approvals_created": 0,
+  "legacy_passages_preserved": 12,
+  "local_checks": {
+    "new_reading_content_tests": {
+      "passed": 30,
+      "seconds": 9.43
+    },
+    "reading_legacy_cms_queue_regression": {
+      "passed": 111,
+      "seconds": 20.94
+    },
+    "real_yamnet_and_reading_regression": {
+      "passed": 43,
+      "seconds": 9.89
+    },
+    "typescript": "passed",
+    "changed_component_lint": "passed",
+    "next_production_build": "passed",
+    "module_and_kit_checksums": "passed",
+    "public_source_selected_pattern_check": "passed",
+    "transport_and_portable_config": "passed"
+  },
+  "private_stack": {
+    "run_id": 42163798166,
+    "job_id": 127715405943,
+    "conclusion": "success",
+    "report": {
+      "fixture_only": true,
+      "cloud_deployment": false,
+      "full_50_tool_scope_certified": false,
+      "postgres_tls_verified": true,
+      "migration_ledger_idempotent": true,
+      "four_isolated_roles": true,
+      "s3_tls_handshake_verified": true,
+      "s3_tls_verified": true,
+      "secure_cookie_origin_csrf_and_owner_boundaries": true,
+      "s3_private_ciphertext_sse_roundtrip": true,
+      "real_clamav_test_signature_rejection": true,
+      "dedicated_worker_real_queued_run": true,
+      "container_real_tesseract_inference": true,
+      "container_real_onnx_retrieval_two_distinct_answers": true,
+      "production_model_release_gate_enforced": true,
+      "rights_reviewed_directory_real_tls_queue_and_revocation": true,
+      "real_bangladesh_osm_reference_review_lookup_revocation": true,
+      "reviewed_site_builder_tls_mfa_assets_scheduler_and_rollback": true,
+      "reviewed_reading_content_tls_mfa_queue_withdrawal_and_rollback": true,
+      "real_operator_login_mfa_and_private_record_denial": true,
+      "real_expiry_worker_history_db_and_s3_deletion": true,
+      "container_real_yamnet_cpu_and_production_gate": true,
+      "deployment_smoke_cli_verified_in_fixture": true,
+      "result": "passed"
+    }
+  },
+  "noise_acquisition": {
+    "historical_endpoint_status": 403,
+    "selected_public_source": "Google Codelabs immutable repository asset",
+    "revision": "9c8a8ec8623ec254c22c61e97a55b5d7a22cb9ec",
+    "bytes": 4126810,
+    "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+    "checksum_changed": false,
+    "model_replaced": false,
+    "fresh_directory_real_download": "passed"
+  },
+  "full_ci": {
+    "run_id": 42163798166,
+    "source_commit": "e0515749caecd99331b51f84363f78eb1b785384",
+    "status": "completed",
+    "conclusion": "success",
+    "platform_job": 127715406845,
+    "private_stack_job": 127715405943,
+    "pytest_passed": 511,
+    "subtests_passed": 17,
+    "pytest_seconds": 192.13,
+    "typescript": "passed",
+    "eslint": "passed",
+    "production_next_build": "passed",
+    "postgres_rls_checks": "passed",
+    "transport_checks": "passed"
+  },
+  "browser": {
+    "preview_cli_url": "http://127.0.0.1:4173/",
+    "result": "unverified",
+    "error": "Browser net::ERR_CONNECTION_REFUSED at the exact preview CLI URL",
+    "preview_stopped": true,
+    "authenticated_admin_e2e": "unverified",
+    "pdf_and_exact_mobile_viewports": "unverified",
+    "alternate_browser_or_security_bypass_used": false
+  },
+  "remaining": {
+    "independent_content_review": "Real independent rights, spelling, educational and safety approval of the 120 original seeds",
+    "non_hosting_code": "Guardian/teacher moderation and linkage; lexicon/rubric/phoneme/adaptive/progress/offline/challenge workflows; other original specialized 50-tool pipelines",
+    "external_validation": "Representative licensed Bangladesh holdouts, field evaluation and expert acceptance",
+    "browser": "Authenticated admin and public new-lesson UI end-to-end, PDF and exact mobile viewports"
+  },
+  "implementation_commit": "011e3c4f58946a8d07793649530dfb40c5242f92",
+  "prior_ci_failure": {
+    "run_id": 42163127564,
+    "source_commit": "011e3c4f58946a8d07793649530dfb40c5242f92",
+    "private_stack": "success",
+    "platform": "failed_before_pytest_on_historical_kaggle_http_403",
+    "resolved_in_source_commit": "e0515749caecd99331b51f84363f78eb1b785384"
+  }
+}
