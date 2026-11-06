@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-06",
+  "scope": "Mouchak public identity and shared visual system refresh",
+  "changes": [
+    "Public product name Mouchak; original letter-free connected-cell logo and matching favicon",
+    "Slate and blue light/dark palettes, readable Bengali and English typography",
+    "Sticky navigation with active states, accessible mobile menu and larger-text controls",
+    "Task links replace decorative homepage graphic; existing 50 workspaces retained",
+    "Shared cards, forms, catalogue, footer and operator surfaces use the new tokens; public README and PDF heading renamed"
+  ],
+  "verification": {
+    "production_build": "passed",
+    "typescript": "passed",
+    "eslint": "passed",
+    "site_presentation_helpers": "passed",
+    "site_builder_tests": 28,
+    "pdf_and_public_session_tests": 61,
+    "portable_configuration_checks": "passed",
+    "public_source_pattern_check": "0 findings; selected-pattern scan, not a comprehensive certification",
+    "browser": [
+      "Bengali homepage and new identity rendered",
+      "English language switch",
+      "Dark theme including readable primary navigation action",
+      "Catalogue renders all 50 tools",
+      "Larger-text setting changes root font to 19px with no horizontal page overflow at the observed desktop width",
+      "Home quick-start opens LandLedger workspace",
+      "Private visitor session and real area calculation: 0.4514 acre -> 45.1400 decimal and 19662.98400 square feet",
+      "Download PDF click completed a browser download event"
+    ]
+  },
+  "preview_configuration": "Local ignored PUBLIC_ORIGIN set to the exact URL returned by sites-preview. Origin enforcement and production configuration unchanged.",
+  "limits": [
+    "Exact mobile-device viewport QA not performed: browser has no supported viewport resizing capability. Responsive styles implemented at 900px and 640px; not presented as device-tested.",
+    "PDF bytes passed automated rendering/text extraction tests. The browser download completed, but its returned file path was not available through the shared filesystem for separate byte inspection.",
+    "No external hosting or production deployment performed. This design change does not mark remaining advanced pipelines or field validation complete."
+  ],
+  "screenshot": "mouchak-design-20261106.png"
+}

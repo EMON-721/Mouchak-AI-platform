@@ -23,42 +23,34 @@ export function Brand() {
     <Link
       href="/"
       className="brand"
-      aria-label={t(
-        brand.name_bn || "মৌচাক এআই",
-        brand.name_en || "Mouchak AI",
-      )}
+      aria-label={t(brand.name_bn || "Mouchak", brand.name_en || "Mouchak")}
     >
       {site.brand.logo_asset ? (
         <Image
           unoptimized
           src={siteAssetUrl(site.brand.logo_asset)}
           alt=""
-          width={62}
-          height={62}
+          width={40}
+          height={40}
         />
       ) : (
-        <svg viewBox="0 0 62 62" aria-hidden="true">
-          <path
-            d="M20 4 33 11v15l-13 8-13-8V11ZM44 18l13 8v15l-13 8-13-8V26ZM20 32l13 8v15l-13 7-13-7V40Z"
-            fill="currentColor"
-          />
-          <path
-            d="m20 18 24 15-24 14"
-            fill="none"
-            stroke="#DBAA4D"
-            strokeWidth="4"
-          />
-        </svg>
+        <Image
+          src="/logos/mouchak.svg"
+          alt=""
+          width={40}
+          height={40}
+          className="brand-mark"
+        />
       )}
       <span>
-        {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
+        {t(brand.name_bn || "Mouchak", brand.name_en || "Mouchak")}
         <small>{t(site.brand.tagline_bn, site.brand.tagline_en)}</small>
       </span>
     </Link>
   );
 }
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { t, lang, setLang, brand, site, sitePublished } = useApp();
+  const { t, lang, setLang, brand, site } = useApp();
   const path = usePathname();
   const [menu, setMenu] = useState(false),
     [dark, setDark] = useState(false),
@@ -71,6 +63,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
     setLarge((v) => !v);
     document.documentElement.dataset.large = large ? "false" : "true";
   }
+  const isCurrent = (url: string) =>
+    path === url || (url === "/explore" && path.startsWith("/tools/"));
   const nav = site.navigation.map((x) => [x.href, t(x.bn, x.en)]);
   return (
     <>
@@ -86,8 +80,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
           >
             {nav.map(([url, label]) => (
               <Link
-                className={path === url ? "active" : ""}
+                className={isCurrent(url) ? "active" : ""}
                 key={url}
+                aria-current={isCurrent(url) ? "page" : undefined}
                 href={url}
               >
                 {label}
@@ -106,6 +101,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               className="icon-button theme-button"
               onClick={theme}
               aria-label={t("রং পরিবর্তন", "Toggle theme")}
+              aria-pressed={dark}
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -124,6 +120,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <button
               className="icon-button mobile-menu"
               aria-expanded={menu}
+              aria-controls="mobile-navigation"
               aria-label={t("মেনু", "Menu")}
               onClick={() => setMenu(!menu)}
             >
@@ -132,9 +129,18 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         {menu ? (
-          <nav className="mobile-dropdown">
+          <nav
+            id="mobile-navigation"
+            className="mobile-dropdown"
+            aria-label={t("প্রধান নেভিগেশন", "Main navigation")}
+          >
             {nav.map(([url, label]) => (
-              <Link onClick={() => setMenu(false)} key={url} href={url}>
+              <Link
+                onClick={() => setMenu(false)}
+                key={url}
+                href={url}
+                aria-current={isCurrent(url) ? "page" : undefined}
+              >
                 {label}
               </Link>
             ))}
@@ -147,14 +153,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div>
             <Brand />
             <p>
-              {t(
-                sitePublished
-                  ? site.footer.text.bn
-                  : brand.tagline_bn || site.footer.text.bn,
-                sitePublished
-                  ? site.footer.text.en
-                  : brand.tagline_en || site.footer.text.en,
-              )}
+              {t(site.footer.text.bn, site.footer.text.en)}
               <br />
               {t(
                 "ফলাফলের সঙ্গে যুক্তি, উৎস ও সীমাবদ্ধতা।",
@@ -176,7 +175,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="footer-note">
           <span>
             © {new Date().getFullYear()}{" "}
-            {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
+            {t(brand.name_bn || "Mouchak", brand.name_en || "Mouchak")}
           </span>
           <span>{t(site.footer.note.bn, site.footer.note.en)}</span>
           <span className="dot-label">

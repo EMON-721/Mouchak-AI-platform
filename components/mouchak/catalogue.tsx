@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Fragment, type ReactNode, useState, useMemo, useEffect } from "react";
 import {
   ArrowRight,
+  ArrowUpRight,
   Search,
   SlidersHorizontal,
   Leaf,
@@ -263,7 +264,7 @@ export function Explore({ initialQuery = "" }: { initialQuery?: string }) {
 export function Home() {
   const catalogue = useCatalogue();
   const router = useRouter();
-  const { t, site, brand, setSearchDraft } = useApp();
+  const { t, site, setSearchDraft } = useApp();
   const copy = (key: string) =>
     t(site.home.text[key].bn, site.home.text[key].en);
   const [query, setQuery] = useState("");
@@ -311,7 +312,8 @@ export function Home() {
               [t("বাংলা শেখা", "learn Bengali"), "reading"],
             ].map(([name, q]) => (
               <Link key={q} href={"/explore?q=" + q}>
-                {name} ↗
+                {name}
+                <ArrowUpRight size={13} aria-hidden="true" />
               </Link>
             ))}
           </div>
@@ -324,51 +326,64 @@ export function Home() {
             <span>বাংলা + English</span>
           </div>
         </div>
-        <div
-          className="hero-art"
-          aria-label={t("এক কেন্দ্র, নানা কাজ", "One hub, many tasks")}
-        >
-          <div className="art-grid" />
-          <div className="art-caption">
-            <span className="small-diamond" />
-            {t(
-              "একটা সংযোগ। অনেক সম্ভাবনা।",
-              "ONE CONNECTION. MANY POSSIBILITIES.",
-            )}
+        <aside className="start-panel" aria-labelledby="start-panel-title">
+          <div className="start-panel-heading">
+            <span className="eyebrow">{t("কাজের জায়গা", "Workspace")}</span>
+            <span className="workspace-count">{t("৫০টি টুল", "50 tools")}</span>
           </div>
-          <div className="hub-core">
-            <div className="hub-symbol">⬡</div>
-            <strong>
-              {t(brand.name_bn || "মৌচাক এআই", brand.name_en || "Mouchak AI")}
-            </strong>
+          <h2 id="start-panel-title">
+            {t("কী দিয়ে শুরু করবেন?", "What are you working on?")}
+          </h2>
+          <p>
+            {t("একটি কাজ বেছে নিন।", "Pick a task to open your workspace.")}
+          </p>
+          <div className="start-panel-links">
+            {[
+              {
+                href: "/tools/shikkharag-bd",
+                icon: BookOpen,
+                title: t("পড়াশোনা ও শেখা", "Study & learning"),
+                detail: t(
+                  "পাঠ থেকে প্রশ্নের উত্তর খুঁজুন",
+                  "Find answers in your learning material",
+                ),
+              },
+              {
+                href: "/tools/biddutplan-bd",
+                icon: Calculator,
+                title: t("ব্যবহার ও খরচের হিসাব", "Usage & costs"),
+                detail: t(
+                  "বিদ্যুৎ ব্যবহারের হিসাব গুছিয়ে নিন",
+                  "Work through your electricity usage",
+                ),
+              },
+              {
+                href: "/tools/landledger-bd",
+                icon: Landmark,
+                title: t("জমির পরিমাপ", "Land measurements"),
+                detail: t(
+                  "জমির একক ও পরিমাণ হিসাব করুন",
+                  "Calculate area and convert units",
+                ),
+              },
+            ].map(({ href, icon: Icon, title, detail }) => (
+              <Link href={href} key={href} className="start-panel-link">
+                <span className="start-panel-icon">
+                  <Icon size={21} strokeWidth={1.7} />
+                </span>
+                <span>
+                  <strong>{title}</strong>
+                  <small>{detail}</small>
+                </span>
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+            ))}
           </div>
-          <div className="orbit orbit-1">
-            <BookOpen />
-            <span>{t("শিখুন", "Learn")}</span>
-          </div>
-          <div className="orbit orbit-2">
-            <Leaf />
-            <span>{t("পরিচর্যা", "Care")}</span>
-          </div>
-          <div className="orbit orbit-3">
-            <FileText />
-            <span>{t("বুঝুন", "Understand")}</span>
-          </div>
-          <div className="orbit orbit-4">
-            <Calculator />
-            <span>{t("হিসাব করুন", "Calculate")}</span>
-          </div>
-          <div className="art-note">
-            <span>50</span>
-            <div>
-              <strong>{t("ভিন্ন কাজের টুল", "PURPOSEFUL TOOLS")}</strong>
-              <small>
-                {t("এক কেন্দ্রীয় প্ল্যাটফর্মে", "ONE SHARED PLATFORM")}
-              </small>
-            </div>
-            <ArrowUp />
-          </div>
-        </div>
+          <Link className="start-panel-all" href="/explore">
+            {t("সব টুল দেখুন", "Browse all tools")}
+            <ArrowRight size={17} />
+          </Link>
+        </aside>
       </section>
     ),
     statement: (
@@ -398,7 +413,7 @@ export function Home() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">
-              {t("শুরু করার কয়েকটি পথ", "A FEW PLACES TO START")}
+              {t("বাছাই করা টুল", "Selected tools")}
             </span>
             <h2>{copy("featured_title")}</h2>
           </div>
@@ -417,11 +432,13 @@ export function Home() {
     principles: (
       <section className="page-width principles">
         <div>
-          <span className="eyebrow">{t("আস্থার ভিত", "BUILT ON TRUST")}</span>
+          <span className="eyebrow">
+            {t("ব্যবহারের আগে", "Working with Mouchak")}
+          </span>
           <h2>
-            {t("সহায়ক প্রযুক্তি।", "Helpful technology.")}
+            {t("সক্ষমতা জানুন।", "Clear capabilities.")}
             <br />
-            {t("সৎ সীমাবদ্ধতা।", "Honest limitations.")}
+            {t("বুঝে ব্যবহার করুন।", "Informed decisions.")}
           </h2>
           <p>
             {t(
@@ -438,7 +455,7 @@ export function Home() {
           {[
             [
               ShieldCheck,
-              t("ব্যক্তিগত মানেই ব্যক্তিগত", "Private means private"),
+              t("ব্যক্তিগত তথ্যের সুরক্ষা", "Private by design"),
               t(
                 "আপনার সংবেদনশীল নথি সাধারণ সার্চ বা অন্য ব্যবহারকারীর ফলাফলে যায় না।",
                 "Sensitive records stay out of public search and other users’ results.",
@@ -514,7 +531,4 @@ export function Home() {
       ))}
     </>
   );
-}
-function ArrowUp() {
-  return <ArrowRight size={28} className="rotate-up" />;
 }

@@ -1,6 +1,6 @@
 {
-  "brand": "Mouchak AI",
-  "brand_bn": "মৌচাক এআই",
+  "brand": "Mouchak",
+  "brand_bn": "Mouchak",
   "platform_slug": "mouchak-ai",
   "total": 50,
   "repo_strategy": "one-central-monorepo",

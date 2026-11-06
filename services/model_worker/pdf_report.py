@@ -29,7 +29,7 @@ def report(data):
         return escape(str(v)).replace("\n", "<br>")
 
     html = (
-        "<html><head><style>@font-face {font-family: Bengali;src:url(NotoSansBengali.ttf)} body{font-family:Bengali,sans-serif;font-size:11pt;line-height:1.7;color:#142c32}h1{font-size:23pt;color:#116f6e}dt{font-size:9pt;color:#53666b;margin-top:10pt}dd{margin-left:0} .note{background:#f6f4ed;padding:10pt}li{margin-bottom:7pt}</style></head><body><h1>মৌচাক এআই · Mouchak AI</h1><h2>"
+        "<html><head><style>@font-face {font-family: Bengali;src:url(NotoSansBengali.ttf)} body{font-family:Bengali,sans-serif;font-size:11pt;line-height:1.7;color:#142c32}h1{font-size:23pt;color:#116f6e}dt{font-size:9pt;color:#53666b;margin-top:10pt}dd{margin-left:0} .note{background:#f6f4ed;padding:10pt}li{margin-bottom:7pt}</style></head><body><h1>Mouchak</h1><h2>"
         + escape(data["module"])
         + "</h2><p>"
         + escape(data["created_at"])

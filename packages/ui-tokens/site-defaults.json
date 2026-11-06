@@ -1,64 +1,69 @@
 {
   "schema_version": 1,
   "brand": {
-    "name_bn": "মৌচাক এআই",
-    "name_en": "Mouchak AI",
-    "tagline_bn": "এক জায়গায়, অনেক সমাধান",
-    "tagline_en": "MANY TOOLS. ONE PLACE.",
+    "name_bn": "Mouchak",
+    "name_en": "Mouchak",
+    "tagline_bn": "আপনার কাজের জায়গা",
+    "tagline_en": "Your everyday workspace",
     "logo_asset": null,
     "favicon_asset": null
   },
   "theme": {
     "light": {
-      "ink": "#142c32",
-      "teal": "#116f6e",
-      "paper": "#f6f4ed",
-      "white": "#fffefa",
-      "muted": "#5b6c6d",
-      "border": "#dcded6",
-      "amber": "#dbaa4d",
-      "sky": "#d7edf0",
-      "terra": "#c57053",
-      "soft": "#e9ede5",
-      "danger": "#a33232"
+      "ink": "#182338",
+      "teal": "#3457c1",
+      "paper": "#f8f9fc",
+      "white": "#ffffff",
+      "muted": "#596579",
+      "border": "#dfe4ed",
+      "amber": "#886a25",
+      "sky": "#edf1ff",
+      "terra": "#3457c1",
+      "soft": "#eef1f6",
+      "danger": "#ad303e"
     },
     "dark": {
-      "ink": "#e6edeb",
-      "teal": "#80ccc4",
-      "paper": "#101c21",
-      "white": "#18272c",
-      "muted": "#b2c4c4",
-      "border": "#38484c",
-      "amber": "#dbaa4d",
-      "sky": "#243f44",
-      "terra": "#c57053",
-      "soft": "#26383a",
-      "danger": "#ffadad"
+      "ink": "#edf1f8",
+      "teal": "#a6bbff",
+      "paper": "#111722",
+      "white": "#192231",
+      "muted": "#afbbce",
+      "border": "#344156",
+      "amber": "#d9bd7c",
+      "sky": "#263452",
+      "terra": "#a6bbff",
+      "soft": "#222e40",
+      "danger": "#ffadb7"
     },
     "font": "bengali_sans",
     "text_scale": 1
   },
   "navigation": [
     {
-      "bn": "টুল খুঁজুন",
-      "en": "Explore tools",
+      "bn": "টুলসমূহ",
+      "en": "Tools",
       "href": "/explore"
     },
     {
-      "bn": "এই সেশনের কাজ",
+      "bn": "চলমান কাজ",
       "en": "Session work",
       "href": "/work"
     },
     {
-      "bn": "উৎস ও আস্থা",
-      "en": "Sources & trust",
+      "bn": "তথ্যসূত্র",
+      "en": "Sources",
       "href": "/sources"
+    },
+    {
+      "bn": "সহায়তা",
+      "en": "Help",
+      "href": "/help"
     }
   ],
   "footer": {
     "text": {
-      "bn": "প্রতিদিনের কাজে, একসঙ্গে পঞ্চাশ AI।",
-      "en": "Practical AI for everyday Bangladesh."
+      "bn": "শেখা, নথি ও হিসাবের টুল—এক জায়গায়।",
+      "en": "Tools for learning, documents and everyday decisions."
     },
     "note": {
       "bn": "বাংলাদেশের বাস্তব কাজের জন্য তৈরি।",
@@ -103,13 +108,7 @@
     ]
   },
   "home": {
-    "sections": [
-      "hero",
-      "statement",
-      "featured",
-      "principles",
-      "closing"
-    ],
+    "sections": ["hero", "statement", "featured", "principles", "closing"],
     "featured_slugs": [
       "biddutplan-bd",
       "shikkharag-bd",
@@ -118,32 +117,32 @@
     ],
     "text": {
       "hero_kicker": {
-        "bn": "বাংলাদেশের মানুষের দৈনন্দিন কাজের পাশে",
-        "en": "EVERYDAY TOOLS, ROOTED IN BANGLADESH"
+        "bn": "বাংলাদেশের জন্য তৈরি",
+        "en": "Built for everyday Bangladesh"
       },
       "hero_title": {
-        "bn": "দৈনন্দিন সমস্যায়,",
-        "en": "Everyday problems."
+        "bn": "আপনার কাজের টুল।",
+        "en": "The tools you need."
       },
       "hero_accent": {
-        "bn": "একটা কাজের মৌচাক।",
-        "en": "A hive of possibilities."
+        "bn": "এক জায়গায়।",
+        "en": "One place to start."
       },
       "hero_intro": {
-        "bn": "একটা কাগজ বুঝতে, খরচের হিসাব মেলাতে, কিংবা নতুন কিছু শিখতে—আপনার প্রয়োজনের টুল, এক জায়গায়।",
-        "en": "Understand a document, make sense of your expenses, or learn something new. A practical tool for your task, all in one place."
+        "bn": "নথি বুঝুন, হিসাব গুছিয়ে নিন, নতুন কিছু শিখুন। প্রয়োজন অনুযায়ী টুল বেছে নিয়ে সরাসরি কাজ শুরু করুন।",
+        "en": "Read a document, work through a calculation or learn something new. Find the right tool and get straight to work."
       },
       "hero_search": {
-        "bn": "আজ কী করতে চান?",
-        "en": "What would you like to do today?"
+        "bn": "কোন কাজের জন্য টুল খুঁজছেন?",
+        "en": "Find a tool for your task"
       },
       "featured_title": {
-        "bn": "ছোট কাজ, কাজে লাগে।",
-        "en": "Small tasks. Useful outcomes."
+        "bn": "কাজ শুরু করুন",
+        "en": "Find your starting point"
       },
       "closing_title": {
-        "bn": "শুরু করুন একটা কাজ দিয়ে।",
-        "en": "Start with one useful task."
+        "bn": "পরের কাজটি এখান থেকেই।",
+        "en": "Ready for your next task?"
       }
     },
     "faqs": []
@@ -153,8 +152,8 @@
   "pages": {},
   "locales": {},
   "seo": {
-    "title_bn": "মৌচাক এআই · Mouchak AI",
-    "title_en": "Mouchak AI · মৌচাক এআই",
+    "title_bn": "Mouchak · আপনার কাজের জায়গা",
+    "title_en": "Mouchak · Your everyday workspace",
     "description_bn": "৫০টি বাংলাদেশভিত্তিক টুল, এক কেন্দ্রীয় কর্মক্ষেত্র। বর্তমান সক্ষমতা ও সীমাবদ্ধতা দেখুন।",
     "description_en": "50 Bangladesh-focused tool workspaces with verified capabilities and honest limitations.",
     "index": false

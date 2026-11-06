@@ -12,6 +12,7 @@ export async function siteMetadata(): Promise<Metadata> {
       return {
         title: seo.title_bn,
         description: seo.description_bn,
+        icons: { icon: "/favicon.svg" },
         robots: { index: false, follow: false },
       };
     const headers: Record<string, string> = {};
@@ -29,6 +30,7 @@ export async function siteMetadata(): Promise<Metadata> {
   return {
     title: { default: seo.title_bn, template: `%s · ${seo.title_en}` },
     description: seo.description_bn,
+    icons: { icon: "/favicon.svg" },
     robots: { index: seo.index, follow: seo.index },
   };
 }

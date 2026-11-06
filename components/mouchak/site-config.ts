@@ -92,6 +92,6 @@ export function siteTokenCSS(site: SiteConfig) {
   const font =
     site.theme.font === "system_serif"
       ? '"Noto Bengali", Georgia, serif'
-      : '"Noto Bengali", Arial, sans-serif';
+      : 'Arial, "Noto Bengali", sans-serif';
   return `:root{${palette(site.theme.light)}font-size:${16 * scale}px}:root[data-theme="dark"]{${palette(site.theme.dark)}}:root[data-large="true"]{font-size:${19 * scale}px}body{font-family:${font};font-size:calc(.9375rem)}`;
 }
