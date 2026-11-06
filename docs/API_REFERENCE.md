@@ -111,6 +111,14 @@ A route's presence is not proof that its advanced model/data gate is enabled. Pu
 | POST | `/api/admin/notifications` | `operations.send_notice` |
 | PATCH | `/api/notifications/{nid}` | `operations.read_notice` |
 | GET | `/api/admin/notifications` | `operations.notice_dispatches` |
+| GET | `/api/admin/reading-content` | `reading_content.overview` |
+| GET | `/api/admin/reading-content/seeds/{seed_id}` | `reading_content.seed` |
+| POST | `/api/admin/reading-content/drafts` | `reading_content.create` |
+| GET | `/api/admin/reading-content/drafts/{vid}` | `reading_content.detail` |
+| POST | `/api/admin/reading-content/drafts/{vid}/review` | `reading_content.review` |
+| POST | `/api/admin/reading-content/drafts/{vid}/publish` | `reading_content.publish` |
+| POST | `/api/admin/reading-content/withdraw` | `reading_content.withdraw` |
+| POST | `/api/admin/reading-content/order` | `reading_content.reorder` |
 | GET | `/api/reading/speech/status` | `reading_speech.public_status` |
 | POST | `/api/reading/speech/transcribe` | `reading_speech.speech` |
 | GET | `/api/admin/reading-speech` | `reading_speech.overview` |

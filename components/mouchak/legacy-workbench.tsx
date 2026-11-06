@@ -1,6 +1,7 @@
 "use client";
+import { runQueued } from "./private-processing";
 import { requestId } from "./request-id";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import {
   Plus,
   Trash2,
@@ -26,6 +27,11 @@ type Props = {
 type Passage = {
   id: string;
   title: string;
+  title_en?: string;
+  revision?: string;
+  question_en?: string;
+  options?: { bn: string; en: string }[];
+  educational_goal?: { bn: string; en: string };
   text: string;
   question: string;
   publisher: string;
@@ -81,9 +87,12 @@ function ReadingStudio({ workspaceId, onResult }: Props) {
     [id, setId] = useState(""),
     [selected, setSelected] = useState<number[]>([]),
     [answer, setAnswer] = useState(""),
+    [choice, setChoice] = useState<number | null>(null),
     [consent, setConsent] = useState(false),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
+  const pending = useRef<AbortController | null>(null);
+  useEffect(() => () => pending.current?.abort(), []);
   useEffect(() => {
     let active = true;
     fetch("/api/reading/passages")
@@ -110,25 +119,49 @@ function ReadingStudio({ workspaceId, onResult }: Props) {
     e.preventDefault();
     setBusy(true);
     setError("");
+    const control = new AbortController();
+    pending.current?.abort();
+    pending.current = control;
     try {
-      onResult(
-        await api<RunResult>("/api/tools/banglaread-coach/runs", {
-          method: "POST",
-          body: JSON.stringify({
-            workspace_id: workspaceId || undefined,
-            consent,
-            language: lang,
-            inputs: { passage_id: id, difficult_indices: selected, answer },
-            idempotency_key: requestId(),
-          }),
-        }),
+      const body = JSON.stringify({
+        workspace_id: workspaceId || undefined,
+        consent,
+        language: lang,
+        inputs: {
+          passage_id: id,
+          passage_revision: passage?.revision,
+          difficult_indices: selected,
+          answer,
+          answer_choice: choice,
+        },
+        idempotency_key: requestId(),
+      });
+      const toolConfig = await api<{ execution_mode: string }>(
+        "/api/modules/banglaread-coach",
+        { signal: control.signal },
       );
+      const result =
+        toolConfig.execution_mode === "queued"
+          ? await runQueued(
+              api,
+              "banglaread-coach",
+              body,
+              control.signal,
+              () => {},
+            )
+          : await api<RunResult>("/api/tools/banglaread-coach/runs", {
+              method: "POST",
+              body,
+              signal: control.signal,
+            });
+      if (!control.signal.aborted) onResult(result);
     } catch (e) {
-      setError((e as Error).message);
+      if (!control.signal.aborted) setError((e as Error).message);
     } finally {
-      setBusy(false);
+      if (!control.signal.aborted) setBusy(false);
     }
   }
+
   return (
     <section className="panel legacy-workbench reading-studio">
       <span className="eyebrow">
@@ -150,11 +183,13 @@ function ReadingStudio({ workspaceId, onResult }: Props) {
             setId(e.target.value);
             setSelected([]);
             setAnswer("");
+            setChoice(null);
           }}
         >
           {passages.map((p) => (
             <option key={p.id} value={p.id}>
-              {p.title} · {t("ধাপ", "Level")} {p.level}
+              {lang === "en" ? p.title_en || p.title : p.title} ·{" "}
+              {t("ধাপ", "Level")} {p.level}
             </option>
           ))}
         </select>
@@ -188,18 +223,43 @@ function ReadingStudio({ workspaceId, onResult }: Props) {
             {passage.publisher} · {passage.license}
           </p>
           <form onSubmit={save}>
-            <label className="form-field">
-              {passage.question}
-              <input
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                maxLength={500}
-                placeholder={t(
-                  "ইচ্ছা হলে নিজের ভাষায় লিখুন",
-                  "Optional: write your answer",
-                )}
-              />
-            </label>
+            {passage.educational_goal && (
+              <p>{passage.educational_goal[lang]}</p>
+            )}
+            {passage.options ? (
+              <fieldset disabled={busy}>
+                <legend>
+                  {lang === "en" ? passage.question_en : passage.question}
+                </legend>
+                {passage.options.map((option, i) => (
+                  <label className="consent-check" key={i}>
+                    <input
+                      type="radio"
+                      name="reading-answer"
+                      checked={choice === i}
+                      onChange={() => setChoice(i)}
+                    />
+                    {option[lang]}
+                  </label>
+                ))}
+                <button type="button" onClick={() => setChoice(null)}>
+                  {t("উত্তর পরে দেব", "Skip answer for now")}
+                </button>
+              </fieldset>
+            ) : (
+              <label className="form-field">
+                {passage.question}
+                <input
+                  value={answer}
+                  onChange={(e) => setAnswer(e.target.value)}
+                  maxLength={500}
+                  placeholder={t(
+                    "ইচ্ছা হলে নিজের ভাষায় লিখুন",
+                    "Optional: write your answer",
+                  )}
+                />
+              </label>
+            )}
             <Consent checked={consent} onChange={setConsent} />
             <button
               className="button dark"

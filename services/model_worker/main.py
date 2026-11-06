@@ -50,12 +50,13 @@ app.include_router(operations.router)
 app.include_router(anonymous.router)
 app.include_router(uploads.router)
 app.include_router(bills.router)
-from . import site_builder, launcher, model_operations, road_context, reading_speech
+from . import site_builder, launcher, model_operations, road_context, reading_speech, reading_content
 app.include_router(site_builder.router)
 app.include_router(launcher.router)
 app.include_router(model_operations.router)
 app.include_router(road_context.router)
 app.include_router(reading_speech.router)
+app.include_router(reading_content.router)
 app.add_middleware(reading_speech.SpeechBodyLimit)
 app.include_router(directories.router)
 RATE = {}
@@ -281,8 +282,8 @@ def learning():
 
 
 @app.get("/api/reading/passages")
-def reading_passages():
-    return [{k: v for k, v in p.items() if k != "answer"} for p in READING]
+def reading_passages(db=Depends(db_session, scope="function")):
+    return [{k: v for k, v in p.items() if k != "answer"} for p in READING] + reading_content.public_lessons(db)
 
 
 @app.get("/api/commodities")
@@ -691,6 +692,8 @@ def execute(slug: str, p: RunInput, u=Depends(identify), db=Depends(db_session, 
     start = time.perf_counter()
     if slug in directories.MODULES:
         output = directories.search(db, slug, p.inputs)
+    elif m["engine"] == "reading" and str(p.inputs.get("passage_id", "")).startswith("lesson:"):
+        output = reading_content.exercise(db, p.inputs)
     elif m["engine"] == "reading" and str(p.inputs.get("passage_id", "")).startswith(
         "legacy:"
     ):

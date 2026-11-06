@@ -198,6 +198,67 @@ def check_site_builder_integration(operator, client, pg_dsn, secret_values, visi
         assert visitor.get('/api/public/site').json()['revision']==second
         assert operator.post(f'/api/admin/site-builder/{vid}/publish',json={'expected_revision':second,'rollback':True}).status_code==200
         assert visitor.get('/api/public/site').json()['revision']==vid
+        check_reading_content_integration(operator, reviewer, visitor)
+
+
+def check_reading_content_integration(operator, reviewer, visitor):
+    """Disposable original text over real TLS, MFA, PostgreSQL and worker role."""
+    base='/api/admin/reading-content'
+    reason='DEMO disposable owned original lesson; no real editorial approval.'
+    lesson={'lesson_id':'OWN-TLS-DEMO','source_seed_id':None,
+            'title':{'bn':'গাছের যত্ন','en':'DEMO caring for a tree'},
+            'passage':'মিনা সকালে গাছে পানি দেয়। গাছের নিচে একটি পাখি বসে আছে।','level':1,
+            'topic':{'bn':'প্রকৃতি','en':'Nature'},'age_band':'new_reader',
+            'educational_goal':{'bn':'পাঠ থেকে তথ্য পাওয়া','en':'Find a fact in the passage'},
+            'question':{'bn':'মিনা কখন পানি দেয়?','en':'When does Mina water the tree?'},
+            'options':[{'bn':'রাতে','en':'At night'},{'bn':'সকালে','en':'In the morning'}],
+            'correct_option_index':1,'explanation':{'bn':'পাঠে সকালে লেখা আছে।','en':'The passage states in the morning.'},
+            'publisher':'DEMO integration author','license':'permission_granted','rights_note':reason}
+    original=visitor.get('/api/reading/passages').json()
+    state=operator.get(base).json()
+    assert len(state['seeds'])==120 and all(s['approved'] is False for s in state['seeds'])
+    drafted=operator.post(base+'/drafts',json={'lesson':lesson,'expected_revision':state['state']['revision']})
+    assert drafted.status_code==201
+    vid=drafted.json()['id']
+    checks={key:True for key in ['spelling','age_suitability','answer_grounded_in_passage','educational_goal','publication_rights']}
+    review={'decision':'approved','checks':checks,'reason':reason}
+    assert operator.post(base+f'/drafts/{vid}/review',json=review).status_code==403
+    assert visitor.get('/api/reading/passages').json()==original
+    assert reviewer.post(base+f'/drafts/{vid}/review',json=review).status_code==200
+    published=operator.post(base+f'/drafts/{vid}/publish',json={'expected_revision':state['state']['revision'],'reason':reason})
+    assert published.status_code==200
+    rows=visitor.get('/api/reading/passages').json()
+    public=next(p for p in rows if p['id']=='lesson:OWN-TLS-DEMO')
+    assert public['revision']==vid and 'correct_option_index' not in public and 'rights_note' not in public
+    def submit():
+        r=visitor.post('/api/tools/banglaread-coach/jobs',json={'consent':True,'idempotency_key':uuid.uuid4().hex,
+            'inputs':{'passage_id':public['id'],'passage_revision':vid,'answer_choice':1,'difficult_indices':[0]}})
+        assert r.status_code==202
+        return r.json()['id']
+    def done(jid):
+        def terminal():
+            r=visitor.get('/api/jobs/'+jid)
+            assert r.status_code==200
+            status=r.json()
+            return status if status['state'] in ['succeeded','failed'] else None
+        return wait_for(terminal)
+    completed=done(submit())
+    assert completed['state']=='succeeded', 'Reviewed reading worker failed or lacks minimal database grants'
+    output=visitor.get('/api/runs/'+completed['run_id']).json()['output']
+    assert output['facts']['comprehension']=='matched' and output['details']['correct_option']==1
+    assert output['references'][0]['revision']==vid and output['full_module_complete'] is False
+    assert operator.get('/api/runs/'+completed['run_id']).status_code==404
+    withdrawn=operator.post(base+'/withdraw',json={'expected_revision':published.json()['revision'],'lesson_id':lesson['lesson_id'],'reason':reason})
+    assert withdrawn.status_code==200
+    assert visitor.get('/api/reading/passages').json()==original
+    failed=done(submit())
+    assert failed['state']=='failed' and failed['run_id'] is None
+    # Repeated publication has durable history/reasons; restoring the exact
+    # independently reviewed original is distinct from autoapproving a seed.
+    restored=operator.post(base+f'/drafts/{vid}/publish',json={'expected_revision':withdrawn.json()['revision'],'reason':reason,'rollback':True})
+    assert restored.status_code==200
+    assert operator.post(base+'/withdraw',json={'expected_revision':restored.json()['revision'],'lesson_id':lesson['lesson_id'],'reason':reason}).status_code==200
+    assert visitor.get('/api/reading/passages').json()==original
 
 
 def main():
@@ -371,6 +432,7 @@ def main():
                     report["real_bangladesh_osm_reference_review_lookup_revocation"] = True
                     check_site_builder_integration(operator, client, pg_dsn, secret_values, probe)
                     report["reviewed_site_builder_tls_mfa_assets_scheduler_and_rollback"] = True
+                    report["reviewed_reading_content_tls_mfa_queue_withdrawal_and_rollback"] = True
                 report["real_operator_login_mfa_and_private_record_denial"] = True
                 # A real retention worker must erase expired guests + actual S3
                 # bytes + derived artifacts, without deleting the operator.
