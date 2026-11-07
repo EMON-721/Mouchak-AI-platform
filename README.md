@@ -9,7 +9,7 @@ Mouchak combines fifty task-specific workspaces under a common interface. The ad
 
 Mouchak বাংলাদেশের দৈনন্দিন কাজের জন্য তৈরি একটি কেন্দ্রীয় বাংলা–ইংরেজি সহায়ক প্ল্যাটফর্ম। কৃষি, শিক্ষা, স্বাস্থ্যসংক্রান্ত নথি, ব্যবসা, বাজার, বাসাবাড়ি ও নাগরিক সেবার বিভিন্ন প্রয়োজনকে এক জায়গায় আনতে এর ক্যাটালগে ৫০টি বিষয়ভিত্তিক tool workspace সাজানো হয়েছে।
 
-প্রতিটি টুলের নিজস্ব পরিচিতি, লোগো ও কাজের জায়গা রয়েছে। একই navigation, ভাষা নির্বাচন, ব্যক্তিগত session এবং কেন্দ্রীয় প্রশাসনিক ব্যবস্থার মাধ্যমে পুরো প্ল্যাটফর্ম ব্যবহার করা যায়।
+প্রতিটি টুলের নিজস্ব পরিচিতি, লোগো ও কাজের জায়গা রয়েছে। একই navigation, ভাষা নির্বাচন এবং ব্যক্তিগত session দিয়ে প্ল্যাটফর্মের টুলগুলো ব্যবহার করা যায়।
 
 ## কার জন্য
 
@@ -32,7 +32,6 @@ Mouchak বাংলাদেশের দৈনন্দিন কাজের 
 | **Session workspace** | নিজের সাময়িক কাজের ইতিহাস, ফলাফল আবার খোলা, export ও তথ্য ব্যবস্থাপনা |
 | **বাংলা ও English interface** | ভাষা পরিবর্তন, বড় অক্ষরের সুবিধা, theme এবং পরিচিত navigation |
 | **User-controlled processing** | কাজভিত্তিক সম্মতি, ব্যক্তিগত ফলাফল ও সংরক্ষিত তথ্যের নিয়ন্ত্রণ |
-| **Super Admin ও operator console** | ভূমিকা অনুযায়ী কনটেন্ট, উৎস, টুল, মডেল ও প্রশাসনিক কার্যক্রম পরিচালনা |
 | **Site Builder** | ব্র্যান্ড, লোগো, রং, menu, homepage, public page ও টুলের উপস্থাপনা সম্পাদনা |
 | **Review ও publishing** | খসড়া, স্বতন্ত্র পর্যালোচনা, প্রকাশের সময়সূচি, rollback ও audit history |
 
@@ -69,7 +68,7 @@ Mouchakয়ের processing layer-এ বিভিন্ন ধরনের ই�
 
 ## প্রোজেক্টের architecture
 
-একই monorepo-তে frontend, backend, database migrations, inference services, প্রশাসনিক ব্যবস্থা এবং deployment configuration রাখা হয়েছে। Browser-এর অনুরোধ frontend-এর একই origin দিয়ে private backend-এ পৌঁছায়। দীর্ঘ processing কাজ queue ও worker-এর মাধ্যমে পরিচালিত হয়।
+একই monorepo-তে frontend, backend, database migrations, inference services এবং deployment configuration রাখা হয়েছে। Browser-এর অনুরোধ frontend-এর একই origin দিয়ে private backend-এ পৌঁছায়। দীর্ঘ processing কাজ queue ও worker-এর মাধ্যমে পরিচালিত হয়।
 
 ```mermaid
 flowchart TB
@@ -87,19 +86,12 @@ flowchart TB
 
 | স্তর | প্রধান প্রযুক্তি ও দায়িত্ব |
 |---|---|
-| **Frontend** | Next.js, React ও TypeScript; কেন্দ্রীয় website, tool workspace ও প্রশাসনিক interface |
+| **Frontend** | Next.js, React ও TypeScript; কেন্দ্রীয় website ও tool workspace |
 | **Backend ও API** | Python ও FastAPI; ইনপুট যাচাই, অনুমতি, processing এবং ফলাফল সরবরাহ |
 | **AI ও processing** | ONNX Runtime, Tesseract, multilingual retrieval, Whisper ও বিষয়ভিত্তিক processing engine |
 | **Database ও storage** | PostgreSQL, development-এর জন্য SQLite, private S3-compatible storage ও encryption |
 | **Background services** | Inference worker, job queue, scheduled publishing এবং session data retention |
-| **পরিচালনা** | Role-based access, MFA, review workflow ও audit trail |
 | **Deployment** | Node/Python service এবং Docker configuration; সামঞ্জস্যপূর্ণ infrastructure-এ চালানোর ব্যবস্থা |
-
-## কেন্দ্রীয় প্রশাসন
-
-Super Admin ও অনুমোদিত operator-রা দায়িত্ব অনুযায়ী প্ল্যাটফর্ম পরিচালনা করেন। Content editor, dataset reviewer, model operator, module manager, support agent ও auditor-এর জন্য আলাদা permission boundary রয়েছে।
-
-প্রশাসনিক কাজের মধ্যে রয়েছে website-এর উপস্থাপনা সম্পাদনা, কনটেন্ট পর্যালোচনা, উৎস ও data rights যাচাই, মডেলের অবস্থা দেখা, টুলের availability পরিচালনা এবং audit record পর্যালোচনা। গুরুত্বপূর্ণ প্রশাসনিক কাজে MFA ও নির্দিষ্ট review workflow ব্যবহৃত হয়।
 
 ## তথ্য ও গোপনীয়তা
 
@@ -110,7 +102,6 @@ Super Admin ও অনুমোদিত operator-রা দায়িত্ব �
 ## বিস্তারিত documentation
 
 - [বাংলা ব্যবহারকারী নির্দেশিকা](docs/USER_GUIDE_BN.md)
-- [প্রশাসনিক নির্দেশিকা](docs/ADMIN_GUIDE.md)
 - [Site Builder](docs/SITE_BUILDER.md)
 - [API reference](docs/API_REFERENCE.md)
 - [Local preview ও development setup](docs/PREVIEW.md)
