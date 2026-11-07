@@ -1,10 +1,5 @@
 # Mouchak
 
-## Repository scope
-
-Mouchak combines fifty task-specific workspaces under a common interface. The administration layer maintains tool configurations, content, source and dataset references, model settings and review workflows. Roles and permissions are covered in the existing [Admin Guide](docs/ADMIN_GUIDE.md); advanced model and dataset integration is tracked separately in the implementation documents.
-
-
 **Central AI Platform for Bangladesh**
 
 Mouchak বাংলাদেশের দৈনন্দিন কাজের জন্য তৈরি একটি কেন্দ্রীয় বাংলা–ইংরেজি সহায়ক প্ল্যাটফর্ম। কৃষি, শিক্ষা, স্বাস্থ্যসংক্রান্ত নথি, ব্যবসা, বাজার, বাসাবাড়ি ও নাগরিক সেবার বিভিন্ন প্রয়োজনকে এক জায়গায় আনতে এর ক্যাটালগে ৫০টি বিষয়ভিত্তিক tool workspace সাজানো হয়েছে।
