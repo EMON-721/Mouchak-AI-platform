@@ -1,4 +1,17 @@
-# Mouchak AI — implementation and verification report
+# Mouchak — implementation and verification report
+
+## Design release verification — 7 November 2026
+
+Resumed the pending CI check without rebuilding or repeating the completed design. Public identity remains **Mouchak**, with the letter-free connected-cell logo, shared light/dark styles and existing 50 workspaces. Hosting remains paused.
+
+**Confirmed remote source:** `581e97e6ae3e119f9ea2de45929ea7fd9dc5ff84`. [GitHub CI 42196145260](https://github.com/emonhossain24/Mouchak-AI-platform/actions/runs/42196145260) completed successfully: platform job `127819763421` and private-stack job `127819763152`. The actual platform log reports **511 passed, 17 subtests passed in 124.01s**. These are the full-suite results for the already-pushed design source; the earlier 89 selected local tests are not additional independent tests.
+
+**Repository continuity:** the owner login changed to `emonhossain24`. Repository ID `1436654004` and its source history are unchanged. The canonical repository is now [emonhossain24/Mouchak-AI-platform](https://github.com/emonhossain24/Mouchak-AI-platform); the previous owner https://github.com/emonhossain24/Mouchak-AI-platform/actions/runs/42196145260 redirects. GitHub write permission remains available.
+
+**Browser evidence carried forward from 6 November:** Bengali/English homepage, dark theme, larger-text setting, all 50 catalogue entries, quick-start navigation, actual private LandLedger calculation and completed PDF download event were observed. [Evidence and screenshot](docs/audit/mouchak-design-20261106.json). This supersedes earlier statements that all PDF downloads or public previews remained unverified. It does not prove downloaded-file visual inspection, exact mobile viewports, authenticated operator browser workflows, or full 50-tool advanced acceptance.
+
+**Next unfinished acceptance:** exact 390/768/1440 viewport checks, authenticated editorial/operator browser workflows and downloaded PDF inspection; independent content/rights approvals, representative Bangladesh field evaluation and the specialized module requirements remain outstanding. None is marked complete by this documentation-only continuation. No credentials, production approvals or fabricated datasets were introduced.
+
 
 ## Reading content continuation — 6 November 2026
 

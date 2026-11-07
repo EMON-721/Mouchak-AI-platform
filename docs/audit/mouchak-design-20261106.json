@@ -34,5 +34,27 @@
     "PDF bytes passed automated rendering/text extraction tests. The browser download completed, but its returned file path was not available through the shared filesystem for separate byte inspection.",
     "No external hosting or production deployment performed. This design change does not mark remaining advanced pipelines or field validation complete."
   ],
-  "screenshot": "mouchak-design-20261106.png"
+  "screenshot": "mouchak-design-20261106.png",
+  "remote_verification": {
+    "checked_on": "2026-11-07",
+    "repository": "emonhossain24/Mouchak-AI-platform",
+    "repository_id": 1436654004,
+    "source_commit": "581e97e6ae3e119f9ea2de45929ea7fd9dc5ff84",
+    "workflow_run": 42196145260,
+    "url": "https://github.com/emonhossain24/Mouchak-AI-platform/actions/runs/42196145260",
+    "conclusion": "success",
+    "jobs": {
+      "platform": {
+        "id": 127819763421,
+        "conclusion": "success"
+      },
+      "private-stack": {
+        "id": 127819763152,
+        "conclusion": "success"
+      }
+    },
+    "python_tests": 511,
+    "subtests": 17,
+    "seconds": 124.01
+  }
 }
